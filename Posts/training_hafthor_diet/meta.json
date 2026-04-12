@@ -1,0 +1,42 @@
+{
+  "post_number": 2,
+  "topic_slug": "training_hafthor_diet",
+  "topic_label": "TRAINING / NUTRITION",
+  "source_name": "BarBend",
+  "source_url": "https://barbend.com/news/hafthor-bjornsson-8000-calorie-diet/",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#Strongman",
+    "#HafthorBjornsson",
+    "#StrengthNutrition",
+    "#MealPrep",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#FitnessMotivation",
+    "#EatBigLiftBig"
+  ],
+  "references": [
+    {
+      "citation": "1. Helms ER et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. J Int Soc Sports Nutr, 11:20. doi:10.1186/1550-2783-11-20",
+      "doi": "10.1186/1550-2783-11-20"
+    },
+    {
+      "citation": "2. Jäger R et al. (2017). ISSN Position Stand: Protein and Exercise. J Int Soc Sports Nutr, 14:20. doi:10.1186/s12970-017-0177-8",
+      "doi": "10.1186/s12970-017-0177-8"
+    },
+    {
+      "citation": "3. Iraki J et al. (2019). Nutrition recommendations for bodybuilders in the off-season: a narrative review. Sports, 7(7):154. doi:10.3390/sports7070154",
+      "doi": "10.3390/sports7070154"
+    },
+    {
+      "citation": "4. Morton RW et al. (2018). A systematic review of protein supplementation on resistance training-induced gains. Br J Sports Med, 52(6):376-384. doi:10.1136/bjsports-2017-097608",
+      "doi": "10.1136/bjsports-2017-097608"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

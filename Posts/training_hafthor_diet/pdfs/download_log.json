@@ -1,0 +1,48 @@
+{
+  "topic_slug": "training_hafthor_diet",
+  "entries": {
+    "ref01": {
+      "status": "ok",
+      "path": "training_hafthor_diet/pdfs/ref01.pdf",
+      "sha256_16": "572036f27f76ff39",
+      "bytes": 902409,
+      "citation": "Helms ER et al. (2014). J Int Soc Sports Nutr, 11:20.",
+      "url": "https://europepmc.org/articles/PMC4033492?pdf=render",
+      "downloaded_at": "2026-04-12T00:54:52"
+    },
+    "ref02": {
+      "status": "ok",
+      "path": "training_hafthor_diet/pdfs/ref02.pdf",
+      "sha256_16": "7a97a81db0334c95",
+      "bytes": 672473,
+      "citation": "Jäger R et al. (2017). J Int Soc Sports Nutr, 14:20.",
+      "url": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0177-8",
+      "downloaded_at": "2026-04-12T00:32:34"
+    },
+    "ref03": {
+      "status": "ok",
+      "path": "training_hafthor_diet/pdfs/ref03.pdf",
+      "sha256_16": "428bab27c6b605d1",
+      "bytes": 292188,
+      "citation": "Iraki J et al. (2019). Sports, 7(7):154.",
+      "url": "https://europepmc.org/articles/PMC6680710?pdf=render",
+      "downloaded_at": "2026-04-12T00:54:58"
+    },
+    "ref04": {
+      "status": "ok",
+      "path": "training_hafthor_diet/pdfs/ref04.pdf",
+      "sha256_16": "34c5e2c21ba9b9d1",
+      "bytes": 1592485,
+      "citation": "Morton RW et al. (2018). Br J Sports Med, 52(6):376-384.",
+      "url": "https://europepmc.org/articles/PMC5867436?pdf=render",
+      "downloaded_at": "2026-04-12T00:54:59"
+    }
+  },
+  "last_run_at": "2026-04-12T00:54:46",
+  "summary": {
+    "ok": 3,
+    "planned": 0,
+    "skipped": 0,
+    "failed": 0
+  }
+}

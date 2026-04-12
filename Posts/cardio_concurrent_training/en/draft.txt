@@ -1,0 +1,73 @@
+============================================================
+POST #25 — CARDIO + STRENGTH
+Source: PubMed Meta-Analyses + Sports Medicine Reviews
+============================================================
+
+CAPTION:
+----------------------------------------
+🏋️ CARDIO WON'T KILL YOUR GAINS (HERE'S THE SCIENCE)
+
+"Don't do cardio — it'll eat your muscle."
+
+This is one of the most persistent myths in powerlifting. And the research says it's mostly wrong. Here's the full picture.
+
+1. THE INTERFERENCE EFFECT IS REAL — BUT OVERSTATED
+A 2012 meta-analysis by Wilson et al. analyzed 21 studies on concurrent training (cardio + strength). The finding: running impaired lower body hypertrophy and strength more than cycling. But moderate cardio (2-3 sessions per week, under 30 minutes) had NO significant negative effect on strength gains.
+
+2. THE TYPE OF CARDIO MATTERS
+- CYCLING: Minimal interference with strength. Uses similar movement patterns to squats/leg press. Best choice for powerlifters.
+- WALKING/INCLINE TREADMILL: Essentially zero interference. Great for recovery and general health.
+- RUNNING: Highest interference, especially for lower body. The eccentric impact creates additional muscle damage and recovery demands.
+- ROWING/SWIMMING: Moderate interference. Good options if you enjoy them.
+
+3. THE DOSE MATTERS MORE THAN THE TYPE
+A 2022 review by Schumann et al. found that interference becomes significant when:
+- Cardio exceeds 3 sessions per week
+- Sessions last longer than 30-40 minutes
+- Cardio is performed immediately before strength training
+- Total weekly cardio volume exceeds 150 minutes of moderate-intensity work
+
+Below these thresholds? Your squat is safe.
+
+4. TIMING MATTERS — LIFT FIRST, CARDIO SECOND
+Separate your cardio and strength sessions by at least 6-8 hours when possible. If you must do both in one session, lift first — then do cardio. A 2026 umbrella review of 17 meta-analyses (144 studies, 1,492 participants) by Held et al. confirmed that performing resistance training BEFORE endurance training may favor strength and hypertrophy outcomes. The same review found that concurrent training improved aerobic capacity comparably to endurance-only training while maintaining strength gains.
+
+BONUS: THE SEX DIFFERENCE
+A 2023 meta-analysis found that concurrent training blunted lower-body strength in males (SMD = -0.43) but NOT in females (SMD = 0.08). Women appear largely immune to the interference effect. If you're a female lifter, cardio is even less of a concern.
+
+5. YOUR HEART ACTUALLY NEEDS IT
+Here's the part nobody talks about: powerlifters have higher rates of hypertension, left ventricular hypertrophy, and cardiovascular disease risk factors than the general population. MacDougall et al. (1985) found that heavy resistance exercise acutely raises systolic blood pressure above 300 mmHg during maximal efforts. Regular cardio helps keep your cardiovascular system healthy enough to handle the demands of heavy lifting long-term.
+
+HOW TO PROGRAM CARDIO AS A POWERLIFTER:
+- 2-3 sessions per week, 20-30 minutes each
+- Preferred: cycling, walking, incline treadmill
+- Intensity: Zone 2 (conversational pace, 60-70% max HR)
+- Timing: off days or 6+ hours after lifting
+- During a peaking block: reduce to 1-2 light sessions or walking only
+
+SAMPLE WEEKLY SCHEDULE:
+Mon: Squat + Bench (heavy)
+Tue: 25 min zone 2 bike
+Wed: Deadlift + OHP
+Thu: Rest or 20 min walk
+Fri: Squat + Bench (volume)
+Sat: 30 min zone 2 bike or hike
+Sun: Full rest
+
+THE BOTTOM LINE:
+Cardio doesn't kill gains. Excessive, poorly-timed, high-impact cardio can. 2-3 sessions of 20-30 min low-intensity cycling or walking per week will improve your health, your recovery between sets, and your longevity in the sport. Your heart is a muscle too — train it.
+
+Save this for your next program review
+
+#CentralStrength #SantaClaraFitness #CentralStrengthGym #BayAreaStrength #CardioAndStrength #ConcurrentTraining #PowerlifterCardio #HeartHealth #Zone2 #StrengthTraining #Powerlifting #GymLife #EvidenceBasedFitness #TrainSmart
+
+REFERENCES:
+1. Held S et al. (2026). Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses. Sports Med. doi:10.1007/s40279-026-02401-y PMID:41762427
+2. Wilson JM et al. (2012). Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises. J Strength Cond Res, 26(8):2293-2307. doi:10.1519/JSC.0b013e31823a3e2d
+3. Huiberts RO et al. (2023). Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status. Sports Med. doi:10.1007/s40279-023-01943-9 PMID:37847373
+4. Schumann M et al. (2022). Compatibility of concurrent aerobic and strength training for skeletal muscle size and function: an updated systematic review and meta-analysis. Sports Med, 52(3):601-612. doi:10.1007/s40279-021-01587-7
+5. MacDougall JD et al. (1985). Arterial blood pressure response to heavy resistance exercise. J Appl Physiol, 58(3):785-790. doi:10.1152/jappl.1985.58.3.785
+6. Fikenzer S et al. (2018). Effects of endurance versus resistance training on cardiac biomarkers. Clin Res Cardiol, 107(5):411-420. doi:10.1007/s00392-017-1192-0
+----------------------------------------
+
+SUGGESTED VISUAL: Split graphic — left side shows a lifter on a bike (green checkmark, "won't kill gains"), right side shows a lifter running a marathon (yellow caution, "might interfere"). Bottom bar: "2-3x/week, 20-30 min, zone 2 = safe"

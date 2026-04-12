@@ -1,0 +1,44 @@
+{
+  "post_number": 7,
+  "topic_slug": "training_squat_mistakes",
+  "topic_label": "TRAINING",
+  "source_name": "Juggernaut Training Systems",
+  "source_url": "https://www.jtsstrength.com/5-common-mistakes-in-the-squat/",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#SquatTechnique",
+    "#SquatTips",
+    "#PowerliftingTraining",
+    "#LiftingForm",
+    "#StrengthCoaching",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#FitnessMotivation",
+    "#SquatDay"
+  ],
+  "references": [
+    {
+      "citation": "1. Schoenfeld BJ (2010). Squatting kinematics and kinetics and their application to exercise performance. J Strength Cond Res, 24(12):3497-3506. doi:10.1519/JSC.0b013e3181bac2d7",
+      "doi": "10.1519/JSC.0b013e3181bac2d7"
+    },
+    {
+      "citation": "2. Escamilla RF (2001). Knee biomechanics of the dynamic squat exercise. Med Sci Sports Exerc, 33(1):127-141."
+    },
+    {
+      "citation": "3. Kritz M et al. (2009). The bodyweight squat: a movement screen for the squat pattern. Strength Cond J, 31(1):76-85."
+    },
+    {
+      "citation": "4. Comfort P et al. (2018). Effect of knee and trunk angle on kinetic variables during the isometric midthigh pull. Int J Sports Physiol Perform, 13(5):575-581."
+    },
+    {
+      "citation": "5. Myer GD et al. (2014). The back squat: a proposed assessment of functional deficits and technical factors that limit performance. Strength Cond J, 36(6):4-27. doi:10.1519/SSC.0000000000000103",
+      "doi": "10.1519/SSC.0000000000000103"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

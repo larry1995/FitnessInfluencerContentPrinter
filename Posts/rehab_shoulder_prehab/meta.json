@@ -1,0 +1,58 @@
+{
+  "post_number": 30,
+  "topic_slug": "rehab_shoulder_prehab",
+  "topic_label": "REHAB MOVEMENTS",
+  "source_name": "PubMed Systematic Reviews + JOSPT Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#ShoulderPrehab",
+    "#RotatorCuff",
+    "#InjuryPrevention",
+    "#ShoulderHealth",
+    "#FacePulls",
+    "#BandPullAparts",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#PainFreeTraining",
+    "#MobilityWork"
+  ],
+  "references": [
+    {
+      "citation": "1. Kolber MJ et al. (2010). Shoulder injuries attributed to resistance training: a brief review. J Strength Cond Res, 24(6):1696-1704. doi:10.1519/JSC.0b013e3181dc4330",
+      "doi": "10.1519/JSC.0b013e3181dc4330"
+    },
+    {
+      "citation": "2. Escamilla RF et al. (2009). Shoulder muscle recruitment patterns and related biomechanics during upper extremity sports. Sports Med, 39(7):569-590. doi:10.2165/00007256-200939070-00004",
+      "doi": "10.2165/00007256-200939070-00004"
+    },
+    {
+      "citation": "3. Cools AM et al. (2007). Rehabilitation of scapular muscle balance: which exercises to prescribe? Am J Sports Med, 35(10):1744-1751. doi:10.1177/0363546507303560",
+      "doi": "10.1177/0363546507303560"
+    },
+    {
+      "citation": "4. Reinold MM et al. (2009). Electromyographic analysis of the rotator cuff and deltoid musculature during common shoulder external rotation exercises. J Orthop Sports Phys Ther, 39(3):105-117. doi:10.2519/jospt.2009.2848",
+      "doi": "10.2519/jospt.2009.2848"
+    },
+    {
+      "citation": "5. Kibler WB et al. (2013). Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement from the Scapular Summit. Br J Sports Med, 47(14):877-885. doi:10.1136/bjsports-2013-092425",
+      "doi": "10.1136/bjsports-2013-092425"
+    },
+    {
+      "citation": "6. Therapeutic Exercise Prescription for Overhead Athletes with Shoulder Impingement Syndrome. J Clin Med. doi:10.3390/jcm14051657 PMID:40095639",
+      "doi": "10.3390/jcm14051657",
+      "pmid": "40095639"
+    },
+    {
+      "citation": "7. Scapular Dyskinesis-Based Exercise Therapy vs Multimodal Physical Therapy for SIS in Young Overhead Athletes. doi:10.1186/s13102-025-01254-8 PMID:40671042",
+      "doi": "10.1186/s13102-025-01254-8",
+      "pmid": "40671042"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

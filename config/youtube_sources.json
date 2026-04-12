@@ -1,0 +1,71 @@
+{
+  "channels": [
+    {
+      "name": "Jeff Nippard",
+      "url": "https://www.youtube.com/@JeffNippard",
+      "max_videos": 3,
+      "focus": ["science-based training", "hypertrophy", "technique breakdowns"]
+    },
+    {
+      "name": "Renaissance Periodization",
+      "url": "https://www.youtube.com/@RenaissancePeriodization",
+      "max_videos": 3,
+      "focus": ["training volume", "nutrition science", "hypertrophy", "Dr. Mike Israetel"]
+    },
+    {
+      "name": "Juggernaut Training Systems",
+      "url": "https://www.youtube.com/@JuggernautTrainingSystems",
+      "max_videos": 3,
+      "focus": ["powerlifting technique", "programming", "competition prep"]
+    },
+    {
+      "name": "Barbell Medicine",
+      "url": "https://www.youtube.com/@BarbellMedicine",
+      "max_videos": 3,
+      "focus": ["evidence-based training", "pain science", "programming"]
+    },
+    {
+      "name": "Stronger By Science",
+      "url": "https://www.youtube.com/@StrongerByScience",
+      "max_videos": 3,
+      "focus": ["research reviews", "training science", "nutrition"]
+    },
+    {
+      "name": "Calgary Barbell",
+      "url": "https://www.youtube.com/@CalgaryBarbell",
+      "max_videos": 2,
+      "focus": ["powerlifting form checks", "technique", "programming"]
+    },
+    {
+      "name": "Alan Thrall",
+      "url": "https://www.youtube.com/@AlanThrall",
+      "max_videos": 2,
+      "focus": ["squat technique", "deadlift technique", "beginner lifting"]
+    },
+    {
+      "name": "Geoffrey Verity Schofield",
+      "url": "https://www.youtube.com/@GeoffreyVeritySchofield",
+      "max_videos": 2,
+      "focus": ["fitness research debunking", "evidence-based analysis"]
+    },
+    {
+      "name": "Revive Stronger",
+      "url": "https://www.youtube.com/@ReviveStronger",
+      "max_videos": 2,
+      "focus": ["bodybuilding science", "training optimization", "nutrition"]
+    },
+    {
+      "name": "Alex Bromley - Empire Barbell",
+      "url": "https://www.youtube.com/@AlexanderBromley",
+      "max_videos": 2,
+      "focus": ["strength programming", "powerlifting", "strongman"]
+    },
+    {
+      "name": "Bruce Lu",
+      "url": "https://www.youtube.com/@bruce_lu_1993",
+      "max_videos": 3,
+      "focus": ["science-based training", "Chinese-language strength content", "nutrition"],
+      "language": "zh"
+    }
+  ]
+}

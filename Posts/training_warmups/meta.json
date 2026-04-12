@@ -1,0 +1,42 @@
+{
+  "post_number": 4,
+  "topic_slug": "training_warmups",
+  "topic_label": "TRAINING",
+  "source_name": "Juggernaut Training Systems",
+  "source_url": "https://www.jtsstrength.com/optimizing-your-warmups/",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#WarmUp",
+    "#TrainingTips",
+    "#PowerliftingTraining",
+    "#StrengthCoaching",
+    "#ScienceBasedTraining",
+    "#ProgressiveOverload",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#FitnessMotivation"
+  ],
+  "references": [
+    {
+      "citation": "1. Fradkin AJ et al. (2010). Effects of warming-up on physical performance: a systematic review with meta-analysis. J Strength Cond Res, 24(1):140-148. doi:10.1519/JSC.0b013e3181c643a0",
+      "doi": "10.1519/JSC.0b013e3181c643a0"
+    },
+    {
+      "citation": "2. McCrary JM et al. (2015). A systematic review of the effects of upper body warm-up on performance and injury. Br J Sports Med, 49(14):935-942. doi:10.1136/bjsports-2014-094228",
+      "doi": "10.1136/bjsports-2014-094228"
+    },
+    {
+      "citation": "3. Barroso R et al. (2013). Maximal strength, number of repetitions, and total volume are differently affected by static-, ballistic-, and proprioceptive neuromuscular facilitation stretching. J Strength Cond Res, 27(10):2903-2908."
+    },
+    {
+      "citation": "4. Zourdos MC et al. (2016). Novel resistance training-specific RPE scale measuring repetitions in reserve. J Strength Cond Res, 30(1):267-275. doi:10.1519/JSC.0000000000001049",
+      "doi": "10.1519/JSC.0000000000001049"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

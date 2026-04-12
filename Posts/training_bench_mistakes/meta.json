@@ -1,0 +1,43 @@
+{
+  "post_number": 5,
+  "topic_slug": "training_bench_mistakes",
+  "topic_label": "TRAINING",
+  "source_name": "Juggernaut Training Systems",
+  "source_url": "https://www.jtsstrength.com/5-common-mistakes-in-the-bench-press/",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#BenchPress",
+    "#BenchPressTips",
+    "#PowerliftingTraining",
+    "#LiftingForm",
+    "#StrengthCoaching",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#FitnessMotivation",
+    "#PRday"
+  ],
+  "references": [
+    {
+      "citation": "1. Green CM & Comfort P (2007). Effect of grip width on bench press performance and risk of injury. Strength Cond J, 29(5):10-14."
+    },
+    {
+      "citation": "2. Lehman GJ (2005). The influence of grip width and forearm pronation/supination on upper-body myoelectric activity during the flat bench press. J Strength Cond Res, 19(3):587-591."
+    },
+    {
+      "citation": "3. Duffey MJ & Challis JH (2011). Vertical and lateral forces applied to the bar during the bench press in novice lifters. J Strength Cond Res, 25(9):2442-2447."
+    },
+    {
+      "citation": "4. Gomo O & Van den Tillaar R (2016). The effects of grip width on sticking region in bench press. J Sports Sci, 34(3):232-238. doi:10.1080/02640414.2015.1046395",
+      "doi": "10.1080/02640414.2015.1046395"
+    },
+    {
+      "citation": "5. Fees M et al. (1998). Upper extremity weight-training modifications for the injured athlete. Am J Sports Med, 26(5):732-742."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

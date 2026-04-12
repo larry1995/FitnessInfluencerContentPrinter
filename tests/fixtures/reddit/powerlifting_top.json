@@ -1,0 +1,50 @@
+{
+  "kind": "Listing",
+  "data": {
+    "after": "t3_fake002",
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "id": "fake001",
+          "title": "Weekly discussion: RPE vs percentage training — what does the research say?",
+          "permalink": "/r/powerlifting/comments/fake001/weekly_discussion_rpe_vs_percentages/",
+          "url": "https://old.reddit.com/r/powerlifting/comments/fake001/weekly_discussion_rpe_vs_percentages/",
+          "score": 420,
+          "num_comments": 137,
+          "stickied": false,
+          "selftext": "Good breakdown here: https://www.strongerbyscience.com/autoregulation/ and a meta-analysis: https://pubmed.ncbi.nlm.nih.gov/12345678/ — curious what people think.",
+          "author": "example_user"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "fake002",
+          "title": "Low-score post that should be filtered out",
+          "permalink": "/r/powerlifting/comments/fake002/low_score_filtered/",
+          "url": "https://old.reddit.com/r/powerlifting/comments/fake002/low_score_filtered/",
+          "score": 3,
+          "num_comments": 1,
+          "stickied": false,
+          "selftext": "",
+          "author": "example_user"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "fake003",
+          "title": "Stickied mod announcement",
+          "permalink": "/r/powerlifting/comments/fake003/stickied/",
+          "url": "https://old.reddit.com/r/powerlifting/comments/fake003/stickied/",
+          "score": 999,
+          "num_comments": 50,
+          "stickied": true,
+          "selftext": "Please read the rules.",
+          "author": "automoderator"
+        }
+      }
+    ]
+  }
+}

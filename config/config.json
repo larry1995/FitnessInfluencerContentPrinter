@@ -1,0 +1,24 @@
+{
+  "scrape_settings": {
+    "max_articles_per_feed": 5,
+    "max_age_days": 14,
+    "min_content_length": 200,
+    "request_timeout": 15,
+    "request_delay_seconds": 2
+  },
+  "post_settings": {
+    "posts_per_run": 7,
+    "caption_max_length": 2200,
+    "caption_target_length": 800,
+    "include_carousel_slides": true,
+    "max_hashtags": 30,
+    "image_width": 1080,
+    "image_height": 1080
+  },
+  "output": {
+    "posts_dir": "Posts",
+    "raw_content_dir": "Posts/raw",
+    "drafts_dir": "Posts/drafts",
+    "archive_dir": "Posts/archive"
+  }
+}

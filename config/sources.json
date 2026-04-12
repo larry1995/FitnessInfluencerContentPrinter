@@ -1,0 +1,187 @@
+{
+  "rss_feeds": [
+    {
+      "name": "BarBend",
+      "url": "https://barbend.com/feed/",
+      "categories": ["powerlifting", "training", "nutrition"]
+    },
+    {
+      "name": "Juggernaut Training Systems",
+      "url": "https://www.jtsstrength.com/feed/",
+      "categories": ["powerlifting", "training", "techniques"]
+    },
+    {
+      "name": "Barbell Medicine",
+      "url": "https://www.barbellmedicine.com/blog/feed/",
+      "categories": ["science-based", "training", "nutrition"]
+    },
+    {
+      "name": "Examine.com",
+      "url": "https://examine.com/blog/feed/",
+      "categories": ["science-based", "nutrition", "supplements"]
+    },
+    {
+      "name": "Stronger By Science",
+      "url": "https://www.strongerbyscience.com/feed/",
+      "categories": ["science-based", "training", "nutrition"]
+    },
+    {
+      "name": "Precision Nutrition",
+      "url": "https://www.precisionnutrition.com/feed",
+      "categories": ["science-based", "nutrition", "training"]
+    },
+    {
+      "name": "Legion Athletics",
+      "url": "https://legionathletics.com/blog/feed/",
+      "categories": ["science-based", "training", "nutrition"]
+    },
+    {
+      "name": "Breaking Muscle",
+      "url": "https://breakingmuscle.com/feed/",
+      "categories": ["training", "techniques", "science-based"]
+    },
+    {
+      "name": "MASS Research Review",
+      "url": "https://www.strongerbyscience.com/mass/feed/",
+      "categories": ["science-based", "training", "nutrition"]
+    },
+    {
+      "name": "Sigma Nutrition",
+      "url": "https://sigmanutrition.com/feed/",
+      "categories": ["science-based", "nutrition", "training"]
+    },
+    {
+      "name": "Ripped Body",
+      "url": "https://rippedbody.com/feed/",
+      "categories": ["science-based", "nutrition", "training"]
+    },
+    {
+      "name": "Alan Aragon",
+      "url": "https://www.alanaragonblog.com/feed/",
+      "categories": ["science-based", "nutrition", "training"]
+    },
+    {
+      "name": "My Sports Science",
+      "url": "https://www.mysportscience.com/blog-feed.xml",
+      "categories": ["science-based", "nutrition", "training"]
+    },
+    {
+      "name": "NASM Blog",
+      "url": "https://blog.nasm.org/rss.xml",
+      "categories": ["training", "nutrition", "techniques"]
+    },
+    {
+      "name": "StrongFirst",
+      "url": "https://www.strongfirst.com/feed/",
+      "categories": ["training", "techniques", "powerlifting"]
+    }
+  ],
+  "instagram_hashtags": [
+    "powerlifting",
+    "powerliftingmotivation",
+    "sciencebasedtraining",
+    "strengthtraining",
+    "squatbenchdeadlift",
+    "powerliftinglife",
+    "evidencebasedtraining",
+    "olympicweightlifting",
+    "strengthandconditioning"
+  ],
+  "topics": {
+    "training": {
+      "keywords": ["squat", "bench press", "deadlift", "programming", "periodization", "progressive overload", "RPE", "volume", "intensity", "hypertrophy", "strength", "peaking", "deload"],
+      "description": "Science-based training methods and programming"
+    },
+    "nutrition": {
+      "keywords": ["protein", "calories", "macros", "bulking", "cutting", "meal prep", "supplements", "creatine", "recovery", "hydration", "pre-workout", "post-workout"],
+      "description": "Diet and nutrition for strength athletes"
+    },
+    "techniques": {
+      "keywords": ["form", "technique", "cues", "mobility", "warm-up", "belt", "shoes", "grip", "stance", "bracing", "breathing", "injury prevention", "accessory"],
+      "description": "Lifting techniques and movement mechanics"
+    }
+  },
+  "pubmed_searches": [
+    {
+      "query": "resistance training hypertrophy[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "training",
+      "max_results": 10
+    },
+    {
+      "query": "strength training programming periodization[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "training",
+      "max_results": 10
+    },
+    {
+      "query": "protein intake muscle protein synthesis exercise[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "nutrition",
+      "max_results": 10
+    },
+    {
+      "query": "creatine supplementation exercise performance[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "nutrition",
+      "max_results": 5
+    },
+    {
+      "query": "squat biomechanics technique[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "techniques",
+      "max_results": 5
+    },
+    {
+      "query": "powerlifting injury prevention sports medicine[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "techniques",
+      "max_results": 5
+    },
+    {
+      "query": "exercise recovery sleep muscle adaptation[Title/Abstract] AND (2024[pdat] OR 2025[pdat] OR 2026[pdat])",
+      "topic": "nutrition",
+      "max_results": 5
+    }
+  ],
+  "biorxiv_settings": {
+    "interval_days": 30,
+    "max_results": 20,
+    "categories": [
+      "physiology",
+      "sports science",
+      "nutrition",
+      "biophysics"
+    ],
+    "keywords": [
+      "resistance training",
+      "strength training",
+      "hypertrophy",
+      "muscle",
+      "exercise",
+      "protein synthesis",
+      "nutrition",
+      "sports performance",
+      "skeletal muscle",
+      "powerlifting",
+      "recovery",
+      "creatine",
+      "biomechanics",
+      "exercise physiology"
+    ]
+  },
+  "brand": {
+    "gym_name": "Central Strength",
+    "full_gym_name": "Central Strength Gym",
+    "location": "Santa Clara, CA",
+    "website": "centralstrengthgyms.com",
+    "gym_phone": "408-655-1852",
+    "author_name": "Hao Cheng",
+    "author_title": "NASM Certified Personal Trainer",
+    "author_phone": "573-529-3057",
+    "personal_cta": "For personalized coaching, contact Hao directly",
+    "voice": "Supportive, expert, community-focused. We speak like a knowledgeable training partner — not a salesperson.",
+    "hashtags": ["#CentralStrength", "#SantaClaraFitness", "#CentralStrengthGym", "#BayAreaStrength", "#SantaClaraGym"],
+    "cta_options": [
+      "Drop in for a free class — link in bio",
+      "Book your intro session at centralstrengthgyms.com",
+      "Tag a training partner who needs to see this",
+      "Save this for your next training session",
+      "Comment your PR below"
+    ]
+  }
+}

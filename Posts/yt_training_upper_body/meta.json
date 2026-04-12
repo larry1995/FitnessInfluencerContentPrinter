@@ -1,0 +1,43 @@
+{
+  "post_number": 21,
+  "topic_slug": "yt_training_upper_body",
+  "topic_label": "TRAINING (YouTube)",
+  "source_name": "Jeff Nippard + Exercise Science Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#UpperBodyWorkout",
+    "#JeffNippard",
+    "#NaturalBodybuilding",
+    "#ScienceBasedTraining",
+    "#Hypertrophy",
+    "#ChestWorkout",
+    "#BackWorkout",
+    "#StrengthTraining",
+    "#GymLife"
+  ],
+  "references": [
+    {
+      "citation": "1. Chavez ML et al. (2023). Effect of incline angle on upper and lower pectoral muscle activation during bench press. J Strength Cond Res."
+    },
+    {
+      "citation": "2. Pedrosa GF et al. (2023). Training at long muscle lengths leads to greater muscle hypertrophy. Med Sci Sports Exerc. doi:10.1249/MSS.0000000000003120",
+      "doi": "10.1249/MSS.0000000000003120"
+    },
+    {
+      "citation": "3. Schoenfeld BJ et al. (2021). Resistance training recommendations to maximize muscle hypertrophy in an athletic population. Strength Cond J, 43(4):3-13."
+    },
+    {
+      "citation": "4. Fonseca RM et al. (2014). Changes in exercises are more effective than loading schemes to improve muscle strength. J Strength Cond Res, 28(11):3085-3092. doi:10.1519/JSC.0000000000000539",
+      "doi": "10.1519/JSC.0000000000000539"
+    },
+    {
+      "citation": "5. Nippard J (2025). The Upper Body Workout I Followed For My 1 Year Transformation. YouTube."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

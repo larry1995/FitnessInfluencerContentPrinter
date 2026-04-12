@@ -1,0 +1,763 @@
+{
+  "_meta": {
+    "generated_by": "researcher (Task #3 first half)",
+    "generated_at": "2026-04-11",
+    "resolver_strategy": "Unpaywall API (DOI-keyed) -> NCBI ID converter (DOI -> PMCID) -> PubMed title+author search with strict verification (author + year + journal must all match). Fuzzy matches that failed verification were demoted to 'unresolved'.",
+    "unpaywall_email": "contentprinter@centralstrengthgyms.com",
+    "total_references": 68,
+    "status_counts": {
+      "ok": 18,
+      "unresolved": 31,
+      "pmid_only": 13,
+      "no_doi": 5,
+      "citation_doi_mismatch": 1
+    },
+    "schema": {
+      "status_values": [
+        "ok",
+        "unresolved",
+        "pmid_only",
+        "no_doi"
+      ],
+      "fields_per_ref": [
+        "ref_idx",
+        "citation",
+        "doi",
+        "pdf_url",
+        "source",
+        "status",
+        "pmid (if found)",
+        "landing (if available)",
+        "notes"
+      ]
+    },
+    "backend_writer_instructions": "Download only entries where status == 'ok'. For each slug, save PDFs to /opt/home/buckcenter.org/hcheng/ContentPrinter/Posts/<slug>/pdfs/ref<N>.pdf. Log results to Posts/<slug>/pdfs/download_log.json. Use http_utils.py for all HTTP. Honor Content-Type — some repository URLs return HTML fallbacks; validate that the response starts with '%PDF'.",
+    "audit_history": [
+      {
+        "date": "2026-04-12",
+        "audit_name": "task_19_title_overlap_backport",
+        "rule": "Content-word overlap between draft.txt REFERENCES block entry and Unpaywall/PubMed-fetched title must be >=0.25 (25%) on stopword-filtered tokens >=4 chars. Tokens extracted from the *draft* reference text (which includes the descriptive title), NOT the resolver's stripped 'Author (Year). Journal, vol:pages' citation field which has zero informative content.",
+        "entries_audited": 19,
+        "passed": 18,
+        "retroactively_demoted": 1,
+        "demotions": [
+          {
+            "slug": "yt_training_past_failure",
+            "ref_idx": 1,
+            "draft_ref": "Vieira AF et al. (2024). Training to failure vs not to failure for muscle hypertrophy: a systematic review with meta-analysis. Scand J Med Sci Sports, 34(1):e14265.",
+            "doi_in_json": "10.1111/sms.14265",
+            "actual_title_at_doi": "Short and mid-term characteristics of COVID-19 disease course in athletes: A high-volume, single-center study",
+            "overlap": 0.0,
+            "new_status": "citation_doi_mismatch",
+            "notes": "DOI resolves to a COVID paper, not a training-to-failure paper. No Vieira AF Scand J Med Sci Sports 2024 paper exists in PubMed at all. Post-side citation is fabricated or wrong. Same finding reached independently during Task #17 retry resolution. Needs frontend-writer reconciliation before any download attempt."
+          }
+        ],
+        "notes_for_future_resolvers": [
+          "The original Task #3 resolver stored 'Author (Year). Journal, vol:pages.' as the citation field, which strips the descriptive title and makes title-overlap verification impossible against the stored JSON alone. Future resolvers should preserve the draft.txt reference text verbatim as a 'draft_ref_text' field so audit passes are self-contained.",
+          "Unpaywall DOI lookups can return valid 'is_oa=true' with a correct PDF URL for the wrong paper if the upstream draft contains a fabricated DOI. Title-overlap must be checked post-resolution, not just author+year+journal.",
+          "Stopword list for token extraction: the, and, for, with, from, into, over, under, between, among, more, less, than, that, this, these, those, their, there, which, where, when, what, have, has, been, were, are, was, is, a, an, of, in, on, to, by, as, at, be, or, vs, versus, systematic, review, meta-analysis, meta, analysis, effect, effects, influence, impact, results, study, studies, trial, trials, randomized, randomised, controlled, double-blind, placebo, position, stand, narrative, gains, recommendations, recommendation, based, evidence. Tokens must be >=4 chars, [a-z0-9] only."
+        ]
+      }
+    ]
+  },
+  "training_beginner_program": [
+    {
+      "ref_idx": 1,
+      "citation": "Ralston GW et al. (2017). Sports Med, 47(12):2585-2601.",
+      "doi": "10.1007/s40279-017-0762-7",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40279-017-0762-7.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007/s40279-017-0762-7.pdf"
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Grgic J et al. (2018). Eur J Sport Sci, 18(7):971-980.",
+      "doi": "10.1080/17461391.2018.1444095",
+      "pdf_url": null,
+      "source": "pmc:PMC6267019 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "30424511",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Rhea MR et al. (2003). Med Sci Sports Exerc, 35(3):456-464.",
+      "doi": "10.1249/01.MSS.0000053727.63505.D4",
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "12618576",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Peterson MD et al. (2005). J Strength Cond Res, 19(4):950-958.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC2504141 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "18751812",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "NSCA (2024). Essentials of Strength Training and Conditioning, 5th Edition.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "no_doi",
+      "notes": "Citation has no DOI (may be a book, textbook chapter, or YouTube video). Skip for PDF download."
+    }
+  ],
+  "training_bench_mistakes": [
+    {
+      "ref_idx": 1,
+      "citation": "Green CM & Comfort P (2007). Strength Cond J, 29(5):10-14.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC2504261 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "18751791",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Lehman GJ (2005). J Strength Cond Res, 19(3):587-591.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "18943991",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Duffey MJ & Challis JH (2011). J Strength Cond Res, 25(9):2442-2447.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC3240875 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "22086250",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Gomo O & Van den Tillaar R (2016). J Sports Sci, 34(3):232-238.",
+      "doi": "10.1080/02640414.2015.1046395",
+      "pdf_url": null,
+      "source": "pmc:PMC5303056 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "27994108",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Fees M et al. (1998). Am J Sports Med, 26(5):732-742.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "11066851",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    }
+  ],
+  "training_hafthor_diet": [
+    {
+      "ref_idx": 1,
+      "citation": "Helms ER et al. (2014). J Int Soc Sports Nutr, 11:20.",
+      "doi": "10.1186/1550-2783-11-20",
+      "pdf_url": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true"
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Jäger R et al. (2017). J Int Soc Sports Nutr, 14:20.",
+      "doi": "10.1186/s12970-017-0177-8",
+      "pdf_url": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0177-8",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0177-8"
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Iraki J et al. (2019). Sports, 7(7):154.",
+      "doi": "10.3390/sports7070154",
+      "pdf_url": "https://www.mdpi.com/2075-4663/7/7/154/pdf?version=1561541344",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://www.mdpi.com/2075-4663/7/7/154/pdf?version=1561541344"
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Morton RW et al. (2018). Br J Sports Med, 52(6):376-384.",
+      "doi": "10.1136/bjsports-2017-097608",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/52/6/376.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/52/6/376.full.pdf"
+    }
+  ],
+  "training_masters_lifters": [
+    {
+      "ref_idx": 1,
+      "citation": "Strasser B & Schobersberger W (2011). J Obes, 2011:482564.",
+      "doi": "10.1155/2011/482564",
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2931407/pdf/",
+      "source": "pmc:PMC2931407",
+      "status": "ok",
+      "landing": "https://doi.org/10.1155/2011/482564"
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Peterson MD et al. (2010). Med Sci Sports Exerc, 43(2):249-258.",
+      "doi": "10.1249/MSS.0b013e3181eb6265",
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2995836/pdf/",
+      "source": "pmc:PMC2995836",
+      "status": "ok"
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Borde R et al. (2015). Sports Med, 45(12):1693-1720.",
+      "doi": "10.1007/s40279-015-0385-9",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40279-015-0385-9.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007/s40279-015-0385-9.pdf"
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Fragala MS et al. (2019). J Strength Cond Res, 33(8):2019-2052.",
+      "doi": "10.1519/JSC.0000000000003230",
+      "pdf_url": null,
+      "source": "pmc:PMC6766941 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "31540076",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Morton RW et al. (2018). Br J Sports Med, 52(6):376-384.",
+      "doi": "10.1136/bjsports-2017-097608",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/52/6/376.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/52/6/376.full.pdf"
+    }
+  ],
+  "training_squat_mistakes": [
+    {
+      "ref_idx": 1,
+      "citation": "Schoenfeld BJ (2010). J Strength Cond Res, 24(12):3497-3506.",
+      "doi": "10.1519/JSC.0b013e3181bac2d7",
+      "pdf_url": null,
+      "source": "pmc:PMC3004855 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "21187951",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Escamilla RF (2001). Med Sci Sports Exerc, 33(1):127-141.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "11528346",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Kritz M et al. (2009). Strength Cond J, 31(1):76-85.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC2743506 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "20161081",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Comfort P et al. (2018). Int J Sports Physiol Perform, 13(5):575-581.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "29035592",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Myer GD et al. (2014). Strength Cond J, 36(6):4-27.",
+      "doi": "10.1519/SSC.0000000000000103",
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262933/pdf/",
+      "source": "pmc:PMC4262933",
+      "status": "ok",
+      "landing": "https://www.ncbi.nlm.nih.gov/pmc/articles/4262933"
+    }
+  ],
+  "training_texas_method": [
+    {
+      "ref_idx": 1,
+      "citation": "Rhea MR et al. (2003). Med Sci Sports Exerc, 35(3):456-464.",
+      "doi": "10.1249/01.MSS.0000053727.63505.D4",
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "12618576",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Zourdos MC et al. (2016). J Strength Cond Res, 30(1):267-275.",
+      "doi": "10.1519/JSC.0000000000001049",
+      "pdf_url": null,
+      "source": "pmc:PMC4961270 (via pubmed title+author)",
+      "status": "unresolved",
+      "landing": "http://hdl.handle.net/11268/5960",
+      "pmid": "27531969",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Williams TD et al. (2017). Sports Med, 47(10):2083-2100.",
+      "doi": "10.1007/s40279-017-0734-y",
+      "pdf_url": null,
+      "source": "pmc:PMC7059845 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "32175477",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Stone MH et al. (2007). Strength Cond J, 29(1):56-62.",
+      "doi": "10.1519/1533-4295(2007)29[56:PEOMVA]2.0.CO;2",
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "18162566",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Helms ER et al. (2017). J Strength Cond Res, 31(2):292-297.",
+      "doi": "10.1519/JSC.0000000000001517",
+      "pdf_url": null,
+      "source": "pmc:PMC6132893 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "30229181",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ],
+  "training_warmups": [
+    {
+      "ref_idx": 1,
+      "citation": "Fradkin AJ et al. (2010). J Strength Cond Res, 24(1):140-148.",
+      "doi": "10.1519/JSC.0b013e3181c643a0",
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "21230852",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "McCrary JM et al. (2015). Br J Sports Med, 49(14):935-942.",
+      "doi": "10.1136/bjsports-2014-094228",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/49/14/935.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/49/14/935.full.pdf"
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Barroso R et al. (2013). J Strength Cond Res, 27(10):2903-2908.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC3967665 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "24757517",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Zourdos MC et al. (2016). J Strength Cond Res, 30(1):267-275.",
+      "doi": "10.1519/JSC.0000000000001049",
+      "pdf_url": null,
+      "source": "pmc:PMC4961270 (via pubmed title+author)",
+      "status": "unresolved",
+      "landing": "http://hdl.handle.net/11268/5960",
+      "pmid": "27531969",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ],
+  "yt_training_exercises": [
+    {
+      "ref_idx": 1,
+      "citation": "Pedrosa GF et al. (2023). Med Sci Sports Exerc.",
+      "doi": "10.1249/MSS.0000000000003120",
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "notes": "Unpaywall returned no OA PDF for this DOI. Paywalled content — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Chavez ML et al. (2023). J Strength Cond Res.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC11378818 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "39294830",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Schoenfeld BJ & Grgic J (2020). J Strength Cond Res, 34(5):1441-1453.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC7966829 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "33748541",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Vigotsky AD et al. (2018). Front Physiol, 8:985.",
+      "doi": "10.3389/fphys.2017.00985",
+      "pdf_url": "https://www.frontiersin.org/articles/10.3389/fphys.2017.00985/pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://www.frontiersin.org/articles/10.3389/fphys.2017.00985/pdf"
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Nippard J (2025). YouTube.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "no_doi",
+      "notes": "Citation has no DOI (may be a book, textbook chapter, or YouTube video). Skip for PDF download."
+    }
+  ],
+  "yt_training_past_failure": [
+    {
+      "ref_idx": 1,
+      "citation": "Vieira AF et al. (2024). Scand J Med Sci Sports, 34(1):e14265.",
+      "doi": "10.1111/sms.14265",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/sms.14265",
+      "source": "unpaywall:publisher",
+      "status": "citation_doi_mismatch",
+      "landing": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/sms.14265",
+      "notes": "RETROACTIVELY DEMOTED by Task #19 audit 2026-04-12. DOI 10.1111/sms.14265 resolves to a COVID-in-athletes paper, not training-to-failure. Title-overlap of draft-ref vs Unpaywall title = 0.00. No Vieira AF Scand J Med Sci Sports 2024 paper exists in PubMed. Frontend-writer must reconcile the citation. Do not download from the pdf_url - it is the wrong paper."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Grgic J et al. (2022). J Sport Health Sci, 11(2):202-211.",
+      "doi": "10.1016/j.jshs.2021.01.007",
+      "pdf_url": "https://vuir.vu.edu.au/42420/1/Effects%20of%20resistance%20training%20performed%20to%20repetition%20failure%20or%20non-failure%20on%20muscular%20strength%20and%20hypertrophy%20A%20systematic%20review%20and%20meta-analysis.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://vuir.vu.edu.au/42420/1/Effects%20of%20resistance%20training%20performed%20to%20repetition%20failure%20or%20non-failure%20on%20muscular%20strength%20and%20hypertrophy%20A%20systematic%20review%20and%20meta-analysis.pdf"
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Schoenfeld BJ & Grgic J (2019). Strength Cond J, 41(5):108-113.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC7271969 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "32500095",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Martorelli S et al. (2017). Eur J Transl Myol, 27(2):6339.",
+      "doi": null,
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5505097/pdf/",
+      "source": "pmc:PMC5505097 (via pubmed title+author)",
+      "status": "ok",
+      "pmid": "28713535"
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Lacerda LT et al. (2020). J Strength Cond Res, 34(4):952-960.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC7577872 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "34629679",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ],
+  "yt_training_upper_body": [
+    {
+      "ref_idx": 1,
+      "citation": "Chavez ML et al. (2023). J Strength Cond Res.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC11378818 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "39294830",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Pedrosa GF et al. (2023). Med Sci Sports Exerc.",
+      "doi": "10.1249/MSS.0000000000003120",
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "notes": "Unpaywall returned no OA PDF for this DOI. Paywalled content — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Schoenfeld BJ et al. (2021). Strength Cond J, 43(4):3-13.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC9421688 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "36159957",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Fonseca RM et al. (2014). J Strength Cond Res, 28(11):3085-3092.",
+      "doi": "10.1519/JSC.0000000000000539",
+      "pdf_url": null,
+      "source": "pmc:PMC4518797 (via pubmed title+author)",
+      "status": "unresolved",
+      "landing": "http://dx.doi.org/10.1519/JSC.0000000000000539",
+      "pmid": "26225012",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Nippard J (2025). YouTube.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "no_doi",
+      "notes": "Citation has no DOI (may be a book, textbook chapter, or YouTube video). Skip for PDF download."
+    }
+  ],
+  "yt_training_volume_cut": [
+    {
+      "ref_idx": 1,
+      "citation": "Baz-Valle E et al. (2024). Br J Sports Med.",
+      "doi": "10.1136/bjsports-2023-107803",
+      "pdf_url": null,
+      "source": "pmc:PMC10907779 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "38434302",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Schoenfeld BJ et al. (2019). Med Sci Sports Exerc, 51(1):94-103.",
+      "doi": "10.1249/MSS.0000000000001764",
+      "pdf_url": "https://vuir.vu.edu.au/42280/1/Resistance%20Training%20Volume%20Enhances%20Muscle%20Hypertrophy%20but%20Not%20Strength%20in%20Trained%20Men.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://vuir.vu.edu.au/42280/1/Resistance%20Training%20Volume%20Enhances%20Muscle%20Hypertrophy%20but%20Not%20Strength%20in%20Trained%20Men.pdf"
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Heaselgrave SR et al. (2019). Med Sci Sports Exerc, 51(5):1033-1040.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "no_doi",
+      "notes": "Citation has no DOI (may be a book, textbook chapter, or YouTube video). Skip for PDF download."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Krieger JW (2010). J Strength Cond Res, 24(4):1150-1159.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "23658957",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Helms ER et al. (2014). J Int Soc Sports Nutr, 11:20.",
+      "doi": "10.1186/1550-2783-11-20",
+      "pdf_url": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true"
+    }
+  ],
+  "yt_powerlifting_program": [
+    {
+      "ref_idx": 1,
+      "citation": "Williams TD et al. (2017). Sports Med, 47(10):2083-2100.",
+      "doi": "10.1007/s40279-017-0734-y",
+      "pdf_url": null,
+      "source": "pmc:PMC7059845 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "32175477",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Zourdos MC et al. (2016). J Strength Cond Res, 30(1):267-275.",
+      "doi": "10.1519/JSC.0000000000001049",
+      "pdf_url": null,
+      "source": "pmc:PMC4961270 (via pubmed title+author)",
+      "status": "unresolved",
+      "landing": "http://hdl.handle.net/11268/5960",
+      "pmid": "27531969",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Pritchard H et al. (2015). J Strength Cond Res, 29(7):1867-1872.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC4762643 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "26958540",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Stone MH et al. (2007). Strength Cond J, 21(2):56-62.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "18162566",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Helms ER et al. (2015). Strength Cond J, 38(4):42-49.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC4732920 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "26223349",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ],
+  "yt_deadlift_accessories": [
+    {
+      "ref_idx": 1,
+      "citation": "Kompf J & Arandjelovic O (2017). Sports Med, 47(4):631-640.",
+      "doi": "10.1007/s40279-016-0615-9",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007%2Fs40279-016-0615-9.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007%2Fs40279-016-0615-9.pdf"
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Robbins DW et al. (2012). J Strength Cond Res, 26(12):3321-3328.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC3715618 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "23874258",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Bird SP et al. (2005). Sports Med, 35(10):841-851.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "20301573",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Escamilla RF et al. (2002). Med Sci Sports Exerc, 34(4):682-688.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "11932579",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Stastny P et al. (2017). Strength Cond J, 38(3):91-98.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC5765804 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "29340004",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ],
+  "yt_volume": [
+    {
+      "ref_idx": 1,
+      "citation": "Schoenfeld BJ et al. (2019). Med Sci Sports Exerc, 51(1):94-103.",
+      "doi": "10.1249/MSS.0000000000001764",
+      "pdf_url": "https://vuir.vu.edu.au/42280/1/Resistance%20Training%20Volume%20Enhances%20Muscle%20Hypertrophy%20but%20Not%20Strength%20in%20Trained%20Men.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "is_oa": true,
+      "landing": "https://vuir.vu.edu.au/42280/1/Resistance%20Training%20Volume%20Enhances%20Muscle%20Hypertrophy%20but%20Not%20Strength%20in%20Trained%20Men.pdf"
+    },
+    {
+      "ref_idx": 2,
+      "citation": "Baz-Valle E et al. (2024). Br J Sports Med.",
+      "doi": "10.1136/bjsports-2023-107803",
+      "pdf_url": null,
+      "source": "pmc:PMC10907779 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "38434302",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    },
+    {
+      "ref_idx": 3,
+      "citation": "Heaselgrave SR et al. (2019). Med Sci Sports Exerc, 51(5):1033-1040.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "no_doi",
+      "notes": "Citation has no DOI (may be a book, textbook chapter, or YouTube video). Skip for PDF download."
+    },
+    {
+      "ref_idx": 4,
+      "citation": "Krieger JW (2010). J Strength Cond Res, 24(4):1150-1159.",
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "pmid_only",
+      "pmid": "23658957",
+      "notes": "PubMed returned a PMID candidate but the paper is not in PMC OA. Consider manual download via library proxy if needed."
+    },
+    {
+      "ref_idx": 5,
+      "citation": "Hackett DA et al. (2018). J Strength Cond Res, 32(5):1254-1262.",
+      "doi": null,
+      "pdf_url": null,
+      "source": "pmc:PMC6364853 (via pubmed title+author)",
+      "status": "unresolved",
+      "pmid": "30740140",
+      "notes": "PubMed author+year search returned candidates but none matched the citation's title/journal/year on verification. Backend-writer should skip these or flag for manual review."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "settings": {
+    "user_agent": "ContentPrinter/1.0 (+https://centralstrengthgyms.com)",
+    "request_delay_seconds": 3,
+    "max_posts_per_subreddit": 10,
+    "min_score": 25,
+    "min_comments": 10,
+    "recursion_depth": 2,
+    "max_outbound_links_per_post": 5
+  },
+  "subreddits": [
+    {
+      "name": "powerlifting",
+      "listing": "top",
+      "window": "week"
+    },
+    {
+      "name": "weightroom",
+      "listing": "top",
+      "window": "week"
+    },
+    {
+      "name": "StrongerByScience",
+      "listing": "hot",
+      "window": "week"
+    },
+    {
+      "name": "Fitness",
+      "listing": "top",
+      "window": "week"
+    }
+  ],
+  "outbound_link_allowlist": [
+    "strongerbyscience.com",
+    "barbellmedicine.com",
+    "jtsstrength.com",
+    "examine.com",
+    "pubmed.ncbi.nlm.nih.gov",
+    "pmc.ncbi.nlm.nih.gov",
+    "ncbi.nlm.nih.gov",
+    "biorxiv.org",
+    "medrxiv.org",
+    "doi.org",
+    "sciencedirect.com",
+    "link.springer.com",
+    "tandfonline.com",
+    "journals.lww.com",
+    "academic.oup.com",
+    "mdpi.com"
+  ],
+  "outbound_link_blocklist": [
+    "reddit.com",
+    "old.reddit.com",
+    "redd.it",
+    "imgur.com",
+    "i.redd.it",
+    "v.redd.it",
+    "youtube.com",
+    "youtu.be",
+    "amazon.com",
+    "instagram.com"
+  ]
+}

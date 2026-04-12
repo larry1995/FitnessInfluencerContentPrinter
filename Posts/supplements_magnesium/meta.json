@@ -1,0 +1,57 @@
+{
+  "post_number": 31,
+  "topic_slug": "supplements_magnesium",
+  "topic_label": "SUPPLEMENTS",
+  "source_name": "PubMed Meta-Analyses + Sports Nutrition Reviews",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#Magnesium",
+    "#SupplementScience",
+    "#SleepAndRecovery",
+    "#MineralDeficiency",
+    "#FitnessNutrition",
+    "#EvidenceBasedFitness",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#GymLife",
+    "#RecoveryDay",
+    "#AthleteHealth"
+  ],
+  "references": [
+    {
+      "citation": "1. Wang R et al. (2017). Effects of magnesium supplementation on muscle performance: a meta-analysis. Biol Trace Elem Res, 180(2):261-268. doi:10.1007/s12011-017-1084-0",
+      "doi": "10.1007/s12011-017-1084-0"
+    },
+    {
+      "citation": "2. Heffernan SM et al. (2019). The role of mineral and trace element supplementation in exercise and athletic performance: a systematic review. Nutrients, 11(3):696. doi:10.3390/nu11030696",
+      "doi": "10.3390/nu11030696"
+    },
+    {
+      "citation": "3. Veronese N et al. (2014). Effect of magnesium supplementation on glucose metabolism in people with or at risk of diabetes: a systematic review and meta-analysis. Eur J Clin Nutr, 68(12):1261-1272. doi:10.1038/ejcn.2014.209",
+      "doi": "10.1038/ejcn.2014.209"
+    },
+    {
+      "citation": "4. Mah J & Pitre T (2021). Oral magnesium supplementation for insomnia in older adults: a systematic review and meta-analysis. BMC Complement Med Ther, 21(1):125. doi:10.1186/s12906-021-03297-z",
+      "doi": "10.1186/s12906-021-03297-z"
+    },
+    {
+      "citation": "5. Dominguez LJ et al. (2025). The Importance of Vitamin D and Magnesium in Athletes. Nutrients. doi:10.3390/nu17101655 PMID:40431395",
+      "doi": "10.3390/nu17101655",
+      "pmid": "40431395"
+    },
+    {
+      "citation": "6. Nielsen FH & Lukaski HC (2006). Update on the relationship between magnesium and exercise. Magnes Res, 19(3):180-189. PMID:17172008",
+      "pmid": "17172008"
+    },
+    {
+      "citation": "7. Reno AM et al. (2022). Effects of magnesium supplementation on muscle soreness and performance. J Strength Cond Res, 36(8):2198-2203. doi:10.1519/JSC.0000000000003827",
+      "doi": "10.1519/JSC.0000000000003827"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

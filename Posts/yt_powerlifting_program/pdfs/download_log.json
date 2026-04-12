@@ -1,0 +1,42 @@
+{
+  "topic_slug": "yt_powerlifting_program",
+  "entries": {
+    "ref01": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Williams TD et al. (2017). Sports Med, 47(10):2083-2100.",
+      "url": null
+    },
+    "ref02": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Zourdos MC et al. (2016). J Strength Cond Res, 30(1):267-275.",
+      "url": null
+    },
+    "ref03": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Pritchard H et al. (2015). J Strength Cond Res, 29(7):1867-1872.",
+      "url": null
+    },
+    "ref04": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Stone MH et al. (2007). Strength Cond J, 21(2):56-62.",
+      "url": null
+    },
+    "ref05": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Helms ER et al. (2015). Strength Cond J, 38(4):42-49.",
+      "url": null
+    }
+  },
+  "last_run_at": "2026-04-12T00:26:40",
+  "summary": {
+    "ok": 0,
+    "planned": 0,
+    "skipped": 5,
+    "failed": 0
+  }
+}

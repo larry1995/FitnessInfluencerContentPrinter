@@ -1,0 +1,56 @@
+name: artifact
+
+on:
+  workflow_run:
+    workflows: ["smoke"]
+    types: [completed]
+  workflow_dispatch:
+
+jobs:
+  upload-pngs:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate fixture PNG (if fixtures present)
+        env:
+          PYTHONPATH: src
+        run: |
+          mkdir -p artifacts
+          if [ -d tests/fixtures ]; then
+            python - <<'PY'
+          import os, sys
+          sys.path.insert(0, "src")
+          try:
+              from single_page_generator import generate_all_single_pages
+              generate_all_single_pages()
+          except Exception as e:
+              print(f"single-page generation skipped: {e}")
+          PY
+            # Collect any PNGs produced under Posts/single_pages or Posts/<topic>/en
+            find Posts -type f -name "*.png" -print0 2>/dev/null | xargs -0 -I{} cp {} artifacts/ || true
+          else
+            echo "No fixtures directory — nothing to render."
+          fi
+          ls -la artifacts/ || true
+
+      - name: Upload PNG artifacts
+        if: ${{ hashFiles('artifacts/*.png') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: contentprinter-pngs
+          path: artifacts/*.png
+          if-no-files-found: ignore
+          retention-days: 14

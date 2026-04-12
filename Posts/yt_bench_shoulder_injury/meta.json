@@ -1,0 +1,44 @@
+{
+  "post_number": 12,
+  "topic_slug": "yt_bench_shoulder_injury",
+  "topic_label": "TRAINING (YouTube)",
+  "source_name": "Juggernaut Training Systems",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#ShoulderPain",
+    "#BenchPress",
+    "#InjuryPrevention",
+    "#TrainAroundInjury",
+    "#PowerliftingTraining",
+    "#StrengthCoaching",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife",
+    "#FitnessMotivation"
+  ],
+  "references": [
+    {
+      "citation": "1. Green CM & Comfort P (2007). Effect of grip width on bench press performance and risk of injury. Strength Cond J, 29(5):10-14."
+    },
+    {
+      "citation": "2. Kolber MJ et al. (2010). Shoulder injuries attributed to resistance training: a brief review. J Strength Cond Res, 24(6):1696-1704. doi:10.1519/JSC.0b013e3181dc4330",
+      "doi": "10.1519/JSC.0b013e3181dc4330"
+    },
+    {
+      "citation": "3. Fees M et al. (1998). Upper extremity weight-training modifications for the injured athlete. Am J Sports Med, 26(5):732-742."
+    },
+    {
+      "citation": "4. Saeterbakken AH et al. (2017). The effects of bench press variations in competitive athletes on muscle activity and performance. J Hum Kinet, 57:61-71. doi:10.1515/hukin-2017-0047",
+      "doi": "10.1515/hukin-2017-0047"
+    },
+    {
+      "citation": "5. Durall CJ et al. (2012). Shoulder injury prevention tips for overhead pressing. Strength Cond J, 34(1):24-29."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

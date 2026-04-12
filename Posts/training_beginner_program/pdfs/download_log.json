@@ -1,0 +1,46 @@
+{
+  "topic_slug": "training_beginner_program",
+  "entries": {
+    "ref01": {
+      "status": "ok",
+      "path": "training_beginner_program/pdfs/ref01.pdf",
+      "sha256_16": "999a9c7bd54a0cf8",
+      "bytes": 1117274,
+      "citation": "Ralston GW et al. (2017). Sports Med, 47(12):2585-2601.",
+      "url": "https://link.springer.com/content/pdf/10.1007/s40279-017-0762-7.pdf",
+      "reused_existing": true,
+      "verified_at": "2026-04-12T00:26:40"
+    },
+    "ref02": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Grgic J et al. (2018). Eur J Sport Sci, 18(7):971-980.",
+      "url": null
+    },
+    "ref03": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Rhea MR et al. (2003). Med Sci Sports Exerc, 35(3):456-464.",
+      "url": null
+    },
+    "ref04": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Peterson MD et al. (2005). J Strength Cond Res, 19(4):950-958.",
+      "url": null
+    },
+    "ref05": {
+      "status": "skipped",
+      "reason": "researcher status='no_doi'",
+      "citation": "NSCA (2024). Essentials of Strength Training and Conditioning, 5th Edition.",
+      "url": null
+    }
+  },
+  "last_run_at": "2026-04-12T00:26:40",
+  "summary": {
+    "ok": 1,
+    "planned": 0,
+    "skipped": 4,
+    "failed": 0
+  }
+}

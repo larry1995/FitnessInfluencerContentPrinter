@@ -1,0 +1,4121 @@
+{
+  "rows": [
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 1,
+      "raw": "Held S et al. (2026). Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses. Sports Med. doi:10.1007/s40279-026-02401-y PMID:41762427",
+      "draft": {
+        "first_author": "Held",
+        "year": 2026,
+        "title": "Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses",
+        "journal": null,
+        "doi": "10.1007/s40279-026-02401-y",
+        "pmid": "41762427"
+      },
+      "fetched": {
+        "title": "Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses",
+        "first_author": "Held",
+        "year": 2026,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 2,
+      "raw": "Wilson JM et al. (2012). Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises. J Strength Cond Res, 26(8):2293-2307. doi:10.1519/JSC.0b013e31823a3e2d",
+      "draft": {
+        "first_author": "Wilson",
+        "year": 2012,
+        "title": "Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e31823a3e2d",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Concurrent Training",
+        "first_author": "Wilson",
+        "year": 2012,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 3,
+      "raw": "Huiberts RO et al. (2023). Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status. Sports Med. doi:10.1007/s40279-023-01943-9 PMID:37847373",
+      "draft": {
+        "first_author": "Huiberts",
+        "year": 2023,
+        "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+        "journal": null,
+        "doi": "10.1007/s40279-023-01943-9",
+        "pmid": "37847373"
+      },
+      "fetched": {
+        "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+        "first_author": "Huiberts",
+        "year": 2023,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 4,
+      "raw": "Schumann M et al. (2022). Compatibility of concurrent aerobic and strength training for skeletal muscle size and function: an updated systematic review and meta-analysis. Sports Med, 52(3):601-612. doi:10.1007/s40279-021-01587-7",
+      "draft": {
+        "first_author": "Schumann",
+        "year": 2022,
+        "title": "Compatibility of concurrent aerobic and strength training for skeletal muscle size and function: an updated systematic review and meta-analysis",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-021-01587-7",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis",
+        "first_author": "Schumann",
+        "year": 2021,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 5,
+      "raw": "MacDougall JD et al. (1985). Arterial blood pressure response to heavy resistance exercise. J Appl Physiol, 58(3):785-790. doi:10.1152/jappl.1985.58.3.785",
+      "draft": {
+        "first_author": "MacDougall",
+        "year": 1985,
+        "title": "Arterial blood pressure response to heavy resistance exercise",
+        "journal": "J Appl Physiol",
+        "doi": "10.1152/jappl.1985.58.3.785",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Arterial blood pressure response to heavy resistance exercise",
+        "first_author": "MacDougall",
+        "year": 1985,
+        "journal": "Journal of Applied Physiology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_concurrent_training",
+      "ref_idx": 6,
+      "raw": "Fikenzer S et al. (2018). Effects of endurance versus resistance training on cardiac biomarkers. Clin Res Cardiol, 107(5):411-420. doi:10.1007/s00392-017-1192-0",
+      "draft": {
+        "first_author": "Fikenzer",
+        "year": 2018,
+        "title": "Effects of endurance versus resistance training on cardiac biomarkers",
+        "journal": "Clin Res Cardiol",
+        "doi": "10.1007/s00392-017-1192-0",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Management and predictors of outcome in unselected patients with cardiogenic shock complicating acute ST-segment elevation myocardial infarction: results from the Bremen STEMI Registry",
+        "first_author": "Backhaus",
+        "year": 2017,
+        "journal": "Clinical Research in Cardiology"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 1,
+      "raw": "Held S et al. (2026). Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses. Sports Med. doi:10.1007/s40279-026-02401-y PMID:41762427",
+      "draft": {
+        "first_author": "Held",
+        "year": 2026,
+        "title": "Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses",
+        "journal": null,
+        "doi": "10.1007/s40279-026-02401-y",
+        "pmid": "41762427"
+      },
+      "fetched": {
+        "title": "Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses",
+        "first_author": "Held",
+        "year": 2026,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 2,
+      "raw": "Fikenzer S et al. (2018). Effects of endurance versus resistance training on cardiac biomarkers in recreational athletes. Clin Res Cardiol, 107(5):411-420. doi:10.1007/s00392-017-1192-0",
+      "draft": {
+        "first_author": "Fikenzer",
+        "year": 2018,
+        "title": "Effects of endurance versus resistance training on cardiac biomarkers in recreational athletes",
+        "journal": "Clin Res Cardiol",
+        "doi": "10.1007/s00392-017-1192-0",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Management and predictors of outcome in unselected patients with cardiogenic shock complicating acute ST-segment elevation myocardial infarction: results from the Bremen STEMI Registry",
+        "first_author": "Backhaus",
+        "year": 2017,
+        "journal": "Clinical Research in Cardiology"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 3,
+      "raw": "Wilson JM et al. (2012). Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises. J Strength Cond Res, 26(8):2293-2307. doi:10.1519/JSC.0b013e31823a3e2d",
+      "draft": {
+        "first_author": "Wilson",
+        "year": 2012,
+        "title": "Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e31823a3e2d",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Concurrent Training",
+        "first_author": "Wilson",
+        "year": 2012,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 4,
+      "raw": "MacDougall JD et al. (1985). Arterial blood pressure response to heavy resistance exercise. J Appl Physiol, 58(3):785-790. doi:10.1152/jappl.1985.58.3.785",
+      "draft": {
+        "first_author": "MacDougall",
+        "year": 1985,
+        "title": "Arterial blood pressure response to heavy resistance exercise",
+        "journal": "J Appl Physiol",
+        "doi": "10.1152/jappl.1985.58.3.785",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Arterial blood pressure response to heavy resistance exercise",
+        "first_author": "MacDougall",
+        "year": 1985,
+        "journal": "Journal of Applied Physiology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 5,
+      "raw": "Iellamo F et al. (2019). Cardiovascular effects of strength training in strength athletes. J Cardiovasc Med, 20(6):372-378. doi:10.2459/JCM.0000000000000648",
+      "draft": {
+        "first_author": "Iellamo",
+        "year": 2019,
+        "title": "Cardiovascular effects of strength training in strength athletes",
+        "journal": "J Cardiovasc Med",
+        "doi": "10.2459/JCM.0000000000000648",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Closure of patent foramen ovale or medical therapy alone for secondary prevention of cryptogenic cerebrovascular events",
+        "first_author": "Fortuni",
+        "year": 2018,
+        "journal": "Journal of Cardiovascular Medicine"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "cardio_zone2",
+      "ref_idx": 6,
+      "raw": "Tomlin DL & Wenger HA (2001). The relationship between aerobic fitness and recovery from high intensity intermittent exercise. Sports Med, 31(1):1-11. doi:10.2165/00007256-200131010-00001",
+      "draft": {
+        "first_author": "Tomlin",
+        "year": 2001,
+        "title": "The relationship between aerobic fitness and recovery from high intensity intermittent exercise",
+        "journal": "Sports Med",
+        "doi": "10.2165/00007256-200131010-00001",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Relationship Between Aerobic Fitness and Recovery from High Intensity Intermittent Exercise",
+        "first_author": "Tomlin",
+        "year": 2001,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_caffeine_strength",
+      "ref_idx": 1,
+      "raw": "Machado M et al. (2025). Effects of acute caffeine intake on muscular power during resistance exercise: a systematic review and meta-analysis. Front Nutr, 12:1686283. doi:10.3389/fnut.2025.1686283",
+      "draft": {
+        "first_author": "Machado",
+        "year": 2025,
+        "title": "Effects of acute caffeine intake on muscular power during resistance exercise: a systematic review and meta-analysis",
+        "journal": "Front Nutr",
+        "doi": "10.3389/fnut.2025.1686283",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of acute caffeine intake on muscular power during resistance exercise: a systematic review and meta-analysis",
+        "first_author": "Xiao",
+        "year": 2025,
+        "journal": "Frontiers in Nutrition"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_caffeine_strength",
+      "ref_idx": 2,
+      "raw": "Ferreira TT et al. (2024). The effect of caffeine supplementation on muscular strength and endurance: A meta-analysis of meta-analyses. Heliyon, 10(19):e38529. doi:10.1016/j.heliyon.2024.e38529",
+      "draft": {
+        "first_author": "Ferreira",
+        "year": 2024,
+        "title": "The effect of caffeine supplementation on muscular strength and endurance: A meta-analysis of meta-analyses",
+        "journal": "Heliyon",
+        "doi": "10.1016/j.heliyon.2024.e38529",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Advances and trends in pressure ulcer care research over the last 20 years: A bibliometric and visual analysis",
+        "first_author": "Li",
+        "year": 2024,
+        "journal": "Heliyon"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_caffeine_strength",
+      "ref_idx": 3,
+      "raw": "Grgic J et al. (2025). How does acute caffeine ingestion affect maximal strength and muscular power in bench press and back squat? J Int Soc Sports Nutr, 22(1):2587791. doi:10.1080/15502783.2025.2587791",
+      "draft": {
+        "first_author": "Grgic",
+        "year": 2025,
+        "title": "How does acute caffeine ingestion affect maximal strength and muscular power in bench press and back squat? J Int Soc Sports Nutr, 22(1):2587791. doi:10.1080/15502783.2025.2587791",
+        "journal": null,
+        "doi": "10.1080/15502783.2025.2587791",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "How does acute caffeine ingestion affect maximal strength and muscular power in bench press and back squat in resistance-trained men?",
+        "first_author": "Ma",
+        "year": 2025,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.867,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_caffeine_strength",
+      "ref_idx": 4,
+      "raw": "Grgic J et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. J Int Soc Sports Nutr, 15:11. doi:10.1186/s12970-018-0216-0",
+      "draft": {
+        "first_author": "Grgic",
+        "year": 2018,
+        "title": "Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-018-0216-0",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis",
+        "first_author": "Grgic",
+        "year": 2018,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_caffeine_strength",
+      "ref_idx": 5,
+      "raw": "Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33. doi:10.1186/s12970-017-0189-4",
+      "draft": {
+        "first_author": "Kerksick",
+        "year": 2017,
+        "title": "ISSN Position Stand: Nutrient Timing",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0189-4",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: nutrient timing",
+        "first_author": "Kerksick",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_carb_timing",
+      "ref_idx": 1,
+      "raw": "Li Y et al. (2025). An investigation into how the timing of nutritional supplements affects the recovery from post-exercise fatigue: a systematic review and meta-analysis. Front Nutr, 12:1567438. doi:10.3389/fnut.2025.1567438",
+      "draft": {
+        "first_author": "Li",
+        "year": 2025,
+        "title": "An investigation into how the timing of nutritional supplements affects the recovery from post-exercise fatigue: a systematic review and meta-analysis",
+        "journal": "Front Nutr",
+        "doi": "10.3389/fnut.2025.1567438",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "An investigation into how the timing of nutritional supplements affects the recovery from post-exercise fatigue: a systematic review and meta-analysis",
+        "first_author": "Cheng",
+        "year": 2025,
+        "journal": "Frontiers in Nutrition"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_carb_timing",
+      "ref_idx": 2,
+      "raw": "Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33. doi:10.1186/s12970-017-0189-4",
+      "draft": {
+        "first_author": "Kerksick",
+        "year": 2017,
+        "title": "ISSN Position Stand: Nutrient Timing",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0189-4",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: nutrient timing",
+        "first_author": "Kerksick",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_carb_timing",
+      "ref_idx": 3,
+      "raw": "Henselmans M et al. (2022). The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review. Nutrients, 14(4):856. doi:10.3390/nu14040856",
+      "draft": {
+        "first_author": "Henselmans",
+        "year": 2022,
+        "title": "The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review",
+        "journal": "Nutrients",
+        "doi": "10.3390/nu14040856",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effect of Carbohydrate Intake on Strength and Resistance Training Performance: A Systematic Review",
+        "first_author": "Henselmans",
+        "year": 2022,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_carb_timing",
+      "ref_idx": 4,
+      "raw": "Aragon AA & Schoenfeld BJ (2013). Nutrient timing revisited: is there a post-exercise anabolic window? J Int Soc Sports Nutr, 10(1):5. doi:10.1186/1550-2783-10-5",
+      "draft": {
+        "first_author": "Aragon",
+        "year": 2013,
+        "title": "Nutrient timing revisited: is there a post-exercise anabolic window? J Int Soc Sports Nutr, 10(1):5. doi:10.1186/1550-2783-10-5",
+        "journal": null,
+        "doi": "10.1186/1550-2783-10-5",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Nutrient timing revisited: is there a post-exercise anabolic window?",
+        "first_author": "Aragon",
+        "year": 2013,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_carb_timing",
+      "ref_idx": 5,
+      "raw": "Jäger R et al. (2017). ISSN Position Stand: Protein and Exercise. J Int Soc Sports Nutr, 14:20. doi:10.1186/s12970-017-0177-8",
+      "draft": {
+        "first_author": "Jäger",
+        "year": 2017,
+        "title": "ISSN Position Stand: Protein and Exercise",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0177-8",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+        "first_author": "Jäger",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_clean_eating_myth",
+      "ref_idx": 1,
+      "raw": "Aragon AA et al. (2017). International Society of Sports Nutrition position stand: diets and body composition. J Int Soc Sports Nutr, 14:16. doi:10.1186/s12970-017-0174-y",
+      "draft": {
+        "first_author": "Aragon",
+        "year": 2017,
+        "title": "International Society of Sports Nutrition position stand: diets and body composition",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0174-y",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: diets and body composition",
+        "first_author": "Aragon",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_clean_eating_myth",
+      "ref_idx": 2,
+      "raw": "Freire R (2020). Scientific evidence of diets for weight loss: different macronutrient composition, intermittent fasting, and popular diets. Nutrition, 69:110549. doi:10.1016/j.nut.2019.07.001",
+      "draft": {
+        "first_author": "Freire",
+        "year": 2020,
+        "title": "Scientific evidence of diets for weight loss: different macronutrient composition, intermittent fasting, and popular diets",
+        "journal": "Nutrition",
+        "doi": "10.1016/j.nut.2019.07.001",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Scientific evidence of diets for weight loss: Different macronutrient composition, intermittent fasting, and popular diets",
+        "first_author": "Freire",
+        "year": 2020,
+        "journal": "Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_clean_eating_myth",
+      "ref_idx": 3,
+      "raw": "Stice E et al. (2008). Relation of obesity to consummatory and anticipatory food reward. Physiol Behav, 97(5):551-560.",
+      "draft": {
+        "first_author": "Stice",
+        "year": 2008,
+        "title": "Relation of obesity to consummatory and anticipatory food reward",
+        "journal": "Physiol Behav",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "19025237",
+        "title": "Relation of reward from food intake and anticipated food intake to obesity: a functional magnetic resonance imaging study.",
+        "first_author": "Stice",
+        "year": 2008,
+        "journal": "Journal of abnormal psychology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.4,
+        "journal_match": false
+      },
+      "severity": "JOURNAL_MISMATCH",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=19025237"
+    },
+    {
+      "slug": "nutrition_clean_eating_myth",
+      "ref_idx": 4,
+      "raw": "Westenhoefer J et al. (2013). Cognitive and weight-related correlates of flexible and rigid restrained eating behaviour. Eat Behav, 14(1):69-72. doi:10.1016/j.eatbeh.2012.10.015",
+      "draft": {
+        "first_author": "Westenhoefer",
+        "year": 2013,
+        "title": "Cognitive and weight-related correlates of flexible and rigid restrained eating behaviour",
+        "journal": "Eat Behav",
+        "doi": "10.1016/j.eatbeh.2012.10.015",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Cognitive and weight-related correlates of flexible and rigid restrained eating behaviour",
+        "first_author": "Westenhoefer",
+        "year": 2013,
+        "journal": "Eating Behaviors"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_clean_eating_myth",
+      "ref_idx": 5,
+      "raw": "Del Corral P et al. (2009). Dietary adherence during weight loss predicts weight regain. Obesity, 17(6):1101-1103. doi:10.1038/oby.2009.35",
+      "draft": {
+        "first_author": "Del Corral",
+        "year": 2009,
+        "title": "Dietary adherence during weight loss predicts weight regain",
+        "journal": "Obesity",
+        "doi": "10.1038/oby.2009.35",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Excessive Energy Intake Does Not Modify Fed‐state Tissue Protein Synthesis Rates in Adult Rats",
+        "first_author": "Adéchian",
+        "year": 2009,
+        "journal": "Obesity"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_fat_myth",
+      "ref_idx": 1,
+      "raw": "Hall KD et al. (2015). Calorie for calorie, dietary fat restriction results in more body fat loss than carbohydrate restriction in people with obesity. Cell Metab, 22(3):427-436. doi:10.1016/j.cmet.2015.07.021",
+      "draft": {
+        "first_author": "Hall",
+        "year": 2015,
+        "title": "Calorie for calorie, dietary fat restriction results in more body fat loss than carbohydrate restriction in people with obesity",
+        "journal": "Cell Metab",
+        "doi": "10.1016/j.cmet.2015.07.021",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than Carbohydrate Restriction in People with Obesity",
+        "first_author": "Hall",
+        "year": 2015,
+        "journal": "Cell Metabolism"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_fat_myth",
+      "ref_idx": 2,
+      "raw": "Ge L et al. (2020). Comparison of dietary macronutrient patterns of 14 popular named dietary programmes for weight and cardiovascular risk factor reduction in adults: systematic review and network meta-analysis. BMJ, 369:m696. doi:10.1136/bmj.m696",
+      "draft": {
+        "first_author": "Ge",
+        "year": 2020,
+        "title": "Comparison of dietary macronutrient patterns of 14 popular named dietary programmes for weight and cardiovascular risk factor reduction in adults: systematic review and network meta-analysis",
+        "journal": "BMJ",
+        "doi": "10.1136/bmj.m696",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Comparison of dietary macronutrient patterns of 14 popular named dietary programmes for weight and cardiovascular risk factor reduction in adults: systematic review and network meta-analysis of randomised trials",
+        "first_author": "Ge",
+        "year": 2020,
+        "journal": "BMJ"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_fat_myth",
+      "ref_idx": 3,
+      "raw": "Whittaker J & Wu K (2021). Low-fat diets and testosterone in men: systematic review and meta-analysis of intervention studies. J Steroid Biochem Mol Biol, 210:105878. doi:10.1016/j.jsbmb.2021.105878",
+      "draft": {
+        "first_author": "Whittaker",
+        "year": 2021,
+        "title": "Low-fat diets and testosterone in men: systematic review and meta-analysis of intervention studies",
+        "journal": "J Steroid Biochem Mol Biol",
+        "doi": "10.1016/j.jsbmb.2021.105878",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Low-fat diets and testosterone in men: Systematic review and meta-analysis of intervention studies",
+        "first_author": "Whittaker",
+        "year": 2021,
+        "journal": "The Journal of Steroid Biochemistry and Molecular Biology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_fat_myth",
+      "ref_idx": 4,
+      "raw": "Aragon AA et al. (2017). International Society of Sports Nutrition position stand: diets and body composition. J Int Soc Sports Nutr, 14:16. doi:10.1186/s12970-017-0174-y",
+      "draft": {
+        "first_author": "Aragon",
+        "year": 2017,
+        "title": "International Society of Sports Nutrition position stand: diets and body composition",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0174-y",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: diets and body composition",
+        "first_author": "Aragon",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_fat_myth",
+      "ref_idx": 5,
+      "raw": "Helms ER et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. J Int Soc Sports Nutr, 11:20. doi:10.1186/1550-2783-11-20",
+      "draft": {
+        "first_author": "Helms",
+        "year": 2014,
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/1550-2783-11-20",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "first_author": "Helms",
+        "year": 2014,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 1,
+      "raw": "Tsuchiya Y et al. (2024). Omega-3 Fatty Acid Supplementation on Post-Exercise Inflammation, Muscle Damage, Oxidative Response, and Sports Performance in Physically Healthy Adults — A Systematic Review. Nutrients, 16(13):2017. doi:10.3390/nu16132017",
+      "draft": {
+        "first_author": "Tsuchiya",
+        "year": 2024,
+        "title": "Omega-3 Fatty Acid Supplementation on Post-Exercise Inflammation, Muscle Damage, Oxidative Response, and Sports Performance in Physically Healthy Adults — A Systematic Review",
+        "journal": "Nutrients",
+        "doi": "10.3390/nu16132017",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Efficacy of Pea Protein Supplementation in Combination with a Resistance Training Program on Muscle Performance in a Sedentary Adult Population: A Randomized, Comparator-Controlled, Parallel Clinical Trial",
+        "first_author": "Singh",
+        "year": 2024,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.2,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 2,
+      "raw": "Harty PS et al. (2026). Improved muscle recovery after omega-3 supplementation is associated with increased oxylipin availability. Sci Rep. doi:10.1038/s41598-026-44339-1",
+      "draft": {
+        "first_author": "Harty",
+        "year": 2026,
+        "title": "Improved muscle recovery after omega-3 supplementation is associated with increased oxylipin availability",
+        "journal": null,
+        "doi": "10.1038/s41598-026-44339-1",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Improved muscle recovery after omega-3 supplementation is associated with increased oxylipin availability",
+        "first_author": "Miranda-Fuentes",
+        "year": 2026,
+        "journal": "Scientific Reports"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 3,
+      "raw": "Rossato LT et al. (2025). The Effect of Omega-3 on Mitigating Exercise-Induced Muscle Damage. Nutrients, 17(7):1234. PMC12044634",
+      "draft": {
+        "first_author": "Rossato",
+        "year": 2025,
+        "title": "The Effect of Omega-3 on Mitigating Exercise-Induced Muscle Damage",
+        "journal": "Nutrients",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 4,
+      "raw": "Da Boit M et al. (2024). Omega-3 Fatty Acids and Muscle Strength — Current State of Knowledge and Future Perspectives. Nutrients, 16(22):3408. PMC11643269",
+      "draft": {
+        "first_author": "Da Boit",
+        "year": 2024,
+        "title": "Omega-3 Fatty Acids and Muscle Strength — Current State of Knowledge and Future Perspectives",
+        "journal": "Nutrients",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 5,
+      "raw": "Gatorade Sports Science Institute (2024). Omega-3 Fatty Acids for Training Adaptation and Exercise Recovery: A Muscle-Centric Perspective in Athletes. GSSI.",
+      "draft": {
+        "first_author": "Gatorade Sports Science Institute",
+        "year": 2024,
+        "title": "Omega-3 Fatty Acids for Training Adaptation and Exercise Recovery: A Muscle-Centric Perspective in Athletes",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "nutrition_omega3_recovery",
+      "ref_idx": 6,
+      "raw": "Philpott JD et al. (2019). Applications of omega-3 polyunsaturated fatty acid supplementation for sport performance. Res Sports Med, 27(2):219-237. doi:10.1080/15438627.2018.1550401",
+      "draft": {
+        "first_author": "Philpott",
+        "year": 2019,
+        "title": "Applications of omega-3 polyunsaturated fatty acid supplementation for sport performance",
+        "journal": "Res Sports Med",
+        "doi": "10.1080/15438627.2018.1550401",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Applications of omega-3 polyunsaturated fatty acid supplementation for sport performance",
+        "first_author": "Philpott",
+        "year": 2018,
+        "journal": "Research in Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 1,
+      "raw": "Chen Y et al. (2025). Implications of sleep loss or sleep deprivation on muscle strength: a systematic review. PMC. doi:10.3390/nu17091452",
+      "draft": {
+        "first_author": "Chen",
+        "year": 2025,
+        "title": "Implications of sleep loss or sleep deprivation on muscle strength: a systematic review",
+        "journal": null,
+        "doi": "10.3390/nu17091452",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effect of Acute Dehydration upon Muscle Strength Indices at Elite Karate Athletes: A Randomized Crossover Study",
+        "first_author": "Arnaoutis",
+        "year": 2025,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.2,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 2,
+      "raw": "Sayed A et al. (2025). Effects of sleep deprivation on sports performance and perceived exertion in athletes and non-athletes: a systematic review and meta-analysis. Front Physiol, 16:1544286. doi:10.3389/fphys.2025.1544286",
+      "draft": {
+        "first_author": "Sayed",
+        "year": 2025,
+        "title": "Effects of sleep deprivation on sports performance and perceived exertion in athletes and non-athletes: a systematic review and meta-analysis",
+        "journal": "Front Physiol",
+        "doi": "10.3389/fphys.2025.1544286",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of sleep deprivation on sports performance and perceived exertion in athletes and non-athletes: a systematic review and meta-analysis",
+        "first_author": "Kong",
+        "year": 2025,
+        "journal": "Frontiers in Physiology"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 3,
+      "raw": "Mavroudis C et al. (2025). Sleep and Athletic Performance: A Multidimensional Review of Physiological and Molecular Mechanisms. J Clin Med, 14(21):7606. doi:10.3390/jcm14217606",
+      "draft": {
+        "first_author": "Mavroudis",
+        "year": 2025,
+        "title": "Sleep and Athletic Performance: A Multidimensional Review of Physiological and Molecular Mechanisms",
+        "journal": "J Clin Med",
+        "doi": "10.3390/jcm14217606",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Sleep and Athletic Performance: A Multidimensional Review of Physiological and Molecular Mechanisms",
+        "first_author": "Kaczmarek",
+        "year": 2025,
+        "journal": "Journal of Clinical Medicine"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 4,
+      "raw": "Vitale KC et al. (2019). Sleep hygiene for optimizing recovery in athletes. Int J Sports Physiol Perform, 14(2):144-148. doi:10.1123/ijspp.2019-0032",
+      "draft": {
+        "first_author": "Vitale",
+        "year": 2019,
+        "title": "Sleep hygiene for optimizing recovery in athletes",
+        "journal": "Int J Sports Physiol Perform",
+        "doi": "10.1123/ijspp.2019-0032",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 5,
+      "raw": "Milewski MD et al. (2014). Chronic lack of sleep is associated with increased sports injuries in adolescent athletes. J Pediatr Orthop, 34(2):129-133. doi:10.1097/BPO.0000000000000151",
+      "draft": {
+        "first_author": "Milewski",
+        "year": 2014,
+        "title": "Chronic lack of sleep is associated with increased sports injuries in adolescent athletes",
+        "journal": "J Pediatr Orthop",
+        "doi": "10.1097/BPO.0000000000000151",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Chronic Lack of Sleep is Associated With Increased Sports Injuries in Adolescent Athletes",
+        "first_author": "Milewski",
+        "year": 2014,
+        "journal": "Journal of Pediatric Orthopaedics"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_sleep_recovery",
+      "ref_idx": 6,
+      "raw": "Leproult R & Van Cauter E (2011). Effect of 1 week of sleep restriction on testosterone levels in young healthy men. JAMA, 305(21):2173-2174. doi:10.1001/jama.2011.710",
+      "draft": {
+        "first_author": "Leproult",
+        "year": 2011,
+        "title": "Effect of 1 week of sleep restriction on testosterone levels in young healthy men",
+        "journal": "JAMA",
+        "doi": "10.1001/jama.2011.710",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effect of 1 Week of Sleep Restriction on Testosterone Levels in Young Healthy Men",
+        "first_author": "Leproult",
+        "year": 2011,
+        "journal": "JAMA"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vegan_creatine",
+      "ref_idx": 1,
+      "raw": "Forbes SC et al. (2025). Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis. Nutrients, 17(17), 2748. doi:10.3390/nu17172748",
+      "draft": {
+        "first_author": "Forbes",
+        "year": 2025,
+        "title": "Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis",
+        "journal": "Nutrients",
+        "doi": "10.3390/nu17172748",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis",
+        "first_author": "Kazeminasab",
+        "year": 2025,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vegan_creatine",
+      "ref_idx": 2,
+      "raw": "Candow DG et al. (2024). Effects of Creatine Supplementation and Resistance Training on Muscle Strength Gains in Adults <50 Years: Systematic Review and Meta-Analysis. J Int Soc Sports Nutr, 21(1). PMID:39519498",
+      "draft": {
+        "first_author": "Candow",
+        "year": 2024,
+        "title": "Effects of Creatine Supplementation and Resistance Training on Muscle Strength Gains in Adults <50 Years: Systematic Review and Meta-Analysis",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": null,
+        "pmid": "39519498"
+      },
+      "fetched": {
+        "title": "Effects of Creatine Supplementation and Resistance Training on Muscle Strength Gains in Adults <50 Years of Age: A Systematic Review and Meta-Analysis.",
+        "first_author": "Wang",
+        "year": 2024,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": false
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vegan_creatine",
+      "ref_idx": 3,
+      "raw": "Antonio J et al. (2021). Common questions and misconceptions about creatine supplementation. J Int Soc Sports Nutr, 18(1):45. doi:10.1186/s12970-021-00412-w",
+      "draft": {
+        "first_author": "Antonio",
+        "year": 2021,
+        "title": "Common questions and misconceptions about creatine supplementation",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-021-00412-w",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Common questions and misconceptions about creatine supplementation: what does the scientific evidence really show?",
+        "first_author": "Antonio",
+        "year": 2021,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.6,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vegan_creatine",
+      "ref_idx": 4,
+      "raw": "ACE Fitness (2025). Creatine Reconsidered: What the Latest Research Reveals.",
+      "draft": {
+        "first_author": "ACE Fitness",
+        "year": 2025,
+        "title": "Creatine Reconsidered: What the Latest Research Reveals",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 1,
+      "raw": "Farrokhyar F et al. (2024). Effects of vitamin D3 supplementation on strength of lower and upper extremities in athletes: an updated systematic review and meta-analysis of randomized controlled trials. Front Nutr, 11:1381301. doi:10.3389/fnut.2024.1381301",
+      "draft": {
+        "first_author": "Farrokhyar",
+        "year": 2024,
+        "title": "Effects of vitamin D3 supplementation on strength of lower and upper extremities in athletes: an updated systematic review and meta-analysis of randomized controlled trials",
+        "journal": "Front Nutr",
+        "doi": "10.3389/fnut.2024.1381301",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of vitamin D3 supplementation on strength of lower and upper extremities in athletes: an updated systematic review and meta-analysis of randomized controlled trials",
+        "first_author": "Han",
+        "year": 2024,
+        "journal": "Frontiers in Nutrition"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "DOI_MISATTRIBUTED",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 2,
+      "raw": "Wyatt PB et al. (2024). Effects of Vitamin D Supplementation in Elite Athletes: A Systematic Review. Am J Sports Med, 52(3). doi:10.1177/23259671231220371",
+      "draft": {
+        "first_author": "Wyatt",
+        "year": 2024,
+        "title": "Effects of Vitamin D Supplementation in Elite Athletes: A Systematic Review",
+        "journal": "Am J Sports Med",
+        "doi": "10.1177/23259671231220371",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of Vitamin D Supplementation in Elite Athletes: A Systematic Review",
+        "first_author": "Wyatt",
+        "year": 2024,
+        "journal": "Orthopaedic Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 3,
+      "raw": "Owens DJ et al. (2018). Vitamin D and the Athlete: Current Perspectives and New Challenges. Sports Med, 48(Suppl 1):3-16. doi:10.1007/s40279-017-0841-9",
+      "draft": {
+        "first_author": "Owens",
+        "year": 2018,
+        "title": "Vitamin D and the Athlete: Current Perspectives and New Challenges",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-017-0841-9",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Vitamin D and the Athlete: Current Perspectives and New Challenges",
+        "first_author": "Owens",
+        "year": 2018,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 4,
+      "raw": "Angeline ME et al. (2013). The effects of vitamin D deficiency in athletes. Am J Sports Med, 41(2):461-464. doi:10.1177/0363546513475787",
+      "draft": {
+        "first_author": "Angeline",
+        "year": 2013,
+        "title": "The effects of vitamin D deficiency in athletes",
+        "journal": "Am J Sports Med",
+        "doi": "10.1177/0363546513475787",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effects of Vitamin D Deficiency in Athletes",
+        "first_author": "Angeline",
+        "year": 2013,
+        "journal": "The American Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 5,
+      "raw": "Dahlquist DT et al. (2015). Plausible ergogenic effects of vitamin D on athletic performance and recovery. J Int Soc Sports Nutr, 12:33. doi:10.1186/s12970-015-0093-8",
+      "draft": {
+        "first_author": "Dahlquist",
+        "year": 2015,
+        "title": "Plausible ergogenic effects of vitamin D on athletic performance and recovery",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-015-0093-8",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Plausible ergogenic effects of vitamin D on athletic performance and recovery",
+        "first_author": "Dahlquist",
+        "year": 2015,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_vitamin_d",
+      "ref_idx": 6,
+      "raw": "Close GL et al. (2013). Assessment of vitamin D concentration in non-supplemented professional athletes and healthy adults during the winter months in the UK. J Sports Sci, 31(4):344-353. doi:10.1080/02640414.2012.733822",
+      "draft": {
+        "first_author": "Close",
+        "year": 2013,
+        "title": "Assessment of vitamin D concentration in non-supplemented professional athletes and healthy adults during the winter months in the UK",
+        "journal": "J Sports Sci",
+        "doi": "10.1080/02640414.2012.733822",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Assessment of vitamin D concentration in non-supplemented professional athletes and healthy adults during the winter months in the UK: implications for skeletal muscle function",
+        "first_author": "Close",
+        "year": 2013,
+        "journal": "Journal of Sports Sciences"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.733,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_whey_vs_collagen",
+      "ref_idx": 1,
+      "raw": "Morton RW et al. (2018). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. Br J Sports Med, 52(6):376-384. doi:10.1136/bjsports-2017-097608",
+      "draft": {
+        "first_author": "Morton",
+        "year": 2018,
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2017-097608",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "first_author": "Morton",
+        "year": 2017,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.818,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_whey_vs_collagen",
+      "ref_idx": 2,
+      "raw": "Schoenfeld BJ & Aragon AA (2018). How much protein can the body use in a single meal for muscle-building? J Int Soc Sports Nutr, 15:10. doi:10.1186/s12970-018-0215-1",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2018,
+        "title": "How much protein can the body use in a single meal for muscle-building? J Int Soc Sports Nutr, 15:10. doi:10.1186/s12970-018-0215-1",
+        "journal": null,
+        "doi": "10.1186/s12970-018-0215-1",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution",
+        "first_author": "Schoenfeld",
+        "year": 2018,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.7,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_whey_vs_collagen",
+      "ref_idx": 3,
+      "raw": "Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33. doi:10.1186/s12970-017-0189-4",
+      "draft": {
+        "first_author": "Kerksick",
+        "year": 2017,
+        "title": "ISSN Position Stand: Nutrient Timing",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0189-4",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: nutrient timing",
+        "first_author": "Kerksick",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "nutrition_whey_vs_collagen",
+      "ref_idx": 4,
+      "raw": "Bagheri R et al. (2024). Even vs skewed protein distribution and muscle protein synthesis. Front Nutr. doi:10.3389/fnut.2024.1567438",
+      "draft": {
+        "first_author": "Bagheri",
+        "year": 2024,
+        "title": "Even vs skewed protein distribution and muscle protein synthesis",
+        "journal": null,
+        "doi": "10.3389/fnut.2024.1567438",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "nutrition_whey_vs_collagen",
+      "ref_idx": 5,
+      "raw": "de Sire A et al. (2022). Systematic review on collagen supplementation: lack of high-quality evidence for skin and joint outcomes.",
+      "draft": {
+        "first_author": "de Sire",
+        "year": 2022,
+        "title": "Systematic review on collagen supplementation: lack of high-quality evidence for skin and joint outcomes",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 1,
+      "raw": "Hayden JA et al. (2021). Exercise therapy for chronic low back pain. Cochrane Database Syst Rev, 9(9):CD009790. doi:10.1002/14651858.CD009790.pub2",
+      "draft": {
+        "first_author": "Hayden",
+        "year": 2021,
+        "title": "Exercise therapy for chronic low back pain",
+        "journal": "Cochrane Database Syst Rev",
+        "doi": "10.1002/14651858.CD009790.pub2",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Exercise therapy for chronic low back pain",
+        "first_author": "Hayden",
+        "year": 2021,
+        "journal": "Cochrane Database of Systematic Reviews"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 2,
+      "raw": "Rodriguez-Dominguez AJ et al. (2025). Does Resistance Training Improve Pain Intensity, Quality of Life, and Disability in People with Chronic Nonspecific Low Back Pain? Disabil Rehabil. doi:10.1080/09638288.2025.2566275 PMID:41065407",
+      "draft": {
+        "first_author": "Rodriguez-Dominguez",
+        "year": 2025,
+        "title": "Does Resistance Training Improve Pain Intensity, Quality of Life, and Disability in People with Chronic Nonspecific Low Back Pain? Disabil Rehabil. doi:10.1080/09638288.2025.2566275 PMID:41065407",
+        "journal": null,
+        "doi": "10.1080/09638288.2025.2566275",
+        "pmid": "41065407"
+      },
+      "fetched": {
+        "title": "Does resistance training improve pain intensity, quality of life, and disability in people with chronic nonspecific low back pain? A systematic review and meta-analysis",
+        "first_author": "Rodríguez-Domínguez",
+        "year": 2025,
+        "journal": "Disability and Rehabilitation"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 3,
+      "raw": "McGill SM (2015). Low Back Disorders: Evidence-Based Prevention and Rehabilitation, 3rd Edition. Human Kinetics.",
+      "draft": {
+        "first_author": "McGill",
+        "year": 2015,
+        "title": "Low Back Disorders: Evidence-Based Prevention and Rehabilitation, 3rd Edition",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 4,
+      "raw": "Ramirez VJ et al. (2024). Influence of Repetitions-to-Failure Deadlift on Lumbo-Pelvic Coordination. J Strength Cond Res. doi:10.1519/JSC.0000000000004871 PMID:38917029",
+      "draft": {
+        "first_author": "Ramirez",
+        "year": 2024,
+        "title": "Influence of Repetitions-to-Failure Deadlift on Lumbo-Pelvic Coordination",
+        "journal": null,
+        "doi": "10.1519/JSC.0000000000004871",
+        "pmid": "38917029"
+      },
+      "fetched": {
+        "title": "Influence of Repetitions-to-Failure Deadlift on Lumbo-Pelvic Coordination, With and Without Body Armor",
+        "first_author": "Ramirez",
+        "year": 2024,
+        "journal": "Journal of Strength &amp; Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.667,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 5,
+      "raw": "Owen PJ et al. (2020). Which specific modes of exercise training are most effective for treating low back pain? A network meta-analysis. Br J Sports Med, 54(21):1279-1287. doi:10.1136/bjsports-2019-100886",
+      "draft": {
+        "first_author": "Owen",
+        "year": 2020,
+        "title": "Which specific modes of exercise training are most effective for treating low back pain? A network meta-analysis",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2019-100886",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Which specific modes of exercise training are most effective for treating low back pain? Network meta-analysis",
+        "first_author": "Owen",
+        "year": 2019,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 6,
+      "raw": "McGill SM et al. (2009). Exercises for the torso performed in a standing posture: spine and hip motion and motor patterns and spine load. J Strength Cond Res, 23(2):455-464. doi:10.1519/JSC.0b013e3181a0227e",
+      "draft": {
+        "first_author": "McGill",
+        "year": 2009,
+        "title": "Exercises for the torso performed in a standing posture: spine and hip motion and motor patterns and spine load",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e3181a0227e",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Isokinetic Leg Strength Profile of Elite Male Basketball Players",
+        "first_author": "Bradic",
+        "year": 2009,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "rehab_low_back_pain",
+      "ref_idx": 7,
+      "raw": "Steffens D et al. (2016). Prevention of low back pain: a systematic review and meta-analysis. JAMA Intern Med, 176(2):199-208. doi:10.1001/jamainternmed.2015.7431",
+      "draft": {
+        "first_author": "Steffens",
+        "year": 2016,
+        "title": "Prevention of low back pain: a systematic review and meta-analysis",
+        "journal": "JAMA Intern Med",
+        "doi": "10.1001/jamainternmed.2015.7431",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Prevention of Low Back Pain",
+        "first_author": "Steffens",
+        "year": 2016,
+        "journal": "JAMA Internal Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 1,
+      "raw": "Kolber MJ et al. (2010). Shoulder injuries attributed to resistance training: a brief review. J Strength Cond Res, 24(6):1696-1704. doi:10.1519/JSC.0b013e3181dc4330",
+      "draft": {
+        "first_author": "Kolber",
+        "year": 2010,
+        "title": "Shoulder injuries attributed to resistance training: a brief review",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e3181dc4330",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Shoulder Injuries Attributed to Resistance Training: A Brief Review",
+        "first_author": "Kolber",
+        "year": 2010,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 2,
+      "raw": "Escamilla RF et al. (2009). Shoulder muscle recruitment patterns and related biomechanics during upper extremity sports. Sports Med, 39(7):569-590. doi:10.2165/00007256-200939070-00004",
+      "draft": {
+        "first_author": "Escamilla",
+        "year": 2009,
+        "title": "Shoulder muscle recruitment patterns and related biomechanics during upper extremity sports",
+        "journal": "Sports Med",
+        "doi": "10.2165/00007256-200939070-00004",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Shoulder Muscle Recruitment Patterns and Related Biomechanics during Upper Extremity Sports",
+        "first_author": "Escamilla",
+        "year": 2009,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 3,
+      "raw": "Cools AM et al. (2007). Rehabilitation of scapular muscle balance: which exercises to prescribe? Am J Sports Med, 35(10):1744-1751. doi:10.1177/0363546507303560",
+      "draft": {
+        "first_author": "Cools",
+        "year": 2007,
+        "title": "Rehabilitation of scapular muscle balance: which exercises to prescribe? Am J Sports Med, 35(10):1744-1751. doi:10.1177/0363546507303560",
+        "journal": null,
+        "doi": "10.1177/0363546507303560",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Rehabilitation of Scapular Muscle Balance",
+        "first_author": "Cools",
+        "year": 2007,
+        "journal": "The American Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 4,
+      "raw": "Reinold MM et al. (2009). Electromyographic analysis of the rotator cuff and deltoid musculature during common shoulder external rotation exercises. J Orthop Sports Phys Ther, 39(3):105-117. doi:10.2519/jospt.2009.2848",
+      "draft": {
+        "first_author": "Reinold",
+        "year": 2009,
+        "title": "Electromyographic analysis of the rotator cuff and deltoid musculature during common shoulder external rotation exercises",
+        "journal": "J Orthop Sports Phys Ther",
+        "doi": "10.2519/jospt.2009.2848",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 5,
+      "raw": "Kibler WB et al. (2013). Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement from the Scapular Summit. Br J Sports Med, 47(14):877-885. doi:10.1136/bjsports-2013-092425",
+      "draft": {
+        "first_author": "Kibler",
+        "year": 2013,
+        "title": "Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement from the Scapular Summit",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2013-092425",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Clinical implications of scapular dyskinesis in shoulder injury: the 2013 consensus statement from the ‘scapular summit’",
+        "first_author": "Kibler",
+        "year": 2013,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 6,
+      "raw": "Therapeutic Exercise Prescription for Overhead Athletes with Shoulder Impingement Syndrome. J Clin Med. doi:10.3390/jcm14051657 PMID:40095639",
+      "draft": {
+        "first_author": null,
+        "year": null,
+        "title": "Therapeutic Exercise Prescription for Overhead Athletes with Shoulder Impingement Syndrome",
+        "journal": null,
+        "doi": "10.3390/jcm14051657",
+        "pmid": "40095639"
+      },
+      "fetched": {
+        "title": "Therapeutic Exercise Prescription for Overhead Athletes with Shoulder Impingement Syndrome: A Systematic Review and CERT Analysis",
+        "first_author": "Guérineau",
+        "year": 2025,
+        "journal": "Journal of Clinical Medicine"
+      },
+      "verify": {
+        "author_match": null,
+        "year_match": null,
+        "title_overlap": 0.889,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "rehab_shoulder_prehab",
+      "ref_idx": 7,
+      "raw": "Scapular Dyskinesis-Based Exercise Therapy vs Multimodal Physical Therapy for SIS in Young Overhead Athletes. doi:10.1186/s13102-025-01254-8 PMID:40671042",
+      "draft": {
+        "first_author": null,
+        "year": null,
+        "title": "Scapular Dyskinesis-Based Exercise Therapy vs Multimodal Physical Therapy for SIS in Young Overhead Athletes. doi:10.1186/s13102-025-01254-8 PMID:40671042",
+        "journal": null,
+        "doi": "10.1186/s13102-025-01254-8",
+        "pmid": "40671042"
+      },
+      "fetched": {
+        "title": "Scapular dyskinesis-based exercise therapy versus multimodal physical therapy for subacromial impingement syndrome in young overhead athletes with scapular dyskinesis: a randomized controlled trial",
+        "first_author": "Wen",
+        "year": 2025,
+        "journal": "BMC Sports Science, Medicine and Rehabilitation"
+      },
+      "verify": {
+        "author_match": null,
+        "year_match": null,
+        "title_overlap": 0.75,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_beta_alanine",
+      "ref_idx": 1,
+      "raw": "Hobson RM et al. (2012). Effects of beta-alanine supplementation on exercise performance: a meta-analysis. Amino Acids, 43(1):25-37. doi:10.1007/s00726-011-1200-z",
+      "draft": {
+        "first_author": "Hobson",
+        "year": 2012,
+        "title": "Effects of beta-alanine supplementation on exercise performance: a meta-analysis",
+        "journal": "Amino Acids",
+        "doi": "10.1007/s00726-011-1200-z",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of β-alanine supplementation on exercise performance: a meta-analysis",
+        "first_author": "Hobson",
+        "year": 2012,
+        "journal": "Amino Acids"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_beta_alanine",
+      "ref_idx": 2,
+      "raw": "Trexler ET et al. (2015). International Society of Sports Nutrition position stand: beta-alanine. J Int Soc Sports Nutr, 12:30. doi:10.1186/s12970-015-0090-y",
+      "draft": {
+        "first_author": "Trexler",
+        "year": 2015,
+        "title": "International Society of Sports Nutrition position stand: beta-alanine",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-015-0090-y",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International society of sports nutrition position stand: Beta-Alanine",
+        "first_author": "Trexler",
+        "year": 2015,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_beta_alanine",
+      "ref_idx": 3,
+      "raw": "Saunders B et al. (2017). Beta-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis. Br J Sports Med, 51(8):658-669. doi:10.1136/bjsports-2016-096396",
+      "draft": {
+        "first_author": "Saunders",
+        "year": 2017,
+        "title": "Beta-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2016-096396",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "β-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis",
+        "first_author": "Saunders",
+        "year": 2016,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_beta_alanine",
+      "ref_idx": 4,
+      "raw": "Dolan E et al. (2019). A systematic risk assessment and meta-analysis on the use of oral beta-alanine supplementation. Adv Nutr, 10(3):452-463. doi:10.1093/advances/nmy115",
+      "draft": {
+        "first_author": "Dolan",
+        "year": 2019,
+        "title": "A systematic risk assessment and meta-analysis on the use of oral beta-alanine supplementation",
+        "journal": "Adv Nutr",
+        "doi": "10.1093/advances/nmy115",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A Systematic Risk Assessment and Meta-Analysis on the Use of Oral β-Alanine Supplementation",
+        "first_author": "Dolan",
+        "year": 2019,
+        "journal": "Advances in Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_beta_alanine",
+      "ref_idx": 5,
+      "raw": "Blancquaert L et al. (2015). Beta-alanine supplementation, muscle carnosine and exercise performance. Curr Opin Clin Nutr Metab Care, 18(1):63-70. doi:10.1097/MCO.0000000000000127",
+      "draft": {
+        "first_author": "Blancquaert",
+        "year": 2015,
+        "title": "Beta-alanine supplementation, muscle carnosine and exercise performance",
+        "journal": "Curr Opin Clin Nutr Metab Care",
+        "doi": "10.1097/MCO.0000000000000127",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Beta-alanine supplementation, muscle carnosine and exercise performance",
+        "first_author": "Blancquaert",
+        "year": 2015,
+        "journal": "Current Opinion in Clinical Nutrition and Metabolic Care"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 1,
+      "raw": "Wang R et al. (2017). Effects of magnesium supplementation on muscle performance: a meta-analysis. Biol Trace Elem Res, 180(2):261-268. doi:10.1007/s12011-017-1084-0",
+      "draft": {
+        "first_author": "Wang",
+        "year": 2017,
+        "title": "Effects of magnesium supplementation on muscle performance: a meta-analysis",
+        "journal": "Biol Trace Elem Res",
+        "doi": "10.1007/s12011-017-1084-0",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 2,
+      "raw": "Heffernan SM et al. (2019). The role of mineral and trace element supplementation in exercise and athletic performance: a systematic review. Nutrients, 11(3):696. doi:10.3390/nu11030696",
+      "draft": {
+        "first_author": "Heffernan",
+        "year": 2019,
+        "title": "The role of mineral and trace element supplementation in exercise and athletic performance: a systematic review",
+        "journal": "Nutrients",
+        "doi": "10.3390/nu11030696",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Role of Mineral and Trace Element Supplementation in Exercise and Athletic Performance: A Systematic Review",
+        "first_author": "Heffernan",
+        "year": 2019,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 3,
+      "raw": "Veronese N et al. (2014). Effect of magnesium supplementation on glucose metabolism in people with or at risk of diabetes: a systematic review and meta-analysis. Eur J Clin Nutr, 68(12):1261-1272. doi:10.1038/ejcn.2014.209",
+      "draft": {
+        "first_author": "Veronese",
+        "year": 2014,
+        "title": "Effect of magnesium supplementation on glucose metabolism in people with or at risk of diabetes: a systematic review and meta-analysis",
+        "journal": "Eur J Clin Nutr",
+        "doi": "10.1038/ejcn.2014.209",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The effect of a single, large bolus of vitamin D in healthy adults over the winter and following year: a randomized, double-blind, placebo-controlled trial",
+        "first_author": "Kearns",
+        "year": 2014,
+        "journal": "European Journal of Clinical Nutrition"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 4,
+      "raw": "Mah J & Pitre T (2021). Oral magnesium supplementation for insomnia in older adults: a systematic review and meta-analysis. BMC Complement Med Ther, 21(1):125. doi:10.1186/s12906-021-03297-z",
+      "draft": {
+        "first_author": "Mah",
+        "year": 2021,
+        "title": "Oral magnesium supplementation for insomnia in older adults: a systematic review and meta-analysis",
+        "journal": "BMC Complement Med Ther",
+        "doi": "10.1186/s12906-021-03297-z",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Oral magnesium supplementation for insomnia in older adults: a Systematic Review &amp; Meta-Analysis",
+        "first_author": "Mah",
+        "year": 2021,
+        "journal": "BMC Complementary Medicine and Therapies"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 5,
+      "raw": "Dominguez LJ et al. (2025). The Importance of Vitamin D and Magnesium in Athletes. Nutrients. doi:10.3390/nu17101655 PMID:40431395",
+      "draft": {
+        "first_author": "Dominguez",
+        "year": 2025,
+        "title": "The Importance of Vitamin D and Magnesium in Athletes",
+        "journal": null,
+        "doi": "10.3390/nu17101655",
+        "pmid": "40431395"
+      },
+      "fetched": {
+        "title": "The Importance of Vitamin D and Magnesium in Athletes",
+        "first_author": "Dominguez",
+        "year": 2025,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 6,
+      "raw": "Nielsen FH & Lukaski HC (2006). Update on the relationship between magnesium and exercise. Magnes Res, 19(3):180-189. PMID:17172008",
+      "draft": {
+        "first_author": "Nielsen",
+        "year": 2006,
+        "title": "Update on the relationship between magnesium and exercise",
+        "journal": "Magnes Res",
+        "doi": null,
+        "pmid": "17172008"
+      },
+      "fetched": {
+        "title": "Update on the relationship between magnesium and exercise.",
+        "first_author": "Nielsen",
+        "year": 2006,
+        "journal": "Magnesium research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "supplements_magnesium",
+      "ref_idx": 7,
+      "raw": "Reno AM et al. (2022). Effects of magnesium supplementation on muscle soreness and performance. J Strength Cond Res, 36(8):2198-2203. doi:10.1519/JSC.0000000000003827",
+      "draft": {
+        "first_author": "Reno",
+        "year": 2022,
+        "title": "Effects of magnesium supplementation on muscle soreness and performance",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000003827",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of Magnesium Supplementation on Muscle Soreness and Performance",
+        "first_author": "Reno",
+        "year": 2020,
+        "journal": "Journal of Strength &amp; Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": false,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "YEAR_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "training_beginner_program",
+      "ref_idx": 1,
+      "raw": "Ralston GW et al. (2017). The effect of weekly set volume on strength gain: a meta-analysis. Sports Med, 47(12):2585-2601. doi:10.1007/s40279-017-0762-7",
+      "draft": {
+        "first_author": "Ralston",
+        "year": 2017,
+        "title": "The effect of weekly set volume on strength gain: a meta-analysis",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-017-0762-7",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effect of Weekly Set Volume on Strength Gain: A Meta-Analysis",
+        "first_author": "Ralston",
+        "year": 2017,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_beginner_program",
+      "ref_idx": 2,
+      "raw": "Grgic J et al. (2018). The effects of short versus long inter-set rest intervals in resistance training on measures of muscle hypertrophy: a systematic review. Eur J Sport Sci, 18(7):971-980. doi:10.1080/17461391.2018.1444095",
+      "draft": {
+        "first_author": "Grgic",
+        "year": 2018,
+        "title": "The effects of short versus long inter-set rest intervals in resistance training on measures of muscle hypertrophy: a systematic review",
+        "journal": "Eur J Sport Sci",
+        "doi": "10.1080/17461391.2018.1444095",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Physiological implications of preparing for a natural male bodybuilding competition",
+        "first_author": "Mitchell",
+        "year": 2018,
+        "journal": "European Journal of Sport Science"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "training_beginner_program",
+      "ref_idx": 3,
+      "raw": "Rhea MR et al. (2003). A meta-analysis to determine the dose response for strength development. Med Sci Sports Exerc, 35(3):456-464. doi:10.1249/01.MSS.0000053727.63505.D4",
+      "draft": {
+        "first_author": "Rhea",
+        "year": 2003,
+        "title": "A meta-analysis to determine the dose response for strength development",
+        "journal": "Med Sci Sports Exerc",
+        "doi": "10.1249/01.MSS.0000053727.63505.D4",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A Meta-analysis to Determine the Dose Response for Strength Development",
+        "first_author": "RHEA",
+        "year": 2003,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_beginner_program",
+      "ref_idx": 4,
+      "raw": "Peterson MD et al. (2005). Applications of the dose-response for muscular strength development: a review of meta-analytic efficacy and reliability for designing training prescription. J Strength Cond Res, 19(4):950-958.",
+      "draft": {
+        "first_author": "Peterson",
+        "year": 2005,
+        "title": "Applications of the dose-response for muscular strength development: a review of meta-analytic efficacy and reliability for designing training prescription",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "16287373",
+        "title": "Applications of the dose-response for muscular strength development: a review of meta-analytic efficacy and reliability for designing training prescription.",
+        "first_author": "Peterson",
+        "year": 2005,
+        "journal": "Journal of strength and conditioning research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=16287373"
+    },
+    {
+      "slug": "training_beginner_program",
+      "ref_idx": 5,
+      "raw": "NSCA (2024). Essentials of Strength Training and Conditioning, 5th Edition. Chapter 19: Program Design for Resistance Training.",
+      "draft": {
+        "first_author": "NSCA",
+        "year": 2024,
+        "title": "Essentials of Strength Training and Conditioning, 5th Edition",
+        "journal": "Chapter",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "training_bench_mistakes",
+      "ref_idx": 1,
+      "raw": "Green CM & Comfort P (2007). Effect of grip width on bench press performance and risk of injury. Strength Cond J, 29(5):10-14.",
+      "draft": {
+        "first_author": "Green",
+        "year": 2007,
+        "title": "Effect of grip width on bench press performance and risk of injury",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "training_bench_mistakes",
+      "ref_idx": 2,
+      "raw": "Lehman GJ (2005). The influence of grip width and forearm pronation/supination on upper-body myoelectric activity during the flat bench press. J Strength Cond Res, 19(3):587-591.",
+      "draft": {
+        "first_author": "Lehman",
+        "year": 2005,
+        "title": "The influence of grip width and forearm pronation/supination on upper-body myoelectric activity during the flat bench press",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "16095407",
+        "title": "The influence of grip width and forearm pronation/supination on upper-body myoelectric activity during the flat bench press.",
+        "first_author": "Lehman",
+        "year": 2005,
+        "journal": "Journal of strength and conditioning research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=16095407"
+    },
+    {
+      "slug": "training_bench_mistakes",
+      "ref_idx": 3,
+      "raw": "Duffey MJ & Challis JH (2011). Vertical and lateral forces applied to the bar during the bench press in novice lifters. J Strength Cond Res, 25(9):2442-2447.",
+      "draft": {
+        "first_author": "Duffey",
+        "year": 2011,
+        "title": "Vertical and lateral forces applied to the bar during the bench press in novice lifters",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "21804421",
+        "title": "Vertical and lateral forces applied to the bar during the bench press in novice lifters.",
+        "first_author": "Duffey",
+        "year": 2011,
+        "journal": "Journal of strength and conditioning research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=21804421"
+    },
+    {
+      "slug": "training_bench_mistakes",
+      "ref_idx": 4,
+      "raw": "Gomo O & Van den Tillaar R (2016). The effects of grip width on sticking region in bench press. J Sports Sci, 34(3):232-238. doi:10.1080/02640414.2015.1046395",
+      "draft": {
+        "first_author": "Gomo O & Van den Tillaar",
+        "year": 2016,
+        "title": "The effects of grip width on sticking region in bench press",
+        "journal": "J Sports Sci",
+        "doi": "10.1080/02640414.2015.1046395",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The effects of grip width on sticking region in bench press",
+        "first_author": "Gomo",
+        "year": 2015,
+        "journal": "Journal of Sports Sciences"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_bench_mistakes",
+      "ref_idx": 5,
+      "raw": "Fees M et al. (1998). Upper extremity weight-training modifications for the injured athlete. Am J Sports Med, 26(5):732-742.",
+      "draft": {
+        "first_author": "Fees",
+        "year": 1998,
+        "title": "Upper extremity weight-training modifications for the injured athlete",
+        "journal": "Am J Sports Med",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "9784824",
+        "title": "Upper extremity weight-training modifications for the injured athlete. A clinical perspective.",
+        "first_author": "Fees",
+        "year": 1998,
+        "journal": "The American journal of sports medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.778,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=9784824"
+    },
+    {
+      "slug": "training_hafthor_diet",
+      "ref_idx": 1,
+      "raw": "Helms ER et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. J Int Soc Sports Nutr, 11:20. doi:10.1186/1550-2783-11-20",
+      "draft": {
+        "first_author": "Helms",
+        "year": 2014,
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/1550-2783-11-20",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "first_author": "Helms",
+        "year": 2014,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_hafthor_diet",
+      "ref_idx": 2,
+      "raw": "Jäger R et al. (2017). ISSN Position Stand: Protein and Exercise. J Int Soc Sports Nutr, 14:20. doi:10.1186/s12970-017-0177-8",
+      "draft": {
+        "first_author": "Jäger",
+        "year": 2017,
+        "title": "ISSN Position Stand: Protein and Exercise",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/s12970-017-0177-8",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "International Society of Sports Nutrition Position Stand: protein and exercise",
+        "first_author": "Jäger",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_hafthor_diet",
+      "ref_idx": 3,
+      "raw": "Iraki J et al. (2019). Nutrition recommendations for bodybuilders in the off-season: a narrative review. Sports, 7(7):154. doi:10.3390/sports7070154",
+      "draft": {
+        "first_author": "Iraki",
+        "year": 2019,
+        "title": "Nutrition recommendations for bodybuilders in the off-season: a narrative review",
+        "journal": "Sports",
+        "doi": "10.3390/sports7070154",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Nutrition Recommendations for Bodybuilders in the Off-Season: A Narrative Review",
+        "first_author": "Iraki",
+        "year": 2019,
+        "journal": "Sports"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_hafthor_diet",
+      "ref_idx": 4,
+      "raw": "Morton RW et al. (2018). A systematic review of protein supplementation on resistance training-induced gains. Br J Sports Med, 52(6):376-384. doi:10.1136/bjsports-2017-097608",
+      "draft": {
+        "first_author": "Morton",
+        "year": 2018,
+        "title": "A systematic review of protein supplementation on resistance training-induced gains",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2017-097608",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "first_author": "Morton",
+        "year": 2017,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.455,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_masters_lifters",
+      "ref_idx": 1,
+      "raw": "Strasser B & Schobersberger W (2011). Evidence for resistance training as a treatment therapy in obesity. J Obes, 2011:482564. doi:10.1155/2011/482564",
+      "draft": {
+        "first_author": "Strasser",
+        "year": 2011,
+        "title": "Evidence for resistance training as a treatment therapy in obesity",
+        "journal": "J Obes",
+        "doi": "10.1155/2011/482564",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Evidence for Resistance Training as a Treatment Therapy in Obesity",
+        "first_author": "Strasser",
+        "year": 2011,
+        "journal": "Journal of Obesity"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_masters_lifters",
+      "ref_idx": 2,
+      "raw": "Peterson MD et al. (2010). Influence of resistance exercise on lean body mass in aging adults: a meta-analysis. Med Sci Sports Exerc, 43(2):249-258. doi:10.1249/MSS.0b013e3181eb6265",
+      "draft": {
+        "first_author": "Peterson",
+        "year": 2010,
+        "title": "Influence of resistance exercise on lean body mass in aging adults: a meta-analysis",
+        "journal": "Med Sci Sports Exerc",
+        "doi": "10.1249/MSS.0b013e3181eb6265",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Influence of Resistance Exercise on Lean Body Mass in Aging Adults",
+        "first_author": "PETERSON",
+        "year": 2011,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_masters_lifters",
+      "ref_idx": 3,
+      "raw": "Borde R et al. (2015). Dose-response relationships of resistance training in healthy old adults: a systematic review and meta-analysis. Sports Med, 45(12):1693-1720. doi:10.1007/s40279-015-0385-9",
+      "draft": {
+        "first_author": "Borde",
+        "year": 2015,
+        "title": "Dose-response relationships of resistance training in healthy old adults: a systematic review and meta-analysis",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-015-0385-9",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Dose–Response Relationships of Resistance Training in Healthy Old Adults: A Systematic Review and Meta-Analysis",
+        "first_author": "Borde",
+        "year": 2015,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_masters_lifters",
+      "ref_idx": 4,
+      "raw": "Fragala MS et al. (2019). Resistance training for older adults: position statement from the National Strength and Conditioning Association. J Strength Cond Res, 33(8):2019-2052. doi:10.1519/JSC.0000000000003230",
+      "draft": {
+        "first_author": "Fragala",
+        "year": 2019,
+        "title": "Resistance training for older adults: position statement from the National Strength and Conditioning Association",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000003230",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Resistance Training for Older Adults: Position Statement From the National Strength and Conditioning Association",
+        "first_author": "Fragala",
+        "year": 2019,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_masters_lifters",
+      "ref_idx": 5,
+      "raw": "Morton RW et al. (2018). Protein supplementation and resistance training gains in older adults. Br J Sports Med, 52(6):376-384.",
+      "draft": {
+        "first_author": "Morton",
+        "year": 2018,
+        "title": "Protein supplementation and resistance training gains in older adults",
+        "journal": "Br J Sports Med",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "29771273",
+        "title": "Does protein supplementation really augment hypertrophy in older persons with resistance exercise training?",
+        "first_author": "Morton",
+        "year": 2018,
+        "journal": "The American journal of clinical nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.455,
+        "journal_match": false
+      },
+      "severity": "JOURNAL_MISMATCH",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=29771273"
+    },
+    {
+      "slug": "training_squat_mistakes",
+      "ref_idx": 1,
+      "raw": "Schoenfeld BJ (2010). Squatting kinematics and kinetics and their application to exercise performance. J Strength Cond Res, 24(12):3497-3506. doi:10.1519/JSC.0b013e3181bac2d7",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2010,
+        "title": "Squatting kinematics and kinetics and their application to exercise performance",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e3181bac2d7",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Squatting Kinematics and Kinetics and Their Application to Exercise Performance",
+        "first_author": "Schoenfeld",
+        "year": 2010,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_squat_mistakes",
+      "ref_idx": 2,
+      "raw": "Escamilla RF (2001). Knee biomechanics of the dynamic squat exercise. Med Sci Sports Exerc, 33(1):127-141.",
+      "draft": {
+        "first_author": "Escamilla",
+        "year": 2001,
+        "title": "Knee biomechanics of the dynamic squat exercise",
+        "journal": "Med Sci Sports Exerc",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "11194098",
+        "title": "Knee biomechanics of the dynamic squat exercise.",
+        "first_author": "Escamilla",
+        "year": 2001,
+        "journal": "Medicine and science in sports and exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=11194098"
+    },
+    {
+      "slug": "training_squat_mistakes",
+      "ref_idx": 3,
+      "raw": "Kritz M et al. (2009). The bodyweight squat: a movement screen for the squat pattern. Strength Cond J, 31(1):76-85.",
+      "draft": {
+        "first_author": "Kritz",
+        "year": 2009,
+        "title": "The bodyweight squat: a movement screen for the squat pattern",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "training_squat_mistakes",
+      "ref_idx": 4,
+      "raw": "Comfort P et al. (2018). Effect of knee and trunk angle on kinetic variables during the isometric midthigh pull. Int J Sports Physiol Perform, 13(5):575-581.",
+      "draft": {
+        "first_author": "Comfort",
+        "year": 2018,
+        "title": "Effect of knee and trunk angle on kinetic variables during the isometric midthigh pull",
+        "journal": "Int J Sports Physiol Perform",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "training_squat_mistakes",
+      "ref_idx": 5,
+      "raw": "Myer GD et al. (2014). The back squat: a proposed assessment of functional deficits and technical factors that limit performance. Strength Cond J, 36(6):4-27. doi:10.1519/SSC.0000000000000103",
+      "draft": {
+        "first_author": "Myer",
+        "year": 2014,
+        "title": "The back squat: a proposed assessment of functional deficits and technical factors that limit performance",
+        "journal": "Strength Cond J",
+        "doi": "10.1519/SSC.0000000000000103",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Back Squat",
+        "first_author": "Myer",
+        "year": 2014,
+        "journal": "Strength &amp; Conditioning Journal"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_texas_method",
+      "ref_idx": 1,
+      "raw": "Rhea MR et al. (2003). A meta-analysis to determine the dose response for strength development. Med Sci Sports Exerc, 35(3):456-464. doi:10.1249/01.MSS.0000053727.63505.D4",
+      "draft": {
+        "first_author": "Rhea",
+        "year": 2003,
+        "title": "A meta-analysis to determine the dose response for strength development",
+        "journal": "Med Sci Sports Exerc",
+        "doi": "10.1249/01.MSS.0000053727.63505.D4",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A Meta-analysis to Determine the Dose Response for Strength Development",
+        "first_author": "RHEA",
+        "year": 2003,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_texas_method",
+      "ref_idx": 2,
+      "raw": "Zourdos MC et al. (2016). Novel resistance training-specific RPE scale measuring repetitions in reserve. J Strength Cond Res, 30(1):267-275. doi:10.1519/JSC.0000000000001049",
+      "draft": {
+        "first_author": "Zourdos",
+        "year": 2016,
+        "title": "Novel resistance training-specific RPE scale measuring repetitions in reserve",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000001049",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve",
+        "first_author": "Zourdos",
+        "year": 2016,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.727,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_texas_method",
+      "ref_idx": 3,
+      "raw": "Williams TD et al. (2017). Comparison of periodized and non-periodized resistance training on maximal strength: a meta-analysis. Sports Med, 47(10):2083-2100. doi:10.1007/s40279-017-0734-y",
+      "draft": {
+        "first_author": "Williams",
+        "year": 2017,
+        "title": "Comparison of periodized and non-periodized resistance training on maximal strength: a meta-analysis",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-017-0734-y",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Comparison of Periodized and Non-Periodized Resistance Training on Maximal Strength: A Meta-Analysis",
+        "first_author": "Williams",
+        "year": 2017,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_texas_method",
+      "ref_idx": 4,
+      "raw": "Stone MH et al. (2007). Periodization: effects of manipulating volume and intensity. Part 1. Strength Cond J, 29(1):56-62. doi:10.1519/1533-4295(2007)29[56:PEOMVA]2.0.CO;2",
+      "draft": {
+        "first_author": "Stone",
+        "year": 2007,
+        "title": "Periodization: effects of manipulating volume and intensity",
+        "journal": "Part",
+        "doi": "10.1519/1533-4295(2007)29[56:PEOMVA]2.0.CO;2",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "training_texas_method",
+      "ref_idx": 5,
+      "raw": "Helms ER et al. (2017). RPE and velocity relationships for the back squat, bench press, and deadlift in powerlifters. J Strength Cond Res, 31(2):292-297. doi:10.1519/JSC.0000000000001517",
+      "draft": {
+        "first_author": "Helms",
+        "year": 2017,
+        "title": "RPE and velocity relationships for the back squat, bench press, and deadlift in powerlifters",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000001517",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "RPE and Velocity Relationships for the Back Squat, Bench Press, and Deadlift in Powerlifters",
+        "first_author": "Helms",
+        "year": 2017,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_warmups",
+      "ref_idx": 1,
+      "raw": "Fradkin AJ et al. (2010). Effects of warming-up on physical performance: a systematic review with meta-analysis. J Strength Cond Res, 24(1):140-148. doi:10.1519/JSC.0b013e3181c643a0",
+      "draft": {
+        "first_author": "Fradkin",
+        "year": 2010,
+        "title": "Effects of warming-up on physical performance: a systematic review with meta-analysis",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e3181c643a0",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of Warming-up on Physical Performance: A Systematic Review With Meta-analysis",
+        "first_author": "Fradkin",
+        "year": 2010,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_warmups",
+      "ref_idx": 2,
+      "raw": "McCrary JM et al. (2015). A systematic review of the effects of upper body warm-up on performance and injury. Br J Sports Med, 49(14):935-942. doi:10.1136/bjsports-2014-094228",
+      "draft": {
+        "first_author": "McCrary",
+        "year": 2015,
+        "title": "A systematic review of the effects of upper body warm-up on performance and injury",
+        "journal": "Br J Sports Med",
+        "doi": "10.1136/bjsports-2014-094228",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "A systematic review of the effects of upper body warm-up on performance and injury",
+        "first_author": "McCrary",
+        "year": 2015,
+        "journal": "British Journal of Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "training_warmups",
+      "ref_idx": 3,
+      "raw": "Barroso R et al. (2013). Maximal strength, number of repetitions, and total volume are differently affected by static-, ballistic-, and proprioceptive neuromuscular facilitation stretching. J Strength Cond Res, 27(10):2903-2908.",
+      "draft": {
+        "first_author": "Barroso",
+        "year": 2013,
+        "title": "Maximal strength, number of repetitions, and total volume are differently affected by static-, ballistic-, and proprioceptive neuromuscular facilitation stretching",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "training_warmups",
+      "ref_idx": 4,
+      "raw": "Zourdos MC et al. (2016). Novel resistance training-specific RPE scale measuring repetitions in reserve. J Strength Cond Res, 30(1):267-275. doi:10.1519/JSC.0000000000001049",
+      "draft": {
+        "first_author": "Zourdos",
+        "year": 2016,
+        "title": "Novel resistance training-specific RPE scale measuring repetitions in reserve",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000001049",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve",
+        "first_author": "Zourdos",
+        "year": 2016,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.727,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_bench_shoulder_injury",
+      "ref_idx": 1,
+      "raw": "Green CM & Comfort P (2007). Effect of grip width on bench press performance and risk of injury. Strength Cond J, 29(5):10-14.",
+      "draft": {
+        "first_author": "Green",
+        "year": 2007,
+        "title": "Effect of grip width on bench press performance and risk of injury",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_bench_shoulder_injury",
+      "ref_idx": 2,
+      "raw": "Kolber MJ et al. (2010). Shoulder injuries attributed to resistance training: a brief review. J Strength Cond Res, 24(6):1696-1704. doi:10.1519/JSC.0b013e3181dc4330",
+      "draft": {
+        "first_author": "Kolber",
+        "year": 2010,
+        "title": "Shoulder injuries attributed to resistance training: a brief review",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0b013e3181dc4330",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Shoulder Injuries Attributed to Resistance Training: A Brief Review",
+        "first_author": "Kolber",
+        "year": 2010,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_bench_shoulder_injury",
+      "ref_idx": 3,
+      "raw": "Fees M et al. (1998). Upper extremity weight-training modifications for the injured athlete. Am J Sports Med, 26(5):732-742.",
+      "draft": {
+        "first_author": "Fees",
+        "year": 1998,
+        "title": "Upper extremity weight-training modifications for the injured athlete",
+        "journal": "Am J Sports Med",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "9784824",
+        "title": "Upper extremity weight-training modifications for the injured athlete. A clinical perspective.",
+        "first_author": "Fees",
+        "year": 1998,
+        "journal": "The American journal of sports medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.778,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=9784824"
+    },
+    {
+      "slug": "yt_bench_shoulder_injury",
+      "ref_idx": 4,
+      "raw": "Saeterbakken AH et al. (2017). The effects of bench press variations in competitive athletes on muscle activity and performance. J Hum Kinet, 57:61-71. doi:10.1515/hukin-2017-0047",
+      "draft": {
+        "first_author": "Saeterbakken",
+        "year": 2017,
+        "title": "The effects of bench press variations in competitive athletes on muscle activity and performance",
+        "journal": "J Hum Kinet",
+        "doi": "10.1515/hukin-2017-0047",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Effects of Bench Press Variations in Competitive Athletes on Muscle Activity and Performance",
+        "first_author": "Saeterbakken",
+        "year": 2017,
+        "journal": "Journal of Human Kinetics"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_bench_shoulder_injury",
+      "ref_idx": 5,
+      "raw": "Durall CJ et al. (2012). Shoulder injury prevention tips for overhead pressing. Strength Cond J, 34(1):24-29.",
+      "draft": {
+        "first_author": "Durall",
+        "year": 2012,
+        "title": "Shoulder injury prevention tips for overhead pressing",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_deadlift_accessories",
+      "ref_idx": 1,
+      "raw": "Kompf J & Arandjelovic O (2017). The sticking point in the bench press, the squat, and the deadlift: similarities and differences, and their significance for research and practice. Sports Med, 47(4):631-640. doi:10.1007/s40279-016-0615-9",
+      "draft": {
+        "first_author": "Kompf",
+        "year": 2017,
+        "title": "The sticking point in the bench press, the squat, and the deadlift: similarities and differences, and their significance for research and practice",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-016-0615-9",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Sticking Point in the Bench Press, the Squat, and the Deadlift: Similarities and Differences, and Their Significance for Research and Practice",
+        "first_author": "Kompf",
+        "year": 2016,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_deadlift_accessories",
+      "ref_idx": 2,
+      "raw": "Robbins DW et al. (2012). The effect of a Romanian deadlift exercise on multijoint muscle strength characteristics. J Strength Cond Res, 26(12):3321-3328.",
+      "draft": {
+        "first_author": "Robbins",
+        "year": 2012,
+        "title": "The effect of a Romanian deadlift exercise on multijoint muscle strength characteristics",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_deadlift_accessories",
+      "ref_idx": 3,
+      "raw": "Bird SP et al. (2005). Designing resistance training programmes to enhance muscular fitness: a review of the acute programme variables. Sports Med, 35(10):841-851.",
+      "draft": {
+        "first_author": "Bird",
+        "year": 2005,
+        "title": "Designing resistance training programmes to enhance muscular fitness: a review of the acute programme variables",
+        "journal": "Sports Med",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "16180944",
+        "title": "Designing resistance training programmes to enhance muscular fitness: a review of the acute programme variables.",
+        "first_author": "Bird",
+        "year": 2005,
+        "journal": "Sports medicine (Auckland, N.Z.)"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=16180944"
+    },
+    {
+      "slug": "yt_deadlift_accessories",
+      "ref_idx": 4,
+      "raw": "Escamilla RF et al. (2002). An electromyographic analysis of sumo and conventional style deadlifts. Med Sci Sports Exerc, 34(4):682-688.",
+      "draft": {
+        "first_author": "Escamilla",
+        "year": 2002,
+        "title": "An electromyographic analysis of sumo and conventional style deadlifts",
+        "journal": "Med Sci Sports Exerc",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "11932579",
+        "title": "An electromyographic analysis of sumo and conventional style deadlifts.",
+        "first_author": "Escamilla",
+        "year": 2002,
+        "journal": "Medicine and science in sports and exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=11932579"
+    },
+    {
+      "slug": "yt_deadlift_accessories",
+      "ref_idx": 5,
+      "raw": "Stastny P et al. (2017). Strengthening the gluteus medius using various bodyweight and resistance exercises. Strength Cond J, 38(3):91-98.",
+      "draft": {
+        "first_author": "Stastny",
+        "year": 2017,
+        "title": "Strengthening the gluteus medius using various bodyweight and resistance exercises",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_powerlifting_program",
+      "ref_idx": 1,
+      "raw": "Williams TD et al. (2017). Comparison of periodized and non-periodized resistance training on maximal strength: a meta-analysis. Sports Med, 47(10):2083-2100. doi:10.1007/s40279-017-0734-y",
+      "draft": {
+        "first_author": "Williams",
+        "year": 2017,
+        "title": "Comparison of periodized and non-periodized resistance training on maximal strength: a meta-analysis",
+        "journal": "Sports Med",
+        "doi": "10.1007/s40279-017-0734-y",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Comparison of Periodized and Non-Periodized Resistance Training on Maximal Strength: A Meta-Analysis",
+        "first_author": "Williams",
+        "year": 2017,
+        "journal": "Sports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_powerlifting_program",
+      "ref_idx": 2,
+      "raw": "Zourdos MC et al. (2016). Novel resistance training-specific RPE scale measuring repetitions in reserve. J Strength Cond Res, 30(1):267-275. doi:10.1519/JSC.0000000000001049",
+      "draft": {
+        "first_author": "Zourdos",
+        "year": 2016,
+        "title": "Novel resistance training-specific RPE scale measuring repetitions in reserve",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000001049",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve",
+        "first_author": "Zourdos",
+        "year": 2016,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.727,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_powerlifting_program",
+      "ref_idx": 3,
+      "raw": "Pritchard H et al. (2015). Tapering practices of competitive powerlifters. J Strength Cond Res, 29(7):1867-1872.",
+      "draft": {
+        "first_author": "Pritchard",
+        "year": 2015,
+        "title": "Tapering practices of competitive powerlifters",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_powerlifting_program",
+      "ref_idx": 4,
+      "raw": "Stone MH et al. (2007). Periodization: effects of manipulating volume and intensity. Part 1. Strength Cond J, 21(2):56-62.",
+      "draft": {
+        "first_author": "Stone",
+        "year": 2007,
+        "title": "Periodization: effects of manipulating volume and intensity",
+        "journal": "Part",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_powerlifting_program",
+      "ref_idx": 5,
+      "raw": "Helms ER et al. (2015). Application of the repetitions in reserve-based rating of perceived exertion scale for resistance training. Strength Cond J, 38(4):42-49.",
+      "draft": {
+        "first_author": "Helms",
+        "year": 2015,
+        "title": "Application of the repetitions in reserve-based rating of perceived exertion scale for resistance training",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 1,
+      "raw": "Trommelen J et al. (2023). The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration. Cell Rep Med, 4(12):101324. doi:10.1016/j.xcrm.2023.101324",
+      "draft": {
+        "first_author": "Trommelen",
+        "year": 2023,
+        "title": "The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration",
+        "journal": "Cell Rep Med",
+        "doi": "10.1016/j.xcrm.2023.101324",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans",
+        "first_author": "Trommelen",
+        "year": 2023,
+        "journal": "Cell Reports Medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.846,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 2,
+      "raw": "Kim IY et al. (2016). The anabolic response to a meal containing different amounts of protein is not limited by the maximal stimulation of protein synthesis. Am J Physiol, 310(1):E73-E80.",
+      "draft": {
+        "first_author": "Kim",
+        "year": 2016,
+        "title": "The anabolic response to a meal containing different amounts of protein is not limited by the maximal stimulation of protein synthesis",
+        "journal": "Am J Physiol",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "26530155",
+        "title": "The anabolic response to a meal containing different amounts of protein is not limited by the maximal stimulation of protein synthesis in healthy young adults.",
+        "first_author": "Kim",
+        "year": 2016,
+        "journal": "American journal of physiology. Endocrinology and metabolism"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.786,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=26530155"
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 3,
+      "raw": "Schoenfeld BJ et al. (2018). How much protein can the body use in a single meal? J Int Soc Sports Nutr, 15:10.",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2018,
+        "title": "How much protein can the body use in a single meal? J Int Soc Sports Nutr, 15:10",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "29497353",
+        "title": "How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution.",
+        "first_author": "Schoenfeld",
+        "year": 2018,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.5,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=29497353"
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 4,
+      "raw": "Bagheri R et al. (2024). Even protein distribution enhances weekly muscle protein synthesis by ~12%. Front Nutr.",
+      "draft": {
+        "first_author": "Bagheri",
+        "year": 2024,
+        "title": "Even protein distribution enhances weekly muscle protein synthesis by ~12%",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 5,
+      "raw": "Stokes T et al. (2018). Recent perspectives regarding the role of dietary protein for the promotion of muscle hypertrophy. Nutrients, 10(2):180.",
+      "draft": {
+        "first_author": "Stokes",
+        "year": 2018,
+        "title": "Recent perspectives regarding the role of dietary protein for the promotion of muscle hypertrophy",
+        "journal": "Nutrients",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "29414855",
+        "title": "Recent Perspectives Regarding the Role of Dietary Protein for the Promotion of Muscle Hypertrophy with Resistance Exercise Training.",
+        "first_author": "Stokes",
+        "year": 2018,
+        "journal": "Nutrients"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.75,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=29414855"
+    },
+    {
+      "slug": "yt_protein_excess",
+      "ref_idx": 6,
+      "raw": "Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33.",
+      "draft": {
+        "first_author": "Kerksick",
+        "year": 2017,
+        "title": "ISSN Position Stand: Nutrient Timing",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "28919842",
+        "title": "International society of sports nutrition position stand: nutrient timing.",
+        "first_author": "Kerksick",
+        "year": 2017,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.333,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=28919842"
+    },
+    {
+      "slug": "yt_training_exercises",
+      "ref_idx": 1,
+      "raw": "Pedrosa GF et al. (2023). Training at long muscle lengths leads to greater muscle hypertrophy: a systematic review with meta-analysis. Med Sci Sports Exerc. doi:10.1249/MSS.0000000000003120",
+      "draft": {
+        "first_author": "Pedrosa",
+        "year": 2023,
+        "title": "Training at long muscle lengths leads to greater muscle hypertrophy: a systematic review with meta-analysis",
+        "journal": null,
+        "doi": "10.1249/MSS.0000000000003120",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Presence of Wind Worsens the Effect of Cold Temperature on Time to Ischemia in Patients with Stable Angina",
+        "first_author": "BARRY",
+        "year": 2023,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_exercises",
+      "ref_idx": 2,
+      "raw": "Chavez ML et al. (2023). Incline vs flat bench press: effect on muscle activation and hypertrophy. J Strength Cond Res.",
+      "draft": {
+        "first_author": "Chavez",
+        "year": 2023,
+        "title": "Incline vs flat bench press: effect on muscle activation and hypertrophy",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_training_exercises",
+      "ref_idx": 3,
+      "raw": "Schoenfeld BJ & Grgic J (2020). Effects of range of motion on muscle development during resistance training. J Strength Cond Res, 34(5):1441-1453.",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2020,
+        "title": "Effects of range of motion on muscle development during resistance training",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "32030125",
+        "title": "Effects of range of motion on muscle development during resistance training interventions: A systematic review.",
+        "first_author": "Schoenfeld",
+        "year": 2020,
+        "journal": "SAGE open medicine"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.875,
+        "journal_match": false
+      },
+      "severity": "JOURNAL_MISMATCH",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=32030125"
+    },
+    {
+      "slug": "yt_training_exercises",
+      "ref_idx": 4,
+      "raw": "Vigotsky AD et al. (2018). Interpreting signal amplitudes in surface electromyography studies in sport and rehabilitation sciences. Front Physiol, 8:985. doi:10.3389/fphys.2017.00985",
+      "draft": {
+        "first_author": "Vigotsky",
+        "year": 2018,
+        "title": "Interpreting signal amplitudes in surface electromyography studies in sport and rehabilitation sciences",
+        "journal": "Front Physiol",
+        "doi": "10.3389/fphys.2017.00985",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Interpreting Signal Amplitudes in Surface Electromyography Studies in Sport and Rehabilitation Sciences",
+        "first_author": "Vigotsky",
+        "year": 2018,
+        "journal": "Frontiers in Physiology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_exercises",
+      "ref_idx": 5,
+      "raw": "Nippard J (2025). 7 Amazing Exercises No One Does. YouTube.",
+      "draft": {
+        "first_author": "Nippard",
+        "year": 2025,
+        "title": "7 Amazing Exercises No One Does",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "yt_training_past_failure",
+      "ref_idx": 1,
+      "raw": "Vieira AF et al. (2024). Training to failure vs not to failure for muscle hypertrophy: a systematic review with meta-analysis. Scand J Med Sci Sports, 34(1):e14265. doi:10.1111/sms.14265",
+      "draft": {
+        "first_author": "Vieira",
+        "year": 2024,
+        "title": "Training to failure vs not to failure for muscle hypertrophy: a systematic review with meta-analysis",
+        "journal": "Scand J Med Sci Sports",
+        "doi": "10.1111/sms.14265",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Short and mid‐term characteristics of COVID‐19 disease course in athletes: A high‐volume, single‐center study",
+        "first_author": "Juhász",
+        "year": 2022,
+        "journal": "Scandinavian Journal of Medicine &amp; Science in Sports"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": false,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_past_failure",
+      "ref_idx": 2,
+      "raw": "Grgic J et al. (2022). Effects of resistance training performed to repetition failure or non-failure on muscular strength and hypertrophy: a systematic review and meta-analysis. J Sport Health Sci, 11(2):202-211. doi:10.1016/j.jshs.2021.01.007",
+      "draft": {
+        "first_author": "Grgic",
+        "year": 2022,
+        "title": "Effects of resistance training performed to repetition failure or non-failure on muscular strength and hypertrophy: a systematic review and meta-analysis",
+        "journal": "J Sport Health Sci",
+        "doi": "10.1016/j.jshs.2021.01.007",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Effects of resistance training performed to repetition failure or non-failure on muscular strength and hypertrophy: A systematic review and meta-analysis",
+        "first_author": "Grgic",
+        "year": 2022,
+        "journal": "Journal of Sport and Health Science"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_past_failure",
+      "ref_idx": 3,
+      "raw": "Schoenfeld BJ & Grgic J (2019). Does training to failure maximize muscle hypertrophy? Strength Cond J, 41(5):108-113.",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2019,
+        "title": "Does training to failure maximize muscle hypertrophy? Strength Cond J, 41(5):108-113",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_training_past_failure",
+      "ref_idx": 4,
+      "raw": "Martorelli S et al. (2017). Strength training with repetitions to failure does not provide additional strength and muscle hypertrophy gains in young women. Eur J Transl Myol, 27(2):6339.",
+      "draft": {
+        "first_author": "Martorelli",
+        "year": 2017,
+        "title": "Strength training with repetitions to failure does not provide additional strength and muscle hypertrophy gains in young women",
+        "journal": "Eur J Transl Myol",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "28713535",
+        "title": "Strength Training with Repetitions to Failure does not Provide Additional Strength and Muscle Hypertrophy Gains in Young Women.",
+        "first_author": "Martorelli",
+        "year": 2017,
+        "journal": "European journal of translational myology"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=28713535"
+    },
+    {
+      "slug": "yt_training_past_failure",
+      "ref_idx": 5,
+      "raw": "Lacerda LT et al. (2020). Variations in repetition duration and repetition numbers influence muscular activation and blood lactate response in protocols equalized by time under tension. J Strength Cond Res, 34(4):952-960.",
+      "draft": {
+        "first_author": "Lacerda",
+        "year": 2020,
+        "title": "Variations in repetition duration and repetition numbers influence muscular activation and blood lactate response in protocols equalized by time under tension",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_training_upper_body",
+      "ref_idx": 1,
+      "raw": "Chavez ML et al. (2023). Effect of incline angle on upper and lower pectoral muscle activation during bench press. J Strength Cond Res.",
+      "draft": {
+        "first_author": "Chavez",
+        "year": 2023,
+        "title": "Effect of incline angle on upper and lower pectoral muscle activation during bench press",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_training_upper_body",
+      "ref_idx": 2,
+      "raw": "Pedrosa GF et al. (2023). Training at long muscle lengths leads to greater muscle hypertrophy. Med Sci Sports Exerc. doi:10.1249/MSS.0000000000003120",
+      "draft": {
+        "first_author": "Pedrosa",
+        "year": 2023,
+        "title": "Training at long muscle lengths leads to greater muscle hypertrophy",
+        "journal": null,
+        "doi": "10.1249/MSS.0000000000003120",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "The Presence of Wind Worsens the Effect of Cold Temperature on Time to Ischemia in Patients with Stable Angina",
+        "first_author": "BARRY",
+        "year": 2023,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": false,
+        "year_match": true,
+        "title_overlap": 0.0,
+        "journal_match": true
+      },
+      "severity": "DOI_WRONG",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_upper_body",
+      "ref_idx": 3,
+      "raw": "Schoenfeld BJ et al. (2021). Resistance training recommendations to maximize muscle hypertrophy in an athletic population. Strength Cond J, 43(4):3-13.",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2021,
+        "title": "Resistance training recommendations to maximize muscle hypertrophy in an athletic population",
+        "journal": "Strength Cond J",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    },
+    {
+      "slug": "yt_training_upper_body",
+      "ref_idx": 4,
+      "raw": "Fonseca RM et al. (2014). Changes in exercises are more effective than loading schemes to improve muscle strength. J Strength Cond Res, 28(11):3085-3092. doi:10.1519/JSC.0000000000000539",
+      "draft": {
+        "first_author": "Fonseca",
+        "year": 2014,
+        "title": "Changes in exercises are more effective than loading schemes to improve muscle strength",
+        "journal": "J Strength Cond Res",
+        "doi": "10.1519/JSC.0000000000000539",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Changes in Exercises Are More Effective Than in Loading Schemes to Improve Muscle Strength",
+        "first_author": "Fonseca",
+        "year": 2014,
+        "journal": "Journal of Strength and Conditioning Research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_upper_body",
+      "ref_idx": 5,
+      "raw": "Nippard J (2025). The Upper Body Workout I Followed For My 1 Year Transformation. YouTube.",
+      "draft": {
+        "first_author": "Nippard",
+        "year": 2025,
+        "title": "The Upper Body Workout I Followed For My 1 Year Transformation",
+        "journal": null,
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NOT_PUBMED_INDEXED",
+      "notes": "Textbook / institutional report / YouTube video / non-peer-reviewed source. Not verifiable via Crossref/PubMed. Editor should confirm the source exists and the quoted figures are accurate by hand."
+    },
+    {
+      "slug": "yt_training_volume_cut",
+      "ref_idx": 1,
+      "raw": "Baz-Valle E et al. (2024). The effects of exercise volume on muscle hypertrophy: updated systematic review and meta-analysis of 35 studies. Br J Sports Med. doi:10.1136/bjsports-2023-107803",
+      "draft": {
+        "first_author": "Baz-Valle",
+        "year": 2024,
+        "title": "The effects of exercise volume on muscle hypertrophy: updated systematic review and meta-analysis of 35 studies",
+        "journal": null,
+        "doi": "10.1136/bjsports-2023-107803",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "yt_training_volume_cut",
+      "ref_idx": 2,
+      "raw": "Schoenfeld BJ et al. (2019). Resistance training volume enhances muscle hypertrophy but not strength in trained men. Med Sci Sports Exerc, 51(1):94-103. doi:10.1249/MSS.0000000000001764",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2019,
+        "title": "Resistance training volume enhances muscle hypertrophy but not strength in trained men",
+        "journal": "Med Sci Sports Exerc",
+        "doi": "10.1249/MSS.0000000000001764",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Resistance Training Volume Enhances Muscle Hypertrophy but Not Strength in Trained Men",
+        "first_author": "SCHOENFELD",
+        "year": 2019,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_training_volume_cut",
+      "ref_idx": 3,
+      "raw": "Heaselgrave SR et al. (2019). Dose-response of weekly resistance training volume on muscular adaptations. Med Sci Sports Exerc, 51(5):1033-1040.",
+      "draft": {
+        "first_author": "Heaselgrave",
+        "year": 2019,
+        "title": "Dose-response of weekly resistance training volume on muscular adaptations",
+        "journal": "Med Sci Sports Exerc",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "30160627",
+        "title": "Dose-Response Relationship of Weekly Resistance-Training Volume and Frequency on Muscular Adaptations in Trained Men.",
+        "first_author": "Heaselgrave",
+        "year": 2019,
+        "journal": "International journal of sports physiology and performance"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.727,
+        "journal_match": false
+      },
+      "severity": "JOURNAL_MISMATCH",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=30160627"
+    },
+    {
+      "slug": "yt_training_volume_cut",
+      "ref_idx": 4,
+      "raw": "Krieger JW (2010). Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis. J Strength Cond Res, 24(4):1150-1159.",
+      "draft": {
+        "first_author": "Krieger",
+        "year": 2010,
+        "title": "Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "20300012",
+        "title": "Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis.",
+        "first_author": "Krieger",
+        "year": 2010,
+        "journal": "Journal of strength and conditioning research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=20300012"
+    },
+    {
+      "slug": "yt_training_volume_cut",
+      "ref_idx": 5,
+      "raw": "Helms ER et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. J Int Soc Sports Nutr, 11:20. doi:10.1186/1550-2783-11-20",
+      "draft": {
+        "first_author": "Helms",
+        "year": 2014,
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "journal": "J Int Soc Sports Nutr",
+        "doi": "10.1186/1550-2783-11-20",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation",
+        "first_author": "Helms",
+        "year": 2014,
+        "journal": "Journal of the International Society of Sports Nutrition"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_volume",
+      "ref_idx": 1,
+      "raw": "Schoenfeld BJ et al. (2019). Resistance training volume enhances muscle hypertrophy but not strength in trained men. Med Sci Sports Exerc, 51(1):94-103. doi:10.1249/MSS.0000000000001764",
+      "draft": {
+        "first_author": "Schoenfeld",
+        "year": 2019,
+        "title": "Resistance training volume enhances muscle hypertrophy but not strength in trained men",
+        "journal": "Med Sci Sports Exerc",
+        "doi": "10.1249/MSS.0000000000001764",
+        "pmid": null
+      },
+      "fetched": {
+        "title": "Resistance Training Volume Enhances Muscle Hypertrophy but Not Strength in Trained Men",
+        "first_author": "SCHOENFELD",
+        "year": 2019,
+        "journal": "Medicine &amp; Science in Sports &amp; Exercise"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": null
+    },
+    {
+      "slug": "yt_volume",
+      "ref_idx": 2,
+      "raw": "Baz-Valle E et al. (2024). The effects of exercise volume on muscle hypertrophy: updated systematic review and meta-analysis of 35 studies. Br J Sports Med. doi:10.1136/bjsports-2023-107803",
+      "draft": {
+        "first_author": "Baz-Valle",
+        "year": 2024,
+        "title": "The effects of exercise volume on muscle hypertrophy: updated systematic review and meta-analysis of 35 studies",
+        "journal": null,
+        "doi": "10.1136/bjsports-2023-107803",
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "DOI_FABRICATED",
+      "notes": "Neither Crossref nor doi.org can resolve this DOI. The DOI string appears to be fabricated.",
+      "fetch_error": "HTTP Error 404: Not Found"
+    },
+    {
+      "slug": "yt_volume",
+      "ref_idx": 3,
+      "raw": "Heaselgrave SR et al. (2019). Dose-response relationship of weekly resistance training volume and frequency on muscular adaptations. Med Sci Sports Exerc, 51(5):1033-1040.",
+      "draft": {
+        "first_author": "Heaselgrave",
+        "year": 2019,
+        "title": "Dose-response relationship of weekly resistance training volume and frequency on muscular adaptations",
+        "journal": "Med Sci Sports Exerc",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "30160627",
+        "title": "Dose-Response Relationship of Weekly Resistance-Training Volume and Frequency on Muscular Adaptations in Trained Men.",
+        "first_author": "Heaselgrave",
+        "year": 2019,
+        "journal": "International journal of sports physiology and performance"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 0.909,
+        "journal_match": false
+      },
+      "severity": "JOURNAL_MISMATCH",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=30160627"
+    },
+    {
+      "slug": "yt_volume",
+      "ref_idx": 4,
+      "raw": "Krieger JW (2010). Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis. J Strength Cond Res, 24(4):1150-1159.",
+      "draft": {
+        "first_author": "Krieger",
+        "year": 2010,
+        "title": "Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": {
+        "pmid": "20300012",
+        "title": "Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis.",
+        "first_author": "Krieger",
+        "year": 2010,
+        "journal": "Journal of strength and conditioning research"
+      },
+      "verify": {
+        "author_match": true,
+        "year_match": true,
+        "title_overlap": 1.0,
+        "journal_match": true
+      },
+      "severity": "OK",
+      "notes": "Matched via PubMed author+year+title search (no DOI in draft). PMID=20300012"
+    },
+    {
+      "slug": "yt_volume",
+      "ref_idx": 5,
+      "raw": "Hackett DA et al. (2018). Effect of increasing the volume of training on resistance training-related outcomes. J Strength Cond Res, 32(5):1254-1262.",
+      "draft": {
+        "first_author": "Hackett",
+        "year": 2018,
+        "title": "Effect of increasing the volume of training on resistance training-related outcomes",
+        "journal": "J Strength Cond Res",
+        "doi": null,
+        "pmid": null
+      },
+      "fetched": null,
+      "verify": {},
+      "severity": "NO_VERIFIABLE_SOURCE",
+      "notes": "No DOI, no PMID in the draft, and PubMed search on (first_author, year, title keywords) returned no hits."
+    }
+  ],
+  "generated_at": "2026-04-12",
+  "generator": "audits/_citation_audit.py"
+}

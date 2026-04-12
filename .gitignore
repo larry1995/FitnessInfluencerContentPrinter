@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Third-party downloaded PDFs (regenerable via pdf_downloader)
+Posts/*/pdfs/*.pdf
+Posts/pdfs/*.pdf
+
+# Raw scraper cache (regenerable, large, churns)
+Posts/raw/*.json
+
+# Scraper visited-state (machine-local runtime state, not source)
+Posts/.seen_*.json
+
+# Dev harness outputs
+/tmp/contentprinter_dev/
+
+# OS cruft
+.DS_Store
+Thumbs.db

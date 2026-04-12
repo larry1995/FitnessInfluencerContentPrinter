@@ -1,0 +1,50 @@
+{
+  "post_number": 18,
+  "topic_slug": "nutrition_vitamin_d",
+  "topic_label": "NUTRITION",
+  "source_name": "Frontiers in Nutrition + AJSM Systematic Reviews",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#VitaminD",
+    "#SupplementScience",
+    "#FitnessNutrition",
+    "#InjuryPrevention",
+    "#EvidenceBasedFitness",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#GymLife",
+    "#AthleteHealth"
+  ],
+  "references": [
+    {
+      "citation": "1. Farrokhyar F et al. (2024). Effects of vitamin D3 supplementation on strength of lower and upper extremities in athletes: an updated systematic review and meta-analysis of randomized controlled trials. Front Nutr, 11:1381301. doi:10.3389/fnut.2024.1381301",
+      "doi": "10.3389/fnut.2024.1381301"
+    },
+    {
+      "citation": "2. Wyatt PB et al. (2024). Effects of Vitamin D Supplementation in Elite Athletes: A Systematic Review. Am J Sports Med, 52(3). doi:10.1177/23259671231220371",
+      "doi": "10.1177/23259671231220371"
+    },
+    {
+      "citation": "3. Owens DJ et al. (2018). Vitamin D and the Athlete: Current Perspectives and New Challenges. Sports Med, 48(Suppl 1):3-16. doi:10.1007/s40279-017-0841-9",
+      "doi": "10.1007/s40279-017-0841-9"
+    },
+    {
+      "citation": "4. Angeline ME et al. (2013). The effects of vitamin D deficiency in athletes. Am J Sports Med, 41(2):461-464. doi:10.1177/0363546513475787",
+      "doi": "10.1177/0363546513475787"
+    },
+    {
+      "citation": "5. Dahlquist DT et al. (2015). Plausible ergogenic effects of vitamin D on athletic performance and recovery. J Int Soc Sports Nutr, 12:33. doi:10.1186/s12970-015-0093-8",
+      "doi": "10.1186/s12970-015-0093-8"
+    },
+    {
+      "citation": "6. Close GL et al. (2013). Assessment of vitamin D concentration in non-supplemented professional athletes and healthy adults during the winter months in the UK. J Sports Sci, 31(4):344-353. doi:10.1080/02640414.2012.733822",
+      "doi": "10.1080/02640414.2012.733822"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

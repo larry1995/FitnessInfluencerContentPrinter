@@ -1,0 +1,52 @@
+{
+  "topic_slug": "training_masters_lifters",
+  "entries": {
+    "ref01": {
+      "status": "ok",
+      "path": "training_masters_lifters/pdfs/ref01.pdf",
+      "sha256_16": "756ca13ba21eea5f",
+      "bytes": 614047,
+      "citation": "Strasser B & Schobersberger W (2011). J Obes, 2011:482564.",
+      "url": "https://europepmc.org/articles/PMC2931407?pdf=render",
+      "downloaded_at": "2026-04-12T00:55:06"
+    },
+    "ref02": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved_no_oa_mirror'",
+      "citation": "Peterson MD et al. (2010). Med Sci Sports Exerc, 43(2):249-258.",
+      "url": null
+    },
+    "ref03": {
+      "status": "ok",
+      "path": "training_masters_lifters/pdfs/ref03.pdf",
+      "sha256_16": "d104a8b40b4badd2",
+      "bytes": 1300731,
+      "citation": "Borde R et al. (2015). Sports Med, 45(12):1693-1720.",
+      "url": "https://link.springer.com/content/pdf/10.1007/s40279-015-0385-9.pdf",
+      "reused_existing": true,
+      "verified_at": "2026-04-12T00:26:40"
+    },
+    "ref04": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Fragala MS et al. (2019). J Strength Cond Res, 33(8):2019-2052.",
+      "url": null
+    },
+    "ref05": {
+      "status": "ok",
+      "path": "training_masters_lifters/pdfs/ref05.pdf",
+      "sha256_16": "34c5e2c21ba9b9d1",
+      "bytes": 1592485,
+      "citation": "Morton RW et al. (2018). Br J Sports Med, 52(6):376-384.",
+      "url": "https://europepmc.org/articles/PMC5867436?pdf=render",
+      "downloaded_at": "2026-04-12T00:55:08"
+    }
+  },
+  "last_run_at": "2026-04-12T00:54:59",
+  "summary": {
+    "ok": 2,
+    "planned": 0,
+    "skipped": 1,
+    "failed": 0
+  }
+}

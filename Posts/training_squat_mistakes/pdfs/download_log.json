@@ -1,0 +1,42 @@
+{
+  "topic_slug": "training_squat_mistakes",
+  "entries": {
+    "ref01": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Schoenfeld BJ (2010). J Strength Cond Res, 24(12):3497-3506.",
+      "url": null
+    },
+    "ref02": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Escamilla RF (2001). Med Sci Sports Exerc, 33(1):127-141.",
+      "url": null
+    },
+    "ref03": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Kritz M et al. (2009). Strength Cond J, 31(1):76-85.",
+      "url": null
+    },
+    "ref04": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Comfort P et al. (2018). Int J Sports Physiol Perform, 13(5):575-581.",
+      "url": null
+    },
+    "ref05": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved_no_oa_mirror'",
+      "citation": "Myer GD et al. (2014). Strength Cond J, 36(6):4-27.",
+      "url": null
+    }
+  },
+  "last_run_at": "2026-04-12T00:55:08",
+  "summary": {
+    "ok": 0,
+    "planned": 0,
+    "skipped": 1,
+    "failed": 0
+  }
+}

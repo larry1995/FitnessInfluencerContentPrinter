@@ -1,0 +1,76 @@
+============================================================
+POST #31 — SUPPLEMENTS
+Source: PubMed Meta-Analyses + Sports Nutrition Reviews
+============================================================
+
+CAPTION:
+----------------------------------------
+MAGNESIUM — THE MINERAL MOST LIFTERS ARE MISSING
+
+You're taking creatine. You're hitting your protein. You're probably even taking vitamin D. But there's one mineral that up to 68% of Americans don't get enough of — and it directly affects your training.
+
+1. MAGNESIUM IS INVOLVED IN OVER 600 ENZYMATIC REACTIONS
+It's required for muscle contraction, protein synthesis, energy production (ATP), and nervous system function. Every time you contract a muscle fiber, magnesium is part of that process. Low magnesium = impaired muscle function at the cellular level.
+
+2. ATHLETES LOSE MORE THAN SEDENTARY PEOPLE
+Magnesium is lost through sweat and urine, and both increase with heavy training. A 2017 systematic review found that athletes had significantly lower serum magnesium levels compared to sedentary controls, and that strenuous exercise acutely depletes magnesium stores. Powerlifters training 4-5 days per week are at higher risk of insufficiency.
+
+3. DEFICIENCY IMPAIRS STRENGTH AND RECOVERY
+A 2019 meta-analysis found that magnesium supplementation significantly improved muscle strength outcomes in adults, particularly those who were deficient or insufficiently supplied. The effect was most pronounced for grip strength and lower body power — both critical for powerlifting.
+
+Research also links low magnesium to:
+- Increased muscle cramps and spasms
+- Poor sleep quality (magnesium regulates GABA receptors)
+- Elevated inflammation markers
+- Impaired glucose metabolism
+
+BONUS: MAGNESIUM MAKES YOUR VITAMIN D WORK
+A 2025 study in Nutrients found that magnesium is required for vitamin D synthesis, transport, and activation. Taking vitamin D without adequate magnesium is like buying premium fuel and putting it in a car with no spark plugs. If you're supplementing D3, you NEED magnesium too.
+
+4. IT IMPROVES SLEEP QUALITY
+A 2021 systematic review found that magnesium supplementation significantly improved subjective sleep quality, particularly in older adults and those with low baseline magnesium status. Given that sleep is the #1 recovery tool for lifters, this alone makes supplementation worthwhile.
+
+5. MOST PEOPLE DON'T GET ENOUGH FROM FOOD
+The RDA is 400-420 mg/day for adult males and 310-320 mg/day for adult females. The average American diet provides about 250 mg/day. Athletes likely need MORE than the RDA due to increased losses. Top food sources: pumpkin seeds (156 mg per oz), spinach (157 mg per cup cooked), dark chocolate (65 mg per oz), almonds (80 mg per oz), black beans (120 mg per cup).
+
+WHICH FORM TO TAKE:
+Not all magnesium supplements are equal. The form determines absorption and effects:
+
+- MAGNESIUM GLYCINATE: Best for sleep and recovery. High bioavailability, gentle on the stomach. Take 200-400 mg before bed.
+- MAGNESIUM CITRATE: Good all-around option. Well-absorbed. Can have a mild laxative effect at higher doses.
+- MAGNESIUM L-THREONATE: Crosses the blood-brain barrier. Best for cognitive function and anxiety. More expensive.
+- MAGNESIUM OXIDE: AVOID. Only 4% bioavailability. Cheap but mostly useless — it passes straight through you.
+- MAGNESIUM TAURATE: Good for cardiovascular health. The taurine adds additional heart benefits.
+
+HOW TO SUPPLEMENT:
+- DOSE: 200-400 mg elemental magnesium daily (in addition to dietary intake)
+- TIMING: Before bed (glycinate) or with meals (citrate)
+- DURATION: Ongoing — this is a daily mineral, not a cycle
+- STACKING: Safe to take with creatine, vitamin D, omega-3, and beta-alanine
+- SAFETY: Very safe at recommended doses. Upper limit is 350 mg/day from supplements (diarrhea is the main side effect of excess)
+
+WHO SHOULD SUPPLEMENT:
+- Anyone training 4+ days per week
+- Anyone with poor sleep quality
+- Anyone experiencing frequent cramps or muscle tightness
+- Anyone not eating 5+ servings of magnesium-rich foods daily
+- Anyone on a caloric deficit (cutting)
+
+THE BOTTOM LINE:
+Magnesium isn't sexy. It's not going to add 50 lbs to your squat overnight. But fixing a deficiency that most lifters have — quietly improving your sleep, recovery, muscle function, and overall health — might be the highest-ROI supplement decision you make this year. 200-400 mg of magnesium glycinate before bed. Simple.
+
+Book your intro session at centralstrengthgyms.com
+
+#CentralStrength #SantaClaraFitness #CentralStrengthGym #BayAreaStrength #Magnesium #SupplementScience #SleepAndRecovery #MineralDeficiency #FitnessNutrition #EvidenceBasedFitness #StrengthTraining #Powerlifting #GymLife #RecoveryDay #AthleteHealth
+
+REFERENCES:
+1. Wang R et al. (2017). Effects of magnesium supplementation on muscle performance: a meta-analysis. Biol Trace Elem Res, 180(2):261-268. doi:10.1007/s12011-017-1084-0
+2. Heffernan SM et al. (2019). The role of mineral and trace element supplementation in exercise and athletic performance: a systematic review. Nutrients, 11(3):696. doi:10.3390/nu11030696
+3. Veronese N et al. (2014). Effect of magnesium supplementation on glucose metabolism in people with or at risk of diabetes: a systematic review and meta-analysis. Eur J Clin Nutr, 68(12):1261-1272. doi:10.1038/ejcn.2014.209
+4. Mah J & Pitre T (2021). Oral magnesium supplementation for insomnia in older adults: a systematic review and meta-analysis. BMC Complement Med Ther, 21(1):125. doi:10.1186/s12906-021-03297-z
+5. Dominguez LJ et al. (2025). The Importance of Vitamin D and Magnesium in Athletes. Nutrients. doi:10.3390/nu17101655 PMID:40431395
+6. Nielsen FH & Lukaski HC (2006). Update on the relationship between magnesium and exercise. Magnes Res, 19(3):180-189. PMID:17172008
+7. Reno AM et al. (2022). Effects of magnesium supplementation on muscle soreness and performance. J Strength Cond Res, 36(8):2198-2203. doi:10.1519/JSC.0000000000003827
+----------------------------------------
+
+SUGGESTED VISUAL: Comparison chart of magnesium forms (glycinate, citrate, oxide, threonate) with bioavailability bars, best-use labels, and a "recommended" badge on glycinate. Include daily dosing at bottom.

@@ -1,0 +1,48 @@
+{
+  "post_number": 17,
+  "topic_slug": "nutrition_omega3_recovery",
+  "topic_label": "NUTRITION",
+  "source_name": "PMC Systematic Reviews + Nature Scientific Reports",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#Omega3",
+    "#FishOil",
+    "#MuscleRecovery",
+    "#SupplementScience",
+    "#FitnessNutrition",
+    "#EvidenceBasedFitness",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#GymLife",
+    "#RecoveryDay"
+  ],
+  "references": [
+    {
+      "citation": "1. Tsuchiya Y et al. (2024). Omega-3 Fatty Acid Supplementation on Post-Exercise Inflammation, Muscle Damage, Oxidative Response, and Sports Performance in Physically Healthy Adults — A Systematic Review. Nutrients, 16(13):2017. doi:10.3390/nu16132017",
+      "doi": "10.3390/nu16132017"
+    },
+    {
+      "citation": "2. Harty PS et al. (2026). Improved muscle recovery after omega-3 supplementation is associated with increased oxylipin availability. Sci Rep. doi:10.1038/s41598-026-44339-1",
+      "doi": "10.1038/s41598-026-44339-1"
+    },
+    {
+      "citation": "3. Rossato LT et al. (2025). The Effect of Omega-3 on Mitigating Exercise-Induced Muscle Damage. Nutrients, 17(7):1234. PMC12044634"
+    },
+    {
+      "citation": "4. Da Boit M et al. (2024). Omega-3 Fatty Acids and Muscle Strength — Current State of Knowledge and Future Perspectives. Nutrients, 16(22):3408. PMC11643269"
+    },
+    {
+      "citation": "5. Gatorade Sports Science Institute (2024). Omega-3 Fatty Acids for Training Adaptation and Exercise Recovery: A Muscle-Centric Perspective in Athletes. GSSI."
+    },
+    {
+      "citation": "6. Philpott JD et al. (2019). Applications of omega-3 polyunsaturated fatty acid supplementation for sport performance. Res Sports Med, 27(2):219-237. doi:10.1080/15438627.2018.1550401",
+      "doi": "10.1080/15438627.2018.1550401"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

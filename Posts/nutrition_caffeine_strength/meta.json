@@ -1,0 +1,46 @@
+{
+  "post_number": 14,
+  "topic_slug": "nutrition_caffeine_strength",
+  "topic_label": "NUTRITION",
+  "source_name": "Frontiers in Nutrition + PubMed Meta-Analyses",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#PreWorkout",
+    "#Caffeine",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#ScienceBasedTraining",
+    "#FitnessNutrition",
+    "#EvidenceBasedFitness",
+    "#GymLife",
+    "#SquatBenchDeadlift"
+  ],
+  "references": [
+    {
+      "citation": "1. Machado M et al. (2025). Effects of acute caffeine intake on muscular power during resistance exercise: a systematic review and meta-analysis. Front Nutr, 12:1686283. doi:10.3389/fnut.2025.1686283",
+      "doi": "10.3389/fnut.2025.1686283"
+    },
+    {
+      "citation": "2. Ferreira TT et al. (2024). The effect of caffeine supplementation on muscular strength and endurance: A meta-analysis of meta-analyses. Heliyon, 10(19):e38529. doi:10.1016/j.heliyon.2024.e38529",
+      "doi": "10.1016/j.heliyon.2024.e38529"
+    },
+    {
+      "citation": "3. Grgic J et al. (2025). How does acute caffeine ingestion affect maximal strength and muscular power in bench press and back squat? J Int Soc Sports Nutr, 22(1):2587791. doi:10.1080/15502783.2025.2587791",
+      "doi": "10.1080/15502783.2025.2587791"
+    },
+    {
+      "citation": "4. Grgic J et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. J Int Soc Sports Nutr, 15:11. doi:10.1186/s12970-018-0216-0",
+      "doi": "10.1186/s12970-018-0216-0"
+    },
+    {
+      "citation": "5. Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33. doi:10.1186/s12970-017-0189-4",
+      "doi": "10.1186/s12970-017-0189-4"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

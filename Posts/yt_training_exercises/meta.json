@@ -1,0 +1,43 @@
+{
+  "post_number": 20,
+  "topic_slug": "yt_training_exercises",
+  "topic_label": "TRAINING (YouTube)",
+  "source_name": "Jeff Nippard + Exercise Science Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#UnderratedExercises",
+    "#JeffNippard",
+    "#ExerciseScience",
+    "#StrengthTraining",
+    "#Hypertrophy",
+    "#Powerlifting",
+    "#MovementQuality",
+    "#GymLife",
+    "#WorkoutTips"
+  ],
+  "references": [
+    {
+      "citation": "1. Pedrosa GF et al. (2023). Training at long muscle lengths leads to greater muscle hypertrophy: a systematic review with meta-analysis. Med Sci Sports Exerc. doi:10.1249/MSS.0000000000003120",
+      "doi": "10.1249/MSS.0000000000003120"
+    },
+    {
+      "citation": "2. Chavez ML et al. (2023). Incline vs flat bench press: effect on muscle activation and hypertrophy. J Strength Cond Res."
+    },
+    {
+      "citation": "3. Schoenfeld BJ & Grgic J (2020). Effects of range of motion on muscle development during resistance training. J Strength Cond Res, 34(5):1441-1453."
+    },
+    {
+      "citation": "4. Vigotsky AD et al. (2018). Interpreting signal amplitudes in surface electromyography studies in sport and rehabilitation sciences. Front Physiol, 8:985. doi:10.3389/fphys.2017.00985",
+      "doi": "10.3389/fphys.2017.00985"
+    },
+    {
+      "citation": "5. Nippard J (2025). 7 Amazing Exercises No One Does. YouTube."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

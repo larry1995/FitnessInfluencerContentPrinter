@@ -1,0 +1,37 @@
+{
+  "source_type": "reddit",
+  "subreddit": "powerlifting",
+  "thread_title": "Weekly discussion: RPE vs percentage training — what does the research say?",
+  "thread_score": 420,
+  "thread_permalink": "https://old.reddit.com/r/powerlifting/comments/fake001/weekly_discussion_rpe_vs_percentages/",
+  "op_author": "u/example_user",
+  "op_body": "Good breakdown here: strongerbyscience.com/autoregulation — and a 2018 meta-analysis on PubMed (12345678). Curious what people actually experience week to week. I've been on percentage-based for 2 years and just switched to RPE-based for the past 8 weeks.",
+  "fetched_at": "2026-04-12T00:15:00",
+  "evidence_info": {},
+  "reddit_callouts": [
+    {
+      "author": "u/coachX",
+      "score": 412,
+      "body": "Both work. Volume-equated studies show comparable strength gains. RPE is more forgiving on low-readiness days; percentages are easier to auto-progress when you're sleep-deprived and your proprioception is shot. Pick the one you'll actually follow for 12 weeks.",
+      "permalink": "https://old.reddit.com/r/powerlifting/comments/fake001/_/fakecomment01/",
+      "is_op_reply": false,
+      "flair": "Verified Coach"
+    },
+    {
+      "author": "u/lifter99",
+      "score": 187,
+      "body": "Hot take: for beginners RPE is actively harmful because you can't accurately rate effort until you've missed a few lifts. First 6 months should be percentage-based with clear progression rules, then layer RPE on top.",
+      "permalink": "https://old.reddit.com/r/powerlifting/comments/fake001/_/fakecomment02/",
+      "is_op_reply": false,
+      "flair": null
+    },
+    {
+      "author": "u/meta_analyst",
+      "score": 94,
+      "body": "The Helms 2018 paper everyone cites is a review, not an RCT. The two direct-comparison studies it references have total N under 30 combined. Take the 'both are equivalent' conclusion with a large grain of salt — we don't have enough data to say that definitively.",
+      "permalink": "https://old.reddit.com/r/powerlifting/comments/fake001/_/fakecomment03/",
+      "is_op_reply": false,
+      "flair": "Sports Science"
+    }
+  ]
+}

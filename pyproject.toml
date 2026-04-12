@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contentprinter"
+version = "0.1.1"
+description = "Instagram content pipeline for Central Strength Gym — stable library surface for CentralStrengthKB."
+readme = "API_SURFACE.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [{ name = "Central Strength Gym", email = "contentprinter@centralstrengthgyms.com" }]
+keywords = ["fitness", "content-generation", "instagram", "powerlifting"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Other Audience",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics",
+]
+
+# Dependencies mirror requirements.txt. If that file grows, mirror the new
+# entries here — there is no automatic sync. Kept tight on purpose: the
+# library shim is intentionally dependency-light so FastAPI hosts can pin
+# their own versions without conflict.
+dependencies = [
+    "requests>=2.28",
+    "beautifulsoup4>=4.12",
+    "feedparser>=6.0",
+    "Pillow>=10.0",
+]
+
+[project.urls]
+Homepage = "https://centralstrengthgyms.com"
+Documentation = "https://github.com/centralstrengthgyms/contentprinter/blob/main/API_SURFACE.md"
+
+# ---------------------------------------------------------------------------
+# Layout — PRAGMATIC TWO-SURFACE INSTALL
+# ---------------------------------------------------------------------------
+#
+# This pyproject ships TWO install surfaces:
+#
+#   1. `contentprinter/` — the public package at repo root. All stable
+#      symbols documented in API_SURFACE.md live here. Consumers import
+#      from `contentprinter.*` only.
+#
+#   2. `src/*.py` — internal pipeline modules installed as top-level
+#      modules (via py-modules + package_dir mapping below) so that the
+#      shim modules' bare `import drafter`, `import single_page_generator`
+#      etc. resolve correctly in both dev mode and install mode.
+#
+# This is NOT the clean long-term layout. The desired layout is
+# `contentprinter._internal.drafter` etc. (internals in a private
+# subpackage, no top-level namespace pollution), but achieving that
+# requires either (a) rewriting every `src/*.py` intra-src import from
+# absolute (`import drafter`) to relative (`from . import drafter`) and
+# switching the CLI entry point from `python src/main.py` to
+# `python -m src.main`, OR (b) moving src/ → contentprinter/_internal/.
+# Both are ~25 import-line rewrites plus CLI/docs/CI updates, which is
+# out of scope for a packaging task that was scoped at ~20 lines.
+#
+# Filed as a follow-up sprint item — see task comment history from the
+# #28 pass. Until that refactor ships, the install surface has a known
+# minor leak (top-level `drafter`, `single_page_generator`, etc. names
+# become importable in a venv that installed this package). Documented
+# in API_SURFACE.md § 9 "Internal stability notes" so external consumers
+# know not to rely on the leaked names.
+
+[tool.setuptools]
+# The top-level `contentprinter` package lives in ./contentprinter/.
+packages = ["contentprinter"]
+# Individual src/ modules are installed as top-level modules so
+# `from drafter import draft_post_template` works after `pip install`.
+py-modules = [
+    "biorxiv_scraper",
+    "chinese_drafter",
+    "drafter",
+    "forum_scraper",
+    "http_utils",
+    "image_generator",
+    "llm_client",
+    "main",
+    "pdf_downloader",
+    "pdf_generator",
+    "posts_layout",
+    "pubmed_scraper",
+    "recursive_discovery",
+    "reddit_scraper",
+    "reorganize_posts",
+    "scraper",
+    "single_page_generator",
+    "source_promoter",
+    "youtube_scraper",
+]
+
+[tool.setuptools.package-dir]
+contentprinter = "contentprinter"
+"" = "src"

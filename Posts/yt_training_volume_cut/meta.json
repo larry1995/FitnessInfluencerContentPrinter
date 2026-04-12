@@ -1,0 +1,44 @@
+{
+  "post_number": 19,
+  "topic_slug": "yt_training_volume_cut",
+  "topic_label": "TRAINING (YouTube)",
+  "source_name": "Jeff Nippard + PubMed Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#TrainingVolume",
+    "#JeffNippard",
+    "#ScienceBasedTraining",
+    "#Hypertrophy",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#MinimumEffectiveDose",
+    "#EvidenceBasedFitness",
+    "#GymLife"
+  ],
+  "references": [
+    {
+      "citation": "1. Baz-Valle E et al. (2024). The effects of exercise volume on muscle hypertrophy: updated systematic review and meta-analysis of 35 studies. Br J Sports Med. doi:10.1136/bjsports-2023-107803",
+      "doi": "10.1136/bjsports-2023-107803"
+    },
+    {
+      "citation": "2. Schoenfeld BJ et al. (2019). Resistance training volume enhances muscle hypertrophy but not strength in trained men. Med Sci Sports Exerc, 51(1):94-103. doi:10.1249/MSS.0000000000001764",
+      "doi": "10.1249/MSS.0000000000001764"
+    },
+    {
+      "citation": "3. Heaselgrave SR et al. (2019). Dose-response of weekly resistance training volume on muscular adaptations. Med Sci Sports Exerc, 51(5):1033-1040."
+    },
+    {
+      "citation": "4. Krieger JW (2010). Single vs. multiple sets of resistance exercise for muscle hypertrophy: a meta-analysis. J Strength Cond Res, 24(4):1150-1159."
+    },
+    {
+      "citation": "5. Helms ER et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. J Int Soc Sports Nutr, 11:20. doi:10.1186/1550-2783-11-20",
+      "doi": "10.1186/1550-2783-11-20"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

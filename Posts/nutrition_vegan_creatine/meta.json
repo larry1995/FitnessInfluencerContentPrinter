@@ -1,0 +1,41 @@
+{
+  "post_number": 1,
+  "topic_slug": "nutrition_vegan_creatine",
+  "topic_label": "NUTRITION",
+  "source_name": "BarBend + PubMed Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#VeganFitness",
+    "#Creatine",
+    "#SupplementScience",
+    "#FitnessNutrition",
+    "#PlantBasedAthlete",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#GymLife",
+    "#EvidenceBasedFitness"
+  ],
+  "references": [
+    {
+      "citation": "1. Forbes SC et al. (2025). Effects of Creatine Supplementation on Upper- and Lower-Body Strength and Power: A Systematic Review and Meta-Analysis. Nutrients, 17(17), 2748. doi:10.3390/nu17172748",
+      "doi": "10.3390/nu17172748"
+    },
+    {
+      "citation": "2. Candow DG et al. (2024). Effects of Creatine Supplementation and Resistance Training on Muscle Strength Gains in Adults <50 Years: Systematic Review and Meta-Analysis. J Int Soc Sports Nutr, 21(1). PMID:39519498",
+      "pmid": "39519498"
+    },
+    {
+      "citation": "3. Antonio J et al. (2021). Common questions and misconceptions about creatine supplementation. J Int Soc Sports Nutr, 18(1):45. doi:10.1186/s12970-021-00412-w",
+      "doi": "10.1186/s12970-021-00412-w"
+    },
+    {
+      "citation": "4. ACE Fitness (2025). Creatine Reconsidered: What the Latest Research Reveals."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

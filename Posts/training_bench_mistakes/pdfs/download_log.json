@@ -1,0 +1,42 @@
+{
+  "topic_slug": "training_bench_mistakes",
+  "entries": {
+    "ref01": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Green CM & Comfort P (2007). Strength Cond J, 29(5):10-14.",
+      "url": null
+    },
+    "ref02": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Lehman GJ (2005). J Strength Cond Res, 19(3):587-591.",
+      "url": null
+    },
+    "ref03": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Duffey MJ & Challis JH (2011). J Strength Cond Res, 25(9):2442-2447.",
+      "url": null
+    },
+    "ref04": {
+      "status": "skipped",
+      "reason": "researcher status='unresolved'",
+      "citation": "Gomo O & Van den Tillaar R (2016). J Sports Sci, 34(3):232-238.",
+      "url": null
+    },
+    "ref05": {
+      "status": "skipped",
+      "reason": "researcher status='pmid_only'",
+      "citation": "Fees M et al. (1998). Am J Sports Med, 26(5):732-742.",
+      "url": null
+    }
+  },
+  "last_run_at": "2026-04-12T00:26:40",
+  "summary": {
+    "ok": 0,
+    "planned": 0,
+    "skipped": 5,
+    "failed": 0
+  }
+}

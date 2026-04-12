@@ -1,0 +1,1341 @@
+{
+  "_meta": {
+    "generated_by": "researcher (pre-resolution for Posts 22-41)",
+    "generated_at": "2026-04-11",
+    "source_of_truth": "config/content_strategy.md posts 22-41 target-sources section",
+    "resolver_strategy": "Crossref-first search by author+keywords+year (no pre-typed DOIs). Strict verification required: first-author surname must match the content_strategy.md hint, year must fall in ±1 year window, journal family must match, and title must share >=25% of content words with the query keywords. Unresolved entries were retried with a wider query (no journal filter). DOIs confirmed to match are then sent to Unpaywall -> PMC OA fallback.",
+    "unpaywall_email": "contentprinter@centralstrengthgyms.com",
+    "total_references": 60,
+    "status_counts": {
+      "doi_only": 24,
+      "ok": 31,
+      "unresolved": 5
+    },
+    "schema": {
+      "status_values": [
+        "ok",
+        "doi_only",
+        "unresolved"
+      ],
+      "fields_per_ref": [
+        "ref_idx",
+        "query (author/year/keywords/journal_hint)",
+        "doi",
+        "citation",
+        "pdf_url",
+        "source",
+        "status",
+        "is_oa",
+        "landing",
+        "_audit (title_overlap, first_author_match, paper_title)",
+        "notes"
+      ]
+    },
+    "important_caveats": [
+      "These references are PRE-RESOLVED for posts that have not yet been drafted. The slug names are researcher guesses; frontend-writer may rename when drafting.",
+      "Two entries were demoted during audit (nutrition_low_fat_myth #3 and rehab_low_back_movement_new #2) because Crossref returned semantically adjacent but wrong papers. Consider these references as 'needs alternative source'.",
+      "Three entries could not be resolved at all (status=unresolved, no DOI) — researcher can retry once content_strategy.md adds richer citation hints.",
+      "One reference (Wilson 2012 concurrent training) appears in two slugs and correctly resolves to the same DOI both times."
+    ],
+    "frontend_writer_instructions": "When drafting Posts 22-41, prefer citations from status='ok' entries (verified + OA). For status='doi_only' entries you can still cite by DOI — the paper exists and is correct, just not open-access for us to download. For status='unresolved' entries, you'll need to pick a different reference; flag them back to researcher via SendMessage with the post slug and ref_idx.",
+    "backend_writer_instructions": "This JSON is NOT yet a download manifest. Once frontend-writer drafts the posts and assigns final slug names, promote the status='ok' entries into training_pdf_urls.json (or a similar manifest) and run the Task #3 downloader. Validate every response starts with '%PDF'."
+  },
+  "training_beginner_12wk": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Rhea",
+        "year": 2003,
+        "keywords": "dose response strength development meta-analysis",
+        "journal_hint": "Med Sci Sports Exerc"
+      },
+      "doi": "10.1249/01.mss.0000053727.63505.d4",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "RHEA MATTHEW R. et al. (2003). A Meta-analysis to Determine the Dose Response for Strength Development. Medicine &amp; Science in Sports &amp; Exercise. doi:10.1249/01.mss.0000053727.63505.d4",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "A Meta-analysis to Determine the Dose Response for Strength Development",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Peterson",
+        "year": 2005,
+        "keywords": "dose-response muscular strength resistance training prescription",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/00124278-200511000-00038",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "PETERSON MARK D. et al. (2005). APPLICATIONS OF THE DOSE-RESPONSE FOR MUSCULAR STRENGTH DEVELOPMENT. Journal of Strength and Conditioning Research. doi:10.1519/00124278-200511000-00038",
+      "_audit": {
+        "title_overlap": 0.57,
+        "paper_title": "APPLICATIONS OF THE DOSE-RESPONSE FOR MUSCULAR STRENGTH DEVELOPMENT",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Schoenfeld",
+        "year": 2017,
+        "keywords": "dose-response relationship resistance training frequency muscle hypertrophy",
+        "journal_hint": "J Sports Sci"
+      },
+      "doi": "10.1080/02640414.2016.1243800",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Schoenfeld Brad J. et al. (2016). The dose–response relationship between resistance training volume and muscle hypertrophy: are there really still any doubts?. Journal of Sports Sciences. doi:10.1080/02640414.2016.1243800",
+      "_audit": {
+        "title_overlap": 0.88,
+        "paper_title": "The dose–response relationship between resistance training volume and muscle hypertrophy: are there ",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "nutrition_low_fat_myth": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Hall",
+        "year": 2015,
+        "keywords": "calorie dietary fat restriction body fat loss carbohydrate obesity",
+        "journal_hint": "Cell Metab"
+      },
+      "doi": "10.1016/j.cmet.2015.08.009",
+      "pdf_url": "http://www.cell.com/article/S1550413115004003/pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Hall Kevin D. et al. (2015). Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than Carbohydrate Restriction in People with Obesity. Cell Metabolism. doi:10.1016/j.cmet.2015.08.009",
+      "is_oa": true,
+      "landing": "http://www.cell.com/article/S1550413115004003/pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Calorie for Calorie, Dietary Fat Restriction Results in More Body Fat Loss than Carbohydrate Restric",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Aragon",
+        "year": 2017,
+        "keywords": "ISSN position stand diets body composition",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/s12970-017-0174-y",
+      "pdf_url": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0174-y",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Aragon Alan A. et al. (2017). International society of sports nutrition position stand: diets and body composition. Journal of the International Society of Sports Nutrition. doi:10.1186/s12970-017-0174-y",
+      "is_oa": true,
+      "landing": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0174-y",
+      "_audit": {
+        "title_overlap": 0.83,
+        "paper_title": "International society of sports nutrition position stand: diets and body composition",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.83). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Hooper",
+        "year": 2020,
+        "keywords": "reducing total fat intake body weight systematic review",
+        "journal_hint": "BMJ"
+      },
+      "doi": "10.1136/bmj.l4697",
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "citation": "Brown Tracey J et al. (2019). Omega-3, omega-6, and total dietary polyunsaturated fat for prevention and treatment of type 2 diabetes mellitus: systematic review and meta-analysis of randomised controlled trials. BMJ. doi:10.1136/bmj.l4697",
+      "is_oa": true,
+      "landing": "https://www.bmj.com/content/bmj/366/bmj.l4697.full.pdf",
+      "_audit": {
+        "title_overlap": 0.2,
+        "paper_title": "Omega-3, omega-6, and total dietary polyunsaturated fat for prevention and treatment of type 2 diabe",
+        "first_author_match": false
+      },
+      "notes": "Crossref candidate failed strict verification (title overlap <25% or first-author mismatch). The DOI the query found belongs to a different paper."
+    }
+  ],
+  "supplements_beta_alanine_new": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Trexler",
+        "year": 2015,
+        "keywords": "ISSN position stand beta-alanine supplementation exercise",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/s12970-015-0090-y",
+      "pdf_url": "https://www.tandfonline.com/doi/epdf/10.1186/s12970-015-0090-y?needAccess=true&role=button",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Trexler Eric T. et al. (2015). International society of sports nutrition position stand: Beta-Alanine. Journal of the International Society of Sports Nutrition. doi:10.1186/s12970-015-0090-y",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/epdf/10.1186/s12970-015-0090-y?needAccess=true&role=button",
+      "_audit": {
+        "title_overlap": 0.57,
+        "paper_title": "International society of sports nutrition position stand: Beta-Alanine",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.57). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Saunders",
+        "year": 2017,
+        "keywords": "beta-alanine supplementation exercise capacity performance systematic review meta-analysis",
+        "journal_hint": "Br J Sports Med"
+      },
+      "doi": "10.1136/bjsports-2016-096396",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/51/8/658.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Saunders Bryan et al. (2016). β-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis. British Journal of Sports Medicine. doi:10.1136/bjsports-2016-096396",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/51/8/658.full.pdf",
+      "_audit": {
+        "title_overlap": 0.83,
+        "paper_title": "β-alanine supplementation to improve exercise capacity and performance: a systematic review and meta",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.83). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Hobson",
+        "year": 2012,
+        "keywords": "beta-alanine supplementation exercise performance meta-analysis",
+        "journal_hint": "Amino Acids"
+      },
+      "doi": "10.1007/s00726-011-1200-z",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00726-011-1200-z.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Hobson R. M. et al. (2012). Effects of β-alanine supplementation on exercise performance: a meta-analysis. Amino Acids. doi:10.1007/s00726-011-1200-z",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007/s00726-011-1200-z.pdf",
+      "_audit": {
+        "title_overlap": 0.8,
+        "paper_title": "Effects of β-alanine supplementation on exercise performance: a meta-analysis",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.8). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "cardio_concurrent_new": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Wilson",
+        "year": 2012,
+        "keywords": "concurrent training meta-analysis interference aerobic resistance",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0b013e31823a3e2d",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Wilson Jacob M. et al. (2012). Concurrent Training. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0b013e31823a3e2d",
+      "_audit": {
+        "title_overlap": 0.4,
+        "paper_title": "Concurrent Training",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Murach",
+        "year": 2016,
+        "keywords": "skeletal muscle hypertrophy concurrent exercise training interference",
+        "journal_hint": "Sports Med"
+      },
+      "doi": "10.1007/s40279-016-0496-y",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Murach Kevin A. et al. (2016). Skeletal Muscle Hypertrophy with Concurrent Exercise Training: Contrary Evidence for an Interference Effect. Sports Medicine. doi:10.1007/s40279-016-0496-y",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Skeletal Muscle Hypertrophy with Concurrent Exercise Training: Contrary Evidence for an Interference",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Schumann",
+        "year": 2022,
+        "keywords": "concurrent aerobic strength training skeletal muscle updated systematic review",
+        "journal_hint": "Sports Med"
+      },
+      "doi": "10.1007/s40279-021-01587-7",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40279-021-01587-7.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Schumann Moritz et al. (2021). Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis. Sports Medicine. doi:10.1007/s40279-021-01587-7",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007/s40279-021-01587-7.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An ",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "rehab_low_back_movement_new": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Hayden",
+        "year": 2021,
+        "keywords": "exercise therapy chronic low back pain Cochrane",
+        "journal_hint": "Cochrane Database Syst Rev"
+      },
+      "doi": "10.1002/14651858.cd009790.pub2",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Hayden Jill A et al. (2021). Exercise therapy for chronic low back pain. Cochrane Database of Systematic Reviews. doi:10.1002/14651858.cd009790.pub2",
+      "_audit": {
+        "title_overlap": 0.83,
+        "paper_title": "Exercise therapy for chronic low back pain",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Owen",
+        "year": 2020,
+        "keywords": "specific modes exercise training treating low back pain network meta-analysis",
+        "journal_hint": "Br J Sports Med"
+      },
+      "doi": "10.1136/bjsports-2020-102673",
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "citation": "Belavy Daniel L et al. (2020). Response to Discussion: ‘Which specific modes of exercise training are most effective for treating low back pain? Network meta-analysis’. British Journal of Sports Medicine. doi:10.1136/bjsports-2020-102673",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Response to Discussion: ‘Which specific modes of exercise training are most effective for treating l",
+        "first_author_match": false
+      },
+      "notes": "Crossref candidate failed strict verification (title overlap <25% or first-author mismatch). The DOI the query found belongs to a different paper."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Searle",
+        "year": 2015,
+        "keywords": "exercise interventions chronic non-specific low back pain systematic review",
+        "journal_hint": "Clin Rehabil"
+      },
+      "doi": "10.1177/0269215515570379",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Searle Angela et al. (2015). Exercise interventions for the treatment of chronic low back pain: a systematic review and meta-analysis of randomised controlled trials. Clinical Rehabilitation. doi:10.1177/0269215515570379",
+      "_audit": {
+        "title_overlap": 0.83,
+        "paper_title": "Exercise interventions for the treatment of chronic low back pain: a systematic review and meta-anal",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "training_texas_method_rpe": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Zourdos",
+        "year": 2016,
+        "keywords": "resistance training RPE scale repetitions in reserve",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0000000000001049",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Zourdos Michael C. et al. (2016). Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reserve. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0000000000001049",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Novel Resistance Training–Specific Rating of Perceived Exertion Scale Measuring Repetitions in Reser",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Rhea",
+        "year": 2003,
+        "keywords": "dose response strength development meta-analysis",
+        "journal_hint": "Med Sci Sports Exerc"
+      },
+      "doi": "10.1249/01.mss.0000053727.63505.d4",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "RHEA MATTHEW R. et al. (2003). A Meta-analysis to Determine the Dose Response for Strength Development. Medicine &amp; Science in Sports &amp; Exercise. doi:10.1249/01.mss.0000053727.63505.d4",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "A Meta-analysis to Determine the Dose Response for Strength Development",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Helms",
+        "year": 2017,
+        "keywords": "RPE velocity relationships back squat bench press deadlift powerlifters",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0000000000001517",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Helms Eric R. et al. (2017). RPE and Velocity Relationships for the Back Squat, Bench Press, and Deadlift in Powerlifters. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0000000000001517",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "RPE and Velocity Relationships for the Back Squat, Bench Press, and Deadlift in Powerlifters",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "nutrition_clean_eating_new": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Aragon",
+        "year": 2017,
+        "keywords": "ISSN position stand diets body composition",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/s12970-017-0174-y",
+      "pdf_url": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0174-y",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Aragon Alan A. et al. (2017). International society of sports nutrition position stand: diets and body composition. Journal of the International Society of Sports Nutrition. doi:10.1186/s12970-017-0174-y",
+      "is_oa": true,
+      "landing": "https://jissn.biomedcentral.com/track/pdf/10.1186/s12970-017-0174-y",
+      "_audit": {
+        "title_overlap": 0.83,
+        "paper_title": "International society of sports nutrition position stand: diets and body composition",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.83). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Helms",
+        "year": 2014,
+        "keywords": "evidence-based recommendations natural bodybuilding contest preparation nutrition",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/1550-2783-11-20",
+      "pdf_url": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Helms Eric R et al. (2014). Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplementation. Journal of the International Society of Sports Nutrition. doi:10.1186/1550-2783-11-20",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-11-20?needAccess=true",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Evidence-based recommendations for natural bodybuilding contest preparation: nutrition and supplemen",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Jager",
+        "year": 2017,
+        "keywords": "ISSN position stand protein exercise",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "citation": null,
+      "candidates_count": 5,
+      "notes": "Crossref returned no candidate matching first-author surname + year window. Reference may need manual lookup or the hint citation in content_strategy.md may be incorrect."
+    }
+  ],
+  "cardio_zone2_powerlifters": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "MacDougall",
+        "year": 1985,
+        "keywords": "arterial blood pressure response heavy resistance exercise",
+        "journal_hint": "J Appl Physiol"
+      },
+      "doi": "10.1152/jappl.1985.58.3.785",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "MacDougall J. D. et al. (1985). Arterial blood pressure response to heavy resistance exercise. Journal of Applied Physiology. doi:10.1152/jappl.1985.58.3.785",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Arterial blood pressure response to heavy resistance exercise",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Wernbom",
+        "year": 2007,
+        "keywords": "influence frequency intensity volume mode resistance muscle cross-sectional area",
+        "journal_hint": "Sports Med"
+      },
+      "doi": "10.2165/00007256-200737030-00004",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Wernbom Mathias et al. (2007). The Influence of Frequency, Intensity, Volume and Mode of Strength Training on Whole Muscle Cross-Sectional Area in Humans. Sports Medicine. doi:10.2165/00007256-200737030-00004",
+      "_audit": {
+        "title_overlap": 0.89,
+        "paper_title": "The Influence of Frequency, Intensity, Volume and Mode of Strength Training on Whole Muscle Cross-Se",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Haykowsky",
+        "year": 2013,
+        "keywords": "determinants exercise intolerance heart failure preserved ejection fraction",
+        "journal_hint": "J Am Coll Cardiol"
+      },
+      "doi": "10.1016/j.hfc.2014.04.001",
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4134949/pdf/",
+      "source": "pmc:PMC4134949",
+      "status": "ok",
+      "citation": "Haykowsky Mark J. et al. (2014). Exercise Physiology in Heart Failure and Preserved Ejection Fraction. Heart Failure Clinics. doi:10.1016/j.hfc.2014.04.001",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.75,
+        "paper_title": "Exercise Physiology in Heart Failure and Preserved Ejection Fraction",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.75). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "rehab_shoulder_bulletproof": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Kolber",
+        "year": 2010,
+        "keywords": "shoulder injuries resistance training brief review",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0b013e3181dc4330",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Kolber Morey J et al. (2010). Shoulder Injuries Attributed to Resistance Training: A Brief Review. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0b013e3181dc4330",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Shoulder Injuries Attributed to Resistance Training: A Brief Review",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Cools",
+        "year": 2014,
+        "keywords": "rehabilitation scapular dyskinesis office worker elite overhead athlete",
+        "journal_hint": "Br J Sports Med"
+      },
+      "doi": "10.1136/bjsports-2013-092148",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/48/8/692.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Cools Ann M J et al. (2013). Rehabilitation of scapular dyskinesis: from the office worker to the elite overhead athlete. British Journal of Sports Medicine. doi:10.1136/bjsports-2013-092148",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/48/8/692.full.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Rehabilitation of scapular dyskinesis: from the office worker to the elite overhead athlete",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Reinold",
+        "year": 2009,
+        "keywords": "current concepts scientific basis exercise programs shoulder rehabilitation",
+        "journal_hint": "J Orthop Sports Phys Ther"
+      },
+      "doi": "10.1177/1941738109338548",
+      "pdf_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438857/pdf/",
+      "source": "pmc:PMC3438857",
+      "status": "ok",
+      "citation": "Reinold Michael M. et al. (2009). Current Concepts in the Evaluation and Treatment of the Shoulder in Overhead-Throwing Athletes, Part 1: Physical Characteristics and Clinical Examination. Sports Health: A Multidisciplinary Approach. doi:10.1177/1941738109338548",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.38,
+        "paper_title": "Current Concepts in the Evaluation and Treatment of the Shoulder in Overhead-Throwing Athletes, Part",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.38). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "supplements_magnesium_lifters": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Zhang",
+        "year": 2017,
+        "keywords": "magnesium enhance exercise performance systematic review",
+        "journal_hint": "Nutrients"
+      },
+      "doi": "10.3390/nu9090946",
+      "pdf_url": "https://www.mdpi.com/2072-6643/9/9/946/pdf?version=1503924062",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Zhang Yijia et al. (2017). Can Magnesium Enhance Exercise Performance?. Nutrients. doi:10.3390/nu9090946",
+      "is_oa": true,
+      "landing": "https://www.mdpi.com/2072-6643/9/9/946/pdf?version=1503924062",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Can Magnesium Enhance Exercise Performance?",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Veronese",
+        "year": 2014,
+        "keywords": "oral magnesium supplementation physical performance elderly women",
+        "journal_hint": "Am J Clin Nutr"
+      },
+      "doi": "10.3945/ajcn.113.080168",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Veronese Nicola et al. (2014). Effect of oral magnesium supplementation on physical performance in healthy elderly women involved in a weekly exercise program: a randomized controlled trial , ,. The American Journal of Clinical Nutrition. doi:10.3945/ajcn.113.080168",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Effect of oral magnesium supplementation on physical performance in healthy elderly women involved i",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Wang",
+        "year": 2017,
+        "keywords": "magnesium status skeletal muscle function athletic performance",
+        "journal_hint": "Magnes Res"
+      },
+      "doi": "10.5772/62645",
+      "pdf_url": "https://www.intechopen.com/citation-pdf-url/50205",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Wang Zishuai et al. (2016). Composition and Function of Extracellular Matrix in Development of Skeletal Muscle. Composition and Function of the Extracellular Matrix in the Human Body. doi:10.5772/62645",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.43,
+        "paper_title": "Composition and Function of Extracellular Matrix in Development of Skeletal Muscle",
+        "first_author_match": true
+      },
+      "is_oa": true,
+      "landing": "https://www.intechopen.com/citation-pdf-url/50205",
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.43). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "training_peaking_6wk": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Pritchard",
+        "year": 2015,
+        "keywords": "tapering practices competitive powerlifters",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0000000000001292",
+      "pdf_url": "https://pure.bond.edu.au/ws/files/27624960/AM_Tapering_practices_of_New_Zealand_s_elite_raw_powerlifters.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "citation": "Pritchard Hayden J. et al. (2016). Tapering Practices of New Zealand's Elite Raw Powerlifters. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0000000000001292",
+      "is_oa": true,
+      "landing": "https://pure.bond.edu.au/ws/files/27624960/AM_Tapering_practices_of_New_Zealand_s_elite_raw_powerlifters.pdf",
+      "_audit": {
+        "title_overlap": 0.75,
+        "paper_title": "Tapering Practices of New Zealand's Elite Raw Powerlifters",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.75). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Travis",
+        "year": 2020,
+        "keywords": "maximizing strength stimuli mediators strength gains application training",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "citation": null,
+      "candidates_count": 5,
+      "notes": "Crossref returned no candidate matching first-author surname + year window. Reference may need manual lookup or the hint citation in content_strategy.md may be incorrect."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Helms",
+        "year": 2018,
+        "keywords": "application repetitions in reserve RPE scale resistance training",
+        "journal_hint": "Strength Cond J"
+      },
+      "doi": "10.7287/peerj.4105v0.2/reviews/3",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Helms E et al. (2017). Peer Review #3 of \"Ability to predict repetitions to momentary failure is not perfectly accurate, though improves with resistance training experience (v0.2)\". . doi:10.7287/peerj.4105v0.2/reviews/3",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.5,
+        "paper_title": "Peer Review #3 of \"Ability to predict repetitions to momentary failure is not perfectly accurate, th",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "rehab_knee_squat": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Rio",
+        "year": 2015,
+        "keywords": "isometric exercise induces analgesia patellar tendinopathy",
+        "journal_hint": "Br J Sports Med"
+      },
+      "doi": "10.1136/bjsports-2014-094386",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/49/19/1277.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Rio Ebonie et al. (2015). Isometric exercise induces analgesia and reduces inhibition in patellar tendinopathy. British Journal of Sports Medicine. doi:10.1136/bjsports-2014-094386",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/49/19/1277.full.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Isometric exercise induces analgesia and reduces inhibition in patellar tendinopathy",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Collins",
+        "year": 2018,
+        "keywords": "patellofemoral pain consensus statement 5th international research retreat",
+        "journal_hint": "Br J Sports Med"
+      },
+      "doi": "10.1136/bjsports-2018-099397",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/52/18/1170.full.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Collins Natalie J et al. (2018). 2018 Consensus statement on exercise therapy and physical interventions (orthoses, taping and manual therapy) to treat patellofemoral pain: recommendations from the 5th International Patellofemoral Pain Research Retreat, Gold Coast, Australia, 2017. British Journal of Sports Medicine. doi:10.1136/bjsports-2018-099397",
+      "is_oa": true,
+      "landing": "https://bjsm.bmj.com/content/bjsports/52/18/1170.full.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "2018 Consensus statement on exercise therapy and physical interventions (orthoses, taping and manual",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Malliaras",
+        "year": 2015,
+        "keywords": "patellar tendinopathy clinical diagnosis load management advice progressing",
+        "journal_hint": "J Orthop Sports Phys Ther"
+      },
+      "doi": "10.2519/jospt.2015.5987",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Malliaras Peter et al. (2015). Patellar Tendinopathy: Clinical Diagnosis, Load Management, and Advice for Challenging Case Presentations. Journal of Orthopaedic &amp; Sports Physical Therapy. doi:10.2519/jospt.2015.5987",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.88,
+        "paper_title": "Patellar Tendinopathy: Clinical Diagnosis, Load Management, and Advice for Challenging Case Presenta",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "nutrition_intermittent_fasting": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Tinsley",
+        "year": 2015,
+        "keywords": "effects intermittent fasting body composition clinical health markers humans",
+        "journal_hint": "Nutr Rev"
+      },
+      "doi": "10.1093/nutrit/nuv041",
+      "pdf_url": "https://academic.oup.com/nutritionreviews/article-pdf/73/10/661/5231041/nuv041.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Tinsley Grant M. et al. (2015). Effects of intermittent fasting on body composition and clinical health markers in humans. Nutrition Reviews. doi:10.1093/nutrit/nuv041",
+      "is_oa": true,
+      "landing": "https://academic.oup.com/nutritionreviews/article-pdf/73/10/661/5231041/nuv041.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Effects of intermittent fasting on body composition and clinical health markers in humans",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Moro",
+        "year": 2016,
+        "keywords": "eight weeks time-restricted feeding basal metabolism maximal strength body composition resistance-trained",
+        "journal_hint": "J Transl Med"
+      },
+      "doi": "10.1186/s12967-016-1044-0",
+      "pdf_url": "https://translational-medicine.biomedcentral.com/track/pdf/10.1186/s12967-016-1044-0",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Moro Tatiana et al. (2016). Effects of eight weeks of time-restricted feeding (16/8) on basal metabolism, maximal strength, body composition, inflammation, and cardiovascular risk factors in resistance-trained males. Journal of Translational Medicine. doi:10.1186/s12967-016-1044-0",
+      "is_oa": true,
+      "landing": "https://translational-medicine.biomedcentral.com/track/pdf/10.1186/s12967-016-1044-0",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Effects of eight weeks of time-restricted feeding (16/8) on basal metabolism, maximal strength, body",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Aird",
+        "year": 2018,
+        "keywords": "fasted fed-state exercise performance post-exercise metabolism systematic review",
+        "journal_hint": "Scand J Med Sci Sports"
+      },
+      "doi": "10.1111/sms.13054",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/sms.13054",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Aird T. P. et al. (2018). Effects of fasted vs fed‐state exercise on performance and post‐exercise metabolism: A systematic review and meta‐analysis. Scandinavian Journal of Medicine &amp; Science in Sports. doi:10.1111/sms.13054",
+      "is_oa": true,
+      "landing": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/sms.13054",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Effects of fasted vs fed‐state exercise on performance and post‐exercise metabolism: A systematic re",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "cardio_hiit_vs_liss": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Wilson",
+        "year": 2012,
+        "keywords": "concurrent training meta-analysis interference aerobic resistance",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0b013e31823a3e2d",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Wilson Jacob M. et al. (2012). Concurrent Training. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0b013e31823a3e2d",
+      "_audit": {
+        "title_overlap": 0.4,
+        "paper_title": "Concurrent Training",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Milanovic",
+        "year": 2015,
+        "keywords": "effectiveness high-intensity interval training VO2max meta-analysis",
+        "journal_hint": "Sports Med"
+      },
+      "doi": null,
+      "pdf_url": null,
+      "source": null,
+      "status": "unresolved",
+      "citation": null,
+      "candidates_count": 5,
+      "notes": "Crossref returned no candidate matching first-author surname + year window. Reference may need manual lookup or the hint citation in content_strategy.md may be incorrect."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Sabag",
+        "year": 2022,
+        "keywords": "high-intensity interval training moderate-intensity continuous training body composition overweight obese systematic review",
+        "journal_hint": "Obes Rev"
+      },
+      "doi": "10.1210/clinem/dgab795",
+      "pdf_url": "https://academic.oup.com/jcem/article-pdf/107/3/862/42544658/dgab795.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Sabag Angelo et al. (2021). The Effect of High-intensity Interval Training vs Moderate-intensity Continuous Training on Liver Fat: A Systematic Review and Meta-Analysis. The Journal of Clinical Endocrinology &amp; Metabolism. doi:10.1210/clinem/dgab795",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.6,
+        "paper_title": "The Effect of High-intensity Interval Training vs Moderate-intensity Continuous Training on Liver Fa",
+        "first_author_match": true
+      },
+      "is_oa": true,
+      "landing": "https://academic.oup.com/jcem/article-pdf/107/3/862/42544658/dgab795.pdf",
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.6). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "supplements_electrolytes": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Shirreffs",
+        "year": 2011,
+        "keywords": "fluid electrolyte needs training competition recovery",
+        "journal_hint": "J Sports Sci"
+      },
+      "doi": "10.1080/02640414.2011.614269",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Shirreffs Susan M. et al. (2011). Fluid and electrolyte needs for training, competition, and recovery. Journal of Sports Sciences. doi:10.1080/02640414.2011.614269",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Fluid and electrolyte needs for training, competition, and recovery",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Maughan",
+        "year": 2018,
+        "keywords": "muscle cramps exercise hydration electrolyte",
+        "journal_hint": "Sports Med"
+      },
+      "doi": "10.1007/s40279-019-01162-1",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40279-019-01162-1.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Maughan Ronald J. et al. (2019). Muscle Cramping During Exercise: Causes, Solutions, and Questions Remaining. Sports Medicine. doi:10.1007/s40279-019-01162-1",
+      "is_oa": true,
+      "landing": "https://link.springer.com/content/pdf/10.1007/s40279-019-01162-1.pdf",
+      "_audit": {
+        "title_overlap": 0.4,
+        "paper_title": "Muscle Cramping During Exercise: Causes, Solutions, and Questions Remaining",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.4). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Bergeron",
+        "year": 2008,
+        "keywords": "muscle cramps exercise fatigue electrolyte deficit",
+        "journal_hint": "Curr Sports Med Rep"
+      },
+      "doi": "10.1249/jsr.0b013e31817f476a",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Bergeron Michael F. et al. (2008). Muscle Cramps during Exercise-Is It Fatigue or Electrolyte Deficit?. Current Sports Medicine Reports. doi:10.1249/jsr.0b013e31817f476a",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Muscle Cramps during Exercise-Is It Fatigue or Electrolyte Deficit?",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "rehab_hip_squat_mobility": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Konrad",
+        "year": 2021,
+        "keywords": "stretching range of motion meta-analysis chronic effects",
+        "journal_hint": "Scand J Med Sci Sports"
+      },
+      "doi": "10.52082/jssm.2021.535",
+      "pdf_url": "https://www.jssm.org/hfpdf.php?volume=20&issue=3&page=535",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Konrad Andreas et al. (2021). The Accumulated Effects of Foam Rolling Combined with Stretching on Range of Motion and Physical Performance: A Systematic Review and Meta-Analysis. Journal of Sports Science and Medicine. doi:10.52082/jssm.2021.535",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.75,
+        "paper_title": "The Accumulated Effects of Foam Rolling Combined with Stretching on Range of Motion and Physical Per",
+        "first_author_match": true
+      },
+      "is_oa": true,
+      "landing": "https://www.jssm.org/hfpdf.php?volume=20&issue=3&page=535",
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.75). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Behm",
+        "year": 2016,
+        "keywords": "acute effects muscle stretching physical performance range of motion injury",
+        "journal_hint": "Appl Physiol Nutr Metab"
+      },
+      "doi": "10.1139/apnm-2015-0235",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Behm David G. et al. (2016). Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in healthy active individuals: a systematic review. Applied Physiology, Nutrition, and Metabolism. doi:10.1139/apnm-2015-0235",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Schoenfeld",
+        "year": 2010,
+        "keywords": "squatting kinematics kinetics application exercise performance",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0b013e3181bac2d7",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Schoenfeld Brad J et al. (2010). Squatting Kinematics and Kinetics and Their Application to Exercise Performance. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0b013e3181bac2d7",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Squatting Kinematics and Kinetics and Their Application to Exercise Performance",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ],
+  "training_conjugate_raw": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Swinton",
+        "year": 2009,
+        "keywords": "contemporary training practices elite British powerlifters survey",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0b013e31819424bd",
+      "pdf_url": "https://rke.abertay.ac.uk/ws/files/8519522/LloydJourStrengthConditionResAuthor2009.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "citation": "Swinton Paul A et al. (2009). Contemporary Training Practices in Elite British Powerlifters: Survey Results From an International Competition. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0b013e31819424bd",
+      "is_oa": true,
+      "landing": "https://rke.abertay.ac.uk/ws/files/8519522/LloydJourStrengthConditionResAuthor2009.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Contemporary Training Practices in Elite British Powerlifters: Survey Results From an International ",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Soria-Gila",
+        "year": 2015,
+        "keywords": "effects variable resistance training strength performance meta-analysis",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0000000000000971",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Soria-Gila Miguel A. et al. (2015). Effects of Variable Resistance Training on Maximal Strength. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0000000000000971",
+      "_audit": {
+        "title_overlap": 0.8,
+        "paper_title": "Effects of Variable Resistance Training on Maximal Strength",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Mangine",
+        "year": 2015,
+        "keywords": "training volume intensity improvements muscular strength size resistance-trained men",
+        "journal_hint": "Physiol Rep"
+      },
+      "doi": "10.14814/phy2.12472",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.14814/phy2.12472",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Mangine Gerald T. et al. (2015). The effect of training volume and intensity on improvements in muscular strength and size in resistance-trained men. Physiological Reports. doi:10.14814/phy2.12472",
+      "is_oa": true,
+      "landing": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.14814/phy2.12472",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "The effect of training volume and intensity on improvements in muscular strength and size in resista",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "nutrition_nighttime_carbs": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Sofer",
+        "year": 2011,
+        "keywords": "weight loss hormonal changes carbohydrates eaten dinner",
+        "journal_hint": "Obesity"
+      },
+      "doi": "10.1038/oby.2011.48",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/oby.2011.48",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Sofer Sigal et al. (2011). Greater Weight Loss and Hormonal Changes After 6 Months Diet With Carbohydrates Eaten Mostly at Dinner. Obesity. doi:10.1038/oby.2011.48",
+      "is_oa": true,
+      "landing": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1038/oby.2011.48",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Greater Weight Loss and Hormonal Changes After 6 Months Diet With Carbohydrates Eaten Mostly at Dinn",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Kinsey",
+        "year": 2015,
+        "keywords": "health impact nighttime eating old new perspectives",
+        "journal_hint": "Nutrients"
+      },
+      "doi": "10.3390/nu7042648",
+      "pdf_url": "https://www.mdpi.com/2072-6643/7/4/2648/pdf?version=1428577470",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Kinsey Amber et al. (2015). The Health Impact of Nighttime Eating: Old and  New Perspectives. Nutrients. doi:10.3390/nu7042648",
+      "is_oa": true,
+      "landing": "https://www.mdpi.com/2072-6643/7/4/2648/pdf?version=1428577470",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "The Health Impact of Nighttime Eating: Old and  New Perspectives",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Aragon",
+        "year": 2013,
+        "keywords": "nutrient timing revisited post-exercise anabolic window",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/1550-2783-10-5",
+      "pdf_url": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-10-5?needAccess=true&role=button",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Aragon Alan Albert et al. (2013). Nutrient timing revisited: is there a post-exercise anabolic window?. Journal of the International Society of Sports Nutrition. doi:10.1186/1550-2783-10-5",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/pdf/10.1186/1550-2783-10-5?needAccess=true&role=button",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Nutrient timing revisited: is there a post-exercise anabolic window?",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "supplements_ashwagandha": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Wankhede",
+        "year": 2015,
+        "keywords": "Withania somnifera supplementation muscle strength recovery randomized controlled",
+        "journal_hint": "J Int Soc Sports Nutr"
+      },
+      "doi": "10.1186/s12970-015-0104-9",
+      "pdf_url": "https://www.tandfonline.com/doi/pdf/10.1186/s12970-015-0104-9?needAccess=true&role=button",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Wankhede Sachin et al. (2015). Examining the effect of\n                    <i>Withania somnifera</i>\n                    supplementation on muscle strength and recovery: a randomized controlled trial. Journal of the International Society of Sports Nutrition. doi:10.1186/s12970-015-0104-9",
+      "is_oa": true,
+      "landing": "https://www.tandfonline.com/doi/pdf/10.1186/s12970-015-0104-9?needAccess=true&role=button",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Examining the effect of\n                    <i>Withania somnifera</i>\n                    supplement",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Bonilla",
+        "year": 2021,
+        "keywords": "ashwagandha Withania somnifera physical performance systematic review bayesian meta-analysis",
+        "journal_hint": "J Funct Morphol Kinesiol"
+      },
+      "doi": "10.3390/jfmk6010020",
+      "pdf_url": "https://www.mdpi.com/2411-5142/6/1/20/pdf?version=1615262647",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Bonilla Diego A. et al. (2021). Effects of Ashwagandha (Withania somnifera) on Physical Performance: Systematic Review and Bayesian Meta-Analysis. Journal of Functional Morphology and Kinesiology. doi:10.3390/jfmk6010020",
+      "is_oa": true,
+      "landing": "https://www.mdpi.com/2411-5142/6/1/20/pdf?version=1615262647",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Effects of Ashwagandha (Withania somnifera) on Physical Performance: Systematic Review and Bayesian ",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Salve",
+        "year": 2019,
+        "keywords": "adaptogenic anxiolytic ashwagandha root extract healthy adults randomized placebo-controlled",
+        "journal_hint": "Cureus"
+      },
+      "doi": "10.7759/cureus.6466",
+      "pdf_url": "https://www.cureus.com/articles/25730-adaptogenic-and-anxiolytic-effects-of-ashwagandha-root-extract-in-healthy-adults-a-double-blind-randomized-placebo-controlled-clinical-study.pdf",
+      "source": "unpaywall:publisher",
+      "status": "ok",
+      "citation": "Salve Jaysing et al. (2019). Adaptogenic and Anxiolytic Effects of Ashwagandha Root Extract in Healthy Adults: A Double-blind, Randomized, Placebo-controlled Clinical Study. Cureus. doi:10.7759/cureus.6466",
+      "is_oa": true,
+      "landing": "https://www.cureus.com/articles/25730-adaptogenic-and-anxiolytic-effects-of-ashwagandha-root-extract-in-healthy-adults-a-double-blind-randomized-placebo-controlled-clinical-study.pdf",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Adaptogenic and Anxiolytic Effects of Ashwagandha Root Extract in Healthy Adults: A Double-blind, Ra",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=1.0). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    }
+  ],
+  "training_deload_week": [
+    {
+      "ref_idx": 1,
+      "query": {
+        "author": "Bell",
+        "year": 2020,
+        "keywords": "overreaching overtraining strength sports resistance training scoping review",
+        "journal_hint": "J Sports Sci"
+      },
+      "doi": "10.1080/02640414.2020.1763077",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Bell Lee et al. (2020). Overreaching and overtraining in strength sports and resistance training: A scoping review. Journal of Sports Sciences. doi:10.1080/02640414.2020.1763077",
+      "_audit": {
+        "title_overlap": 1.0,
+        "paper_title": "Overreaching and overtraining in strength sports and resistance training: A scoping review",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    },
+    {
+      "ref_idx": 2,
+      "query": {
+        "author": "Pritchard",
+        "year": 2015,
+        "keywords": "tapering practices competitive powerlifters",
+        "journal_hint": "J Strength Cond Res"
+      },
+      "doi": "10.1519/jsc.0000000000001292",
+      "pdf_url": "https://pure.bond.edu.au/ws/files/27624960/AM_Tapering_practices_of_New_Zealand_s_elite_raw_powerlifters.pdf",
+      "source": "unpaywall:repository",
+      "status": "ok",
+      "citation": "Pritchard Hayden J. et al. (2016). Tapering Practices of New Zealand's Elite Raw Powerlifters. Journal of Strength and Conditioning Research. doi:10.1519/jsc.0000000000001292",
+      "is_oa": true,
+      "landing": "https://pure.bond.edu.au/ws/files/27624960/AM_Tapering_practices_of_New_Zealand_s_elite_raw_powerlifters.pdf",
+      "_audit": {
+        "title_overlap": 0.75,
+        "paper_title": "Tapering Practices of New Zealand's Elite Raw Powerlifters",
+        "first_author_match": true
+      },
+      "notes": "Verified via Crossref (first-author match + title_overlap=0.75). Download only if pdf_url serves a real PDF (validate %PDF header)."
+    },
+    {
+      "ref_idx": 3,
+      "query": {
+        "author": "Coutts",
+        "year": 2007,
+        "keywords": "monitoring tolerance training rugby league",
+        "journal_hint": "J Sci Med Sport"
+      },
+      "doi": "10.2466/pms.106.3.904-916",
+      "pdf_url": null,
+      "source": null,
+      "status": "doi_only",
+      "citation": "Coutts Aaron J. et al. (2008). Monitoring Changes in Rugby League Players' Perceived Stress and Recovery during Intensified Training. Perceptual and Motor Skills. doi:10.2466/pms.106.3.904-916",
+      "candidates_count": 5,
+      "_audit": {
+        "title_overlap": 0.8,
+        "paper_title": "Monitoring Changes in Rugby League Players' Perceived Stress and Recovery during Intensified Trainin",
+        "first_author_match": true
+      },
+      "notes": "DOI verified via Crossref (first-author + year + title overlap all matched), but Unpaywall returned no OA PDF and the paper is not in PMC OA. Paywalled — do not download."
+    }
+  ]
+}

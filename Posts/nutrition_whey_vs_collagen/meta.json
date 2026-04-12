@@ -1,0 +1,45 @@
+{
+  "post_number": 3,
+  "topic_slug": "nutrition_whey_vs_collagen",
+  "topic_label": "NUTRITION",
+  "source_name": "BarBend + PubMed Research",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#WheyProtein",
+    "#Collagen",
+    "#SupplementScience",
+    "#ProteinGoals",
+    "#NutritionScience",
+    "#EvidenceBasedFitness",
+    "#Powerlifting",
+    "#StrengthTraining",
+    "#GymLife"
+  ],
+  "references": [
+    {
+      "citation": "1. Morton RW et al. (2018). A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength. Br J Sports Med, 52(6):376-384. doi:10.1136/bjsports-2017-097608",
+      "doi": "10.1136/bjsports-2017-097608"
+    },
+    {
+      "citation": "2. Schoenfeld BJ & Aragon AA (2018). How much protein can the body use in a single meal for muscle-building? J Int Soc Sports Nutr, 15:10. doi:10.1186/s12970-018-0215-1",
+      "doi": "10.1186/s12970-018-0215-1"
+    },
+    {
+      "citation": "3. Kerksick CM et al. (2017). ISSN Position Stand: Nutrient Timing. J Int Soc Sports Nutr, 14:33. doi:10.1186/s12970-017-0189-4",
+      "doi": "10.1186/s12970-017-0189-4"
+    },
+    {
+      "citation": "4. Bagheri R et al. (2024). Even vs skewed protein distribution and muscle protein synthesis. Front Nutr. doi:10.3389/fnut.2024.1567438",
+      "doi": "10.3389/fnut.2024.1567438"
+    },
+    {
+      "citation": "5. de Sire A et al. (2022). Systematic review on collagen supplementation: lack of high-quality evidence for skin and joint outcomes."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

@@ -1,0 +1,45 @@
+{
+  "post_number": 22,
+  "topic_slug": "training_beginner_program",
+  "topic_label": "POWERLIFTING PROGRAMS",
+  "source_name": "NSCA Position Stand + PubMed Meta-Analyses",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#BeginnerPowerlifting",
+    "#LinearProgression",
+    "#StrengthProgram",
+    "#PowerliftingProgram",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#NewLifter",
+    "#StartingStrength",
+    "#GymLife",
+    "#ProgressiveOverload"
+  ],
+  "references": [
+    {
+      "citation": "1. Ralston GW et al. (2017). The effect of weekly set volume on strength gain: a meta-analysis. Sports Med, 47(12):2585-2601. doi:10.1007/s40279-017-0762-7",
+      "doi": "10.1007/s40279-017-0762-7"
+    },
+    {
+      "citation": "2. Grgic J et al. (2018). The effects of short versus long inter-set rest intervals in resistance training on measures of muscle hypertrophy: a systematic review. Eur J Sport Sci, 18(7):971-980. doi:10.1080/17461391.2018.1444095",
+      "doi": "10.1080/17461391.2018.1444095"
+    },
+    {
+      "citation": "3. Rhea MR et al. (2003). A meta-analysis to determine the dose response for strength development. Med Sci Sports Exerc, 35(3):456-464. doi:10.1249/01.MSS.0000053727.63505.D4",
+      "doi": "10.1249/01.MSS.0000053727.63505.D4"
+    },
+    {
+      "citation": "4. Peterson MD et al. (2005). Applications of the dose-response for muscular strength development: a review of meta-analytic efficacy and reliability for designing training prescription. J Strength Cond Res, 19(4):950-958."
+    },
+    {
+      "citation": "5. NSCA (2024). Essentials of Strength Training and Conditioning, 5th Edition. Chapter 19: Program Design for Resistance Training."
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

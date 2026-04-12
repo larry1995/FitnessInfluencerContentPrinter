@@ -1,0 +1,50 @@
+{
+  "post_number": 15,
+  "topic_slug": "nutrition_sleep_recovery",
+  "topic_label": "NUTRITION / RECOVERY",
+  "source_name": "PMC Systematic Reviews + Journal of Clinical Medicine",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#SleepAndRecovery",
+    "#RestDay",
+    "#MuscleRecovery",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#FitnessNutrition",
+    "#EvidenceBasedFitness",
+    "#GymLife",
+    "#RecoveryDay"
+  ],
+  "references": [
+    {
+      "citation": "1. Chen Y et al. (2025). Implications of sleep loss or sleep deprivation on muscle strength: a systematic review. PMC. doi:10.3390/nu17091452",
+      "doi": "10.3390/nu17091452"
+    },
+    {
+      "citation": "2. Sayed A et al. (2025). Effects of sleep deprivation on sports performance and perceived exertion in athletes and non-athletes: a systematic review and meta-analysis. Front Physiol, 16:1544286. doi:10.3389/fphys.2025.1544286",
+      "doi": "10.3389/fphys.2025.1544286"
+    },
+    {
+      "citation": "3. Mavroudis C et al. (2025). Sleep and Athletic Performance: A Multidimensional Review of Physiological and Molecular Mechanisms. J Clin Med, 14(21):7606. doi:10.3390/jcm14217606",
+      "doi": "10.3390/jcm14217606"
+    },
+    {
+      "citation": "4. Vitale KC et al. (2019). Sleep hygiene for optimizing recovery in athletes. Int J Sports Physiol Perform, 14(2):144-148. doi:10.1123/ijspp.2019-0032",
+      "doi": "10.1123/ijspp.2019-0032"
+    },
+    {
+      "citation": "5. Milewski MD et al. (2014). Chronic lack of sleep is associated with increased sports injuries in adolescent athletes. J Pediatr Orthop, 34(2):129-133. doi:10.1097/BPO.0000000000000151",
+      "doi": "10.1097/BPO.0000000000000151"
+    },
+    {
+      "citation": "6. Leproult R & Van Cauter E (2011). Effect of 1 week of sleep restriction on testosterone levels in young healthy men. JAMA, 305(21):2173-2174. doi:10.1001/jama.2011.710",
+      "doi": "10.1001/jama.2011.710"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

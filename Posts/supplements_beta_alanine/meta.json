@@ -1,0 +1,47 @@
+{
+  "post_number": 24,
+  "topic_slug": "supplements_beta_alanine",
+  "topic_label": "SUPPLEMENTS",
+  "source_name": "ISSN Position Stand + PubMed Meta-Analyses",
+  "source_url": "",
+  "tags": [
+    "#CentralStrength",
+    "#SantaClaraFitness",
+    "#CentralStrengthGym",
+    "#BayAreaStrength",
+    "#BetaAlanine",
+    "#SupplementScience",
+    "#Hypertrophy",
+    "#PreWorkout",
+    "#EvidenceBasedFitness",
+    "#StrengthTraining",
+    "#Powerlifting",
+    "#GymLife",
+    "#FitnessNutrition",
+    "#RepRange"
+  ],
+  "references": [
+    {
+      "citation": "1. Hobson RM et al. (2012). Effects of beta-alanine supplementation on exercise performance: a meta-analysis. Amino Acids, 43(1):25-37. doi:10.1007/s00726-011-1200-z",
+      "doi": "10.1007/s00726-011-1200-z"
+    },
+    {
+      "citation": "2. Trexler ET et al. (2015). International Society of Sports Nutrition position stand: beta-alanine. J Int Soc Sports Nutr, 12:30. doi:10.1186/s12970-015-0090-y",
+      "doi": "10.1186/s12970-015-0090-y"
+    },
+    {
+      "citation": "3. Saunders B et al. (2017). Beta-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis. Br J Sports Med, 51(8):658-669. doi:10.1136/bjsports-2016-096396",
+      "doi": "10.1136/bjsports-2016-096396"
+    },
+    {
+      "citation": "4. Dolan E et al. (2019). A systematic risk assessment and meta-analysis on the use of oral beta-alanine supplementation. Adv Nutr, 10(3):452-463. doi:10.1093/advances/nmy115",
+      "doi": "10.1093/advances/nmy115"
+    },
+    {
+      "citation": "5. Blancquaert L et al. (2015). Beta-alanine supplementation, muscle carnosine and exercise performance. Curr Opin Clin Nutr Metab Care, 18(1):63-70. doi:10.1097/MCO.0000000000000127",
+      "doi": "10.1097/MCO.0000000000000127"
+    }
+  ],
+  "has_chinese": true,
+  "migrated_at": "2026-04-12T00:09:35"
+}

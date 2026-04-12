@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "request_delay_seconds": 3,
+    "max_threads_per_forum": 10,
+    "recursion_depth": 2,
+    "max_outbound_links_per_thread": 5,
+    "respect_robots_txt": true
+  },
+  "forums": [
+    {
+      "name": "Starting Strength Forum",
+      "base_url": "https://startingstrength.com/resources/forum",
+      "thread_index_url": "https://startingstrength.com/resources/forum",
+      "platform": "vbulletin",
+      "enabled": false,
+      "notes": "Enable once researcher verifies robots.txt allowance and landing-page structure."
+    },
+    {
+      "name": "T-Nation Forum",
+      "base_url": "https://www.t-nation.com/t/",
+      "thread_index_url": "https://www.t-nation.com/c/training",
+      "platform": "discourse",
+      "enabled": false,
+      "notes": "Discourse exposes JSON at /latest.json — researcher to confirm rate limits."
+    }
+  ]
+}
