@@ -1,0 +1,57 @@
+{
+  "_comment": "6-category editorial taxonomy for final Posts/ output. Edit the mapping to reclassify a topic without touching code. src/output_layout.py reads this file and falls back to prefix heuristics for unmapped slugs.",
+  "categories": [
+    "training_methods",
+    "sample_programming",
+    "nutrition",
+    "supplements",
+    "cardio",
+    "warmup"
+  ],
+  "category_descriptions": {
+    "training_methods": "Technique, progression, exercise selection, common mistakes, injury-aware training decisions",
+    "sample_programming": "Concrete programs staff can hand to lifters: beginner templates, Texas Method, 5/3/1, powerlifting periodization",
+    "nutrition": "Whole-food diet, macro timing, meal structure, eating patterns, strongman-scale intake, myth-busting on diet",
+    "supplements": "Ergogenic aids and isolated nutrients: creatine, caffeine, beta-alanine, omega-3, vitamin D, magnesium, whey, collagen",
+    "cardio": "Concurrent training, Zone 2, cardiovascular conditioning for strength athletes",
+    "warmup": "Dynamic warmups, mobility, prehab movement sequences, activation protocols"
+  },
+  "mapping": {
+    "training_bench_mistakes":      ["training_methods", "bench_mistakes"],
+    "training_masters_lifters":     ["training_methods", "masters_lifters"],
+    "training_squat_mistakes":      ["training_methods", "squat_mistakes"],
+    "yt_training_past_failure":     ["training_methods", "training_to_failure"],
+    "yt_deadlift_accessories":      ["training_methods", "deadlift_accessories"],
+    "yt_volume":                    ["training_methods", "training_volume"],
+    "yt_bench_shoulder_injury":     ["training_methods", "bench_shoulder_injury"],
+    "yt_training_volume_cut":       ["training_methods", "volume_during_cut"],
+    "yt_training_exercises":        ["training_methods", "exercise_selection"],
+    "yt_training_upper_body":       ["training_methods", "upper_body_training"],
+    "rehab_low_back_pain":          ["training_methods", "low_back_pain_training"],
+
+    "training_beginner_program":    ["sample_programming", "beginner_program"],
+    "training_texas_method":        ["sample_programming", "texas_method"],
+    "yt_powerlifting_program":      ["sample_programming", "powerlifting_program"],
+
+    "training_hafthor_diet":        ["nutrition", "hafthor_diet"],
+    "yt_protein_excess":            ["nutrition", "protein_excess"],
+    "nutrition_sleep_recovery":     ["nutrition", "sleep_recovery"],
+    "nutrition_carb_timing":        ["nutrition", "carb_timing"],
+    "nutrition_fat_myth":           ["nutrition", "dietary_fat_myth"],
+    "nutrition_clean_eating_myth":  ["nutrition", "clean_eating_myth"],
+
+    "nutrition_vegan_creatine":     ["supplements", "vegan_creatine"],
+    "nutrition_whey_vs_collagen":   ["supplements", "whey_vs_collagen"],
+    "nutrition_caffeine_strength":  ["supplements", "caffeine_strength"],
+    "nutrition_omega3_recovery":    ["supplements", "omega3_recovery"],
+    "nutrition_vitamin_d":          ["supplements", "vitamin_d"],
+    "supplements_beta_alanine":     ["supplements", "beta_alanine"],
+    "supplements_magnesium":        ["supplements", "magnesium"],
+
+    "cardio_concurrent_training":   ["cardio", "concurrent_training"],
+    "cardio_zone2":                 ["cardio", "zone2"],
+
+    "training_warmups":             ["warmup", "dynamic_warmups"],
+    "rehab_shoulder_prehab":        ["warmup", "shoulder_prehab"]
+  }
+}

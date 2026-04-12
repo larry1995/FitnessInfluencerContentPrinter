@@ -40,7 +40,7 @@ from pathlib import Path
 from posts_layout import merge_meta, resolve_topic_slug
 
 PROJECT_ROOT = Path(__file__).parent.parent
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 MAX_REDDIT_CALLOUTS = 4
 MAX_FORUM_QUOTE_CHAIN = 4

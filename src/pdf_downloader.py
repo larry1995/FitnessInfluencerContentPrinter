@@ -35,8 +35,8 @@ from pathlib import Path
 from http_utils import create_session, get as http_get
 
 PROJECT_ROOT = Path(__file__).parent.parent
-POSTS_DIR = PROJECT_ROOT / "Posts"
-URLS_JSON = POSTS_DIR / "training_pdf_urls.json"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
+URLS_JSON = PROJECT_ROOT / "audits" / "training_pdf_urls.json"
 
 PDF_MAGIC = b"%PDF"
 DEFAULT_DELAY = 1.0

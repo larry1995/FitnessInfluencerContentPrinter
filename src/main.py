@@ -11,7 +11,8 @@ Usage:
     python src/main.py biorxiv      # Scrape bioRxiv for preprints
     python src/main.py reddit       # Recursive Reddit scraper (r/powerlifting etc., depth 2)
     python src/main.py forums       # Recursive forum scraper (disabled by default in config)
-    python src/main.py draft        # Draft posts from scraped content
+    python src/main.py draft        # Draft posts from scraped content (template path)
+    python src/main.py draft --llm  # Draft posts via grounded LLM (citation-safe)
     python src/main.py zh           # Regenerate Chinese drafts in Bruce Lu voice (requires ANTHROPIC_API_KEY)
     python src/main.py sourcepdfs   # Download open-access source PDFs for training-method posts
     python src/main.py images       # Generate carousel images from drafts
@@ -34,7 +35,7 @@ from reddit_scraper import scrape_reddit
 from forum_scraper import scrape_forums
 from chinese_drafter import regenerate_all as regenerate_chinese
 from pdf_downloader import download_all as download_source_pdfs
-from drafter import draft_all
+from drafter import draft_all, draft_all_grounded
 from image_generator import generate_all_images
 from pdf_generator import generate_all_pdfs
 from single_page_generator import generate_all_single_pages
@@ -81,10 +82,11 @@ def run_biorxiv():
     return preprints
 
 
-def run_draft():
+def run_draft(use_llm: bool = False):
     print("\n[STEP 5/7] Drafting Instagram posts...\n")
-    posts = draft_all()
-    return posts
+    if use_llm:
+        return draft_all_grounded()
+    return draft_all()
 
 
 def run_images():
@@ -97,20 +99,61 @@ def run_pdf():
     generate_all_pdfs()
 
 
+def run_finalize(dry_run: bool = False):
+    """Promote work/<slug>/* artifacts to Posts/<category>/<clean_slug>.*.
+
+    Finalization is idempotent and safe to re-run. Walks every slug in work/
+    with a rendered single_page.png and moves it (plus the zh draft and any
+    downloaded reference PDFs) into the 6-category final output layout under
+    Posts/. The zh draft is converted from plain text to markdown on the way.
+    """
+    from output_layout import finalize_all, summarize
+    print("\n[STEP 8/8] Finalizing outputs → Posts/<category>/ ...\n")
+    results = finalize_all(dry_run=dry_run)
+    print(summarize(results))
+
+
 def run_polish():
+    """DEPRECATED — see banner below.
+
+    The Claude-Code polish workflow this command was designed for is the
+    root cause of the 2026-04-12 citation hallucination crisis (#21 audit
+    found 38% of refs across 31 posts were hallucinated). The polish
+    command fed draft .txt files to an LLM along with the editorial spec's
+    "minimum 2 references" rule but never the actual source articles, so
+    the LLM confabulated citations from training memory.
+
+    Use `python src/main.py draft --llm` instead — the grounded LLM
+    drafter passes verified citations as a hard allow-list and rejects
+    LLM output containing any non-allow-listed citation.
+
+    This function is preserved for backwards compatibility with any
+    in-flight manual workflow but emits a runtime DeprecationWarning and
+    will be removed in a future sprint.
+    """
+    import warnings
+    warnings.warn(
+        "run_polish is the root cause of the 2026-04-12 citation hallucination "
+        "crisis. Use `python src/main.py draft --llm` (grounded drafter) instead. "
+        "See audits/drafter_root_cause_2026-04-12.md.",
+        DeprecationWarning,
+        stacklevel=2,
+    )
     print("""
 ╔══════════════════════════════════════════════════════════╗
-║  POLISH WITH CLAUDE CODE                                 ║
+║  ⚠ DEPRECATED — DO NOT USE FOR PUBLISHED CONTENT          ║
 ╠══════════════════════════════════════════════════════════╣
 ║                                                          ║
-║  Run this in Claude Code to refine your drafts:          ║
+║  This command is the root cause of the citation          ║
+║  hallucination crisis caught by audit #21 (38% of refs   ║
+║  across 31 posts were hallucinated, misattributed, or    ║
+║  unverifiable).                                          ║
 ║                                                          ║
-║  claude                                                  ║
-║  > Read all .txt files in ContentPrinter/Posts/drafts/   ║
-║  > Polish each caption for Instagram. Make them punchy,  ║
-║  > engaging, and on-brand for Central Strength Gym.      ║
-║  > Keep the science accurate. Add line breaks for        ║
-║  > readability. Save polished versions back.             ║
+║  Use the grounded LLM drafter instead:                   ║
+║      python src/main.py draft --llm                      ║
+║                                                          ║
+║  See audits/drafter_root_cause_2026-04-12.md for the     ║
+║  full root-cause analysis.                               ║
 ║                                                          ║
 ╚══════════════════════════════════════════════════════════╝
     """)
@@ -154,6 +197,7 @@ def run_full_pipeline():
     _safe_run("Image generation", run_images)
 
     _safe_run("PDF generation", run_pdf)
+    _safe_run("Finalize", run_finalize)
 
     posts_dir = PROJECT_ROOT / "Posts"
     print(f"""
@@ -164,17 +208,23 @@ def run_full_pipeline():
   Your content is ready in: {posts_dir}/
 
   Posts/
-  ├── raw/          <- Scraped articles + YouTube summaries (JSON)
-  ├── transcripts/  <- YouTube video transcripts (VTT)
-  ├── drafts/       <- Instagram captions (.txt + .json)
-  ├── polished/     <- Human-refined captions
-  ├── images/       <- Carousel slides (PNG, 1080x1080)
-  └── pdfs/         <- Compiled PDFs by topic and combined
+  ├── training_methods/     <- technique, progression, mistakes
+  │   ├── <slug>.png         (Instagram single-page, 1080x1350+)
+  │   ├── <slug>.zh.md       (Chinese markdown version)
+  │   └── pdfs/              (downloaded reference papers)
+  ├── sample_programming/   <- beginner program, Texas Method, etc.
+  ├── nutrition/            <- diet, macros, meal structure
+  ├── supplements/          <- creatine, caffeine, beta-alanine, etc.
+  ├── cardio/               <- concurrent training, Zone 2
+  └── warmup/               <- dynamic warmups, prehab
+
+  Intermediates (drafts, raw scrapes, meta.json) live in work/ and are
+  gitignored — Posts/ contains only the finalized outputs.
 
   NEXT STEPS:
-  1. Review drafts in Posts/drafts/*.txt
-  2. Polish with Claude Code (run: python src/main.py polish)
-  3. Add your own photos/videos to complement the slides
+  1. Review single_page PNGs under Posts/<category>/*.png
+  2. Read Chinese markdowns under Posts/<category>/*.zh.md
+  3. Cite the reference PDFs under Posts/<category>/pdfs/
   4. Post to Instagram!
 
 {'='*60}
@@ -198,7 +248,8 @@ def main():
             run_biorxiv()
         elif command == "draft":
             print_banner()
-            run_draft()
+            use_llm = "--llm" in sys.argv[2:]
+            run_draft(use_llm=use_llm)
         elif command == "images":
             print_banner()
             run_images()
@@ -220,6 +271,10 @@ def main():
         elif command == "singlepage":
             print_banner()
             generate_all_single_pages()
+            run_finalize()
+        elif command == "finalize":
+            print_banner()
+            run_finalize(dry_run="--dry-run" in sys.argv[2:])
         elif command == "polish":
             run_polish()
         elif command in ("help", "-h", "--help"):

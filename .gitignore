@@ -13,15 +13,20 @@ dist/
 .env.local
 *.key
 
-# Third-party downloaded PDFs (regenerable via pdf_downloader)
+# Internal scratch/build directory (drafts, raw scrapes, meta.json, rendered
+# intermediates). The final output layout lives in Posts/<category>/ and IS
+# tracked; everything under work/ is regenerable and ignored.
+work/
+
+# Old Posts/ scratch paths (legacy gitignore entries, kept for safety during
+# the work/ transition in case someone's local checkout still has them)
 Posts/*/pdfs/*.pdf
 Posts/pdfs/*.pdf
-
-# Raw scraper cache (regenerable, large, churns)
 Posts/raw/*.json
-
-# Scraper visited-state (machine-local runtime state, not source)
 Posts/.seen_*.json
+
+# Grounded drafter "needs research" signals (operational state, not source)
+Posts/.needs_research/
 
 # Dev harness outputs
 /tmp/contentprinter_dev/

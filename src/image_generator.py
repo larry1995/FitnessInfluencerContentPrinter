@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 # Brand colors
 COLORS = {

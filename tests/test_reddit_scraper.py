@@ -7,7 +7,7 @@ SRC = Path(__file__).resolve().parent.parent / "src"
 sys.path.insert(0, str(SRC))
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
-VISITED_FILE = Path(__file__).resolve().parent.parent / "Posts" / ".seen_reddit_hashes.json"
+VISITED_FILE = Path(__file__).resolve().parent.parent / "work" / ".seen_reddit_hashes.json"
 
 
 def _reset_visited():

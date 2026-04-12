@@ -1,0 +1,42 @@
+# 睡眠——你的第一恢复工具（而且免费）
+
+你无法用补剂弥补糟糕的睡眠。以下是研究对睡眠与增肌的发现：
+
+**1. 生长激素在深度睡眠期间达到峰值**
+在N3（深度睡眠）阶段，你的身体释放最大量的生长激素、睾酮和IGF-1——这三种激素是肌肉修复和蛋白质合成的最主要驱动力。错过深度睡眠，就错过了你的增长窗口。
+
+**2. 一晚糟糕的睡眠就会大幅降低睾酮**
+仅仅一晚的睡眠剥夺就能使睾酮水平降低近25%。长期睡眠不足会使你的身体进入分解代谢状态——分解肌肉而不是构建肌肉。
+
+**3. 力量和爆发力出现可测量的下降**
+一项2025年的系统综述发现，睡眠剥夺显著损害无氧功率、动作精确度和肌肉力量。每晚睡眠不足7小时的运动员在深蹲 (Squat) 和卧推 (Bench Press) 表现上出现了可测量的下降。
+
+**4. 糖原无法完全补充**
+睡眠剥夺会耗尽肌肉和肝脏糖原，并损害糖原的再合成。这意味着即使你的营养完美无缺，你开始下一次训练时燃料储备也不足。
+
+**5. 受伤风险急剧上升**
+每晚睡眠不足8小时的运动员受伤率是睡眠8小时以上运动员的1.7倍。睡眠剥夺还会损害反应时间和运动协调能力。
+
+如何优化你的睡眠以促进增长：
+- 目标每晚7-9小时（高强度训练期间8小时以上最理想）
+- 保持固定的作息时间——周末也一样
+- 凉爽、黑暗的房间（18-20°C / 65-68°F）
+- 睡前30-60分钟不看屏幕
+- 下午2点后避免咖啡因
+- 如果晚上训练，留出2-3小时再睡觉
+- 考虑睡前服用甘氨酸镁 (Magnesium Glycinate) 200-400mg
+
+最终结论：
+睡眠是你拥有的最强大的恢复工具。没有任何补剂、冰浴或气压靴能与之相比。像重视训练计划一样重视你的8小时睡眠。
+
+收藏这条并分享给你的训练搭档
+
+#CentralStrength #SantaClaraFitness #CentralStrengthGym #BayAreaStrength #SleepAndRecovery #RestDay #MuscleRecovery #StrengthTraining #Powerlifting #FitnessNutrition #EvidenceBasedFitness #GymLife #RecoveryDay
+
+参考文献:
+**1. Chen Y et al. (2025). Implications of sleep loss or sleep deprivation on muscle strength: a systematic review. PMC. doi:10.3390/nu17091452**
+**2. Sayed A et al. (2025). Effects of sleep deprivation on sports performance and perceived exertion in athletes and non-athletes: a systematic review and meta-analysis. Front Physiol, 16:1544286. doi:10.3389/fphys.2025.1544286**
+**3. Mavroudis C et al. (2025). Sleep and Athletic Performance: A Multidimensional Review of Physiological and Molecular Mechanisms. J Clin Med, 14(21):7606. doi:10.3390/jcm14217606**
+**4. Vitale KC et al. (2019). Sleep hygiene for optimizing recovery in athletes. Int J Sports Physiol Perform, 14(2):144-148. doi:10.1123/ijspp.2019-0032**
+**5. Milewski MD et al. (2014). Chronic lack of sleep is associated with increased sports injuries in adolescent athletes. J Pediatr Orthop, 34(2):129-133. doi:10.1097/BPO.0000000000000151**
+**6. Leproult R & Van Cauter E (2011). Effect of 1 week of sleep restriction on testosterone levels in young healthy men. JAMA, 305(21):2173-2174. doi:10.1001/jama.2011.710**

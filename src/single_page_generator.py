@@ -33,7 +33,7 @@ from image_generator import strip_emoji
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 # Render at 3x for print-quality, Instagram-ready output
 SCALE = 3
@@ -1613,6 +1613,28 @@ def render_single_page(post, page_height):
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 
+def _read_audit_meta(draft_path):
+    """Load audit fields from the per-topic meta.json sibling of a draft.
+
+    Returns a dict with `audit_status` (str) and `audit_issues` (list).
+    Missing/malformed meta.json returns the safe defaults — empty status and
+    empty issue list — which means no watermark will fire. Fail-safe by design:
+    a corrupt meta should degrade to "render clean", not "render broken".
+    """
+    meta_path = Path(draft_path).parent.parent / "meta.json"
+    if not meta_path.exists():
+        return {"audit_status": "", "audit_issues": []}
+    try:
+        with open(meta_path, encoding="utf-8") as f:
+            meta = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {"audit_status": "", "audit_issues": []}
+    return {
+        "audit_status": meta.get("audit_status", ""),
+        "audit_issues": meta.get("audit_issues", []),
+    }
+
+
 def _discover_topic_drafts():
     """Yield (topic_slug, draft_path, output_png_path) for each per-topic
     English draft in the new Posts/<slug>/en/ layout. Falls back to the
@@ -1656,6 +1678,9 @@ def generate_all_single_pages():
 
     for slug, txt_file, png_path in topic_drafts:
         post = parse_detailed_content(txt_file)
+        audit_meta = _read_audit_meta(txt_file)
+        post["audit_status"] = audit_meta["audit_status"]
+        post["audit_issue_count"] = len(audit_meta["audit_issues"])
         page_height = calculate_page_height(post, tmp_draw)
         page_img = render_single_page(post, page_height)
 

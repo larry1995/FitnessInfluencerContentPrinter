@@ -18,7 +18,7 @@ from posts_layout import merge_meta, resolve_topic_slug
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 
 def load_config():
@@ -414,6 +414,100 @@ def save_drafts(posts):
 
     print(f"[SAVED] {len(posts)} drafts → Posts/<slug>/en/ (and Posts/drafts/ mirror)")
     return drafts_dir
+
+
+def draft_all_grounded():
+    """Grounded LLM drafting path — Layer 1 of the citation-hallucination fix.
+
+    For each scraped article, calls `generate_grounded_draft` (which extracts
+    a verified citation allow-list from the article, sends a constrained
+    prompt to the LLM, and runs Layer A + Layer B verification on the
+    output). On success, writes the LLM output verbatim to
+    `Posts/<slug>/en/draft.txt` and stamps meta.json with
+    `audit_status: "OK"` via `audit_meta_writer.refresh_audit_meta`.
+
+    Three failure modes (logged, skipped, no draft saved):
+      - INSUFFICIENT_SOURCE_DATA: source article had no extractable
+        citations. A signal file is dropped at `Posts/.needs_research/<slug>.json`.
+      - LLM not configured: no `ANTHROPIC_API_KEY`.
+      - DROP: all retries failed allow-list / verify_citations checks.
+
+    Unlike `draft_all`, the grounded path does NOT mirror posts into
+    `Posts/drafts/`, does NOT auto-trigger the Chinese drafter, and does
+    NOT touch `weekly_summary_*.json`. Those are pure-template-pipeline
+    concerns. The grounded path is strict, citation-safe, and silent on
+    everything outside the per-topic directory.
+    """
+    config, _sources = load_config()
+    settings = config["post_settings"]
+
+    articles = load_latest_articles()
+    if not articles:
+        print("[INFO] No scraped articles found. Run scraper.py first.")
+        return []
+
+    from grounded_drafter import generate_grounded_draft
+
+    print(f"\n{'='*60}")
+    print(f"  GROUNDED DRAFTER (LLM) — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"  Articles available: {len(articles)}")
+    print(f"  Posts to draft: {min(len(articles), settings['posts_per_run'])}")
+    print(f"{'='*60}\n")
+
+    saved: list[dict] = []
+    for i, article in enumerate(articles[:settings["posts_per_run"]], 1):
+        title = article.get("title", "<untitled>")
+        print(f"[GROUNDED-DRAFT] #{i}: {title[:60]}...")
+
+        synthetic_post = {
+            "post_number": i,
+            "topic": article.get("topic", "general"),
+            "source": article.get("source", ""),
+            "source_url": article.get("url") or article.get("source_url", ""),
+            "title": title,
+        }
+        slug = resolve_topic_slug(synthetic_post)
+
+        draft_text = generate_grounded_draft(article, slug=slug)
+        if draft_text is None:
+            continue
+
+        topic_dir = POSTS_DIR / slug
+        en_dir = topic_dir / "en"
+        en_dir.mkdir(parents=True, exist_ok=True)
+        (en_dir / "draft.txt").write_text(draft_text, encoding="utf-8")
+
+        meta_path = topic_dir / "meta.json"
+        new_meta = {
+            "post_number": i,
+            "topic_slug": slug,
+            "topic_label": synthetic_post["topic"],
+            "source_name": synthetic_post["source"],
+            "source_url": synthetic_post["source_url"],
+            "title": title,
+            "drafted_at": datetime.now().isoformat(),
+            "drafter": "grounded_llm",
+            "has_chinese": (topic_dir / "zh" / "draft.txt").exists(),
+        }
+        existing_meta = None
+        if meta_path.exists():
+            try:
+                existing_meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                existing_meta = None
+        meta = merge_meta(existing_meta, new_meta)
+        meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+
+        try:
+            from audit_meta_writer import refresh_audit_meta
+            refresh_audit_meta(slug)
+        except Exception as e:
+            print(f"  [WARN] refresh_audit_meta({slug}) failed: {e}")
+
+        saved.append({"slug": slug, "title": title})
+
+    print(f"\n[SAVED] {len(saved)} grounded drafts → Posts/<slug>/en/draft.txt")
+    return saved
 
 
 def draft_all():

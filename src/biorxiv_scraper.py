@@ -14,7 +14,7 @@ from http_utils import create_session, get as http_get
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 BIORXIV_API_BASE = "https://api.biorxiv.org"
 

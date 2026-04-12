@@ -1,0 +1,41 @@
+# 🏋️ 40岁以上还在训练？请务必看这条。
+
+力量举大师组从40岁开始。但变得更强壮并不会因此停止——你只需要训练得更聪明。
+
+以下是哪些需要改变，哪些不需要：
+
+✅ 不变的是：
+• 渐进超负荷依然有效
+• 复合动作仍然是王道
+• 蛋白质需求实际上更高了（目标每磅体重1g）
+• 坚持永远胜过拼强度
+
+⚠️ 需要改变的是：
+
+1️⃣ 恢复需要更长时间
+你仍然可以刻苦训练——但可能需要在大重量训练之间安排更多休息日。每周3-4天的训练频率通常比5-6天更好。
+
+2️⃣ 热身变得更重要
+花10-15分钟好好热身。你的关节会感谢你的。40岁以上冷身就举铁是在自找麻烦。
+
+3️⃣ 谨慎管理训练量
+你无法消化和25岁时一样的训练量了。专注于接近力竭的高质量组数，而不是堆积无效训练量。
+
+4️⃣ 优先安排灵活性训练
+每周增加2-3次专门的灵活性训练。髋关节、胸椎和肩膀是最常见的问题区域。
+
+5️⃣ 不要跳过减载周
+每4-6周安排一次减载。你的结缔组织恢复速度比肌肉慢。
+
+💪 年龄不是借口。我们健身房里一些最强壮的举重者都在40岁以上。
+
+👉 我们指导各年龄段、各水平的训练者。在 centralstrengthgyms.com 预约你的体验课
+
+#CentralStrength #SantaClaraFitness #CentralStrengthGym #BayAreaStrength #MastersLifter #Over40Fitness #PowerliftingTraining #StrengthCoaching #AgingStrong #NeverTooOld #Powerlifting #StrengthTraining #GymLife #FitnessMotivation
+
+参考文献：
+**1. Strasser B & Schobersberger W (2011). Evidence for resistance training as a treatment therapy in obesity. J Obes, 2011:482564. doi:10.1155/2011/482564**
+**2. Peterson MD et al. (2010). Influence of resistance exercise on lean body mass in aging adults: a meta-analysis. Med Sci Sports Exerc, 43(2):249-258. doi:10.1249/MSS.0b013e3181eb6265**
+**3. Borde R et al. (2015). Dose-response relationships of resistance training in healthy old adults: a systematic review and meta-analysis. Sports Med, 45(12):1693-1720. doi:10.1007/s40279-015-0385-9**
+**4. Fragala MS et al. (2019). Resistance training for older adults: position statement from the National Strength and Conditioning Association. J Strength Cond Res, 33(8):2019-2052. doi:10.1519/JSC.0000000000003230**
+**5. Morton RW et al. (2018). Protein supplementation and resistance training gains in older adults. Br J Sports Med, 52(6):376-384.**

@@ -19,7 +19,7 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 PROJECT_ROOT = Path(__file__).parent.parent
-POSTS_DIR = PROJECT_ROOT / "Posts"
+POSTS_DIR = PROJECT_ROOT / "work"  # internal scratch; final output in Posts/ via output_layout.finalize
 
 _SRC_DIR = str(PROJECT_ROOT / "src")
 if _SRC_DIR not in _sys.path:
@@ -84,6 +84,18 @@ MERGE_UPDATE_KEYS = (
     "drafted_at",
     "migrated_at",
     "source_type",
+    # Audit fields from src/audit_meta_writer.py (Task #29). These MUST be
+    # update-on-re-run, not preserve-from-existing, because a remediation
+    # pass that clears a hard severity needs the new "OK" status to actually
+    # overwrite the old "BLOCKED" — preserve semantics would trap a fixed
+    # post in BLOCKED state forever. Unrelated hand-edits in other meta.json
+    # fields are still protected: the writer's `new` dict only contains
+    # these audit keys, so the merge function's base-from-existing behavior
+    # leaves everything else (tags, references, source_name, etc.) untouched.
+    "audit_status",
+    "audit_date",
+    "audit_issues",
+    "publication_allowed",
 )
 
 

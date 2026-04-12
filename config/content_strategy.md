@@ -153,7 +153,14 @@ All content is organized across 5 core categories. The target distribution ensur
 ## Quality Guidelines
 
 ### Scientific Rigor
-- **Minimum 2 scientific references per post** — prefer peer-reviewed meta-analyses, systematic reviews, and RCTs
+
+**Citation grounding constraint** (added 2026-04-12 after the citation hallucination crisis):
+
+The REFERENCES block must contain ONLY citations that the scraped source article carries in `structured_content.doi` / `structured_content.pmid`, OR inline DOI/PMID strings in the article body that have been verified against Crossref/PubMed at extraction time. **Do NOT generate citations from training memory.** A post with 1 honest citation is better than a post with 5 fabricated ones. A post with 0 citations is allowed if the source article is practitioner-voiced rather than research-citing — mark the REFERENCES block as `[INSUFFICIENT_SOURCE_DATA]` and let the grounded drafter drop the post via the `Posts/.needs_research/` signal path.
+
+The previous "minimum 2 references" rule has been retracted because it created the hallucination pressure that led to the 2026-04-12 audit finding (38% of citations across 31 posts were hallucinated, misattributed, or unverifiable). See `audits/drafter_root_cause_2026-04-12.md` for the full root-cause analysis and `audits/grounded_drafter_design.md` for the replacement workflow.
+
+Other rigor rules (unchanged):
 - Cite specific study findings with numbers (effect sizes, percentages, doses) wherever possible
 - Use DOI links or PMIDs for all journal references
 - Avoid citing only blog posts or YouTube videos as primary evidence — always link to the underlying research
@@ -194,14 +201,14 @@ CAPTION:
 REFERENCES:
 1. [Author et al. (Year). Title. Journal. DOI]
 2. [Author et al. (Year). Title. Journal. DOI]
-[Minimum 2, target 3-5 references]
+[Use only citations extracted+verified from the source article. Empty allow-list → [INSUFFICIENT_SOURCE_DATA].]
 ----------------------------------------
 
 SUGGESTED VISUAL: [Description of ideal accompanying graphic/image]
 ```
 
 ### Content Quality Checklist
-- [ ] Contains at least 2 peer-reviewed references with DOI/PMID
+- [ ] Every reference is byte-equivalent to a verified entry in the source article's allow-list (or block is `[INSUFFICIENT_SOURCE_DATA]`)
 - [ ] Includes specific numbers, dosages, or protocols (not vague advice)
 - [ ] Has a clear practical takeaway section
 - [ ] Uses the approved post format template

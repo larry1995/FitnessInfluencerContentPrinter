@@ -15,14 +15,18 @@ if str(_REPO) not in sys.path:
 
 def test_package_exposes_expected_symbols():
     import contentprinter
-    assert contentprinter.__version__ == "0.1.1"
+    assert contentprinter.__version__ == "0.3.1"
     required = {
         "generate_draft",
+        "generate_grounded_draft",
         "parse_draft_text",
         "generate_chinese_from_english",
         "is_llm_configured",
         "render_page",
         "download_references",
+        "verify_citations",
+        "is_blocking",
+        "refresh_audit_meta",
     }
     assert required.issubset(set(contentprinter.__all__))
     for name in required:

@@ -27,15 +27,33 @@ from contentprinter.chinese_drafter import (
 )
 from contentprinter.single_page_generator import render_page
 from contentprinter.pdf_downloader import download_references
+from contentprinter.verify import (
+    verify_citations,
+    is_blocking,
+    BLOCKING_SEVERITIES,
+    SOFT_FLAG_SEVERITIES,
+    VERIFICATION_UNAVAILABLE,
+    CitationIssue,
+)
+from contentprinter.grounded_drafter import generate_grounded_draft
+from contentprinter.audit import refresh_audit_meta
 
-__version__ = "0.1.1"
+__version__ = "0.3.1"
 
 __all__ = [
     "generate_draft",
+    "generate_grounded_draft",
     "parse_draft_text",
     "generate_chinese_from_english",
     "is_llm_configured",
     "render_page",
     "download_references",
+    "verify_citations",
+    "is_blocking",
+    "BLOCKING_SEVERITIES",
+    "SOFT_FLAG_SEVERITIES",
+    "VERIFICATION_UNAVAILABLE",
+    "CitationIssue",
+    "refresh_audit_meta",
     "__version__",
 ]
