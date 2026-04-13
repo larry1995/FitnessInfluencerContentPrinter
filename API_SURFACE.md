@@ -381,10 +381,9 @@ When this package is installed via `pip install -e .` (or a wheel install), the 
 
 ```
 audit_meta_writer, biorxiv_scraper, chinese_drafter, drafter, forum_scraper,
-grounded_drafter, http_utils, image_generator, llm_client, main,
-pdf_downloader, pdf_generator, posts_layout, pubmed_scraper,
-recursive_discovery, reddit_scraper, reorganize_posts, scraper,
-single_page_generator, source_promoter, youtube_scraper
+grounded_drafter, http_utils, llm_client, main, pdf_downloader, posts_layout,
+pubmed_scraper, recursive_discovery, reddit_scraper, reorganize_posts, scraper,
+single_page_generator, source_promoter, text_utils, youtube_scraper
 ```
 
 These names exist in the venv namespace because the `contentprinter/*.py` shim modules do bare absolute imports (e.g. `import drafter as _drafter`) that need to resolve in both dev mode and install mode. The cleaner long-term layout collapses these into a private `contentprinter._internal` subpackage — see Task #33 for the planned refactor, **scheduled for the next sprint as required work** rather than the deferred 1.0 cleanup. The atomic refactor (~25 intra-src import rewrites + a CLI invocation switch from `python src/main.py` to `python -m src.main`) is cheaper than wrapping `src/*` modules one at a time and is a hard prerequisite for any consumer that wants to write a clean grep-gate against unsanctioned imports.
@@ -393,7 +392,7 @@ These names exist in the venv namespace because the `contentprinter/*.py` shim m
 
 **No sanctioned escape hatches as of 0.3.1.** `audit_meta_writer.refresh_audit_meta` previously required a bare top-level import; that escape hatch is closed by the `contentprinter.refresh_audit_meta` wrapper added in 0.3.1. `grounded_drafter` is wrapped by `contentprinter.generate_grounded_draft`. Both modules remain in the leak list above because the `pip install -e .` shim layer makes them importable at the top level — but **no consumer code should reference them by their bare top-level names**, period. The grep-gate below should reject every name in the leak list without exception. Task #33 (next sprint, required) will collapse `src/` into a private `contentprinter._internal` subpackage and eliminate the leak entirely; until then, the grep-gate is the enforcement mechanism.
 
-The leak is not detectable at runtime (the names work), so this section is the only place it is documented. Code-reviewer should grep PRs in any consumer repo for `^(?:from|import) (?:audit_meta_writer|biorxiv_scraper|chinese_drafter|drafter|forum_scraper|grounded_drafter|http_utils|image_generator|llm_client|main|pdf_downloader|pdf_generator|posts_layout|pubmed_scraper|recursive_discovery|reddit_scraper|reorganize_posts|scraper|single_page_generator|source_promoter|youtube_scraper)\b` and reject any matches.
+The leak is not detectable at runtime (the names work), so this section is the only place it is documented. Code-reviewer should grep PRs in any consumer repo for `^(?:from|import) (?:audit_meta_writer|biorxiv_scraper|chinese_drafter|drafter|forum_scraper|grounded_drafter|http_utils|llm_client|main|pdf_downloader|posts_layout|pubmed_scraper|recursive_discovery|reddit_scraper|reorganize_posts|scraper|single_page_generator|source_promoter|text_utils|youtube_scraper)\b` and reject any matches.
 
 ---
 

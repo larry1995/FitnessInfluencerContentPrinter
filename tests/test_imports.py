@@ -24,8 +24,7 @@ MODULES = [
     "pdf_downloader",
     "drafter",
     "single_page_generator",
-    "image_generator",
-    "pdf_generator",
+    "text_utils",
     "http_utils",
 ]
 

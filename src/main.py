@@ -4,7 +4,7 @@ ContentPrinter — Instagram Content Pipeline for Central Strength Gym
 Modeled after MoneyPrinterV2 architecture.
 
 Usage:
-    python src/main.py              # Run full pipeline (scrape → youtube → pubmed → biorxiv → draft → images → pdf)
+    python src/main.py              # Run full pipeline (scrape → youtube → pubmed → biorxiv → draft → finalize)
     python src/main.py scrape       # Scrape RSS feeds only
     python src/main.py youtube      # Scrape YouTube channels only
     python src/main.py pubmed       # Scrape PubMed for exercise science studies
@@ -15,8 +15,8 @@ Usage:
     python src/main.py draft --llm  # Draft posts via grounded LLM (citation-safe)
     python src/main.py zh           # Regenerate Chinese drafts in Bruce Lu voice (requires ANTHROPIC_API_KEY)
     python src/main.py sourcepdfs   # Download open-access source PDFs for training-method posts
-    python src/main.py images       # Generate carousel images from drafts
-    python src/main.py pdf          # Generate PDFs from carousel images
+    python src/main.py singlepage   # Render single-page PNGs from drafts and finalize to Posts/<category>/
+    python src/main.py finalize     # Promote work/<slug>/* artifacts to Posts/<category>/<clean_slug>.*
 """
 
 import sys
@@ -35,8 +35,6 @@ from forum_scraper import scrape_forums
 from chinese_drafter import regenerate_all as regenerate_chinese
 from pdf_downloader import download_all as download_source_pdfs
 from drafter import draft_all, draft_all_grounded
-from image_generator import generate_all_images
-from pdf_generator import generate_all_pdfs
 from single_page_generator import generate_all_single_pages
 
 
@@ -58,44 +56,34 @@ def print_banner():
 
 
 def run_scrape():
-    print("\n[STEP 1/7] Scraping content from fitness blogs & feeds...\n")
+    print("\n[STEP 1/6] Scraping content from fitness blogs & feeds...\n")
     articles = scrape_all_feeds()
     return articles
 
 
 def run_youtube():
-    print("\n[STEP 2/7] Scraping YouTube channels for science-based videos...\n")
+    print("\n[STEP 2/6] Scraping YouTube channels for science-based videos...\n")
     videos = scrape_youtube()
     return videos
 
 
 def run_pubmed():
-    print("\n[STEP 3/7] Scraping PubMed for exercise science studies...\n")
+    print("\n[STEP 3/6] Scraping PubMed for exercise science studies...\n")
     articles = scrape_pubmed()
     return articles
 
 
 def run_biorxiv():
-    print("\n[STEP 4/7] Scraping bioRxiv for preprints...\n")
+    print("\n[STEP 4/6] Scraping bioRxiv for preprints...\n")
     preprints = scrape_biorxiv()
     return preprints
 
 
 def run_draft(use_llm: bool = False):
-    print("\n[STEP 5/7] Drafting Instagram posts...\n")
+    print("\n[STEP 5/6] Drafting Instagram posts...\n")
     if use_llm:
         return draft_all_grounded()
     return draft_all()
-
-
-def run_images():
-    print("\n[STEP 6/7] Generating carousel images...\n")
-    generate_all_images()
-
-
-def run_pdf():
-    print("\n[STEP 7/7] Generating PDFs from carousel images...\n")
-    generate_all_pdfs()
 
 
 def run_finalize(dry_run: bool = False):
@@ -107,7 +95,7 @@ def run_finalize(dry_run: bool = False):
     Posts/. The zh draft is converted from plain text to markdown on the way.
     """
     from output_layout import finalize_all, summarize
-    print("\n[STEP 8/8] Finalizing outputs → Posts/<category>/ ...\n")
+    print("\n[STEP 6/6] Finalizing outputs → Posts/<category>/ ...\n")
     results = finalize_all(dry_run=dry_run)
     print(summarize(results))
 
@@ -147,9 +135,6 @@ def run_full_pipeline():
         print("[WARN] No posts drafted. Run scrape step first.")
         return
 
-    _safe_run("Image generation", run_images)
-
-    _safe_run("PDF generation", run_pdf)
     _safe_run("Finalize", run_finalize)
 
     posts_dir = PROJECT_ROOT / "Posts"
@@ -203,12 +188,6 @@ def main():
             print_banner()
             use_llm = "--llm" in sys.argv[2:]
             run_draft(use_llm=use_llm)
-        elif command == "images":
-            print_banner()
-            run_images()
-        elif command == "pdf":
-            print_banner()
-            run_pdf()
         elif command == "zh":
             print_banner()
             regenerate_chinese()

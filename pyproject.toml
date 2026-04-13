@@ -80,11 +80,9 @@ py-modules = [
     "drafter",
     "forum_scraper",
     "http_utils",
-    "image_generator",
     "llm_client",
     "main",
     "pdf_downloader",
-    "pdf_generator",
     "posts_layout",
     "pubmed_scraper",
     "recursive_discovery",
@@ -93,6 +91,7 @@ py-modules = [
     "scraper",
     "single_page_generator",
     "source_promoter",
+    "text_utils",
     "youtube_scraper",
 ]
 

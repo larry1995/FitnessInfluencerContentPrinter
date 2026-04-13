@@ -29,7 +29,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from image_generator import strip_emoji
+from text_utils import strip_emoji
 
 PROJECT_ROOT = Path(__file__).parent.parent
 CONFIG_DIR = PROJECT_ROOT / "config"

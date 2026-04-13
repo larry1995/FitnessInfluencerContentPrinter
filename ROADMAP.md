@@ -85,8 +85,7 @@ ContentPrinter/
 │   ├── chinese_drafter.py      ← Chinese drafter (needs ANTHROPIC_API_KEY)
 │   ├── llm_client.py           ← thin Anthropic Messages API client
 │   ├── single_page_generator.py ← PIL renderer (reads work/, writes work/, then finalize)
-│   ├── image_generator.py      ← legacy carousel renderer
-│   ├── pdf_generator.py        ← PDF compiler
+│   ├── text_utils.py           ← strip_emoji helper shared by renderers
 │   ├── pdf_downloader.py       ← downloads cited papers from audits/training_pdf_urls.json
 │   ├── audit_meta_writer.py    ← citation audit state + refresh_audit_meta(slug)
 │   ├── source_promoter.py      ← reddit/forum raw → per-topic draft.txt sidecar

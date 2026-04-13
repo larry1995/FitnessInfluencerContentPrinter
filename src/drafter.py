@@ -359,8 +359,7 @@ def save_drafts(posts):
 
     Writes the per-topic layout (work/<slug>/en/draft.txt + meta.json) that
     single_page_generator.py consumes, and also mirrors a JSON copy into
-    work/drafts/ for downstream steps (image_generator) that still read the
-    flat drafts dir.
+    work/drafts/ for legacy flat-dir consumers.
     """
     drafts_dir = POSTS_DIR / "drafts"
     drafts_dir.mkdir(parents=True, exist_ok=True)
