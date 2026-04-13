@@ -1,5 +1,5 @@
 """
-Stamp citation-audit results into Posts/<slug>/meta.json (Task #29).
+Stamp citation-audit results into work/<slug>/meta.json (Task #29).
 
 Reads `audits/citation_integrity_2026-04-12.json` (or any audit JSON with
 the same row schema), groups rows by slug, computes a per-slug
@@ -108,7 +108,7 @@ def trim_issue_for_meta(row: dict) -> dict:
 
     The full audit row has verbose `verify`, `fetched`, and `draft` sub-dicts
     that are useful for diagnostics but bloat meta.json. The meta.json copy
-    keeps only what the iOS UI and `grep -r DOI_FABRICATED Posts/*/meta.json`
+    keeps only what the iOS UI and `grep -r DOI_FABRICATED work/*/meta.json`
     workflows actually need.
 
     Includes `fetch_error` (truncated to 120 chars) when the row carries one
@@ -240,13 +240,13 @@ def refresh_audit_meta(slug: str, *, dry_run: bool = False) -> str:
     **This is the ONLY sanctioned way to update audit fields after a
     remediation edit to draft.txt.** The remediation workflow (#31) MUST
     call `refresh_audit_meta(slug)` immediately after editing
-    `Posts/<slug>/en/draft.txt`. Do NOT manually patch `audit_issues`
+    `work/<slug>/en/draft.txt`. Do NOT manually patch `audit_issues`
     indices or any other audit field — manual patches drift from the
     actual draft state and re-introduce the trust-the-edit-instead-of-the
     -source failure pattern that #21/#27/#29 exist to prevent.
 
     Pipeline:
-        1. Read `Posts/<slug>/en/draft.txt`
+        1. Read `work/<slug>/en/draft.txt`
         2. Call `contentprinter.verify_citations(text, slug=slug)` for fresh rows
         3. Build audit fields with today's date via `build_audit_fields`
         4. Merge into existing meta.json via `posts_layout.merge_meta`
@@ -265,7 +265,7 @@ def refresh_audit_meta(slug: str, *, dry_run: bool = False) -> str:
 
     Args:
         slug: Topic slug. Must correspond to an existing
-            `Posts/<slug>/en/draft.txt` file.
+            `work/<slug>/en/draft.txt` file.
         dry_run: If True, build the new fields but do not write to disk.
             Returns a status string describing what would happen.
 
@@ -408,7 +408,7 @@ def stamp_audit(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Stamp citation-audit results into Posts/<slug>/meta.json"
+        description="Stamp citation-audit results into work/<slug>/meta.json"
     )
     parser.add_argument(
         "--audit",

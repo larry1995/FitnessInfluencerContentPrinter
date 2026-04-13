@@ -142,8 +142,7 @@ ContentPrinter/
 │   ├── grounded_drafter_design.md               ← Layer 1 design doc
 │   ├── layer1_smoke_test_plan.md                ← API-key-ready smoke plan
 │   ├── training_pdf_urls.json                   ← 68 training-method refs, 18 verified ok
-│   ├── training_pdf_urls_retry.json             ← re-resolved 11 failures via PMC
-│   └── upcoming_pdf_urls.json                   ← Posts 22-41 pre-resolved refs
+│   └── training_pdf_urls_retry.json             ← re-resolved 11 failures via PMC
 │
 ├── tests/
 │   ├── fixtures/               ← recorded scraper inputs for offline smoke tests

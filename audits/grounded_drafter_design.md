@@ -414,7 +414,7 @@ The `Posts/.needs_research/` directory is **gitignored** (added to `.gitignore` 
 
 ### 8.5 Deprecation of `run_polish`
 
-`src/main.py::run_polish` gets a runtime `DeprecationWarning` and a docstring banner pointing at the grounded drafter. **Not removed.** The CLI subcommand `python src/main.py polish` continues to work but prints a yellow warning explaining the hallucination finding and recommending `--llm` instead. Per team-lead's instruction in the #35 task description, deletion comes in a follow-up sprint after the grounded path has been validated.
+`src/main.py::run_polish` was initially landed with a runtime `DeprecationWarning` and a docstring banner pointing at the grounded drafter, left in place so any in-flight manual workflow would surface the warning rather than silently change behavior. The CLI subcommand `python src/main.py polish` continued to work through that window but printed a warning explaining the hallucination finding and recommending `--llm` instead. Per team-lead's instruction in the #35 task description, deletion was deferred to a follow-up sprint after the grounded path had been validated; the function and its CLI dispatcher branch were subsequently removed in full once the grounded path was in production.
 
 ### 8.6 `config/content_strategy.md` update
 

@@ -1,13 +1,13 @@
 """
 Open-access PDF downloader for training-method posts.
 
-Reads `Posts/training_pdf_urls.json` (produced by the researcher's half of
+Reads `audits/training_pdf_urls.json` (produced by the researcher's half of
 Task #3) and downloads every reference with `status == "ok"` into the
-per-topic `Posts/<slug>/pdfs/refN.pdf`. Each download is validated against
+per-topic `work/<slug>/pdfs/refN.pdf`. Each download is validated against
 the `%PDF` magic bytes — some repository URLs return HTML fallback pages,
 and we never want those on disk masquerading as PDFs.
 
-Per-topic outcomes are written to `Posts/<slug>/pdfs/download_log.json` so
+Per-topic outcomes are written to `work/<slug>/pdfs/download_log.json` so
 a re-run can skip already-verified downloads (idempotent).
 
 Usage:
@@ -386,8 +386,8 @@ def download_all(only: str | None = None, dry_run: bool = False,
 def main():
     parser = argparse.ArgumentParser(description="Download OA PDFs for training-method posts")
     parser.add_argument("--manifest", type=Path, default=None,
-                        help="Path to a URL manifest JSON (default: Posts/training_pdf_urls.json). "
-                             "Pass Posts/training_pdf_urls_retry.json for the researcher retry pass.")
+                        help="Path to a URL manifest JSON (default: audits/training_pdf_urls.json). "
+                             "Pass audits/training_pdf_urls_retry.json for the researcher retry pass.")
     parser.add_argument("--topic", default=None, help="Single topic slug to process")
     parser.add_argument("--dry-run", action="store_true", help="Plan only, no network writes")
     parser.add_argument("--force", action="store_true", help="Re-download even if a valid PDF exists")

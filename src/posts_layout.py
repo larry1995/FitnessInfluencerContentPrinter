@@ -1,5 +1,5 @@
 """
-Shared layout helpers for the per-topic Posts/ tree.
+Shared layout helpers for the per-topic work/ tree.
 
 Single source of truth for:
     - merge_meta(existing, new)    — unified meta.json merge strategy
@@ -135,7 +135,7 @@ def _slugify(text: str) -> str:
 
 
 def slug_from_source_url(source_url: str) -> str | None:
-    """Scan existing Posts/<slug>/meta.json files for a match on source_url.
+    """Scan existing work/<slug>/meta.json files for a match on source_url.
 
     Returns the matching slug or None. Used by `resolve_topic_slug` so that
     round-tripping a migrated post through the drafter doesn't regenerate a

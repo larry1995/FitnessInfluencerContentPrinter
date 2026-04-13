@@ -290,11 +290,6 @@ def parse_detailed_content(filepath):
         "reddit_callouts": [],      # list of top-voted comments, len <= 4
         "forum_meta": {},           # for forum_thread layout
         "forum_quote_chain": [],    # flattened quote chain, len <= 4
-        # Audit state (populated from meta.json by the discovery wrapper).
-        # When "BLOCKED", render_single_page stamps the output with a
-        # publication-block watermark unless WATERMARK_BLOCKED is disabled.
-        "audit_status": "",
-        "audit_issue_count": 0,
     }
 
     sidecar = _load_sidecar_if_present(filepath)
@@ -989,13 +984,6 @@ BG_COMMUNITY_OP = (30, 40, 55)
 REDDIT_ORANGE = (255, 120, 70)
 FORUM_BLUE = (100, 160, 220)
 
-# Publication-freeze watermark (Task #31). Posts whose meta.json has
-# audit_status == "BLOCKED" get a diagonal overlay warning humans not to
-# publish. Toggle off via CLI `--no-watermark` during remediation diffs.
-WATERMARK_BLOCKED = True
-WATERMARK_COLOR = (255, 30, 30)
-WATERMARK_BG = (15, 0, 0, 180)
-
 
 def _community_body_wrap_width():
     return CONTENT_WIDTH - S(60)
@@ -1194,50 +1182,6 @@ def _render_forum_layout(draw, y, post, left_x):
                                       indent=indent)
 
     return y
-
-
-def _stamp_blocked_watermark(img, page_height, issue_count):
-    """Overlay a publication-block warning banner on blocked posts.
-
-    Called at the end of render_single_page when post["audit_status"] ==
-    "BLOCKED" and WATERMARK_BLOCKED is True. Draws two solid bands (top and
-    middle) plus a diagonal "AUDIT BLOCKED" stripe so the warning is visible
-    whether someone sees the full PNG, a thumbnail, or an IG picker preview.
-    """
-    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    odraw = ImageDraw.Draw(overlay)
-
-    banner_text = "AUDIT BLOCKED — DO NOT PUBLISH"
-    detail_text = (f"{issue_count} unverified citation"
-                   f"{'s' if issue_count != 1 else ''} — "
-                   f"remediate before publication")
-
-    font_banner = get_font(36, bold=True)
-    font_detail = get_font(16)
-
-    top_band_h = S(90)
-    odraw.rectangle([0, 0, PAGE_WIDTH, top_band_h], fill=WATERMARK_BG)
-    odraw.text((PAGE_WIDTH // 2, S(20)), banner_text,
-               fill=WATERMARK_COLOR, font=font_banner, anchor="mt")
-    odraw.text((PAGE_WIDTH // 2, S(65)), detail_text,
-               fill=(255, 200, 200), font=font_detail, anchor="mt")
-
-    mid_band_y = page_height // 2 - S(30)
-    odraw.rectangle([0, mid_band_y, PAGE_WIDTH, mid_band_y + S(60)],
-                    fill=WATERMARK_BG)
-    odraw.text((PAGE_WIDTH // 2, mid_band_y + S(30)), banner_text,
-               fill=WATERMARK_COLOR, font=font_banner, anchor="mm")
-
-    bottom_band_y = page_height - S(90)
-    odraw.rectangle([0, bottom_band_y, PAGE_WIDTH, bottom_band_y + S(90)],
-                    fill=WATERMARK_BG)
-    odraw.text((PAGE_WIDTH // 2, bottom_band_y + S(20)), banner_text,
-               fill=WATERMARK_COLOR, font=font_banner, anchor="mt")
-    odraw.text((PAGE_WIDTH // 2, bottom_band_y + S(65)), detail_text,
-               fill=(255, 200, 200), font=font_detail, anchor="mt")
-
-    composited = Image.alpha_composite(img.convert("RGBA"), overlay)
-    return composited.convert("RGB")
 
 
 def render_single_page(post, page_height):
@@ -1603,42 +1547,16 @@ def render_single_page(post, page_height):
     # ── Bottom accent bar ──
     draw.rectangle([0, page_height - S(6), PAGE_WIDTH, page_height], fill=ACCENT_RED)
 
-    if WATERMARK_BLOCKED and post.get("audit_status") == "BLOCKED":
-        img = _stamp_blocked_watermark(
-            img, page_height, post.get("audit_issue_count", 0))
-
     return img
 
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 
-def _read_audit_meta(draft_path):
-    """Load audit fields from the per-topic meta.json sibling of a draft.
-
-    Returns a dict with `audit_status` (str) and `audit_issues` (list).
-    Missing/malformed meta.json returns the safe defaults — empty status and
-    empty issue list — which means no watermark will fire. Fail-safe by design:
-    a corrupt meta should degrade to "render clean", not "render broken".
-    """
-    meta_path = Path(draft_path).parent.parent / "meta.json"
-    if not meta_path.exists():
-        return {"audit_status": "", "audit_issues": []}
-    try:
-        with open(meta_path, encoding="utf-8") as f:
-            meta = json.load(f)
-    except (json.JSONDecodeError, OSError):
-        return {"audit_status": "", "audit_issues": []}
-    return {
-        "audit_status": meta.get("audit_status", ""),
-        "audit_issues": meta.get("audit_issues", []),
-    }
-
-
 def _discover_topic_drafts():
     """Yield (topic_slug, draft_path, output_png_path) for each per-topic
-    English draft in the new Posts/<slug>/en/ layout. Falls back to the
-    legacy flat Posts/polished/ layout if no per-topic dirs exist."""
+    English draft in the work/<slug>/en/ layout. Falls back to the
+    legacy flat work/polished/ layout if no per-topic dirs exist."""
     topic_drafts = []
     for topic_dir in sorted(POSTS_DIR.iterdir()):
         if not topic_dir.is_dir():
@@ -1678,9 +1596,6 @@ def generate_all_single_pages():
 
     for slug, txt_file, png_path in topic_drafts:
         post = parse_detailed_content(txt_file)
-        audit_meta = _read_audit_meta(txt_file)
-        post["audit_status"] = audit_meta["audit_status"]
-        post["audit_issue_count"] = len(audit_meta["audit_issues"])
         page_height = calculate_page_height(post, tmp_draw)
         page_img = render_single_page(post, page_height)
 
@@ -1694,13 +1609,7 @@ def generate_all_single_pages():
         ev_level = post.get("evidence_info", {}).get("level", "-")
         layout = post.get("layout", "default")
 
-        audit_tag = ""
-        if post.get("audit_status") == "BLOCKED":
-            audit_tag = f" [BLOCKED: {post.get('audit_issue_count', 0)} issues]"
-        elif post.get("audit_status") == "WARN":
-            audit_tag = f" [WARN: {post.get('audit_issue_count', 0)} soft flags]"
-
-        print(f"[PAGE] {strip_emoji(post['title'])[:55]}...{audit_tag}")
+        print(f"[PAGE] {strip_emoji(post['title'])[:55]}...")
         print(f"  {n_pts} points, {n_extra} extra, {n_guide} guide, "
               f"{len(post['references'])} refs | "
               f"layout={layout} evidence={ev_level} | "
@@ -1733,24 +1642,8 @@ def generate_all_single_pages():
 
         print(f"\n[PDF] Combined PDF: {pdf_path} ({len(all_pages)} pages)")
 
-    print(f"\n[DONE] {len(all_pages)} detailed single-page posts written to per-topic Posts/<slug>/en/")
+    print(f"\n[DONE] {len(all_pages)} detailed single-page posts written to per-topic work/<slug>/en/")
 
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser(
-        description="Render all ContentPrinter posts to single-page PNGs.")
-    parser.add_argument(
-        "--no-watermark",
-        action="store_true",
-        help="Skip the AUDIT BLOCKED watermark on posts with "
-             "audit_status=BLOCKED. Use for clean before/after diffing "
-             "during #31 remediation. DO NOT use for posts you intend to "
-             "publish.",
-    )
-    args = parser.parse_args()
-    if args.no_watermark:
-        WATERMARK_BLOCKED = False
-        print("[WARN] --no-watermark: BLOCKED posts will render without "
-              "warning overlay. For remediation diffs only — do not publish.")
     generate_all_single_pages()

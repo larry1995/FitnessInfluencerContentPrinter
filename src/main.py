@@ -17,7 +17,6 @@ Usage:
     python src/main.py sourcepdfs   # Download open-access source PDFs for training-method posts
     python src/main.py images       # Generate carousel images from drafts
     python src/main.py pdf          # Generate PDFs from carousel images
-    python src/main.py polish       # Print Claude Code command to polish drafts
 """
 
 import sys
@@ -111,52 +110,6 @@ def run_finalize(dry_run: bool = False):
     print("\n[STEP 8/8] Finalizing outputs → Posts/<category>/ ...\n")
     results = finalize_all(dry_run=dry_run)
     print(summarize(results))
-
-
-def run_polish():
-    """DEPRECATED — see banner below.
-
-    The Claude-Code polish workflow this command was designed for is the
-    root cause of the 2026-04-12 citation hallucination crisis (#21 audit
-    found 38% of refs across 31 posts were hallucinated). The polish
-    command fed draft .txt files to an LLM along with the editorial spec's
-    "minimum 2 references" rule but never the actual source articles, so
-    the LLM confabulated citations from training memory.
-
-    Use `python src/main.py draft --llm` instead — the grounded LLM
-    drafter passes verified citations as a hard allow-list and rejects
-    LLM output containing any non-allow-listed citation.
-
-    This function is preserved for backwards compatibility with any
-    in-flight manual workflow but emits a runtime DeprecationWarning and
-    will be removed in a future sprint.
-    """
-    import warnings
-    warnings.warn(
-        "run_polish is the root cause of the 2026-04-12 citation hallucination "
-        "crisis. Use `python src/main.py draft --llm` (grounded drafter) instead. "
-        "See audits/drafter_root_cause_2026-04-12.md.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
-    print("""
-╔══════════════════════════════════════════════════════════╗
-║  ⚠ DEPRECATED — DO NOT USE FOR PUBLISHED CONTENT          ║
-╠══════════════════════════════════════════════════════════╣
-║                                                          ║
-║  This command is the root cause of the citation          ║
-║  hallucination crisis caught by audit #21 (38% of refs   ║
-║  across 31 posts were hallucinated, misattributed, or    ║
-║  unverifiable).                                          ║
-║                                                          ║
-║  Use the grounded LLM drafter instead:                   ║
-║      python src/main.py draft --llm                      ║
-║                                                          ║
-║  See audits/drafter_root_cause_2026-04-12.md for the     ║
-║  full root-cause analysis.                               ║
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
-    """)
 
 
 def _safe_run(step_name, func):
@@ -275,8 +228,6 @@ def main():
         elif command == "finalize":
             print_banner()
             run_finalize(dry_run="--dry-run" in sys.argv[2:])
-        elif command == "polish":
-            run_polish()
         elif command in ("help", "-h", "--help"):
             print(__doc__)
         else:

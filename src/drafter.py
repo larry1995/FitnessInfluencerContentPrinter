@@ -357,9 +357,9 @@ def _write_post_file(path, post):
 def save_drafts(posts):
     """Save drafted posts.
 
-    Writes the per-topic layout (Posts/<slug>/en/draft.txt + meta.json) that
+    Writes the per-topic layout (work/<slug>/en/draft.txt + meta.json) that
     single_page_generator.py consumes, and also mirrors a JSON copy into
-    Posts/drafts/ for downstream steps (image_generator) that still read the
+    work/drafts/ for downstream steps (image_generator) that still read the
     flat drafts dir.
     """
     drafts_dir = POSTS_DIR / "drafts"
@@ -412,7 +412,7 @@ def save_drafts(posts):
         except Exception as e:
             print(f"  [ZH] {slug}: error — {e}")
 
-    print(f"[SAVED] {len(posts)} drafts → Posts/<slug>/en/ (and Posts/drafts/ mirror)")
+    print(f"[SAVED] {len(posts)} drafts → work/<slug>/en/ (and work/drafts/ mirror)")
     return drafts_dir
 
 
@@ -423,17 +423,17 @@ def draft_all_grounded():
     a verified citation allow-list from the article, sends a constrained
     prompt to the LLM, and runs Layer A + Layer B verification on the
     output). On success, writes the LLM output verbatim to
-    `Posts/<slug>/en/draft.txt` and stamps meta.json with
+    `work/<slug>/en/draft.txt` and stamps meta.json with
     `audit_status: "OK"` via `audit_meta_writer.refresh_audit_meta`.
 
     Three failure modes (logged, skipped, no draft saved):
       - INSUFFICIENT_SOURCE_DATA: source article had no extractable
-        citations. A signal file is dropped at `Posts/.needs_research/<slug>.json`.
+        citations. A signal file is dropped at `work/.needs_research/<slug>.json`.
       - LLM not configured: no `ANTHROPIC_API_KEY`.
       - DROP: all retries failed allow-list / verify_citations checks.
 
     Unlike `draft_all`, the grounded path does NOT mirror posts into
-    `Posts/drafts/`, does NOT auto-trigger the Chinese drafter, and does
+    `work/drafts/`, does NOT auto-trigger the Chinese drafter, and does
     NOT touch `weekly_summary_*.json`. Those are pure-template-pipeline
     concerns. The grounded path is strict, citation-safe, and silent on
     everything outside the per-topic directory.
@@ -506,7 +506,7 @@ def draft_all_grounded():
 
         saved.append({"slug": slug, "title": title})
 
-    print(f"\n[SAVED] {len(saved)} grounded drafts → Posts/<slug>/en/draft.txt")
+    print(f"\n[SAVED] {len(saved)} grounded drafts → work/<slug>/en/draft.txt")
     return saved
 
 
@@ -549,10 +549,3 @@ def draft_all():
 
     print(f"\n[SUMMARY] {summary_file}")
     return posts
-
-
-if __name__ == "__main__":
-    posts = draft_all()
-    print(f"\nTotal posts drafted: {len(posts)}")
-    print("Review your drafts in Posts/drafts/")
-    print("Then refine with Claude Code: claude 'Polish these drafts for Instagram'")

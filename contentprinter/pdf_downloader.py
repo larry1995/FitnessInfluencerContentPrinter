@@ -1,7 +1,7 @@
 """Library surface for OA source-PDF downloads.
 
 Wraps `src/pdf_downloader.py` into a batch primitive that takes a list of
-reference dicts (matching the shape in `Posts/training_pdf_urls.json`) and
+reference dicts (matching the shape in `audits/training_pdf_urls.json`) and
 returns the list of successfully-downloaded file paths.
 """
 
@@ -28,7 +28,8 @@ def download_references(
             where status == "ok" additionally need `pdf_url` and ideally
             `citation`. Anything other than `status=="ok"` is skipped
             silently, same as the CLI. Shape matches the researcher's
-            `training_pdf_urls.json` / `upcoming_pdf_urls.json` files.
+            JSON format (see `audits/training_pdf_urls.json`,
+            `config/upcoming_pdf_urls.json`).
         out_dir: Destination directory. Will be created if missing. Each
             successful download writes `refNN.pdf` (zero-padded ref_idx)
             into this directory alongside a `download_log.json` with

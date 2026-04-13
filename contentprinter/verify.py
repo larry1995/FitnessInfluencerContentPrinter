@@ -4,13 +4,14 @@ Wraps `audits/_citation_audit.py::audit_draft` as a stable public function
 that the CSKB iOS app's FastAPI job runner can call to determine whether
 a generated draft is safe to publish.
 
-Background: on 2026-04-12 researcher's #21 audit caught the manual
-`run_polish` workflow producing 38% hallucinated citations across the 31
-existing posts. The drafter library function (`generate_draft`) is safe —
-it doesn't produce citations at all. The hallucination path is any
-pipeline operation that passes drafts through an ungrounded LLM. This
-verification gate is the structural safety net that catches hallucinations
-regardless of how they entered the draft.
+Background: on 2026-04-12 researcher's #21 audit caught an earlier manual
+polish workflow that had produced 38% hallucinated citations across the
+31 existing posts (the offending code path has since been removed). The
+drafter library function (`generate_draft`) is safe — it doesn't produce
+citations at all. The hallucination path is any pipeline operation that
+passes drafts through an ungrounded LLM. This verification gate is the
+structural safety net that catches hallucinations regardless of how they
+entered the draft.
 
 The blocking severity set is **forward-compatible**: it includes the four
 severities currently observed in production data plus three more code-path

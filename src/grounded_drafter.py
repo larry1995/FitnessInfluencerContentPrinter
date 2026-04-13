@@ -1,9 +1,10 @@
 """Grounded LLM drafter — produces draft.txt files whose REFERENCES blocks
 contain ONLY citations extractable from the scraped source article.
 
-Background: on 2026-04-12 researcher's #21 audit caught the ungrounded
-`run_polish` workflow producing 38% hallucinated citations across 31 posts.
-The root cause (#30 investigation): the LLM was given a draft caption + the
+Background: on 2026-04-12 researcher's #21 audit caught an earlier
+ungrounded polish workflow that had produced 38% hallucinated citations
+across 31 posts (the offending code path has since been removed). Root
+cause (#30 investigation): the LLM was given a draft caption + the
 editorial spec mandating "2-5 DOI-bearing citations" but never the actual
 source article's citation metadata, so it confabulated from training memory.
 
@@ -403,7 +404,7 @@ def _write_needs_research_signal(
     slug: str,
     extraction_breakdown: dict[str, Any],
 ) -> None:
-    """Emit `Posts/.needs_research/<slug>.json` for operational triage."""
+    """Emit `work/.needs_research/<slug>.json` for operational triage."""
     NEEDS_RESEARCH_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "slug": slug,

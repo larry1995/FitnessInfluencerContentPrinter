@@ -1,7 +1,7 @@
 """
 Instagram Image Generator for Central Strength Gym
 Creates branded carousel slide images from POLISHED posts.
-Reads from Posts/polished/*.txt — the human-refined content.
+Reads from work/polished/*.txt — the human-refined content.
 Also outputs markdown files for each post.
 """
 
@@ -503,7 +503,7 @@ def generate_all_images():
 
     txt_files = sorted(polished_dir.glob("*.txt"))
     if not txt_files:
-        print("[INFO] No polished posts found in Posts/polished/. Polish your drafts first.")
+        print("[INFO] No polished posts found in work/polished/. Polish your drafts first.")
         return
 
     print(f"\n{'='*60}")

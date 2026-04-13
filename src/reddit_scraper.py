@@ -11,7 +11,7 @@ Notes
 -----
 * Uses src/http_utils.create_session for all HTTP (timeout + retry).
 * No login; no OAuth. We only read public listings.
-* Visited set persisted across runs at Posts/.seen_reddit_hashes.json —
+* Visited set persisted across runs at work/.seen_reddit_hashes.json —
   prevents duplicates and cycles.
 * `--fixture-dir DIR` routes all HTTP through local files for CI smoke tests.
   Expected layout:

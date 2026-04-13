@@ -1,22 +1,22 @@
 """
-Promote raw reddit/forum scraper records into the per-topic Posts/ layout.
+Promote raw reddit/forum scraper records into the per-topic work/ layout.
 
 The scrapers (reddit_scraper, forum_scraper) emit batch JSON into
-`Posts/raw/reddit_*.json` and `Posts/raw/forum_*.json`. This module takes
+`work/raw/reddit_*.json` and `work/raw/forum_*.json`. This module takes
 one such record and fans it out into:
 
-    Posts/<slug>/en/draft.txt      — human-editable caption stub
-    Posts/<slug>/en/source.json    — structured community metadata
-                                     (matches config/source_format_design.md
-                                      §3.2 for reddit, §4.2 for forum)
-    Posts/<slug>/meta.json         — topic-level metadata, with `source_type`
-    Posts/<slug>/pdfs/             — empty directory (for consistency with
-                                     the rest of the layout)
+    work/<slug>/en/draft.txt      — human-editable caption stub
+    work/<slug>/en/source.json    — structured community metadata
+                                    (matches config/source_format_design.md
+                                     §3.2 for reddit, §4.2 for forum)
+    work/<slug>/meta.json         — topic-level metadata, with `source_type`
+    work/<slug>/pdfs/             — empty directory (for consistency with
+                                    the rest of the layout)
 
 Called by `reddit_scraper.scrape_reddit()` and `forum_scraper.scrape_forums()`
 after their scrape loops finish. Also callable directly:
 
-    python src/source_promoter.py --raw Posts/raw/reddit_20260412_001530.json
+    python src/source_promoter.py --raw work/raw/reddit_20260412_001530.json
 
 Design:
 - Never overwrites an existing hand-edited `draft.txt`. The draft stub is a
@@ -332,9 +332,9 @@ def main():
     parser = argparse.ArgumentParser(
         description="Promote raw reddit/forum scraper records to per-topic drafts"
     )
-    parser.add_argument("--raw", type=Path, help="Specific Posts/raw/*.json file to promote")
+    parser.add_argument("--raw", type=Path, help="Specific work/raw/*.json file to promote")
     parser.add_argument("--all", action="store_true",
-                        help="Promote every Posts/raw/reddit_*.json and forum_*.json")
+                        help="Promote every work/raw/reddit_*.json and forum_*.json")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 

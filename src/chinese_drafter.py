@@ -3,7 +3,7 @@ Chinese draft generator — Bruce Lu voice.
 
 Loads config/chinese_prompt_template.md, calls the LLM with the English draft
 substituted in, validates the output for common prompt-failure modes, and
-writes it verbatim to Posts/<slug>/zh/draft.txt. A gym CTA block is appended
+writes it verbatim to work/<slug>/zh/draft.txt. A gym CTA block is appended
 **outside** the Bruce Lu prompt (Bruce never writes ads in his own voice —
 per frontend-writer's integration notes).
 

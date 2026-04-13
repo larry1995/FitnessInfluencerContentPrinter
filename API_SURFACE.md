@@ -39,7 +39,7 @@ Generate an Instagram post draft dict from a scraped-article dict.
 
 | Arg | Type | Description |
 |---|---|---|
-| `article` | `dict` | Required. Must contain `title` and `full_text`. Other recognized fields: `topic`, `source`, `url`, `summary`, `structured_content`. Same shape as scraper output under `Posts/raw/*.json`. |
+| `article` | `dict` | Required. Must contain `title` and `full_text`. Other recognized fields: `topic`, `source`, `url`, `summary`, `structured_content`. Same shape as scraper output under `work/raw/*.json`. |
 | `brand` | `dict \| None` | Optional override. Defaults to `config/sources.json` brand block. |
 | `post_number` | `int` | Sequential post number. Default `1`. |
 
@@ -63,7 +63,7 @@ Produce a draft.txt body whose REFERENCES block is grounded in citations extract
 
 **Returns:** The draft.txt text body on success — caption + REFERENCES block, ready to write to disk. **Returns `None` on three distinct paths**:
 
-- **`INSUFFICIENT_SOURCE_DATA`** — the source article had zero extractable verified citations. A signal file is written to `Posts/.needs_research/<slug>.json` for operational triage.
+- **`INSUFFICIENT_SOURCE_DATA`** — the source article had zero extractable verified citations. A signal file is written to `work/.needs_research/<slug>.json` for operational triage.
 - **LLM not configured** — `is_llm_configured()` returned `False` (no `ANTHROPIC_API_KEY`).
 - **`DROP`** — the LLM produced output that failed allow-list or `verify_citations` on every retry.
 
@@ -71,7 +71,7 @@ Produce a draft.txt body whose REFERENCES block is grounded in citations extract
 
 **Raises:** `ValueError` if `article` is not a dict or has no `title`.
 
-**Side effects:** One or more outbound HTTPS requests to `api.anthropic.com` (LLM call, retried at most `max_retries + 1` times). Crossref / PubMed lookups via `verify_citations` for inline-DOI extraction (Layer A) and post-LLM defense-in-depth (Layer B). May write a single file under `Posts/.needs_research/<slug>.json` on the INSUFFICIENT_SOURCE_DATA path. **Total runtime budget 30-60 seconds end-to-end** — see § 11 for the "background worker only, never request handler" rule.
+**Side effects:** One or more outbound HTTPS requests to `api.anthropic.com` (LLM call, retried at most `max_retries + 1` times). Crossref / PubMed lookups via `verify_citations` for inline-DOI extraction (Layer A) and post-LLM defense-in-depth (Layer B). May write a single file under `work/.needs_research/<slug>.json` on the INSUFFICIENT_SOURCE_DATA path. **Total runtime budget 30-60 seconds end-to-end** — see § 11 for the "background worker only, never request handler" rule.
 
 ---
 
@@ -212,14 +212,14 @@ Re-audit a single post's `draft.txt` and re-stamp its `meta.json` with the resul
 
 | Arg | Type | Description |
 |---|---|---|
-| `slug` | `str` | Required. Topic slug (per-post directory name under `Posts/`). The function reads `Posts/<slug>/en/draft.txt` and writes `Posts/<slug>/meta.json`. |
+| `slug` | `str` | Required. Topic slug (per-post directory name under `work/`). The function reads `work/<slug>/en/draft.txt` and writes `work/<slug>/meta.json`. |
 | `dry_run` | `bool` | When True, run verification but skip the meta.json write. Returns a status string describing what would have been written. Default `False`. |
 
 **Returns:** A status string — one of `"refreshed: <slug> -> <status>"`, `"unchanged: <slug>"`, `"missing-draft: <slug>"`, or `"dry-run: <slug> -> <would-be-status>"`. The set of return strings may grow; existing strings will not be renamed.
 
 **Raises:** `ValueError` if `slug` is empty or not a string. `FileNotFoundError` if the topic directory itself doesn't exist.
 
-**Side effects:** Reads `Posts/<slug>/en/draft.txt`. Outbound HTTPS to Crossref + PubMed via `verify_citations` (1-2 seconds per REFERENCES entry; ~10 seconds for a 5-ref post). Writes `Posts/<slug>/meta.json` unless `dry_run=True` or the merged content is byte-equal to what's already on disk. **Synchronous and not safe to call from a FastAPI request handler** — run in a background worker.
+**Side effects:** Reads `work/<slug>/en/draft.txt`. Outbound HTTPS to Crossref + PubMed via `verify_citations` (1-2 seconds per REFERENCES entry; ~10 seconds for a 5-ref post). Writes `work/<slug>/meta.json` unless `dry_run=True` or the merged content is byte-equal to what's already on disk. **Synchronous and not safe to call from a FastAPI request handler** — run in a background worker.
 
 ---
 
@@ -289,7 +289,7 @@ The renderer dict must have at minimum:
 
 ## 5. The reference dict shape (input to `download_references`)
 
-Matches the researcher's pre-resolved JSON format in `Posts/training_pdf_urls.json` and `config/upcoming_pdf_urls.json`. Fields:
+Matches the researcher's pre-resolved JSON format in `audits/training_pdf_urls.json` and `config/upcoming_pdf_urls.json`. Fields:
 
 | Field | Type | Notes |
 |---|---|---|
@@ -313,7 +313,7 @@ Any additional keys in a ref dict are preserved in `download_log.json` but not u
 4. **HTML fallback served instead of a PDF → rejected by magic-byte validation, recorded as `failed`, not raised.**
 5. **Write failures raise.** `render_page` will raise `OSError` if the backing disk is full, permissions are wrong, or `output_path`'s parent can't be created. It does **not** silently drop — a returned `Path` always points to a file that was written successfully. Same guarantee for `parse_draft_text`'s internal tempfile: if the tempdir is unwritable, `OSError` surfaces rather than returning a half-parsed dict.
 6. **`verify_citations` never raises on network failure.** When Crossref or PubMed are unreachable (DNS, timeout, 5xx, rate limit), the affected reference row is returned with `severity = "VERIFICATION_UNAVAILABLE"` and a `notes` field explaining the failure. The function does NOT raise on individual network errors. `VERIFICATION_UNAVAILABLE` is **not** in `BLOCKING_SEVERITIES` — consumers should treat it as "unknown, escalate to a human reviewer", not as either pass or fail. The only `verify_citations` exceptions are `ValueError` (empty/invalid input) and `FileNotFoundError` (Path arg pointing at a missing file). **Callers MUST check `len(blocked) > 0` rather than catching exceptions** — the gate is data-driven, not exception-driven.
-7. **`generate_grounded_draft` returns `None` on three distinct failure paths**: INSUFFICIENT_SOURCE_DATA (zero extractable verified citations from the source article), no `ANTHROPIC_API_KEY`, or DROP (allow-list / verify_citations rejected the LLM output on every retry). The function never raises on the network round-trip itself — Anthropic API failures fall through to DROP after `max_retries + 1` attempts, and Crossref / PubMed failures during inline-DOI extraction skip the candidate without raising. The only `generate_grounded_draft` exception is `ValueError` (article missing required `title`). **Callers MUST handle `None`** — and SHOULD log-and-skip rather than retry the same article without a topic-source change, since the three None paths are not transient. The INSUFFICIENT_SOURCE_DATA path is the only one that writes a side-effect file (`Posts/.needs_research/<slug>.json`); the LLM-not-configured and DROP paths are silent on the filesystem.
+7. **`generate_grounded_draft` returns `None` on three distinct failure paths**: INSUFFICIENT_SOURCE_DATA (zero extractable verified citations from the source article), no `ANTHROPIC_API_KEY`, or DROP (allow-list / verify_citations rejected the LLM output on every retry). The function never raises on the network round-trip itself — Anthropic API failures fall through to DROP after `max_retries + 1` attempts, and Crossref / PubMed failures during inline-DOI extraction skip the candidate without raising. The only `generate_grounded_draft` exception is `ValueError` (article missing required `title`). **Callers MUST handle `None`** — and SHOULD log-and-skip rather than retry the same article without a topic-source change, since the three None paths are not transient. The INSUFFICIENT_SOURCE_DATA path is the only one that writes a side-effect file (`work/.needs_research/<slug>.json`); the LLM-not-configured and DROP paths are silent on the filesystem.
 
 ---
 
@@ -370,7 +370,7 @@ Things that *might* change and that consumers should not depend on:
 
 - The `src/` module layout and filenames.
 - The exact log format of `download_log.json` (stable keys: `entries.<refKey>.status`, `entries.<refKey>.path`; other keys may churn).
-- The `Posts/` on-disk directory structure (tracked by `posts_layout.py` helpers, which are internal — if the KB app needs layout introspection, file a task).
+- The `work/` on-disk scratch directory structure (tracked by `posts_layout.py` helpers, which are internal — if the KB app needs layout introspection, file a task). Final published output under `Posts/<category>/` is routed via `output_layout.finalize`.
 - The exact prompt text in `config/chinese_prompt_template.md`. The *voice* is stable; the prompt wording is not.
 
 If you find yourself reaching into `src/*` to get something done, file a task to expose it properly here.
@@ -527,13 +527,13 @@ status_msg = refresh_audit_meta("nutrition_vegan_creatine")
 CLI form for the remediation workflow:
 
 ```bash
-# After editing Posts/<slug>/en/draft.txt:
+# After editing work/<slug>/en/draft.txt:
 python src/audit_meta_writer.py --refresh nutrition_vegan_creatine
 ```
 
 Pipeline (from the helper's docstring):
 
-1. Read `Posts/<slug>/en/draft.txt`
+1. Read `work/<slug>/en/draft.txt`
 2. Call `contentprinter.verify_citations(draft_path, slug=slug)` for fresh rows
 3. Build audit fields with today's date via `build_audit_fields`
 4. Merge into existing `meta.json` via `posts_layout.merge_meta` (preserves unrelated fields like `tags`, `references`, `source_name`)
@@ -570,8 +570,6 @@ The repository ships two drafter entry points with intentionally different contr
 | `generate_draft(article)` | Pure-Python template assembly. No LLM. | Zero citations — the template path does not produce a REFERENCES block at all. | You want deterministic output for testing, fixtures, or any flow where the LLM round-trip is undesirable. CSKB iOS app's offline-mode preview can use this. |
 | `generate_grounded_draft(article)` | LLM-assisted, citation-grounded. | Only citations extractable + verifiable from the source article. Empty allow-list → INSUFFICIENT_SOURCE_DATA. | You want publication-grade content for the Central Strength brand. The CSKB iOS app's `drafting` lifecycle step calls this. |
 
-**Never use `run_polish` (the deprecated CLI workflow).** It is the root cause of the 2026-04-12 hallucination crisis. The function still exists for backwards compatibility but emits a `DeprecationWarning` and prints a banner pointing here. Removal scheduled for a future sprint.
-
 ### 11.2 The three None paths
 
 `generate_grounded_draft` can return `None` in three semantically distinct cases. Because the return type doesn't disambiguate them, callers reading the return value alone cannot tell which happened — log lines on stdout describe each. For programmatic disambiguation:
@@ -579,10 +577,10 @@ The repository ships two drafter entry points with intentionally different contr
 | None path | Programmatic check | Operator action |
 |---|---|---|
 | **No `ANTHROPIC_API_KEY`** | Call `is_llm_configured()` first; treat False as "skip the LLM path entirely". | Set the env var, retry the same article. |
-| **`INSUFFICIENT_SOURCE_DATA`** | Check for the existence of `Posts/.needs_research/<slug>.json` after the call. If present, the source article had zero extractable citations. | Find a richer source for the topic, or mark the topic as practitioner-only and skip generation. The signal file is gitignored — operational state, not source-controlled. |
+| **`INSUFFICIENT_SOURCE_DATA`** | Check for the existence of `work/.needs_research/<slug>.json` after the call. If present, the source article had zero extractable citations. | Find a richer source for the topic, or mark the topic as practitioner-only and skip generation. The signal file is gitignored — operational state, not source-controlled. |
 | **`DROP`** | Neither check above succeeds. The LLM produced output, but every retry failed allow-list (Layer A) or `verify_citations` (Layer B). | Investigate via the prompt logs. May indicate the source article has citations the LLM can't fit cleanly into a 4-bullet post — try a different source or a different topic framing. |
 
-The three cases are deliberately not collapsed into an exception type or a structured result object. Callers that need fine-grained outcome info can call `is_llm_configured()` and inspect `Posts/.needs_research/<slug>.json` after the call. This keeps the return type a simple `str | None` and matches the stability shape of `generate_chinese_from_english` — both LLM functions look identical to a consumer reading the signature.
+The three cases are deliberately not collapsed into an exception type or a structured result object. Callers that need fine-grained outcome info can call `is_llm_configured()` and inspect `work/.needs_research/<slug>.json` after the call. This keeps the return type a simple `str | None` and matches the stability shape of `generate_chinese_from_english` — both LLM functions look identical to a consumer reading the signature.
 
 ### 11.3 Library wiring for the CSKB job runner
 
