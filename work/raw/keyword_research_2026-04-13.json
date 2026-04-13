@@ -1,0 +1,640 @@
+{
+  "_meta": {
+    "generated": "2026-04-13",
+    "researcher": "contentprinter-team/researcher",
+    "task_id": "11",
+    "verification_note": "All DOIs verified against PubMed via claude_ai_PubMed MCP. All YouTube channels/creators verified to exist via WebSearch. Video URLs are channel-level; specific video URLs require manual pull from each channel — credibility notes are load-bearing, not URLs.",
+    "source": "PubMed (papers); WebSearch for creator credentials (videos)"
+  },
+  "powerlifting": {
+    "papers": [
+      {
+        "pmid": "32917000",
+        "doi": "10.3390/sports8090125",
+        "authors": ["Travis SK", "Mujika I", "Gentles JA", "Stone MH", "Bazyler CD"],
+        "year": 2020,
+        "title": "Tapering and Peaking Maximal Strength for Powerlifting Performance: A Review",
+        "journal": "Sports (Basel)",
+        "citation": "8(9):125"
+      },
+      {
+        "pmid": "34527944",
+        "doi": "10.3389/fspor.2021.713655",
+        "authors": ["Androulakis-Korakakis P", "Michalopoulos N", "Fisher JP", "Keogh J", "Loenneke JP", "Helms E", "Wolf M", "Nuckols G", "Steele J"],
+        "year": 2021,
+        "title": "The Minimum Effective Training Dose Required for 1RM Strength in Powerlifters",
+        "journal": "Front Sports Act Living",
+        "citation": "3:713655"
+      },
+      {
+        "pmid": "30844981",
+        "doi": "10.1519/JSC.0000000000003099",
+        "authors": ["Ferland PM", "Comtois AS"],
+        "year": 2019,
+        "title": "Classic Powerlifting Performance: A Systematic Review",
+        "journal": "J Strength Cond Res",
+        "citation": "33 Suppl 1:S194-S201"
+      },
+      {
+        "pmid": "27707741",
+        "doi": "10.1136/bjsports-2016-096037",
+        "authors": ["Aasa U", "Svartholm I", "Andersson F", "Berglund L"],
+        "year": 2017,
+        "title": "Injuries among weightlifters and powerlifters: a systematic review",
+        "journal": "Br J Sports Med",
+        "citation": "51(4):211-219"
+      },
+      {
+        "pmid": "37046275",
+        "doi": "10.1186/s13018-023-03781-x",
+        "authors": ["Serafim TT", "de Oliveira ES", "Maffulli N", "Migliorini F", "Okubo R"],
+        "year": 2023,
+        "title": "Which resistance training is safest to practice? A systematic review",
+        "journal": "J Orthop Surg Res",
+        "citation": "18(1):296"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Juggernaut Training Systems",
+        "creator": "Chad Wesley Smith",
+        "url": "https://www.youtube.com/@JuggernautTrainingSystems",
+        "credibility_note": "Top-tier. Chad Wesley Smith is a former elite powerlifter (top-10 all-time totals), 2x collegiate shot put champion, and coach to IPF world champions. JTS YouTube ~250k subs; content built on published scientific-principles framework."
+      },
+      {
+        "channel": "Stronger By Science",
+        "creator": "Greg Nuckols",
+        "url": "https://www.youtube.com/@StrongerByScience",
+        "credibility_note": "Highly credible. Greg Nuckols has BS Exercise Science, MS Exercise Physiology, 3 all-time powerlifting world records, co-founder of MASS Research Review. Explicitly evidence-based."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel, PhD",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "Credentialed. PhD Sport Physiology (East Tennessee State), former Temple University Exercise Science professor. ~3.8M subs. Covers powerlifting + hypertrophy programming."
+      },
+      {
+        "channel": "Jeff Nippard",
+        "creator": "Jeff Nippard",
+        "url": "https://www.youtube.com/@JeffNippard",
+        "credibility_note": "Credentialed communicator. BSc Biochemistry, former Canadian national record holder bench press, 502 squat / 336 bench / 518 DL. 2M+ subs, evidence-based."
+      },
+      {
+        "channel": "Alan Thrall (Untamed Strength)",
+        "creator": "Alan Thrall",
+        "url": "https://www.youtube.com/@AlanThrall",
+        "credibility_note": "Practical coaching credibility. Competitive powerlifter/strongman, gym owner of Untamed Strength, Starting Strength coach background. Strong on squat/bench/deadlift technique cues, not research-focused."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "31797219",
+        "doi": "10.1007/s40279-019-01236-0",
+        "authors": ["Androulakis-Korakakis P", "Fisher JP", "Steele J"],
+        "year": 2020,
+        "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+        "journal": "Sports Med",
+        "citation": "50(4):751-765"
+      }
+    ]
+  },
+  "supplements_evidence_based": {
+    "papers": [
+      {
+        "pmid": "37432300",
+        "doi": "10.3390/nu15092116",
+        "authors": ["Burke R", "Piñero A", "Coleman M", "Mohan A", "Sapuppo M", "Augustin F", "Aragon AA", "Candow DG", "Forbes SC", "Swinton P", "Schoenfeld BJ"],
+        "year": 2023,
+        "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+        "journal": "Nutrients",
+        "citation": "15(9):2116"
+      },
+      {
+        "pmid": "39074168",
+        "doi": "10.1519/JSC.0000000000004862",
+        "authors": ["Desai I", "Wewege MA", "Jones MD", "Clifford BK", "Pandit A", "Kaakoush NO", "Simar D", "Hagstrom AD"],
+        "year": 2024,
+        "title": "The Effect of Creatine Supplementation on Resistance Training-Based Changes to Body Composition: A Systematic Review and Meta-analysis",
+        "journal": "J Strength Cond Res",
+        "citation": "38(10):1813-1821"
+      },
+      {
+        "pmid": "35203046",
+        "doi": "10.1016/j.nut.2022.111604",
+        "authors": ["Grgic J"],
+        "year": 2022,
+        "title": "Exploring the minimum ergogenic dose of caffeine on resistance exercise performance: A meta-analytic approach",
+        "journal": "Nutrition",
+        "citation": "97:111604"
+      },
+      {
+        "pmid": "27797728",
+        "doi": "10.1136/bjsports-2016-096396",
+        "authors": ["Saunders B", "Elliott-Sale K", "Artioli GG", "Swinton PA", "Dolan E", "Roschel H", "Sale C", "Gualano B"],
+        "year": 2017,
+        "title": "β-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis",
+        "journal": "Br J Sports Med",
+        "citation": "51(8):658-669"
+      },
+      {
+        "pmid": "31643020",
+        "doi": "10.1007/s40279-019-01211-9",
+        "authors": ["Raya-González J", "Rendo-Urteaga T", "Domínguez R", "Castillo D", "Rodríguez-Fernández A", "Grgic J"],
+        "year": 2020,
+        "title": "Acute Effects of Caffeine Supplementation on Movement Velocity in Resistance Exercise: A Systematic Review and Meta-analysis",
+        "journal": "Sports Med",
+        "citation": "50(4):717-729"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Layne Norton / Biolayne",
+        "creator": "Dr. Layne Norton, PhD",
+        "url": "https://www.youtube.com/@BioLayne",
+        "credibility_note": "Highest-tier supplement credibility. PhD Nutritional Sciences, foremost expert in protein metabolism and evidence-based supplementation. Debunks fitness myths with citations."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel, PhD",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "PhD Sport Physiology. Produces dose-specific supplement guides citing peer-reviewed meta-analyses."
+      },
+      {
+        "channel": "Jeff Nippard",
+        "creator": "Jeff Nippard",
+        "url": "https://www.youtube.com/@JeffNippard",
+        "credibility_note": "BSc Biochemistry. Known for citation-heavy supplement breakdowns (creatine, caffeine, beta-alanine) with effect size reporting."
+      },
+      {
+        "channel": "Physionic",
+        "creator": "Nicolas Verhoeven, MSc (PhD candidate)",
+        "url": "https://www.youtube.com/@Physionic",
+        "credibility_note": "Deep-dive PhD-level physiology explainer. Good for mechanism-level supplement content; reviews individual RCTs critically."
+      },
+      {
+        "channel": "House of Hypertrophy",
+        "creator": "Milo Wolf, PhD",
+        "url": "https://www.youtube.com/@HouseofHypertrophy",
+        "credibility_note": "Credentialed researcher (co-author on powerlifting METD papers PMID 34527944). Publishes on evidence reviews."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "39042054",
+        "doi": "10.1080/15502783.2024.2380058",
+        "authors": ["Pashayee-Khamene F", "Heidari Z", "Asbaghi O", "Ashtary-Larky D", "Goudarzi K", "Forbes SC", "Candow DG", "Bagheri R", "Ghanavati M", "Dutheil F"],
+        "year": 2024,
+        "title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis",
+        "journal": "J Int Soc Sports Nutr",
+        "citation": "21(1):2380058"
+      },
+      {
+        "pmid": "34861076",
+        "doi": "10.1111/sms.14109",
+        "authors": ["Grgic J", "Mikulic P"],
+        "year": 2022,
+        "title": "Effects of caffeine on rate of force development: A meta-analysis",
+        "journal": "Scand J Med Sci Sports",
+        "citation": "32(4):644-653"
+      }
+    ]
+  },
+  "hybrid_training_concurrent": {
+    "papers": [
+      {
+        "pmid": "37847373",
+        "doi": "10.1007/s40279-023-01943-9",
+        "authors": ["Huiberts RO", "Wüst RCI", "van der Zwaard S"],
+        "year": 2024,
+        "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+        "journal": "Sports Med",
+        "citation": "54(2):485-503"
+      },
+      {
+        "pmid": "37948036",
+        "doi": "10.1007/s40279-023-01955-5",
+        "authors": ["Mikkonen RS", "Ihalainen JK", "Hackney AC", "Häkkinen K"],
+        "year": 2024,
+        "title": "Perspectives on Concurrent Strength and Endurance Training in Healthy Adult Females: A Systematic Review",
+        "journal": "Sports Med",
+        "citation": "54(3):673-696"
+      },
+      {
+        "pmid": "36429528",
+        "doi": "10.3390/ijerph192214800",
+        "authors": ["Kang J", "Ye Z", "Yin X", "Zhou C", "Gong B"],
+        "year": 2022,
+        "title": "Effects of Concurrent Strength and HIIT-Based Endurance Training on Physical Fitness in Trained Team Sports Players: A Systematic Review and Meta-Analysis",
+        "journal": "Int J Environ Res Public Health",
+        "citation": "19(22):14800"
+      },
+      {
+        "pmid": "28783467",
+        "doi": "10.1080/02640414.2017.1364405",
+        "authors": ["Murlasits Z", "Kneffel Z", "Thalib L"],
+        "year": 2017,
+        "title": "The physiological effects of concurrent strength and endurance training sequence: A systematic review and meta-analysis",
+        "journal": "J Sports Sci",
+        "citation": "36(11):1212-1219"
+      },
+      {
+        "pmid": "39969307",
+        "doi": "10.1097/MD.0000000000041055",
+        "authors": ["Wang T", "Bo S"],
+        "year": 2024,
+        "title": "Optimizing concurrent training programs: A review on factors that enhance muscle strength",
+        "journal": "Medicine (Baltimore)",
+        "citation": "103(52):e41055"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Fitness Fatigue (Jake Tuura)",
+        "creator": "Jake Tuura",
+        "url": "https://www.youtube.com/@jaketuura",
+        "credibility_note": "Former D1 collegiate strength coach. Practical hybrid/strength-endurance programming; not research-forward but coaching-credible."
+      },
+      {
+        "channel": "Nick Bare / BareHybrid",
+        "creator": "Nick Bare",
+        "url": "https://www.youtube.com/@NickBareFitness",
+        "credibility_note": "Popularized 'hybrid athlete' concept. Not research-based — he's an army-vet entrepreneur/ultramarathoner. Use only for topical framing/audience hooks, not claims."
+      },
+      {
+        "channel": "Fergus Crawley",
+        "creator": "Fergus Crawley",
+        "url": "https://www.youtube.com/@FergusCrawley",
+        "credibility_note": "Prominent hybrid athlete (sub-5 mile + 500lb squat). Coach, not researcher; good for lived-experience content and audience relevance."
+      },
+      {
+        "channel": "Stronger By Science",
+        "creator": "Greg Nuckols",
+        "url": "https://www.youtube.com/@StrongerByScience",
+        "credibility_note": "Has specifically addressed interference effect with direct reference to Wilson et al. and Huiberts et al. meta-analyses."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel, PhD",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "Covers concurrent training and interference effect with evidence citations; PhD-credentialed."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "30131714",
+        "doi": "10.3389/fphys.2018.01057",
+        "authors": ["Gäbler M", "Prieske O", "Hortobágyi T", "Granacher U"],
+        "year": 2018,
+        "title": "The Effects of Concurrent Strength and Endurance Training on Physical Fitness and Athletic Performance in Youth: A Systematic Review and Meta-Analysis",
+        "journal": "Front Physiol",
+        "citation": "9:1057"
+      }
+    ]
+  },
+  "powerlifting_method_programming": {
+    "papers": [
+      {
+        "pmid": "29372481",
+        "doi": "10.1007/s40279-018-0862-z",
+        "authors": ["Suchomel TJ", "Nimphius S", "Bellon CR", "Stone MH"],
+        "year": 2018,
+        "title": "The Importance of Muscular Strength: Training Considerations",
+        "journal": "Sports Med",
+        "citation": "48(4):765-785"
+      },
+      {
+        "pmid": "34132223",
+        "doi": "10.1519/JSC.0000000000004050",
+        "authors": ["Stone MH", "Hornsby WG", "Haff GG", "Fry AC", "Suarez DG", "Liu J", "Gonzalez-Rave JM", "Pierce KC"],
+        "year": 2021,
+        "title": "Periodization and Block Periodization in Sports: Emphasis on Strength-Power Training — A Provocative and Challenging Narrative",
+        "journal": "J Strength Cond Res",
+        "citation": "35(8):2351-2371"
+      },
+      {
+        "pmid": "36727999",
+        "doi": "10.1519/JSC.0000000000004465",
+        "authors": ["Bartolomei S", "Zaniboni F", "Verzieri N", "Hoffman JR"],
+        "year": 2023,
+        "title": "New Perspectives in Resistance Training Periodization: Mixed Session vs. Block Periodized Programs in Trained Men",
+        "journal": "J Strength Cond Res",
+        "citation": "37(3):537-545"
+      },
+      {
+        "pmid": "30350896",
+        "doi": "10.1111/sms.13326",
+        "authors": ["Rønnestad BR", "Øfsteng SJ", "Ellefsen S"],
+        "year": 2018,
+        "title": "Block periodization of strength and endurance training is superior to traditional periodization in ice hockey players",
+        "journal": "Scand J Med Sci Sports",
+        "citation": "29(2):180-188"
+      },
+      {
+        "pmid": "36078489",
+        "doi": "10.3390/ijerph191710773",
+        "authors": ["Prieto-González P", "Sedlacek J"],
+        "year": 2022,
+        "title": "Effects of Running-Specific Strength Training, Endurance Training, and Concurrent Training on Recreational Endurance Athletes' Performance and Selected Anthropometric Parameters",
+        "journal": "Int J Environ Res Public Health",
+        "citation": "19(17):10773"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Juggernaut Training Systems",
+        "creator": "Chad Wesley Smith",
+        "url": "https://www.youtube.com/@JuggernautTrainingSystems",
+        "credibility_note": "Primary resource for block periodization (Scientific Principles of Strength Training). Author coached dozens of world/national champion powerlifters."
+      },
+      {
+        "channel": "RTS (Reactive Training Systems)",
+        "creator": "Mike Tuchscherer",
+        "url": "https://www.youtube.com/@ReactiveTrainingSystems",
+        "credibility_note": "RPE-based autoregulation pioneer. IPF world medalist. Not peer-reviewed but directly cited in RPE-related research (Helms, Zourdos, Nuckols)."
+      },
+      {
+        "channel": "Jonnie Candito / Candito Training HQ",
+        "creator": "Jonnie Candito",
+        "url": "https://www.youtube.com/@canditotraininghq",
+        "credibility_note": "Author of Candito 6-Week Program. Programming coach with international powerlifting experience; practical not research-forward."
+      },
+      {
+        "channel": "Stronger By Science",
+        "creator": "Greg Nuckols",
+        "url": "https://www.youtube.com/@StrongerByScience",
+        "credibility_note": "Has direct articles comparing Sheiko/Conjugate/DUP/Block programming with effect sizes from meta-analyses."
+      },
+      {
+        "channel": "Alexander Bromley / Empire Barbell",
+        "creator": "Alexander Bromley",
+        "url": "https://www.youtube.com/@AlexanderBromley",
+        "credibility_note": "Competitive strongman/powerlifter, wrote 'Base Strength'. Covers periodization schemes (block, linear, Sheiko) with practical coaching context."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "28657821",
+        "doi": "10.1123/ijspp.2017-0228",
+        "authors": ["Rønnestad BR", "Hansen J"],
+        "year": 2018,
+        "title": "A Scientific Approach to Improve Physiological Capacity of an Elite Cyclist (long-term block periodization case study)",
+        "journal": "Int J Sports Physiol Perform",
+        "citation": "13(3):390-393"
+      }
+    ]
+  },
+  "pyramid_training": {
+    "papers": [
+      {
+        "pmid": "37330772",
+        "doi": "10.1016/j.jbmt.2023.04.070",
+        "authors": ["Cardozo DC", "de Souza Destro D"],
+        "year": 2023,
+        "title": "Pyramidal resistance training: A brief review of acute responses and long-term adaptations",
+        "journal": "J Bodyw Mov Ther",
+        "citation": "35:21-27"
+      },
+      {
+        "pmid": "28130627",
+        "doi": "10.1007/s00421-016-3529-1",
+        "authors": ["Angleri V", "Ugrinowitsch C", "Libardi CA"],
+        "year": 2017,
+        "title": "Crescent pyramid and drop-set systems do not promote greater strength gains, muscle hypertrophy, and changes on muscle architecture compared with traditional resistance training in well-trained men",
+        "journal": "Eur J Appl Physiol",
+        "citation": "117(2):359-369"
+      },
+      {
+        "pmid": "29120984",
+        "doi": "10.1519/JSC.0000000000002326",
+        "authors": ["Ribeiro AS", "Aguiar AF", "Schoenfeld BJ", "Nunes JP", "Cavalcante EF", "Cadore EL", "Cyrino ES"],
+        "year": 2018,
+        "title": "Effects of Different Resistance Training Systems on Muscular Strength and Hypertrophy in Resistance-Trained Older Women",
+        "journal": "J Strength Cond Res",
+        "citation": "32(2):545-553"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Jeff Nippard",
+        "creator": "Jeff Nippard",
+        "url": "https://www.youtube.com/@JeffNippard",
+        "credibility_note": "Has specific videos on pyramid/reverse-pyramid/drop-set comparisons citing Angleri 2017 and Schoenfeld research group."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel, PhD",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "Discusses pyramid and reverse-pyramid set systems in context of volume-load equivalence — useful for 'no magic' framing."
+      },
+      {
+        "channel": "House of Hypertrophy",
+        "creator": "Milo Wolf, PhD",
+        "url": "https://www.youtube.com/@HouseofHypertrophy",
+        "credibility_note": "PhD-credentialed. Covers set-system comparisons with trial-level evidence rather than citing review conclusions alone."
+      },
+      {
+        "channel": "Stronger By Science",
+        "creator": "Greg Nuckols",
+        "url": "https://www.youtube.com/@StrongerByScience",
+        "credibility_note": "Has written and filmed on advanced set systems — the stance is generally that volume-equated systems are broadly similar."
+      }
+    ],
+    "meta_analyses": []
+  },
+  "nutrition": {
+    "papers": [
+      {
+        "pmid": "28698222",
+        "doi": "10.1136/bjsports-2017-097608",
+        "authors": ["Morton RW", "Murphy KT", "McKellar SR", "Schoenfeld BJ", "Henselmans M", "Helms E", "Aragon AA", "Devries MC", "Banfield L", "Krieger JW", "Phillips SM"],
+        "year": 2018,
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "journal": "Br J Sports Med",
+        "citation": "52(6):376-384",
+        "notes": "Key finding: protein benefit plateaus at ~1.62 g/kg/day."
+      },
+      {
+        "pmid": "24299050",
+        "doi": "10.1186/1550-2783-10-53",
+        "authors": ["Schoenfeld BJ", "Aragon AA", "Krieger JW"],
+        "year": 2013,
+        "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+        "journal": "J Int Soc Sports Nutr",
+        "citation": "10(1):53"
+      },
+      {
+        "pmid": "34673936",
+        "doi": "10.1093/ajcn/nqab355",
+        "authors": ["Kirwan RP", "Mazidi M", "Rodríguez García C", "Lane KE", "Jafari A", "Butler T", "Perez de Heredia F", "Davies IG"],
+        "year": 2022,
+        "title": "Protein interventions augment the effect of resistance exercise on appendicular lean mass and handgrip strength in older adults: a systematic review and meta-analysis of randomized controlled trials",
+        "journal": "Am J Clin Nutr",
+        "citation": "115(3):897-913"
+      },
+      {
+        "pmid": "39796095",
+        "doi": "10.3390/ijms26010240",
+        "authors": ["Hwang DJ", "Yang HJ"],
+        "year": 2024,
+        "title": "Nutritional Strategies for Enhancing Performance and Training Adaptation in Weightlifters",
+        "journal": "Int J Mol Sci",
+        "citation": "26(1):240"
+      },
+      {
+        "pmid": "31242624",
+        "doi": "10.3390/nu11061429",
+        "authors": ["Valenzuela PL", "Mata F", "Morales JS", "Castillo-García A", "Lucia A"],
+        "year": 2019,
+        "title": "Does Beef Protein Supplementation Improve Body Composition and Exercise Performance? A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+        "journal": "Nutrients",
+        "citation": "11(6):1429"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Layne Norton / Biolayne",
+        "creator": "Dr. Layne Norton, PhD",
+        "url": "https://www.youtube.com/@BioLayne",
+        "credibility_note": "PhD Nutritional Sciences; world-leading protein-metabolism expert. Most rigorous citation of nutrition science on YouTube."
+      },
+      {
+        "channel": "Eric Helms / Iron Culture",
+        "creator": "Dr. Eric Helms, PhD",
+        "url": "https://www.youtube.com/@IronCulturePodcast",
+        "credibility_note": "PhD Strength & Conditioning, co-founder MASS Research Review, Auckland Univ of Technology Senior Research Fellow, author 'Muscle & Strength Pyramids'."
+      },
+      {
+        "channel": "Jeff Nippard",
+        "creator": "Jeff Nippard",
+        "url": "https://www.youtube.com/@JeffNippard",
+        "credibility_note": "BSc Biochemistry. Protein, cutting/bulking, and periworkout content is heavily citation-backed."
+      },
+      {
+        "channel": "Alan Aragon",
+        "creator": "Alan Aragon",
+        "url": "https://www.youtube.com/@AlanAragon",
+        "credibility_note": "Co-author of Morton 2018 meta-analysis (PMID 28698222). Founding editor of 'Alan Aragon Research Review'. Not prolific on YouTube but high expertise."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel + RP nutrition coaches",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "Strong evidence-based nutrition content (bulking, cutting, meal timing). Channel includes dietitians with MS/RD credentials."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "28698222",
+        "doi": "10.1136/bjsports-2017-097608",
+        "authors": ["Morton RW", "Murphy KT", "McKellar SR", "Schoenfeld BJ", "Henselmans M", "Helms E", "Aragon AA", "Devries MC", "Banfield L", "Krieger JW", "Phillips SM"],
+        "year": 2018,
+        "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+        "journal": "Br J Sports Med",
+        "citation": "52(6):376-384"
+      }
+    ]
+  },
+  "science_based_training": {
+    "papers": [
+      {
+        "pmid": "20847704",
+        "doi": "10.1519/JSC.0b013e3181e840f3",
+        "authors": ["Schoenfeld BJ"],
+        "year": 2010,
+        "title": "The mechanisms of muscle hypertrophy and their application to resistance training",
+        "journal": "J Strength Cond Res",
+        "citation": "24(10):2857-2872",
+        "notes": "Foundational 'mechanical tension / metabolic stress / muscle damage' framework paper."
+      },
+      {
+        "pmid": "31820374",
+        "doi": "10.1007/s40279-019-01247-x",
+        "authors": ["Hagstrom AD", "Marshall PW", "Halaki M", "Hackett DA"],
+        "year": 2020,
+        "title": "The Effect of Resistance Training in Women on Dynamic Strength and Muscular Hypertrophy: A Systematic Review with Meta-analysis",
+        "journal": "Sports Med",
+        "citation": "50(6):1075-1093"
+      },
+      {
+        "pmid": "31336594",
+        "doi": "10.3390/sports7070177",
+        "authors": ["Schoenfeld BJ", "Grgic J", "Haun C", "Itagaki T", "Helms ER"],
+        "year": 2019,
+        "title": "Calculating Set-Volume for the Limb Muscles with the Performance of Multi-Joint Exercises: Implications for Resistance Training Prescription",
+        "journal": "Sports (Basel)",
+        "citation": "7(7):177"
+      },
+      {
+        "pmid": "19204579",
+        "doi": "10.1249/MSS.0b013e3181915670",
+        "authors": ["American College of Sports Medicine"],
+        "year": 2009,
+        "title": "American College of Sports Medicine position stand. Progression models in resistance training for healthy adults",
+        "journal": "Med Sci Sports Exerc",
+        "citation": "41(3):687-708",
+        "notes": "ACSM position stand — foundational evidence-based programming guideline."
+      },
+      {
+        "pmid": "31797219",
+        "doi": "10.1007/s40279-019-01236-0",
+        "authors": ["Androulakis-Korakakis P", "Fisher JP", "Steele J"],
+        "year": 2020,
+        "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+        "journal": "Sports Med",
+        "citation": "50(4):751-765"
+      }
+    ],
+    "videos": [
+      {
+        "channel": "Jeff Nippard",
+        "creator": "Jeff Nippard",
+        "url": "https://www.youtube.com/@JeffNippard",
+        "credibility_note": "The single most popular evidence-based strength/hypertrophy YouTube channel. BSc Biochemistry. Cites Schoenfeld, Helms, Nuckols papers by DOI."
+      },
+      {
+        "channel": "Renaissance Periodization",
+        "creator": "Dr. Mike Israetel, PhD",
+        "url": "https://www.youtube.com/@RenaissancePeriodization",
+        "credibility_note": "3.8M subs, PhD Sport Physiology, co-author 'Scientific Principles of Hypertrophy Training' and 'Scientific Principles of Strength Training'."
+      },
+      {
+        "channel": "Stronger By Science",
+        "creator": "Greg Nuckols",
+        "url": "https://www.youtube.com/@StrongerByScience",
+        "credibility_note": "BS Exercise Science, MS Exercise Physiology, 3x powerlifting WR holder, co-founder MASS. Evidence-based gold standard."
+      },
+      {
+        "channel": "House of Hypertrophy",
+        "creator": "Milo Wolf, PhD",
+        "url": "https://www.youtube.com/@HouseofHypertrophy",
+        "credibility_note": "PhD, published author on resistance training meta-analyses. Trial-level evidence reviews, not just mainstream recaps."
+      },
+      {
+        "channel": "Data Driven Strength",
+        "creator": "Josh Pelland, Zac Robinson (PhD candidates)",
+        "url": "https://www.youtube.com/@DataDrivenStrength",
+        "credibility_note": "Active researchers (published on proximity to failure, volume-hypertrophy relationships). Strong on meta-analytic methodology."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "pmid": "31797219",
+        "doi": "10.1007/s40279-019-01236-0",
+        "authors": ["Androulakis-Korakakis P", "Fisher JP", "Steele J"],
+        "year": 2020,
+        "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+        "journal": "Sports Med",
+        "citation": "50(4):751-765"
+      },
+      {
+        "pmid": "31820374",
+        "doi": "10.1007/s40279-019-01247-x",
+        "authors": ["Hagstrom AD", "Marshall PW", "Halaki M", "Hackett DA"],
+        "year": 2020,
+        "title": "The Effect of Resistance Training in Women on Dynamic Strength and Muscular Hypertrophy: A Systematic Review with Meta-analysis",
+        "journal": "Sports Med",
+        "citation": "50(6):1075-1093"
+      }
+    ]
+  }
+}
