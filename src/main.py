@@ -4,7 +4,7 @@ ContentPrinter — Instagram Content Pipeline for Central Strength Gym
 Modeled after MoneyPrinterV2 architecture.
 
 Usage:
-    python src/main.py              # Run full pipeline (scrape → youtube → pubmed → biorxiv → draft → finalize)
+    python src/main.py              # Run full pipeline (scrape → youtube → pubmed → biorxiv → draft → singlepage → finalize)
     python src/main.py scrape       # Scrape RSS feeds only
     python src/main.py youtube      # Scrape YouTube channels only
     python src/main.py pubmed       # Scrape PubMed for exercise science studies
@@ -56,34 +56,39 @@ def print_banner():
 
 
 def run_scrape():
-    print("\n[STEP 1/6] Scraping content from fitness blogs & feeds...\n")
+    print("\n[STEP 1/7] Scraping content from fitness blogs & feeds...\n")
     articles = scrape_all_feeds()
     return articles
 
 
 def run_youtube():
-    print("\n[STEP 2/6] Scraping YouTube channels for science-based videos...\n")
+    print("\n[STEP 2/7] Scraping YouTube channels for science-based videos...\n")
     videos = scrape_youtube()
     return videos
 
 
 def run_pubmed():
-    print("\n[STEP 3/6] Scraping PubMed for exercise science studies...\n")
+    print("\n[STEP 3/7] Scraping PubMed for exercise science studies...\n")
     articles = scrape_pubmed()
     return articles
 
 
 def run_biorxiv():
-    print("\n[STEP 4/6] Scraping bioRxiv for preprints...\n")
+    print("\n[STEP 4/7] Scraping bioRxiv for preprints...\n")
     preprints = scrape_biorxiv()
     return preprints
 
 
 def run_draft(use_llm: bool = False):
-    print("\n[STEP 5/6] Drafting Instagram posts...\n")
+    print("\n[STEP 5/7] Drafting Instagram posts...\n")
     if use_llm:
         return draft_all_grounded()
     return draft_all()
+
+
+def run_single_page():
+    print("\n[STEP 6/7] Rendering single-page PNGs from drafts...\n")
+    return generate_all_single_pages()
 
 
 def run_finalize(dry_run: bool = False):
@@ -95,7 +100,7 @@ def run_finalize(dry_run: bool = False):
     Posts/. The zh draft is converted from plain text to markdown on the way.
     """
     from output_layout import finalize_all, summarize
-    print("\n[STEP 6/6] Finalizing outputs → Posts/<category>/ ...\n")
+    print("\n[STEP 7/7] Finalizing outputs → Posts/<category>/ ...\n")
     results = finalize_all(dry_run=dry_run)
     print(summarize(results))
 
@@ -134,6 +139,8 @@ def run_full_pipeline():
     if not posts:
         print("[WARN] No posts drafted. Run scrape step first.")
         return
+
+    _safe_run("Single-page render", run_single_page)
 
     _safe_run("Finalize", run_finalize)
 

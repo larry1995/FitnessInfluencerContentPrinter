@@ -18,7 +18,6 @@
   "output": {
     "posts_dir": "Posts",
     "raw_content_dir": "Posts/raw",
-    "drafts_dir": "Posts/drafts",
     "archive_dir": "Posts/archive"
   }
 }

@@ -355,17 +355,9 @@ def _write_post_file(path, post):
 
 
 def save_drafts(posts):
-    """Save drafted posts.
-
-    Writes the per-topic layout (work/<slug>/en/draft.txt + meta.json) that
-    single_page_generator.py consumes, and also mirrors a JSON copy into
-    work/drafts/ for legacy flat-dir consumers.
+    """Save drafted posts to the per-topic layout (work/<slug>/en/draft.txt + meta.json)
+    that single_page_generator.py consumes.
     """
-    drafts_dir = POSTS_DIR / "drafts"
-    drafts_dir.mkdir(parents=True, exist_ok=True)
-
-    timestamp = datetime.now().strftime("%Y%m%d")
-
     for post in posts:
         num = post["post_number"]
         topic = post["topic"]
@@ -399,11 +391,6 @@ def save_drafts(posts):
         meta = merge_meta(existing_meta, new_meta)
         meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
 
-        json_name = f"{timestamp}_post{num:02d}_{topic}.json"
-        with open(drafts_dir / json_name, "w") as f:
-            json.dump(post, f, indent=2)
-        _write_post_file(drafts_dir / f"{timestamp}_post{num:02d}_{topic}.txt", post)
-
         try:
             from chinese_drafter import generate_for_topic
             status = generate_for_topic(topic_dir)
@@ -411,8 +398,7 @@ def save_drafts(posts):
         except Exception as e:
             print(f"  [ZH] {slug}: error — {e}")
 
-    print(f"[SAVED] {len(posts)} drafts → work/<slug>/en/ (and work/drafts/ mirror)")
-    return drafts_dir
+    print(f"[SAVED] {len(posts)} drafts → work/<slug>/en/")
 
 
 def draft_all_grounded():
@@ -431,11 +417,11 @@ def draft_all_grounded():
       - LLM not configured: no `ANTHROPIC_API_KEY`.
       - DROP: all retries failed allow-list / verify_citations checks.
 
-    Unlike `draft_all`, the grounded path does NOT mirror posts into
-    `work/drafts/`, does NOT auto-trigger the Chinese drafter, and does
-    NOT touch `weekly_summary_*.json`. Those are pure-template-pipeline
-    concerns. The grounded path is strict, citation-safe, and silent on
-    everything outside the per-topic directory.
+    Unlike `draft_all`, the grounded path does NOT auto-trigger the
+    Chinese drafter and does NOT touch `weekly_summary_*.json`. Those
+    are pure-template-pipeline concerns. The grounded path is strict,
+    citation-safe, and silent on everything outside the per-topic
+    directory.
     """
     config, _sources = load_config()
     settings = config["post_settings"]
