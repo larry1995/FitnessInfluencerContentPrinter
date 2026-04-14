@@ -1,0 +1,2677 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-14",
+    "source": "deep-research-report.md",
+    "format_spec": "docs/MANUAL_DRAFT_FORMAT.md",
+    "structural_refs": [
+      "Posts/nutrition/dietary_fat_myth.zh.md",
+      "Posts/nutrition/hafthor_diet.zh.md",
+      "Posts/supplements/beta_alanine.zh.md"
+    ],
+    "research_inputs": [
+      "work/raw/keyword_research_2026-04-13.json",
+      "work/raw/trending_questions_2026-04-13.json"
+    ],
+    "clusters_in_source": 12,
+    "clusters_in_plan": 14,
+    "total_topics": 53,
+    "cited_topics": 48,
+    "uncited_topics_count": 0,
+    "warmup_cardio_pass_at": "2026-04-14T22:58:00Z",
+    "warmup_cardio_pass_notes": "Task #52: added cluster 13 (warmup, 5 uncited topics sourced from trending_questions_2026-04-13.json — researcher follow-up needed) and cluster 14 (cardio, 5 topics all cited from keyword_research_2026-04-13.json: hybrid_training_concurrent). Delta: +10 topics (43 → 53). +5 cited (43 → 48). +5 uncited (0 → 5, all warmup). Post-task-52 category_counts computed from the live clusters array: supplements 10, nutrition 13, training_methods 16, sample_programming 4, warmup 5, cardio 5 = 53 total.",
+    "meta_count_history": "Earlier task #50 wrap-up claimed 52 total topics but the actual clusters array has always had 43 (clusters 1-12 hold 5+5+3+5+4+4+3+3+2+3+3+3=43). Task #51 populated citations on 6 topics via contentprinter.scrape_for_topic but did not alter the topic count, and left the top-level uncited_topics[] array with 8 stale entries while setting uncited_topics_count=0. Task #52 ground-truthed the counts from the live clusters array and reset the summary fields accordingly. NOTE: the top-level uncited_topics[] array still contains ~8 entries from task #50 that task #51 should have pruned — team-lead should reconcile or trigger a researcher cleanup pass.",
+    "notes": [
+      "Slug convention follows MANUAL_DRAFT_FORMAT.md: <category_prefix>_<topic>. The prefix drives output_layout.classify() even without an explicit config/categories.json entry.",
+      "Category prefixes used: supplements_, nutrition_, training_, sample_, cardio_, warmup_ — training_ maps to training_methods unless overridden.",
+      "Cluster 11 (Recovery & sleep) does not fit the 6-category taxonomy cleanly. Items are distributed into training_methods and nutrition per the dominant lever in each angle. See `uncited_topics_notes` for the mismatch discussion.",
+      "Citations are pulled verbatim from keyword_research_2026-04-13.json. Only verified DOIs/PMIDs are copied. No citation fabrication per F-0 memory.",
+      "Topics touching SARMs, rapid weight loss, and 'lift through pain' explicitly carry safety_flags per the 2026-04 SARMs/FDA/WADA memo and team safety policy."
+    ],
+    "cited_count": 53,
+    "uncited_count": 0,
+    "researcher_pass_at": "2026-04-14T23:04:40Z",
+    "researcher_pass_notes": "Task #51: fetched PubMed citations for 6 previously-uncited topics via contentprinter.scrape_for_topic. See individual topic.suggested_citations with source tag 'contentprinter.scrape_for_topic @ 2026-04-14 (task #51)'. All DOIs/PMIDs came verbatim from PubMed efetch — no LLM generation, no fabrication (F-0 discipline).",
+    "warmup_backfill_pass_at": "2026-04-14T23:04:40Z"
+  },
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "cluster_name": "Creatine: dosing, safety, myths, strength gains",
+      "category": "supplements",
+      "evidence_tier": "meta-analyses + ISSN position stand",
+      "research_key": "supplements_evidence_based",
+      "topics": [
+        {
+          "slug": "supplements_creatine_basics",
+          "title": "Creatine 101: what it is and why it works",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "beginner",
+          "angle": "The most-studied sports supplement, explained. What creatine does in your muscle, why it helps strength/power, and why you don't need the fancy forms.",
+          "numbered_points_outline": [
+            "1. MECHANISM — Phosphocreatine shuttles ATP during short high-intensity sets; mechanism of action in the ATP-PC system",
+            "2. EVIDENCE — Meta-analyses show consistent small-to-moderate strength + hypertrophy effect (Burke 2023; Desai 2024)",
+            "3. MONOHYDRATE IS THE GOLD STANDARD — Cheapest, most researched, no superior alternative form",
+            "4. SAFETY — Long-term use is safe in healthy adults; no kidney or liver harm signal in controlled trials",
+            "5. WHO SHOULD TAKE IT — Any lifter looking for more work capacity and strength; works regardless of training style"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37432300",
+              "doi": "10.3390/nu15092116",
+              "authors": "Burke R et al.",
+              "year": 2023,
+              "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "39074168",
+              "doi": "10.1519/JSC.0000000000004862",
+              "authors": "Desai I et al.",
+              "year": 2024,
+              "title": "The Effect of Creatine Supplementation on Resistance Training-Based Changes to Body Composition: A Systematic Review and Meta-analysis",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "39042054",
+              "doi": "10.1080/15502783.2024.2380058",
+              "authors": "Pashayee-Khamene F et al.",
+              "year": 2024,
+              "title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis",
+              "journal": "J Int Soc Sports Nutr",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based.meta_analyses"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "supplements_creatine_dosing_no_loading",
+          "title": "Creatine dosing: you don't need to load",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "all",
+          "angle": "Mythbust the 20g/day loading protocol. 3-5g daily gets you to the same saturation in ~28 days with less GI upset.",
+          "numbered_points_outline": [
+            "1. WHAT LOADING DOES — Fills muscle stores faster (~5-7 days) vs the slow path (~28 days)",
+            "2. THE ENDPOINT IS THE SAME — Both protocols converge on identical muscle creatine saturation",
+            "3. DOSE — 3-5g/day is sufficient for the average lifter; larger athletes may benefit from 5-10g/day per recent dose-response work",
+            "4. TIMING — With carbs/protein post-workout shows a small edge but daily consistency is the dominant variable",
+            "5. LOADING-SPECIFIC DOWNSIDES — GI upset and water-weight spike; safe but unpleasant for some"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "39042054",
+              "doi": "10.1080/15502783.2024.2380058",
+              "authors": "Pashayee-Khamene F et al.",
+              "year": 2024,
+              "title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis",
+              "journal": "J Int Soc Sports Nutr",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based.meta_analyses"
+            },
+            {
+              "pmid": "37432300",
+              "doi": "10.3390/nu15092116",
+              "authors": "Burke R et al.",
+              "year": 2023,
+              "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "supplements_creatine_kidney_myth",
+          "title": "Creatine and kidneys: the myth that won't die",
+          "category": "supplements",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "The 'creatine hurts your kidneys' claim comes from one misread serum creatinine number. Here's what the actual kidney-function data says.",
+          "numbered_points_outline": [
+            "1. MYTH: Creatine raises serum creatinine / FACT: It raises creatinine (the waste product) because you have more creatine in your body — not because kidneys are damaged",
+            "2. MYTH: Long-term use is unsafe / FACT: Position stands and meta-analyses over >20 years show no adverse kidney markers in healthy adults",
+            "3. MYTH: You need kidney 'breaks' / FACT: Continuous daily use is the most-studied protocol; no evidence cycling is necessary",
+            "4. WHO SHOULD BE CAUTIOUS — Anyone with pre-existing kidney disease should clear supplementation with their doctor; healthy adults are not the audience for that warning",
+            "5. THE BOTTOM LINE — Decades of data support safety; a single elevated serum creatinine reading is not kidney damage"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37432300",
+              "doi": "10.3390/nu15092116",
+              "authors": "Burke R et al.",
+              "year": 2023,
+              "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "39042054",
+              "doi": "10.1080/15502783.2024.2380058",
+              "authors": "Pashayee-Khamene F et al.",
+              "year": 2024,
+              "title": "Creatine supplementation protocols with or without training interventions on body composition: a GRADE-assessed systematic review and dose-response meta-analysis",
+              "journal": "J Int Soc Sports Nutr",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based.meta_analyses"
+            }
+          ],
+          "safety_flags": [
+            "mention pre-existing kidney disease as the only caveat"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "supplements_creatine_for_women",
+          "title": "Creatine for women: same effect, different myth",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "intermediate",
+          "angle": "Women respond to creatine the same way men do. The 'bulky water weight' and 'just for men' claims are wrong.",
+          "numbered_points_outline": [
+            "1. THE EVIDENCE BASE — Meta-analyses include mixed-sex cohorts; women show comparable strength and lean-mass responses",
+            "2. WATER WEIGHT IS INTRACELLULAR — 1-2kg water gain sits inside muscle cells, not under the skin; nothing like a 'puffy' look",
+            "3. DOSE — Same 3-5g/day; no evidence women need to dose lower",
+            "4. BONE HEALTH — Some evidence creatine + resistance training benefits bone density in post-menopausal women",
+            "5. CYCLE CONSIDERATIONS — No evidence menstrual cycle requires protocol changes"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37432300",
+              "doi": "10.3390/nu15092116",
+              "authors": "Burke R et al.",
+              "year": 2023,
+              "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "31820374",
+              "doi": "10.1007/s40279-019-01247-x",
+              "authors": "Hagstrom AD et al.",
+              "year": 2020,
+              "title": "The Effect of Resistance Training in Women on Dynamic Strength and Muscular Hypertrophy: A Systematic Review with Meta-analysis",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: science_based_training (women-specific hypertrophy context)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "supplements_creatine_timing",
+          "title": "Creatine timing: pre-workout, post-workout, or does it matter?",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "intermediate",
+          "angle": "Timing debates aside, daily consistency is the dominant variable. The post-workout edge is small and may not matter for most lifters.",
+          "numbered_points_outline": [
+            "1. THE CLAIM — Post-workout + carbs/protein shows a small edge in some trials",
+            "2. THE REAL DRIVER — Daily total dose and duration matter much more than time of day",
+            "3. WHAT IF YOU MISS A DAY — The muscle stores deplete slowly; one missed day is not consequential",
+            "4. STACK IT WITH YOUR MEAL — Pair with any protein-containing meal for convenience",
+            "5. TRAINING DAY VS REST DAY — Same dose every day; no need to skip non-training days"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37432300",
+              "doi": "10.3390/nu15092116",
+              "authors": "Burke R et al.",
+              "year": 2023,
+              "title": "The Effects of Creatine Supplementation Combined with Resistance Training on Regional Measures of Muscle Hypertrophy: A Systematic Review with Meta-Analysis",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_name": "Pre-workouts and stimulants + supplement risk (caffeine, beta-alanine, SARMs)",
+      "category": "supplements",
+      "evidence_tier": "meta-analyses (caffeine, beta-alanine) + FDA/WADA primary sources (SARMs)",
+      "research_key": "supplements_evidence_based",
+      "topics": [
+        {
+          "slug": "supplements_caffeine_dosing_for_strength",
+          "title": "Caffeine for strength: the dose that actually works",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "all",
+          "angle": "Meta-analyses pin the minimum ergogenic dose for resistance exercise. Here's the range, the timing, and why more isn't better.",
+          "numbered_points_outline": [
+            "1. THE DOSE — ~3-6 mg/kg bodyweight is the evidence-supported range for strength/power outcomes",
+            "2. MINIMUM EFFECTIVE DOSE — Grgic 2022 meta-analysis shows ergogenic effects starting at lower doses than previously thought",
+            "3. TIMING — 45-60 min pre-training; peak plasma concentration aligns with the session",
+            "4. VELOCITY EFFECTS — Acute caffeine improves movement velocity in resistance exercise per Raya-González 2020 meta",
+            "5. WHO RESPONDS BEST — Non-habitual users see the largest effects; tolerance blunts but doesn't eliminate benefits"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "35203046",
+              "doi": "10.1016/j.nut.2022.111604",
+              "authors": "Grgic J",
+              "year": 2022,
+              "title": "Exploring the minimum ergogenic dose of caffeine on resistance exercise performance: A meta-analytic approach",
+              "journal": "Nutrition",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "31643020",
+              "doi": "10.1007/s40279-019-01211-9",
+              "authors": "Raya-González J et al.",
+              "year": 2020,
+              "title": "Acute Effects of Caffeine Supplementation on Movement Velocity in Resistance Exercise: A Systematic Review and Meta-analysis",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            },
+            {
+              "pmid": "34861076",
+              "doi": "10.1111/sms.14109",
+              "authors": "Grgic J, Mikulic P",
+              "year": 2022,
+              "title": "Effects of caffeine on rate of force development: A meta-analysis",
+              "journal": "Scand J Med Sci Sports",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based.meta_analyses"
+            }
+          ],
+          "safety_flags": [
+            "note upper bound ~400mg/day for healthy adults per FDA consumer guidance"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "supplements_caffeine_sleep_tradeoff",
+          "title": "Caffeine and sleep: the 6-hour rule",
+          "category": "supplements",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "Caffeine's half-life is 5-7 hours. A 3pm coffee can still be in your system at bedtime. Here's how to get the training boost without wrecking sleep.",
+          "numbered_points_outline": [
+            "1. THE HALF-LIFE — 5-7 hours in most adults; twice that in slow metabolizers",
+            "2. THE SLEEP COST — Even when you fall asleep, deep sleep and REM are reduced by evening caffeine",
+            "3. TRAINING TIMING DECISION — If you train after 4pm, decaf options or lower doses",
+            "4. TOLERANCE DOES NOT EQUAL NO EFFECT — Habitual users still get adenosine blockade even if they feel fine",
+            "5. PRACTICAL RULE — Last dose ~8 hours before bedtime for most people"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "35203046",
+              "doi": "10.1016/j.nut.2022.111604",
+              "authors": "Grgic J",
+              "year": 2022,
+              "title": "Exploring the minimum ergogenic dose of caffeine on resistance exercise performance: A meta-analytic approach",
+              "journal": "Nutrition",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "supplements_beta_alanine_for_powerlifters",
+          "title": "Does beta-alanine help powerlifters? (Not really)",
+          "category": "supplements",
+          "layout_hint": "supplement",
+          "audience": "advanced",
+          "angle": "Beta-alanine shines for 60-240 second efforts. Powerlifting is 1-3 second efforts. Here's why it mostly doesn't help the big 3 and where it does matter (accessories, hypertrophy blocks).",
+          "numbered_points_outline": [
+            "1. MECHANISM RECAP — Carnosine buffers H+ ions in high-intensity efforts lasting 60-240s",
+            "2. EFFECT SIZE BY DURATION — Saunders 2017 meta shows benefits largely in the minute-plus range",
+            "3. POWERLIFTING SPECIFICITY — Single-rep squat/bench/DL takes <5 seconds; not the right energy system",
+            "4. WHEN IT HELPS POWERLIFTERS — High-volume accessory work, hypertrophy blocks, 8-15 rep ranges",
+            "5. THE HONEST TAKE — Useful for the right training phase, not a universal 'pre-workout must'"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27797728",
+              "doi": "10.1136/bjsports-2016-096396",
+              "authors": "Saunders B et al.",
+              "year": 2017,
+              "title": "β-alanine supplementation to improve exercise capacity and performance: a systematic review and meta-analysis",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "Companion to surviving beta_alanine.zh.md — this is the 'when it doesn't work' counterpoint post."
+        },
+        {
+          "slug": "supplements_sarms_warning",
+          "title": "SARMs: what the FDA and WADA actually say",
+          "category": "supplements",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "SARMs are not FDA-approved, are prohibited in sport, and carry documented liver-toxicity risk. This is a safety post, not a 'is the evidence mixed' post.",
+          "numbered_points_outline": [
+            "1. THE FDA POSITION — SARMs are not approved for any human use; marketing them as dietary supplements is illegal",
+            "2. THE WADA POSITION — SARMs are on the Prohibited List under S1 (anabolic agents), banned in and out of competition",
+            "3. DOCUMENTED HARMS — Clinical literature reports hepatotoxicity, lipid derangements, and cardiovascular adverse events",
+            "4. CONTAMINATION RISK — Products sold online frequently contain undeclared SARMs, stimulants, or steroids — tested-athlete programs see repeated positive contamination events",
+            "5. WHAT TO DO INSTEAD — Creatine, caffeine, and progressive overload are the evidence-based alternatives; none of them are banned"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "40625511",
+              "doi": "10.7759/cureus.85500",
+              "authors": [
+                "Bola Habeb",
+                "Otto Valdes",
+                "Sandy Khair",
+                "Erica S Thomson"
+              ],
+              "year": "2025",
+              "title": "Silent Threats to the Liver: Acute Hepatotoxicity Attributed to Selective Androgen Receptor Modulators (SARMs).",
+              "journal": "Cureus",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "35340496",
+              "doi": "10.7759/cureus.22239",
+              "authors": [
+                "Sohaib Khan",
+                "Jaclyn Fackler",
+                "Asma Gilani",
+                "Stephanie Murphy",
+                "Lirio Polintan"
+              ],
+              "year": "2022",
+              "title": "Selective Androgen Receptor Modulator Induced Hepatotoxicity.",
+              "journal": "Cureus",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "36561105",
+              "doi": "10.31486/toj.22.0005",
+              "authors": [
+                "Kenneth Leung",
+                "Priyanka Yaramada",
+                "Preeya Goyal",
+                "Cindy X Cai",
+                "Irene Thung",
+                "Muhammad B Hammami"
+              ],
+              "year": "2022",
+              "title": "RAD-140 Drug-Induced Liver Injury.",
+              "journal": "Ochsner journal",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "36479151",
+              "doi": "10.14218/JCTH.2022.00207",
+              "authors": [
+                "Haseeb Mohideen",
+                "Hafsa Hussain",
+                "Dushyant Singh Dahiya",
+                "Hisham Wehbe"
+              ],
+              "year": "2023",
+              "title": "Selective Androgen Receptor Modulators: An Emerging Liver Toxin.",
+              "journal": "Journal of clinical and translational hepatology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "39755947",
+              "doi": "10.1177/03635465241252435",
+              "authors": [
+                "Nikhil Vasireddi",
+                "Henrik A Hahamyan",
+                "Heath P Gould",
+                "Andrew J M Gregory",
+                "Elizabeth B Gausden",
+                "Christopher C Dodson",
+                "James E Voos",
+                "Jacob G Calcei"
+              ],
+              "year": "2025",
+              "title": "Athlete Selective Androgen Receptor Modulators Abuse: A Systematic Review.",
+              "journal": "The American journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "FDA warning required — cite FDA consumer update on SARMs as unapproved",
+            "WADA banned mention required — reference Prohibited List category S1",
+            "Do-not-use framing — no 'evidence is mixed' language, it is settled on the harm side",
+            "USADA supplement-contamination note per research cluster"
+          ],
+          "estimated_difficulty": "hard",
+          "notes": "Citations must come from FDA consumer updates, WADA Prohibited List, and USADA supplement-risk resources — NOT from the general PubMed research file. Researcher task to fetch FDA/WADA primary-source URLs + at least one hepatotoxicity case-series DOI before drafting. Added to uncited_topics until those primaries are pulled."
+        },
+        {
+          "slug": "supplements_preworkout_label_transparency",
+          "title": "Why you can't trust pre-workout labels",
+          "category": "supplements",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "Proprietary blends hide doses, contamination is real, and most pre-workouts under-dose the only ingredients that work. What to look for instead.",
+          "numbered_points_outline": [
+            "1. PROPRIETARY BLENDS — 'Proprietary blend' means the label hides how much of each ingredient you're getting",
+            "2. THE UNDER-DOSING PROBLEM — Beta-alanine at 1.6g, citrulline at 3g, caffeine at 150mg — most products are below effective doses",
+            "3. CONTAMINATION RISK — Industry testing has repeatedly found undeclared stimulants and banned substances in supplements",
+            "4. WHAT TO LOOK FOR — Informed Sport or NSF Certified for Sport marks, clear mg amounts for each ingredient, no 'blend' labels",
+            "5. THE DIY ALTERNATIVE — Separate creatine + caffeine + beta-alanine is cheaper and you control the dose"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "35203046",
+              "doi": "10.1016/j.nut.2022.111604",
+              "authors": "Grgic J",
+              "year": 2022,
+              "title": "Exploring the minimum ergogenic dose of caffeine on resistance exercise performance: A meta-analytic approach",
+              "journal": "Nutrition",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "mention Informed Sport / NSF Certified for Sport as contamination-risk filter"
+          ],
+          "estimated_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_name": "Autoregulation: RPE/RIR, e1RM, readiness-based loading",
+      "category": "training_methods",
+      "evidence_tier": "review articles + published coaching-science treatises",
+      "research_key": "powerlifting_method_programming",
+      "topics": [
+        {
+          "slug": "training_rpe_basics",
+          "title": "RPE/RIR: what the numbers actually mean",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "RPE 8 is not 'hard'. It's 'two reps left in the tank'. Calibrating the scale to reality is the whole skill.",
+          "numbered_points_outline": [
+            "1. THE SCALE — RPE 10 = absolute failure; RPE 9 = 1 rep left; RPE 8 = 2 reps left; RPE 7 = 3 reps left; RPE 6 = 4+ reps left",
+            "2. WHY IT WORKS — Lets you adjust load day-to-day based on how you're recovering, without abandoning the plan",
+            "3. THE CALIBRATION PROBLEM — Most lifters overestimate RPE at moderate loads and underestimate near failure",
+            "4. HOW TO TRAIN THE SKILL — Compare predicted vs actual reps-to-failure on the last set of a session once per week",
+            "5. WHEN TO USE RPE — Main lifts benefit most; machines and isolation work fine with fixed reps"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "29372481",
+              "doi": "10.1007/s40279-018-0862-z",
+              "authors": "Suchomel TJ et al.",
+              "year": 2018,
+              "title": "The Importance of Muscular Strength: Training Considerations",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_autoregulation_when_to_override",
+          "title": "Autoregulation: when to override the plan",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "The whole point of RPE-based programming is flexibility on bad days. Here's the decision tree for when to push, hold, or cut a session.",
+          "numbered_points_outline": [
+            "1. THE TEST SET — First working set tells you the day's capacity; compare to expected",
+            "2. IF YOU'RE UNDER — Cap volume, not intensity; finish the heavy work, cut back-off sets",
+            "3. IF YOU'RE OVER — Don't chase PRs unless the program calls for it; the plan's top set is the plan's top set",
+            "4. THE NEVER-OVERRIDE RULES — Don't override on peaking weeks, meet prep, or first session after a deload",
+            "5. TRACKING — Log actual RPE vs planned; patterns show up over 4-8 weeks"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "34132223",
+              "doi": "10.1519/JSC.0000000000004050",
+              "authors": "Stone MH et al.",
+              "year": 2021,
+              "title": "Periodization and Block Periodization in Sports: Emphasis on Strength-Power Training — A Provocative and Challenging Narrative",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_e1rm_tracking",
+          "title": "Estimated 1RM: using it without abusing it",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "e1RM from rep-max tests is a great progress tool and a terrible peaking tool. Here's how to use it right.",
+          "numbered_points_outline": [
+            "1. THE MATH — Epley, Brzycki, and RPE-chart based e1RMs diverge at heavy loads and high RPEs",
+            "2. WHAT IT'S GOOD FOR — Tracking block-over-block progress at submaximal loads without regularly maxing out",
+            "3. WHAT IT'S BAD FOR — Predicting your actual competition max; the error bars widen at true 1RM intensity",
+            "4. HOW OFTEN TO TEST — Every 4-8 weeks or at block transitions; not every session",
+            "5. LIMITATIONS — Not useful for ~3RM+ with huge grinders where technique degrades"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "31797219",
+              "doi": "10.1007/s40279-019-01236-0",
+              "authors": "Androulakis-Korakakis P et al.",
+              "year": 2020,
+              "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: science_based_training.meta_analyses"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_name": "Programming & periodization: volume, intensity, frequency, DUP vs linear",
+      "category": "training_methods",
+      "evidence_tier": "meta-analyses + periodization review articles",
+      "research_key": "powerlifting_method_programming + science_based_training",
+      "topics": [
+        {
+          "slug": "training_volume_dose_response",
+          "title": "The J-shaped volume curve: when more stops working",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "10-15 sets/muscle/week is a good floor. Past ~20 sets gains flatten and recovery cost rises. The J curve explained.",
+          "numbered_points_outline": [
+            "1. THE FLOOR — Evidence supports ~10 sets/muscle/week as a productive lower bound for trained lifters",
+            "2. THE RISING PART — 10 to ~20 sets/muscle/week shows continued gains for most lifters",
+            "3. THE PLATEAU — Beyond ~20 sets diminishing returns kick in, and recovery cost grows",
+            "4. INDIVIDUAL VARIANCE — Genetic, training-age, and recovery differences shift the curve",
+            "5. HOW TO APPLY — Start at the floor; add 1-2 sets/muscle/week per mesocycle; track performance not soreness"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "31336594",
+              "doi": "10.3390/sports7070177",
+              "authors": "Schoenfeld BJ et al.",
+              "year": 2019,
+              "title": "Calculating Set-Volume for the Limb Muscles with the Performance of Multi-Joint Exercises: Implications for Resistance Training Prescription",
+              "journal": "Sports (Basel)",
+              "source": "keyword_research_2026-04-13.json: science_based_training"
+            },
+            {
+              "pmid": "31797219",
+              "doi": "10.1007/s40279-019-01236-0",
+              "authors": "Androulakis-Korakakis P et al.",
+              "year": 2020,
+              "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: science_based_training.meta_analyses"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "Cross-refs trending_questions_2026-04-13.json trend_jshaped_volume_curve"
+        },
+        {
+          "slug": "training_frequency_vs_volume",
+          "title": "Frequency vs volume: does 2x/week beat 4x/week?",
+          "category": "training_methods",
+          "layout_hint": "mythbust",
+          "audience": "intermediate",
+          "angle": "When weekly set volume is matched, frequency effects on hypertrophy are small. Pick the frequency you can recover from.",
+          "numbered_points_outline": [
+            "1. MYTH: HIGHER FREQUENCY IS ALWAYS BETTER / FACT: Matched-volume research shows near-equivalence",
+            "2. WHY SOME LIFTERS SWEAR BY HIGH FREQUENCY — It spreads fatigue and lets them handle more total volume",
+            "3. WHY SOME LIFTERS SWEAR BY LOW FREQUENCY — Fewer heavy sessions, more recovery between them",
+            "4. THE DECISION — Training age, recovery, schedule; not 'the science says X'",
+            "5. PROGRAMMING — 2-4x/week/muscle is the productive range; pick what fits your life"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "31336594",
+              "doi": "10.3390/sports7070177",
+              "authors": "Schoenfeld BJ et al.",
+              "year": 2019,
+              "title": "Calculating Set-Volume for the Limb Muscles with the Performance of Multi-Joint Exercises: Implications for Resistance Training Prescription",
+              "journal": "Sports (Basel)",
+              "source": "keyword_research_2026-04-13.json: science_based_training"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "Cross-refs trending_questions_2026-04-13.json trend_frequency_vs_volume_tradeoff"
+        },
+        {
+          "slug": "training_dup_vs_linear",
+          "title": "DUP vs linear periodization: what the research actually shows",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "advanced",
+          "angle": "Undulating periodization isn't a magic bullet. For trained lifters the differences are small; for intermediates DUP may have a modest edge.",
+          "numbered_points_outline": [
+            "1. LINEAR — Progressive intensity week-over-week, volume decreases; simple, works for beginners",
+            "2. DUP — Intensity and rep ranges vary within a week (e.g. heavy Mon, moderate Wed, light Fri)",
+            "3. EVIDENCE — Head-to-head trials show small effects in either direction; not a settled superiority",
+            "4. WHO BENEFITS FROM DUP — Intermediates plateaued on linear; people who get bored easily and need variation for adherence",
+            "5. WHO DOESN'T — Absolute beginners (linear is simpler), meet-prep lifters (block periodization wins here)"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "34132223",
+              "doi": "10.1519/JSC.0000000000004050",
+              "authors": "Stone MH et al.",
+              "year": 2021,
+              "title": "Periodization and Block Periodization in Sports: Emphasis on Strength-Power Training — A Provocative and Challenging Narrative",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            },
+            {
+              "pmid": "36727999",
+              "doi": "10.1519/JSC.0000000000004465",
+              "authors": "Bartolomei S et al.",
+              "year": 2023,
+              "title": "New Perspectives in Resistance Training Periodization: Mixed Session vs. Block Periodized Programs in Trained Men",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "hard"
+        },
+        {
+          "slug": "training_minimum_effective_dose",
+          "title": "The minimum effective dose for strength gains",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "You don't need 20 sets per muscle. Androulakis-Korakakis et al. pinned the lower bound. Here it is.",
+          "numbered_points_outline": [
+            "1. THE META — Androulakis-Korakakis 2020 found meaningful 1RM strength gains with very low weekly volume",
+            "2. THE NUMBER — As little as ~4 heavy sets per lift per week produces measurable strength progress in trained men",
+            "3. WHAT IT DOESN'T PIN — Hypertrophy response needs more volume than strength",
+            "4. WHY IT MATTERS — Time-constrained lifters can train productively with much less than the 'standard' prescription",
+            "5. HOW TO USE IT — Default to more; pull back to the MED during busy life phases without abandoning the gym"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "31797219",
+              "doi": "10.1007/s40279-019-01236-0",
+              "authors": "Androulakis-Korakakis P et al.",
+              "year": 2020,
+              "title": "The Minimum Effective Training Dose Required to Increase 1RM Strength in Resistance-Trained Men: A Systematic Review and Meta-Analysis",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: science_based_training.meta_analyses"
+            },
+            {
+              "pmid": "34527944",
+              "doi": "10.3389/fspor.2021.713655",
+              "authors": "Androulakis-Korakakis P et al.",
+              "year": 2021,
+              "title": "The Minimum Effective Training Dose Required for 1RM Strength in Powerlifters",
+              "journal": "Front Sports Act Living",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "sample_block_periodization_intro",
+          "title": "Block periodization for powerlifters: the basic template",
+          "category": "sample_programming",
+          "layout_hint": "program",
+          "audience": "intermediate",
+          "angle": "Accumulation → transmutation → realization. A walkthrough of the block structure that coaches world-record totals.",
+          "numbered_points_outline": [
+            "PHASE 1 — ACCUMULATION: High volume, moderate intensity (RPE 6-8), 3-5 weeks; drives hypertrophy and work capacity",
+            "PHASE 2 — TRANSMUTATION: Moderate volume, higher intensity (RPE 7-9), 3-4 weeks; converts new muscle to strength",
+            "PHASE 3 — REALIZATION (PEAK): Low volume, top-end intensity (RPE 8-10), 2-3 weeks; primes nervous system for maximal output",
+            "THE DELOAD — 4-7 day recovery block after realization; ~50% volume reduction",
+            "THE MISTAKE TO AVOID — Running accumulation intensities during realization or vice versa; each phase needs its own stimulus"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "34132223",
+              "doi": "10.1519/JSC.0000000000004050",
+              "authors": "Stone MH et al.",
+              "year": 2021,
+              "title": "Periodization and Block Periodization in Sports: Emphasis on Strength-Power Training — A Provocative and Challenging Narrative",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            },
+            {
+              "pmid": "30350896",
+              "doi": "10.1111/sms.13326",
+              "authors": "Rønnestad BR et al.",
+              "year": 2018,
+              "title": "Block periodization of strength and endurance training is superior to traditional periodization in ice hockey players",
+              "journal": "Scand J Med Sci Sports",
+              "source": "keyword_research_2026-04-13.json: powerlifting_method_programming"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "cluster_name": "Protein & macros: g/kg targets, quality, distribution",
+      "category": "nutrition",
+      "evidence_tier": "meta-analyses + ISSN position stand",
+      "research_key": "nutrition",
+      "topics": [
+        {
+          "slug": "nutrition_protein_target_1_62",
+          "title": "The 1.62 g/kg protein ceiling: where gains plateau",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "The Morton 2018 meta-analysis pinned the ceiling of additional strength/hypertrophy from dietary protein. More than ~1.62 g/kg/day stops producing additional gains.",
+          "numbered_points_outline": [
+            "1. THE FINDING — Morton et al. 2018: benefits plateau at ~1.62 g/kg/day for lean-mass and strength outcomes",
+            "2. WHAT IT DOESN'T SAY — That more protein is harmful; just that it doesn't add more muscle or strength",
+            "3. HOW TO HIT IT — For a 75kg lifter, ~120g/day distributed across 3-4 meals",
+            "4. QUALITY STILL MATTERS — Leucine content, digestibility, and amino acid profile shape the response within the target",
+            "5. THE BOTTOM LINE — Hit the target, prioritize total daily intake over timing tricks"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition (key finding)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "nutrition_protein_window_myth",
+          "title": "The anabolic window: 30 minutes or 3 hours?",
+          "category": "nutrition",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "The 'slam protein within 30 minutes of lifting' rule is a relic. The actual window is measured in hours, not minutes.",
+          "numbered_points_outline": [
+            "1. MYTH: 30-MINUTE WINDOW / FACT: Meta-analyses show the post-workout window is ~3+ hours wide",
+            "2. WHAT DRIVES THE RESPONSE — Total daily protein and per-meal leucine content, not a narrow clock",
+            "3. THE FED STATE MATTERS — If you ate 1-2 hours pre-lift, the 'post-workout window' concern is mostly moot",
+            "4. WHO DOES NEED POST-WORKOUT PROTEIN — Fasted trainers, very early morning sessions, athletes going multiple sessions per day",
+            "5. THE PRACTICAL RULE — Hit your total daily target; spread it across 3-5 meals; stop stressing the clock"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "24299050",
+              "doi": "10.1186/1550-2783-10-53",
+              "authors": "Schoenfeld BJ et al.",
+              "year": 2013,
+              "title": "The effect of protein timing on muscle strength and hypertrophy: a meta-analysis",
+              "journal": "J Int Soc Sports Nutr",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            },
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy",
+          "notes": "Cross-refs trending_questions_2026-04-13.json trend_protein_window_myth"
+        },
+        {
+          "slug": "nutrition_protein_distribution",
+          "title": "Protein distribution: 3 meals vs 6 meals",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Eating protein across 3-5 meals is optimal for MPS. More than 5 meals doesn't help; fewer than 3 may cost you.",
+          "numbered_points_outline": [
+            "1. MPS PULSE — Each high-protein meal triggers ~3-hour muscle protein synthesis pulse",
+            "2. THE OPTIMAL RANGE — 3-5 meals/day with 0.4-0.5 g/kg protein each is the research-supported range",
+            "3. ONE HUGE MEAL VS SPREAD — Total protein matters most, but very concentrated intake wastes some for MPS",
+            "4. PRE-SLEEP PROTEIN — Some evidence a pre-sleep dose (30-40g casein) supports overnight MPS for lifters training hard",
+            "5. PRACTICAL PATTERN — Breakfast, lunch, dinner minimum; add pre/post workout or pre-sleep for higher targets"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "nutrition_protein_quality_sources",
+          "title": "Protein quality: whey vs beef vs plant",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Whey is the research gold standard but not the only option. Beef protein and plant blends can close the gap if you hit the leucine threshold.",
+          "numbered_points_outline": [
+            "1. LEUCINE IS THE TRIGGER — ~2.5-3g leucine per meal maximizes MPS signal",
+            "2. WHEY — Fast-digesting, leucine-rich, well-studied; the benchmark",
+            "3. BEEF PROTEIN ISOLATE — Meta-analysis shows comparable body-composition outcomes when total protein is matched",
+            "4. PLANT PROTEIN — Needs higher doses or blended sources (pea + rice) to match whey's leucine hit",
+            "5. THE DECISION — Preference, cost, and digestive tolerance; all can work if total daily protein is met"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "31242624",
+              "doi": "10.3390/nu11061429",
+              "authors": "Valenzuela PL et al.",
+              "year": 2019,
+              "title": "Does Beef Protein Supplementation Improve Body Composition and Exercise Performance? A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+              "journal": "Nutrients",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            },
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "cluster_name": "Technique & equipment optimization: big 3, belting, stance/grip",
+      "category": "training_methods",
+      "evidence_tier": "biomechanics studies + EMG research",
+      "research_key": "powerlifting (injury review) + practical coaching references",
+      "topics": [
+        {
+          "slug": "training_squat_high_vs_low_bar",
+          "title": "High bar vs low bar squat: which is 'better'?",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Neither is universally better. Bar placement changes the moment arms; your levers decide which feels natural.",
+          "numbered_points_outline": [
+            "1. BAR POSITIONS — High bar sits on the traps; low bar sits on the rear delts, 2-3 inches lower",
+            "2. BIOMECHANICAL DIFFERENCE — Low bar shifts load backward, favors hip-drive and forward torso lean",
+            "3. WHO PICKS WHAT — Long femurs and strong posterior chain → low bar; shorter femurs + quad dominance → high bar often feels better",
+            "4. LOAD DIFFERENCES — Low bar typically allows ~5-10% more load; not a reason to pick it if technique suffers",
+            "5. THE COMPETITIVE ANSWER — IPF rules allow either; pick the one your leverages and injuries agree with"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_sumo_vs_conventional_deadlift",
+          "title": "Sumo vs conventional deadlift: biomechanics, not morality",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Sumo isn't cheating and conventional isn't purer. Both are legal in every federation; your anthropometry decides which is your strength lift.",
+          "numbered_points_outline": [
+            "1. RANGE OF MOTION — Sumo has a shorter bar path; conventional uses a longer path but more hip extensor involvement",
+            "2. LEVER REALITY — Long arms + short torso favor conventional; short arms + long torso favor sumo",
+            "3. MUSCLE RECRUITMENT — Research shows similar total muscle work; different distribution between hips, quads, and back",
+            "4. INJURY RATE — Similar between the two styles when matched for training age",
+            "5. THE HONEST TAKE — Whichever gives you the higher, more technically consistent lift is yours"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_bench_arch_and_setup",
+          "title": "The bench press setup that unlocks leverage",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Most missed bench lifts are setup failures, not strength failures. Shoulder retraction, foot drive, and arch change what the bar has to travel.",
+          "numbered_points_outline": [
+            "1. SHOULDER RETRACTION — Pull shoulder blades down and together, lock them against the bench",
+            "2. FOOT DRIVE — Feet planted, legs active; drive pushes you into the bench for stability, not off it",
+            "3. ARCH — A moderate thoracic arch shortens the bar path and engages lats; not a lower-back gymnastics display",
+            "4. GRIP WIDTH — Most lifters bench too wide; slightly narrower reduces shoulder stress and bar travel",
+            "5. WHEN TO BREAK THE RULES — Rehabbing from shoulder injury may mean a less arched setup and wider grip for comfort"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_belt_when_to_use",
+          "title": "Weightlifting belts: when to wear one",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Belts don't replace bracing, they amplify it. Use above ~80% 1RM and learn to brace without one at warmup weights.",
+          "numbered_points_outline": [
+            "1. WHAT A BELT DOES — Gives your core something to brace against, increasing intra-abdominal pressure",
+            "2. WHEN TO USE — Typically above 80% of 1RM on squat and deadlift; lighter work is fine beltless",
+            "3. WHEN NOT — Warmups, accessories, and rehab work build the core's ability to brace unassisted",
+            "4. BELT-ONLY BRACING IS A TRAP — If you can't brace without a belt, you don't brace with one — you lean on it",
+            "5. SIZING — 4-inch lever belts are the gold standard for powerlifters; start tight enough that you can't fit more than two fingers between belt and abs at the top of a breath"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "2141312",
+              "doi": "10.1080/00140139008927106",
+              "authors": [
+                "S M McGill",
+                "R W Norman",
+                "M T Sharratt"
+              ],
+              "year": "1990",
+              "title": "The effect of an abdominal belt on trunk muscle activity and intra-abdominal pressure during squat lifts.",
+              "journal": "Ergonomics",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "10619094",
+              "doi": "10.1016/s0268-0033(98)00070-9",
+              "authors": [
+                "K Miyamoto",
+                "N Iinuma",
+                "M Maeda",
+                "E Wada",
+                "K Shimizu"
+              ],
+              "year": "1999",
+              "title": "Effects of abdominal belts on intra-abdominal pressure, intra-muscular pressure in the erector spinae muscles and myoelectrical activities of trunk muscles.",
+              "journal": "Clinical biomechanics (Bristol, Avon)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "28267445",
+              "doi": "10.1053/j.gastro.2017.02.036",
+              "authors": [
+                "David R Mitchell",
+                "Mohammad H Derakhshan",
+                "Angela A Wirz",
+                "Stuart A Ballantyne",
+                "Kenneth E L McColl"
+              ],
+              "year": "2017",
+              "title": "Abdominal Compression by Waist Belt Aggravates Gastroesophageal Reflux, Primarily by Impairing Esophageal Clearance.",
+              "journal": "Gastroenterology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "41682231",
+              "doi": "10.3390/healthcare14030381",
+              "authors": [
+                "Sofia Lopes",
+                "Manon Becam",
+                "Carla Pierrot",
+                "Julie Réard",
+                "Alice Carvalhais",
+                "Ágata Vieira",
+                "Gabriela Brochado"
+              ],
+              "year": "2026",
+              "title": "Factors Associated with Urinary Incontinence in Female Weightlifters.",
+              "journal": "Healthcare (Basel, Switzerland)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "41860443",
+              "doi": "10.1519/JSC.0000000000005426",
+              "authors": [
+                "Falco Veltzke",
+                "Fanji Qiu",
+                "Marie Elena Bey",
+                "Kirsten Legerlotz"
+              ],
+              "year": "2026",
+              "title": "A Weight lifting Belt Increases Squat Performance and Subjectively Perceived But Not Objectively Measured Postural Stability.",
+              "journal": "Journal of strength and conditioning research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "No verified citations in current research file directly on belt biomechanics — mark for researcher top-up before drafting."
+        }
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "cluster_name": "Calories & body recomposition: bulk/cut, high-protein deficits",
+      "category": "nutrition",
+      "evidence_tier": "meta-analyses + ISSN position stand",
+      "research_key": "nutrition",
+      "topics": [
+        {
+          "slug": "nutrition_cut_high_protein",
+          "title": "Cutting without losing strength: the high-protein deficit",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "A moderate deficit + high protein + resistance training preserves most of your strength. Aggressive cuts compound the losses.",
+          "numbered_points_outline": [
+            "1. THE DEFICIT — 10-20% below maintenance is the sweet spot; deeper cuts accelerate strength loss",
+            "2. THE PROTEIN LEVER — Bump to 1.6-2.2 g/kg during the cut; the higher end spares more lean mass",
+            "3. THE TRAINING LEVER — Maintain intensity; drop volume as energy intake drops",
+            "4. RATE — 0.5-1% bodyweight per week is sustainable for most lifters",
+            "5. THE BOTTOM LINE — Slower cuts preserve more strength; aggressive cuts cost you the lifts"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            },
+            {
+              "pmid": "39796095",
+              "doi": "10.3390/ijms26010240",
+              "authors": "Hwang DJ, Yang HJ",
+              "year": 2024,
+              "title": "Nutritional Strategies for Enhancing Performance and Training Adaptation in Weightlifters",
+              "journal": "Int J Mol Sci",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "nutrition_bulk_rate_500g_week",
+          "title": "Lean bulking: the 250-500g/week rule",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Aggressive bulks add fat faster than muscle. A ~500 g/week gain is the maximum productive rate for most lifters.",
+          "numbered_points_outline": [
+            "1. MUSCLE GROWTH HAS A CEILING — Natural lifters gain muscle in grams, not kilograms per week; excess is fat",
+            "2. THE NUMBER — 250-500 g/week weight gain is the productive range for most trained lifters",
+            "3. NOVICES CAN PUSH HIGHER — Beginners can handle 500-750 g/week without much fat accumulation",
+            "4. P-RATIO — The ratio of muscle to fat in newly gained weight depends on training age, recovery, and surplus size",
+            "5. THE TRACKING RULE — Weigh in weekly, average over 2 weeks; adjust by ±200 kcal when the trend is off"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "39796095",
+              "doi": "10.3390/ijms26010240",
+              "authors": "Hwang DJ, Yang HJ",
+              "year": 2024,
+              "title": "Nutritional Strategies for Enhancing Performance and Training Adaptation in Weightlifters",
+              "journal": "Int J Mol Sci",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "nutrition_recomp_reality",
+          "title": "Body recomposition: who it works for",
+          "category": "nutrition",
+          "layout_hint": "mythbust",
+          "audience": "intermediate",
+          "angle": "Recomp isn't magic. It works for specific populations — novices, detrained lifters, higher fat mass — and fails for most intermediate/advanced lifters.",
+          "numbered_points_outline": [
+            "1. WHO IT WORKS FOR — Complete beginners, returning lifters, people with higher body fat, big training stimulus shifts",
+            "2. WHO IT'S HARD FOR — Intermediate+ lifters in their normal training rhythm; gains and losses conflict at maintenance",
+            "3. WHY NOVICES CAN DO IT — The adaptation signal is strong enough to build muscle with available body-fat energy",
+            "4. THE DATA — Evidence supports resistance training + high protein preserving or slowly adding muscle in energy deficit",
+            "5. WHAT TO DO IF YOU'RE NOT A NOVICE — Pick a direction (cut or bulk); recomp is usually just slower progress at both"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "28698222",
+              "doi": "10.1136/bjsports-2017-097608",
+              "authors": "Morton RW et al.",
+              "year": 2018,
+              "title": "A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "cluster_id": 8,
+      "cluster_name": "Meet prep, peaking & rules: tapering, attempts, warm-ups, federation changes",
+      "category": "sample_programming",
+      "evidence_tier": "review + powerlifting-specific research",
+      "research_key": "powerlifting + powerlifting_method_programming",
+      "topics": [
+        {
+          "slug": "sample_meet_taper_2_week",
+          "title": "The 2-week powerlifting taper: what the research shows",
+          "category": "sample_programming",
+          "layout_hint": "program",
+          "audience": "advanced",
+          "angle": "Tapering and peaking review (Travis 2020) lays out the evidence-based framework. Here's a two-week peak template.",
+          "numbered_points_outline": [
+            "WEEK -2 — OPENERS: Squat/bench/deadlift at ~92% of planned opener; volume cut to ~60% of peak block",
+            "WEEK -1 — SINGLES: One heavy single per lift at ~95% opener, Tuesday/Wednesday latest",
+            "WEEK 0 — MEET WEEK: Light technique work Mon/Tue, full rest Wed-Fri, meet Saturday",
+            "THE VOLUME DROP — Volume falls ~40-60% in week -2 and another ~50% in week -1; intensity stays near-max",
+            "THE MISTAKE — Adding volume or intensity 'because you feel good'; tapers work by removing stress, not piling it on"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "32917000",
+              "doi": "10.3390/sports8090125",
+              "authors": "Travis SK et al.",
+              "year": 2020,
+              "title": "Tapering and Peaking Maximal Strength for Powerlifting Performance: A Review",
+              "journal": "Sports (Basel)",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "hard"
+        },
+        {
+          "slug": "sample_attempt_selection",
+          "title": "Meet attempt selection: the 92/97/100+ rule",
+          "category": "sample_programming",
+          "layout_hint": "program",
+          "audience": "advanced",
+          "angle": "Opener conservative, second attempt near training top single, third attempt for the PR. The numbers that keep you in the meet.",
+          "numbered_points_outline": [
+            "1. OPENER — ~92% of training 1RM; a lift you've done 100 times; the point is to go 1/1 not to PR",
+            "2. SECOND ATTEMPT — ~97% of training 1RM or your recent heavy single; builds your total",
+            "3. THIRD ATTEMPT — PR territory or strategic total-builder; only go here if you went 2/2 and the lift felt right",
+            "4. NEVER BOMB — Bombing an opener (missing all 3) = disqualification; your opener discipline is the meet's most important decision",
+            "5. FEDERATION CONTEXT — IPF rules may add wrinkles (red light conditions, depth standards) that change what counts as a safe opener"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "30844981",
+              "doi": "10.1519/JSC.0000000000003099",
+              "authors": "Ferland PM, Comtois AS",
+              "year": 2019,
+              "title": "Classic Powerlifting Performance: A Systematic Review",
+              "journal": "J Strength Cond Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "sample_meet_day_warmup",
+          "title": "The meet-day warmup: from empty bar to opener",
+          "category": "sample_programming",
+          "layout_hint": "program",
+          "audience": "advanced",
+          "angle": "A concrete jump-set template for squat/bench/deadlift meet warmups, timed to the flight.",
+          "numbered_points_outline": [
+            "SQUAT JUMPS — Empty bar × 5; 40% × 5; 60% × 3; 75% × 2; 85% × 1; 92% × 1 (opener)",
+            "BENCH JUMPS — Similar pattern; 6-8 warmup singles total before opener",
+            "DEADLIFT JUMPS — Higher base weight; 4-6 warmup singles (deadlifts are taxing; fewer is better)",
+            "TIMING — Final warmup single ~10 minutes before you're called; stay warm without going stale",
+            "FLIGHT MATH — Know how many lifters are in your flight; start warmups so your opener lines up with ~4-5 lifters before you"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "32917000",
+              "doi": "10.3390/sports8090125",
+              "authors": "Travis SK et al.",
+              "year": 2020,
+              "title": "Tapering and Peaking Maximal Strength for Powerlifting Performance: A Review",
+              "journal": "Sports (Basel)",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "cluster_id": 9,
+      "cluster_name": "Weight cutting & making weight safely: RWL, weigh-ins, rehydration",
+      "category": "nutrition",
+      "evidence_tier": "observational + powerlifting injury review",
+      "research_key": "powerlifting",
+      "topics": [
+        {
+          "slug": "nutrition_weight_cut_safe_floor",
+          "title": "How much weight can you cut safely before a meet?",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "advanced",
+          "angle": "Research from weight-class sports suggests ~5% rapid weight loss within 24-48 hours may be tolerable for strength/power — but risk varies hugely by individual.",
+          "numbered_points_outline": [
+            "1. THE EVIDENCE RANGE — RWL up to ~5% in short windows sometimes preserves performance in elite contexts",
+            "2. WHY IT'S RISKY — Dehydration, electrolyte imbalance, heat illness, and impaired cognition are all real adverse events",
+            "3. WEIGH-IN WINDOW MATTERS — A 24-hour weigh-in allows more rehydration time than a 2-hour weigh-in",
+            "4. WHAT A 'SAFE' CUT LOOKS LIKE — Water manipulation + sodium strategy + rehydration protocol; NOT starvation",
+            "5. THE HONEST TAKE — If cutting weight feels hard, you probably shouldn't; move up a class"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "not for beginners — advanced/competition audience only",
+            "explicit health warning language required",
+            "direct readers to work with a qualified coach + physician for RWL protocols",
+            "do-not-DIY framing for extreme cuts (>5%)"
+          ],
+          "estimated_difficulty": "hard",
+          "notes": "Treated as high-caution content. Researcher should pull a hepatotoxicity/RWL-adverse-events case series reference before drafting."
+        },
+        {
+          "slug": "nutrition_rehydration_protocol",
+          "title": "The 24-hour rehydration window after weigh-in",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "advanced",
+          "angle": "After making weight, the rehydration protocol is what makes the meet performance recover. Here's the structure.",
+          "numbered_points_outline": [
+            "1. FLUID REPLACEMENT — 1.5L per kg lost, with electrolytes, over the first 2-4 hours post-weigh-in",
+            "2. SODIUM MATTERS — Pure water without sodium replacement can cause hyponatremia and won't fully rehydrate",
+            "3. FOOD TIMING — Easy-to-digest carbs and moderate protein; avoid high-fat or high-fiber meals pre-meet",
+            "4. MONITORING — Urine color and bodyweight check-ins the morning of competition",
+            "5. THE LIMIT — Rehydration can't fully restore performance if the cut was too large or too fast"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "40059405",
+              "doi": "10.1080/15502783.2025.2467909",
+              "authors": [
+                "Anthony A Ricci",
+                "Cassandra Evans",
+                "Charles Stull",
+                "Corey A Peacock",
+                "Duncan N French",
+                "Jeffery R Stout",
+                "David H Fukuda",
+                "Paul La Bounty",
+                "Douglas Kalman",
+                "Andrew J Galpin",
+                "Jaime Tartar",
+                "Sarah Johnson",
+                "Richard B Kreider",
+                "Chad M Kerksick",
+                "Bill I Campbell",
+                "Aaron Jeffery",
+                "Chris Algieri",
+                "Jose Antonio"
+              ],
+              "year": "2025",
+              "title": "International society of sports nutrition position stand: nutrition and weight cut strategies for mixed martial arts and other combat sports.",
+              "journal": "Journal of the International Society of Sports Nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "29182412",
+              "doi": "10.1123/ijsnem.2017-0183",
+              "authors": [
+                "Reid Reale",
+                "Gary Slater",
+                "Gregory R Cox",
+                "Ian C Dunican",
+                "Louise M Burke"
+              ],
+              "year": "2018",
+              "title": "The Effect of Water Loading on Acute Weight Loss Following Fluid Restriction in Combat Sports Athletes.",
+              "journal": "International journal of sport nutrition and exercise metabolism",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "36982067",
+              "doi": "10.3390/ijerph20065158",
+              "authors": [
+                "Luis Manuel Martínez-Aranda",
+                "Manuel Sanz-Matesanz",
+                "Guillermo Orozco-Durán",
+                "Francisco Tomás González-Fernández",
+                "Lorena Rodríguez-García",
+                "Amelia Guadalupe-Grau"
+              ],
+              "year": "2023",
+              "title": "Effects of Different Rapid Weight Loss Strategies and Percentages on Performance-Related Parameters in Combat Sports: An Updated Systematic Review.",
+              "journal": "International journal of environmental research and public health",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "24047570",
+              "doi": "10.1136/bjsports-2013-092689",
+              "authors": [
+                "Sandro H Mendes",
+                "Aline C Tritto",
+                "João Paulo L F Guilherme",
+                "Marina Y Solis",
+                "Douglas E Vieira",
+                "Emerson Franchini",
+                "Antonio H Lancha",
+                "Guilherme G Artioli"
+              ],
+              "year": "2013",
+              "title": "Effect of rapid weight loss on performance in combat sport male athletes: does adaptation to chronic weight cycling play a role?",
+              "journal": "British journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "35453700",
+              "doi": "10.3390/biology11040500",
+              "authors": [
+                "Bayram Ceylan",
+                "Latif Aydos",
+                "Jožef Šimenko"
+              ],
+              "year": "2022",
+              "title": "Effect of Rapid Weight Loss on Hydration Status and Performance in Elite Judo Athletes.",
+              "journal": "Biology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "advanced audience only",
+            "work with a qualified coach"
+          ],
+          "estimated_difficulty": "hard",
+          "notes": "No direct citation in current research file for rehydration protocols — flagged for researcher to fetch from ISSN/IOC consensus statements before drafting."
+        }
+      ]
+    },
+    {
+      "cluster_id": 10,
+      "cluster_name": "Injury prevention & deloading: load management, pain, overuse",
+      "category": "training_methods",
+      "evidence_tier": "injury systematic review + load management literature",
+      "research_key": "powerlifting",
+      "topics": [
+        {
+          "slug": "training_deload_when_and_how",
+          "title": "Deloads: when to take one and what to do",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Planned deloads beat reactive ones. Here are the signals and the template.",
+          "numbered_points_outline": [
+            "1. WHEN TO DELOAD — Every 4-8 weeks as part of the block, or reactively when performance drops across sessions",
+            "2. REACTIVE SIGNALS — Top sets feel heavier than usual for multiple sessions, sleep degrading, recurring small injuries",
+            "3. HOW TO DELOAD — Drop volume ~50%, keep intensity ~90% of working loads; not a 'vacation week' from the gym",
+            "4. THE MISTAKE — Taking a full week off; you lose adaptation momentum without reducing joint stress more than a light week",
+            "5. POST-DELOAD — Return to working loads at the previous block's weights, not a fresh PR attempt"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "training_low_back_pain_lift_through_or_rest",
+          "title": "Low-back pain while lifting: train through or rest?",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Not all pain is injury. Here's the decision framework for back-tweak days: what to modify, what to stop, and when to get help.",
+          "numbered_points_outline": [
+            "1. THE GREEN-LIGHT ZONE — Mild discomfort, no radicular symptoms, returns to baseline within 24h — train with reduced load",
+            "2. THE YELLOW-LIGHT ZONE — Pain that changes your movement pattern — stop the aggravating lift, work around it",
+            "3. THE RED-LIGHT ZONE — Radiating pain down the leg, numbness, weakness, bladder/bowel changes — stop training, see a clinician",
+            "4. THE SQUAT/DEADLIFT SUB — Paused squats at lower load, trap bar or rack pulls, front squats — maintain training without re-loading the injury",
+            "5. THE TAPER-BACK — When pain resolves, return to full-range at 70% working weight for 2-3 sessions before normal load"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            },
+            {
+              "pmid": "37046275",
+              "doi": "10.1186/s13018-023-03781-x",
+              "authors": "Serafim TT et al.",
+              "year": 2023,
+              "title": "Which resistance training is safest to practice? A systematic review",
+              "journal": "J Orthop Surg Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "mandatory 'see a clinician' language for red-flag symptoms",
+            "no encouragement to lift through severe/radicular pain"
+          ],
+          "estimated_difficulty": "hard"
+        },
+        {
+          "slug": "training_injury_rates_powerlifting",
+          "title": "How dangerous is powerlifting really?",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "Injury systematic review pins the actual rate. Powerlifting is far safer than most contact sports; the common injuries and how to avoid them.",
+          "numbered_points_outline": [
+            "1. THE RATE — Injury rate in powerlifting is low per-hour compared to contact sports (Aasa 2017 review)",
+            "2. WHERE INJURIES HAPPEN — Low back, shoulders, and elbows are the most common sites",
+            "3. WHO GETS HURT — Higher training volume, maximal attempts in poor technique, and insufficient recovery are the main risk factors",
+            "4. THE MAIN PREVENTION — Progressive loading, technical consistency, managed fatigue, and respecting warmup",
+            "5. THE BOTTOM LINE — Powerlifting is a moderately safe sport when programmed intelligently"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": "Aasa U et al.",
+              "year": 2017,
+              "title": "Injuries among weightlifters and powerlifters: a systematic review",
+              "journal": "Br J Sports Med",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            },
+            {
+              "pmid": "37046275",
+              "doi": "10.1186/s13018-023-03781-x",
+              "authors": "Serafim TT et al.",
+              "year": 2023,
+              "title": "Which resistance training is safest to practice? A systematic review",
+              "journal": "J Orthop Surg Res",
+              "source": "keyword_research_2026-04-13.json: powerlifting"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "cluster_id": 11,
+      "cluster_name": "Recovery & sleep optimization: sleep duration, monitoring, stress",
+      "category": "mixed (training_methods + nutrition)",
+      "evidence_tier": "systematic reviews + athlete-focused consensus",
+      "research_key": "N/A in current research file",
+      "notes_on_category_fit": "Recovery/sleep does not map to any of the 6 categories in config/categories.json. Best fit routes: sleep physiology → training_methods (as recovery IS programming); nutrition-adjacent angles (meal timing for sleep, caffeine cutoff) → nutrition. Leaving to team-lead whether to add a new 'recovery' category later — NOT inventing one here per task rules.",
+      "topics": [
+        {
+          "slug": "training_sleep_as_programming",
+          "title": "Sleep is programming, not a rest-day bonus",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "Sleep extension improves strength and recovery in controlled trials. Treat it as a training variable, not a 'when I have time' afterthought.",
+          "numbered_points_outline": [
+            "1. THE DATA — Sleep extension and napping studies show measurable strength and reaction-time improvements",
+            "2. THE TARGET — 7-9 hours for most adults; athletes at higher training loads benefit from the upper end",
+            "3. SLEEP DEBT IS REAL — Missed sleep does not fully recover with one long weekend sleep-in",
+            "4. MONITORING — Simple time-in-bed tracking beats most wearable-device analytics for useful signal",
+            "5. THE LEVERS — Caffeine cutoff, bedroom temperature, consistent bedtime, and light hygiene"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "21731144",
+              "doi": "10.5665/SLEEP.1132",
+              "authors": [
+                "Cheri D Mah",
+                "Kenneth E Mah",
+                "Eric J Kezirian",
+                "William C Dement"
+              ],
+              "year": "2011",
+              "title": "The effects of sleep extension on the athletic performance of collegiate basketball players.",
+              "journal": "Sleep",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "37462808",
+              "doi": "10.1186/s40798-023-00599-z",
+              "authors": [
+                "Lúcio A Cunha",
+                "Júlio A Costa",
+                "Elisa A Marques",
+                "João Brito",
+                "Michele Lastella",
+                "Pedro Figueiredo"
+              ],
+              "year": "2023",
+              "title": "The Impact of Sleep Interventions on Athletic Performance: A Systematic Review.",
+              "journal": "Sports medicine - open",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "31288293",
+              "doi": "10.1055/a-0905-3103",
+              "authors": [
+                "Kenneth C Vitale",
+                "Roberts Owens",
+                "Susan R Hopkins",
+                "Atul Malhotra"
+              ],
+              "year": "2019",
+              "title": "Sleep Hygiene for Optimizing Recovery in Athletes: Review and Recommendations.",
+              "journal": "International journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "29352373",
+              "doi": "10.1007/s40279-017-0832-x",
+              "authors": [
+                "Daniel Bonnar",
+                "Kate Bartel",
+                "Naomi Kakoschke",
+                "Christin Lang"
+              ],
+              "year": "2018",
+              "title": "Sleep Interventions Designed to Improve Athletic Performance and Recovery: A Systematic Review of Current Approaches.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "34074604",
+              "doi": "10.1016/j.jsams.2021.05.007",
+              "authors": [
+                "Mounir Chennaoui",
+                "Théo Vanneau",
+                "Aurélie Trignol",
+                "Pierrick Arnal",
+                "Danielle Gomez-Merino",
+                "Christophe Baudot",
+                "Jesus Perez",
+                "Sebastiano Pochettino",
+                "Cristiano Eirale",
+                "Hakim Chalabi"
+              ],
+              "year": "2021",
+              "title": "How does sleep help recovery from exercise-induced muscle injuries?",
+              "journal": "Journal of science and medicine in sport",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "Uncited in current research file — researcher should fetch Vitale/Walsh athlete sleep consensus or the IOC sleep consensus statement before drafting."
+        },
+        {
+          "slug": "training_hrv_monitoring",
+          "title": "HRV for lifters: useful or over-quantified?",
+          "category": "training_methods",
+          "layout_hint": "default",
+          "audience": "advanced",
+          "angle": "HRV monitoring can help guide deloads if you measure it correctly. Here's what's load-bearing and what's noise.",
+          "numbered_points_outline": [
+            "1. WHAT HRV MEASURES — Beat-to-beat variation; proxies autonomic nervous system balance and training readiness",
+            "2. HOW TO MEASURE — Daily, at waking, in consistent conditions; wrist-strap consumer devices are noisy",
+            "3. INTERPRETATION — 7-day rolling average, not any single reading; trends matter, points don't",
+            "4. WHAT IT DOESN'T REPLACE — Performance readouts (e.g., RPE tracking) are still more actionable for most lifters",
+            "5. THE HONEST TAKE — Useful data for coaches with many athletes or lifters at the edge of capacity; optional for everyone else"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "35853460",
+              "doi": "10.1055/a-1864-9726",
+              "authors": [
+                "Christopher J Lundstrom",
+                "Nicholas A Foreman",
+                "George Biltz"
+              ],
+              "year": "2023",
+              "title": "Practices and Applications of Heart Rate Variability Monitoring in Endurance Athletes.",
+              "journal": "International journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "23852425",
+              "doi": "10.1007/s40279-013-0071-8",
+              "authors": [
+                "Daniel J Plews",
+                "Paul B Laursen",
+                "Jamie Stanley",
+                "Andrew E Kilding",
+                "Martin Buchheit"
+              ],
+              "year": "2013",
+              "title": "Training adaptation and heart rate variability in elite endurance athletes: opening the door to effective monitoring.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "12762827",
+              "doi": "10.2165/00007256-200333070-00004",
+              "authors": [
+                "Juul Achten",
+                "Asker E Jeukendrup"
+              ],
+              "year": "2003",
+              "title": "Heart rate monitoring: applications and limitations.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "34489178",
+              "doi": "10.1016/j.jsams.2021.04.012",
+              "authors": [
+                "Peter Düking",
+                "Christoph Zinner",
+                "Khaled Trabelsi",
+                "Jennifer L Reed",
+                "Hans-Christer Holmberg",
+                "Philipp Kunz",
+                "Billy Sperlich"
+              ],
+              "year": "2021",
+              "title": "Monitoring and adapting endurance training on the basis of heart rate variability monitored by wearable technologies: A systematic review with meta-analysis.",
+              "journal": "Journal of science and medicine in sport",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "24578692",
+              "doi": "10.3389/fphys.2014.00073",
+              "authors": [
+                "Martin Buchheit"
+              ],
+              "year": "2014",
+              "title": "Monitoring training status with HR measures: do all roads lead to Rome?",
+              "journal": "Frontiers in physiology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "hard",
+          "notes": "No citation in current research file — researcher should fetch an HRV-monitoring review (Plews or Buchheit et al.) before drafting."
+        },
+        {
+          "slug": "nutrition_caffeine_sleep_window",
+          "title": "The caffeine cutoff rule for lifters",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "Caffeine half-life is 5-7 hours. If you train in the evening, timing decisions matter more than dose.",
+          "numbered_points_outline": [
+            "1. HALF-LIFE — 5-7 hours in most adults",
+            "2. THE CUTOFF RULE — Last caffeine dose ~8 hours before target bedtime for most people",
+            "3. THE EVENING LIFTER'S PROBLEM — A pre-workout at 6pm is still 50% active at midnight",
+            "4. DECAF IS NOT ZERO — Decaf coffee still has ~2-10mg per cup; matters for the most sensitive",
+            "5. THE TRADE — Some lifters take the training boost and accept the sleep cost; others train without caffeine at night. Pick deliberately."
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "35203046",
+              "doi": "10.1016/j.nut.2022.111604",
+              "authors": "Grgic J",
+              "year": 2022,
+              "title": "Exploring the minimum ergogenic dose of caffeine on resistance exercise performance: A meta-analytic approach",
+              "journal": "Nutrition",
+              "source": "keyword_research_2026-04-13.json: supplements_evidence_based"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy",
+          "notes": "Duplicate-concept with cluster 2 supplements_caffeine_sleep_tradeoff — this nutrition-framed angle is for the 'meal timing + sleep' audience. Team-lead may merge into a single post."
+        }
+      ]
+    },
+    {
+      "cluster_id": 12,
+      "cluster_name": "Meal timing & peri-workout fueling: carbs, hydration, nutrient timing",
+      "category": "nutrition",
+      "evidence_tier": "ISSN position stand + nutrient timing reviews",
+      "research_key": "nutrition",
+      "topics": [
+        {
+          "slug": "nutrition_pre_lift_meal",
+          "title": "The pre-lift meal: what the research actually supports",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "For most lifters, a moderate protein-carb meal 1-3 hours pre-training covers the evidence base. The rest is personal preference and GI tolerance.",
+          "numbered_points_outline": [
+            "1. THE WINDOW — 1-3 hours before training allows most meals to clear GI tract without hunger mid-session",
+            "2. PROTEIN — 20-40g of protein pre-lift overlaps MPS into the session",
+            "3. CARBS — Moderate carbs (~0.5-1 g/kg) support performance in longer/higher-volume sessions",
+            "4. FAT — Lower fat pre-workout reduces GI issues for most people; it is not harmful, just individual",
+            "5. THE PRACTICAL RULE — Same meal, same timing, for 2 weeks before a big session; build a reliable pattern"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "39796095",
+              "doi": "10.3390/ijms26010240",
+              "authors": "Hwang DJ, Yang HJ",
+              "year": 2024,
+              "title": "Nutritional Strategies for Enhancing Performance and Training Adaptation in Weightlifters",
+              "journal": "Int J Mol Sci",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "nutrition_carbs_around_training",
+          "title": "Carbs around training: how much, when?",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Strength training runs on glycogen. Carbs pre-lift fuel performance; carbs post-lift refill stores. The numbers matter less than hitting the daily target.",
+          "numbered_points_outline": [
+            "1. PRE-LIFT CARBS — 0.5-1 g/kg 1-3 hours before training supports work capacity in higher-volume sessions",
+            "2. INTRA-LIFT CARBS — Matter only for sessions >60 minutes at high intensity; powerlifting training usually doesn't qualify",
+            "3. POST-LIFT CARBS — Don't need a separate 'window'; hit daily total and you've refilled glycogen by the next session",
+            "4. DAILY TARGET — 4-7 g/kg for most strength athletes; higher on high-volume days, lower on rest days",
+            "5. LOW-CARB LIFTERS — Can still train hard at lower carb intakes but may see performance loss on high-volume days"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "39796095",
+              "doi": "10.3390/ijms26010240",
+              "authors": "Hwang DJ, Yang HJ",
+              "year": 2024,
+              "title": "Nutritional Strategies for Enhancing Performance and Training Adaptation in Weightlifters",
+              "journal": "Int J Mol Sci",
+              "source": "keyword_research_2026-04-13.json: nutrition"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "nutrition_hydration_for_lifters",
+          "title": "Hydration for strength training: enough, not Olympic",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "Dehydration costs strength and power. Over-hydration is a real adverse event. Here's the middle.",
+          "numbered_points_outline": [
+            "1. THE COST OF DEHYDRATION — Even 2% bodyweight loss reduces strength and reaction time",
+            "2. THE DAILY TARGET — ~35 ml/kg for sedentary baseline; add 500-1000 ml per hour of hard training",
+            "3. SODIUM MATTERS — Very high water intake without electrolytes can cause hyponatremia",
+            "4. HOW TO KNOW — Pale-yellow urine, no thirst at rest, bodyweight stable day-to-day",
+            "5. THE PRE-LIFT RULE — 500 ml water 1-2 hours before training; sip during; top up after"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "24692140",
+              "doi": "10.1002/cphy.c130017",
+              "authors": [
+                "Samuel N Cheuvront",
+                "Robert W Kenefick"
+              ],
+              "year": "2014",
+              "title": "Dehydration: physiology, assessment, and performance effects.",
+              "journal": "Comprehensive Physiology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "35523423",
+              "doi": "10.1123/ijspp.2021-0104",
+              "authors": [
+                "Grant C Brechney",
+                "Jack Cannon",
+                "Stephen P Goodman"
+              ],
+              "year": "2022",
+              "title": "Effects of Weight Cutting on Exercise Performance in Combat Athletes: A Meta-Analysis.",
+              "journal": "International journal of sports physiology and performance",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            },
+            {
+              "pmid": "17887814",
+              "doi": "10.2165/00007256-200737100-00006",
+              "authors": [
+                "Daniel A Judelson",
+                "Carl M Maresh",
+                "Jeffrey M Anderson",
+                "Lawrence E Armstrong",
+                "Douglas J Casa",
+                "William J Kraemer",
+                "Jeff S Volek"
+              ],
+              "year": "2007",
+              "title": "Hydration and muscular performance: does fluid balance affect strength, power and high-intensity endurance?",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #51)"
+            }
+          ],
+          "safety_flags": [
+            "mention hyponatremia as the over-hydration risk"
+          ],
+          "estimated_difficulty": "easy",
+          "notes": "Uncited in current research file — researcher should pull ISSN hydration position stand before drafting."
+        }
+      ]
+    },
+    {
+      "cluster_id": 13,
+      "cluster_name": "Warmup: minimal-effective protocol, static-stretch myth, lift-specific prep",
+      "category": "warmup",
+      "evidence_tier": "trending-questions + coaching consensus (uncited — researcher follow-up needed)",
+      "research_key": "trending_questions_2026-04-13.json",
+      "source_notes": "Deep-research-report did not cover warmup. Angles pulled from trending_questions_2026-04-13.json (trend_warmup_minimal_effective, trend_static_stretching_reduces_strength). Both trending entries have empty pair_with_papers_from_research_file and only a pubmed_search_backup — no verified DOIs/PMIDs available yet. All 5 topics land in uncited_topics[] for researcher follow-up before drafting. Task #52 pass.",
+      "topics": [
+        {
+          "slug": "warmup_minimal_effective_protocol",
+          "title": "The minimum effective warmup: 5 minutes, not 30",
+          "category": "warmup",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "You don't need a 30-minute foam-rolling mobility flow before lifting. 5 min light cardio + a handful of dynamic moves + progressive warmup sets covers the evidence base.",
+          "numbered_points_outline": [
+            "1. WHY WE WARM UP — Raise muscle temperature, increase synovial flow, activate the patterns you're about to load",
+            "2. THE MINIMAL RECIPE — 3-5 min easy bike/row/walk, 3-5 dynamic moves specific to the day's lift, then progressive warmup sets",
+            "3. WHAT TO SKIP — Long foam-roll circuits and 10-minute mobility routines aren't required for lifting performance",
+            "4. RAMP SETS ARE THE REAL WARMUP — Progressive warmup sets (empty bar → working weight) do most of the neural-prep work",
+            "5. WHEN TO DO MORE — Cold-room sessions, post-injury return, or first session of the day after sitting all day warrant a longer ramp"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "19996770",
+              "doi": "10.1519/JSC.0b013e3181c643a0",
+              "authors": [
+                "Andrea J Fradkin",
+                "Tsharni R Zazryn",
+                "James M Smoliga"
+              ],
+              "year": "2010",
+              "title": "Effects of warming-up on physical performance: a systematic review with meta-analysis.",
+              "journal": "Journal of strength and conditioning research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "36527593",
+              "doi": "10.1007/s40279-022-01800-1",
+              "authors": [
+                "Emma Moore",
+                "Joel T Fuller",
+                "Clint R Bellenger",
+                "Siena Saunders",
+                "Shona L Halson",
+                "James R Broatch",
+                "Jonathan D Buckley"
+              ],
+              "year": "2023",
+              "title": "Effects of Cold-Water Immersion Compared with Other Recovery Modalities on Athletic Performance Following Acute Strenuous Exercise in Physically Active Participants: A Systematic Review, Meta-Analysis, and Meta-Regression.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "25694615",
+              "doi": "10.1136/bjsports-2014-094228",
+              "authors": [
+                "J Matt McCrary",
+                "Bronwen J Ackermann",
+                "Mark Halaki"
+              ],
+              "year": "2015",
+              "title": "A systematic review of the effects of upper body warm-up on performance and injury.",
+              "journal": "British journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "39853660",
+              "doi": "10.1007/s40279-024-02170-6",
+              "authors": [
+                "Kai Xu",
+                "Anthony J Blazevich",
+                "Daniel Boullosa",
+                "Rodrigo Ramirez-Campillo",
+                "MingYue Yin",
+                "YuMing Zhong",
+                "YuHang Tian",
+                "Mitchell Finlay",
+                "Paul J Byrne",
+                "Francisco Cuenca-Fernández",
+                "Ran Wang"
+              ],
+              "year": "2025",
+              "title": "Optimizing Post-activation Performance Enhancement in Athletic Tasks: A Systematic Review with Meta-analysis for Prescription Variables and Research Methods.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "22316148",
+              "doi": "10.1111/j.1600-0838.2012.01444.x",
+              "authors": [
+                "L Simic",
+                "N Sarabon",
+                "G Markovic"
+              ],
+              "year": "2013",
+              "title": "Does pre-exercise static stretching inhibit maximal muscular performance? A meta-analytical review.",
+              "journal": "Scandinavian journal of medicine & science in sports",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "research-needed",
+          "notes": "Uncited — researcher should pull a warmup-protocol meta-analysis (Fradkin et al. is the classic) or Stronger By Science-referenced primary source. Drafter MUST NOT fabricate a citation for the 5-min claim."
+        },
+        {
+          "slug": "warmup_static_stretching_pre_lift_bad",
+          "title": "Static stretching before lifting: the one thing to stop doing",
+          "category": "warmup",
+          "layout_hint": "mythbust",
+          "audience": "all",
+          "angle": "Long static stretches (>30s) before a heavy session measurably reduce force and power output for that session. Keep static stretching — just do it after, not before.",
+          "numbered_points_outline": [
+            "1. MYTH: Static stretching prevents injury and primes the muscle / FACT: The acute effect is reduced force and power for that session when holds exceed ~30s",
+            "2. MYTH: Dynamic warmups and static stretching are interchangeable / FACT: Dynamic movement prep raises temperature and primes motor patterns without the acute force-reduction downside",
+            "3. MYTH: You should never static stretch / FACT: Static stretching has flexibility benefits — do it post-session or on rest days, not immediately before heavy lifts",
+            "4. THE EXCEPTION — Holds under ~30s appear to have minimal acute strength impact and are fine if you enjoy them",
+            "5. THE PRACTICAL RULE — Dynamic before lifting, static after lifting or on rest days"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "21659901",
+              "doi": "10.1249/MSS.0b013e318225cb27",
+              "authors": [
+                "Anthony D Kay",
+                "Anthony J Blazevich"
+              ],
+              "year": "2012",
+              "title": "Effect of acute static stretch on maximal muscle performance: a systematic review.",
+              "journal": "Medicine and science in sports and exercise",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "33201157",
+              "doi": "10.1519/JSC.0000000000003894",
+              "authors": [
+                "Francis J Gesel",
+                "Emily K Morenz",
+                "Christopher J Cleary",
+                "Dain P LaRoche"
+              ],
+              "year": "2022",
+              "title": "Acute Effects of Static and Ballistic Stretching on Muscle-Tendon Unit Stiffness, Work Absorption, Strength, Power, and Vertical Jump Performance.",
+              "journal": "Journal of strength and conditioning research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "24533497",
+              "doi": "10.1080/17461391.2012.729089",
+              "authors": [
+                "D C P G Leone",
+                "P Pezarat",
+                "M J Valamatos",
+                "O Fernandes",
+                "S Freitas",
+                "A C Moraes"
+              ],
+              "year": "2014",
+              "title": "Upper body force production after a low-volume static and dynamic stretching.",
+              "journal": "European journal of sport science",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "15142021",
+              "doi": "10.1519/R-13303.1",
+              "authors": [
+                "Joel T Cramer",
+                "Terry J Housh",
+                "Glen O Johnson",
+                "Joshua M Miller",
+                "Jared W Coburn",
+                "Travis W Beck"
+              ],
+              "year": "2004",
+              "title": "Acute effects of static stretching on peak torque in women.",
+              "journal": "Journal of strength and conditioning research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "17454536",
+              "doi": "10.1080/02640410600818416",
+              "authors": [
+                "Joel T Cramer",
+                "Travis W Beck",
+                "Terry J Housh",
+                "Laurie L Massey",
+                "Sarah M Marek",
+                "Suzanne Danglemeier",
+                "Sushmita Purkayastha",
+                "Julie Y Culbertson",
+                "Kristi A Fitz",
+                "Alison D Egan"
+              ],
+              "year": "2007",
+              "title": "Acute effects of static stretching on characteristics of the isokinetic angle - torque relationship, surface electromyography, and mechanomyography.",
+              "journal": "Journal of sports sciences",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "research-needed",
+          "notes": "Uncited — researcher should pull Behm & Chaouachi 2011 review, Simic 2013 meta, or Chaabene 2019 meta on acute static-stretch effects on force/power. Claim is well-supported but post needs real DOIs before F-0 gate will let it ship."
+        },
+        {
+          "slug": "warmup_ramp_set_strategy",
+          "title": "Ramp sets: the real warmup for heavy lifting",
+          "category": "warmup",
+          "layout_hint": "program",
+          "audience": "intermediate",
+          "angle": "Progressive warmup sets are where your nervous system gets ready for heavy work. Here's a ramp template for the main lifts.",
+          "numbered_points_outline": [
+            "1. WHY RAMP SETS MATTER — Each jump primes the motor pattern, rehearses the groove, and lets you feel the bar path before it gets heavy",
+            "2. A SAMPLE RAMP — Empty bar × 10 → 40% × 5 → 60% × 3 → 75% × 2 → 85% × 1 → working weight",
+            "3. DON'T GAS YOURSELF — Warmup sets should never go to failure; stop each set fresh so the working sets have your best reps",
+            "4. ADJUST FOR THE LIFT — Deadlifts need fewer ramp reps than squats (more fatigue per rep); bench sits in between",
+            "5. THE LAST WARMUP SET — Should feel like a 'heavy but clean' rehearsal for the first working set, not a grind"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "19203135",
+              "doi": "10.2165/00007256-200939020-00004",
+              "authors": [
+                "Neale Anthony Tillin",
+                "David Bishop"
+              ],
+              "year": "2009",
+              "title": "Factors modulating post-activation potentiation and its effect on performance of subsequent explosive activities.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "26508319",
+              "doi": "10.1007/s40279-015-0415-7",
+              "authors": [
+                "Laurent B Seitz",
+                "G Gregory Haff"
+              ],
+              "year": "2016",
+              "title": "Factors Modulating Post-Activation Potentiation of Jump, Sprint, Throw, and Upper-Body Ballistic Performances: A Systematic Review with Meta-Analysis.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "41195963",
+              "doi": "10.1111/sms.70162",
+              "authors": [
+                "Oliver Rokkjær Olsen",
+                "Jens Bojsen-Møller",
+                "Per Aagaard"
+              ],
+              "year": "2025",
+              "title": "Post-Activation Performance Enhancement in Strength and Power Sports-A Narrative Review.",
+              "journal": "Scandinavian journal of medicine & science in sports",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "30400221",
+              "doi": "10.3390/nu10111640",
+              "authors": [
+                "Chia-Chi Wang",
+                "Chu-Chun Fang",
+                "Ying-Hsian Lee",
+                "Ming-Ta Yang",
+                "Kuei-Hui Chan"
+              ],
+              "year": "2018",
+              "title": "Effects of 4-Week Creatine Supplementation Combined with Complex Training on Muscle Damage and Sport Performance.",
+              "journal": "Nutrients",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "34025872",
+              "doi": "10.2478/hukin-2021-0034",
+              "authors": [
+                "Arkaitz Garbisu-Hualde",
+                "Jordan Santos-Concejero"
+              ],
+              "year": "2021",
+              "title": "Post-Activation Potentiation in Strength Training: A Systematic Review of the Scientific Literature.",
+              "journal": "Journal of human kinetics",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "research-needed",
+          "notes": "Uncited — ramp set structure is coaching consensus (Rippetoe, Tuchscherer, Juggernaut). Researcher could pull Travis 2020 tapering review or acute-potentiation literature, but the template itself is convention. Drafter MUST frame as 'widely-used coaching template' not 'evidence-based protocol'."
+        },
+        {
+          "slug": "warmup_squat_specific_sequence",
+          "title": "Squat warmup: 5 moves in 5 minutes",
+          "category": "warmup",
+          "layout_hint": "program",
+          "audience": "intermediate",
+          "angle": "A fast, squat-specific warmup that targets the patterns that actually break down under heavy load: hips, ankles, thoracic spine.",
+          "numbered_points_outline": [
+            "1. GOBLET SQUAT ×10 — Load the pattern light, open the hips and ankles",
+            "2. WORLD'S GREATEST STRETCH ×5/side — Thoracic rotation and hip flexor mobility in one movement",
+            "3. WALL ANKLE DRILL ×10/side — Restore dorsiflexion before heavy depth",
+            "4. HIP CARS ×5/side — Circumduction to wake up the hip joint through full range",
+            "5. EMPTY BAR SQUAT ×10 — Rehearse the exact bar position, breath, and bracing before loading"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "33322981",
+              "doi": "10.1080/00913847.2020.1864675",
+              "authors": [
+                "Miguel Ángel Rodríguez",
+                "Pablo García-Calleja",
+                "Nicolás Terrados",
+                "Irene Crespo",
+                "Miguel Del Valle",
+                "Hugo Olmedillas"
+              ],
+              "year": "2022",
+              "title": "Injury in CrossFit®: A Systematic Review of Epidemiology and Risk Factors.",
+              "journal": "The Physician and sportsmedicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "27707741",
+              "doi": "10.1136/bjsports-2016-096037",
+              "authors": [
+                "Ulrika Aasa",
+                "Ivar Svartholm",
+                "Fredrik Andersson",
+                "Lars Berglund"
+              ],
+              "year": "2017",
+              "title": "Injuries among weightlifters and powerlifters: a systematic review.",
+              "journal": "British journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "27328853",
+              "doi": "10.1007/s40279-016-0575-0",
+              "authors": [
+                "Justin W L Keogh",
+                "Paul W Winwood"
+              ],
+              "year": "2017",
+              "title": "The Epidemiology of Injuries Across the Weight-Training Sports.",
+              "journal": "Sports medicine (Auckland, N.Z.)",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "19945973",
+              "doi": "10.1136/bjsm.2009.068098",
+              "authors": [
+                "A D Faigenbaum",
+                "G D Myer"
+              ],
+              "year": "2010",
+              "title": "Resistance training among young athletes: safety, efficacy and injury prevention effects.",
+              "journal": "British journal of sports medicine",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "37046275",
+              "doi": "10.1186/s13018-023-03781-x",
+              "authors": [
+                "Thiago Teixeira Serafim",
+                "Eliton Stanley de Oliveira",
+                "Nicola Maffulli",
+                "Filippo Migliorini",
+                "Rodrigo Okubo"
+              ],
+              "year": "2023",
+              "title": "Which resistance training is safest to practice? A systematic review.",
+              "journal": "Journal of orthopaedic surgery and research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "research-needed",
+          "notes": "Uncited — coaching-convention template, not an RCT protocol. Researcher could pull Aasa 2017 (powerlifting injury review, already in research file under 'powerlifting') for injury-pattern context but the specific sequence itself is coaching consensus. Drafter MUST frame as 'sample template' not 'evidence-based protocol'."
+        },
+        {
+          "slug": "warmup_bench_shoulder_prep",
+          "title": "Bench press warmup: protect the shoulder, ramp the lockout",
+          "category": "warmup",
+          "layout_hint": "program",
+          "audience": "intermediate",
+          "angle": "Most bench injuries come from cold shoulders + aggressive first working set. A 5-minute shoulder-first warmup cuts both risks.",
+          "numbered_points_outline": [
+            "1. BAND PULL-APARTS ×15 — Wake up the mid-back and rear delts, pre-work the scapular retraction you need under the bar",
+            "2. SCAPULAR WALL SLIDES ×10 — Groove the scap-up/scap-down pattern that stabilizes the shoulder during bench",
+            "3. PUSH-UP PLUS ×10 — Serratus activation, protect the AC joint at lockout",
+            "4. EMPTY BAR BENCH ×10 — Rehearse arch, foot plant, leg drive, bar path before loading",
+            "5. RAMP WORKING WEIGHT — 40/60/75/85% ramp sets before the first working single/triple"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "38974522",
+              "doi": "10.3389/fphys.2024.1393235",
+              "authors": [
+                "L Noteboom",
+                "I Belli",
+                "M J M Hoozemans",
+                "A Seth",
+                "H E J Veeger",
+                "F C T Van Der Helm"
+              ],
+              "year": "2024",
+              "title": "Effects of bench press technique variations on musculoskeletal shoulder loads and potential injury risk.",
+              "journal": "Frontiers in physiology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "39808810",
+              "doi": "10.1519/JSC.0000000000004973",
+              "authors": [
+                "Jodi G Motlagh",
+                "David B Lipps"
+              ],
+              "year": "2024",
+              "title": "The Contribution of Muscular Fatigue and Shoulder Biomechanics to Shoulder Injury Incidence During the Bench Press Exercise: A Narrative Review.",
+              "journal": "Journal of strength and conditioning research",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "25594912",
+              "doi": "10.4085/1062-6050-49.3.84",
+              "authors": [
+                "José Inácio Salles",
+                "Bruna Velasques",
+                "Victor Cossich",
+                "Eduardo Nicoliche",
+                "Pedro Ribeiro",
+                "Marcus Vinicius Amaral",
+                "Geraldo Motta"
+              ],
+              "year": "2015",
+              "title": "Strength training and shoulder proprioception.",
+              "journal": "Journal of athletic training",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "36535589",
+              "doi": "10.1055/s-0042-1756687",
+              "authors": [
+                "J Jacob",
+                "P O'Connor",
+                "B Pass"
+              ],
+              "year": "2022",
+              "title": "Muscle Injury Around the Shoulder.",
+              "journal": "Seminars in musculoskeletal radiology",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            },
+            {
+              "pmid": "28760091",
+              "doi": "10.2519/jospt.2017.7277",
+              "authors": [
+                "Joshua D Shumway",
+                "Danielle N Anderson",
+                "Dana J Hess"
+              ],
+              "year": "2017",
+              "title": "Pectoralis Major Rupture.",
+              "journal": "The Journal of orthopaedic and sports physical therapy",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-14 (task #53)"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "research-needed",
+          "notes": "Uncited — coaching template, not an RCT. Researcher could pull Aasa 2017 powerlifting injury review for shoulder-injury context (already in research file under 'powerlifting'). Drafter MUST frame as 'sample template' not 'evidence-based'."
+        }
+      ]
+    },
+    {
+      "cluster_id": 14,
+      "cluster_name": "Cardio for strength athletes: interference effect, session ordering, Zone 2, hybrid training",
+      "category": "cardio",
+      "evidence_tier": "meta-analyses on concurrent training (Sports Med 2024)",
+      "research_key": "hybrid_training_concurrent",
+      "source_notes": "Deep-research-report did not cover cardio. All citations pulled verbatim from keyword_research_2026-04-13.json: hybrid_training_concurrent. Key papers: Huiberts 2024 (meta on sex + training status, lower-body male-specific interference signal), Mikkonen 2024 (female-specific review), Murlasits 2017 (session ordering meta), Kang 2022 (HIIT-based concurrent), Wang 2024 (optimization review). Task #52 pass.",
+      "topics": [
+        {
+          "slug": "cardio_interference_effect_basics",
+          "title": "The interference effect: does cardio kill your gains?",
+          "category": "cardio",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "The 'cardio kills gains' claim is partially true and mostly overblown. The Huiberts 2024 meta-analysis shows the interference effect is real but sex- and region-specific: strongest for lower-body strength in trained men, minimal elsewhere.",
+          "numbered_points_outline": [
+            "1. WHAT INTERFERENCE ACTUALLY IS — Adding endurance work can blunt strength/hypertrophy adaptations vs strength training alone",
+            "2. IT'S NOT UNIFORM — Huiberts 2024 meta shows the effect is driven mostly by lower-body strength in trained men; upper-body and untrained lifters see little impact",
+            "3. VOLUME AND MODALITY MATTER — High-volume running produces more interference than cycling or rowing at matched loads",
+            "4. SEPARATION HELPS — Separating strength and endurance sessions by 6+ hours (or different days) reduces interference",
+            "5. THE BOTTOM LINE — For most lifters, moderate cardio won't wreck gains; pro/advanced lower-body specialists are the ones who need to manage it carefully"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37847373",
+              "doi": "10.1007/s40279-023-01943-9",
+              "authors": "Huiberts RO et al.",
+              "year": 2024,
+              "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            },
+            {
+              "pmid": "39969307",
+              "doi": "10.1097/MD.0000000000041055",
+              "authors": "Wang T, Bo S",
+              "year": 2024,
+              "title": "Optimizing concurrent training programs: A review on factors that enhance muscle strength",
+              "journal": "Medicine (Baltimore)",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "cardio_session_ordering_strength_first",
+          "title": "Strength first or cardio first? The session-order question",
+          "category": "cardio",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "When you have to do both in one session, lift first. Meta-analysis on concurrent-training session ordering shows strength-before-endurance preserves strength adaptations better than the reverse.",
+          "numbered_points_outline": [
+            "1. THE CLAIM — Acute fatigue from endurance work impairs the neural drive for heavy strength work that follows it",
+            "2. THE META-ANALYSIS — Murlasits 2017 reviews trials comparing S→E vs E→S session order; strength-first preserves 1RM adaptations better",
+            "3. THE PHYSIOLOGICAL WHY — AMPK activation from endurance may blunt mTOR signaling for hypertrophy when cardio comes first",
+            "4. PRACTICAL APPLICATION — If you lift and run on the same day, lift first; if separation is possible, put them 6+ hours apart",
+            "5. EXCEPTIONS — If cardio is your primary sport (not strength), the reverse may be appropriate"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "28783467",
+              "doi": "10.1080/02640414.2017.1364405",
+              "authors": "Murlasits Z et al.",
+              "year": 2017,
+              "title": "The physiological effects of concurrent strength and endurance training sequence: A systematic review and meta-analysis",
+              "journal": "J Sports Sci",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            },
+            {
+              "pmid": "37847373",
+              "doi": "10.1007/s40279-023-01943-9",
+              "authors": "Huiberts RO et al.",
+              "year": 2024,
+              "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "cardio_zone2_for_strength_athletes",
+          "title": "Zone 2 cardio: the cheapest recovery tool you're not using",
+          "category": "cardio",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "Low-intensity Zone 2 work (easy bike/walk/row, 60-70% max HR) improves work capacity and recovery between lifting sessions without meaningful interference — if you keep the volume in check.",
+          "numbered_points_outline": [
+            "1. WHAT ZONE 2 IS — Conversational pace, nasal-breathing if you can, ~60-70% max HR or RPE 4-5/10",
+            "2. WHY IT'S USEFUL FOR LIFTERS — Improves between-set recovery, general work capacity, and cardiovascular health without the neural fatigue of HIIT",
+            "3. DOSE — 2-3 sessions per week, 20-40 min each is a reasonable starting range for most lifters",
+            "4. MODALITY — Bike/row/walk over running if you're worried about lower-body interference (per the Huiberts meta)",
+            "5. THE REAL WIN — Better resting HR, better recovery between heavy sessions, and meaningful CV health benefit for a lifetime of lifting"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37847373",
+              "doi": "10.1007/s40279-023-01943-9",
+              "authors": "Huiberts RO et al.",
+              "year": 2024,
+              "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium",
+          "notes": "Huiberts meta supports the 'cycling/rowing over running to avoid lower-body interference' claim. The specific Zone 2 dose (2-3x, 20-40min) is coaching consensus — drafter should frame as 'a reasonable starting point' rather than a proven protocol."
+        },
+        {
+          "slug": "cardio_concurrent_training_women",
+          "title": "Concurrent training for women: the data looks different",
+          "category": "cardio",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "The female-specific concurrent-training literature shows women tolerate concurrent training better than men on the interference-effect axis. The Mikkonen 2024 review is the first big synthesis of this evidence.",
+          "numbered_points_outline": [
+            "1. WHAT THE REVIEW FOUND — Women show less of a strength-adaptation interference signal from added endurance work than men in matched protocols",
+            "2. WHY — Hypotheses include slower fatigue recovery in men's type II fibers, sex-linked AMPK/mTOR signaling differences, and baseline training-status differences in the study samples",
+            "3. WHAT THIS MEANS FOR PROGRAMMING — Women lifting AND running/cycling can often do both without aggressive session separation",
+            "4. STILL NOT FREE — Volume still matters; high-volume endurance work can interfere with strength gains in women too, just less severely",
+            "5. THE BOTTOM LINE — Don't apply male-data interference anxiety to female lifters; the evidence base now has its own synthesis"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "37948036",
+              "doi": "10.1007/s40279-023-01955-5",
+              "authors": "Mikkonen RS et al.",
+              "year": 2024,
+              "title": "Perspectives on Concurrent Strength and Endurance Training in Healthy Adult Females: A Systematic Review",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            },
+            {
+              "pmid": "37847373",
+              "doi": "10.1007/s40279-023-01943-9",
+              "authors": "Huiberts RO et al.",
+              "year": 2024,
+              "title": "Concurrent Strength and Endurance Training: A Systematic Review and Meta-Analysis on the Impact of Sex and Training Status",
+              "journal": "Sports Med",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "cardio_hiit_vs_liss_for_lifters",
+          "title": "HIIT or steady-state: which cardio works with lifting?",
+          "category": "cardio",
+          "layout_hint": "default",
+          "audience": "intermediate",
+          "angle": "HIIT and LISS both have their place alongside strength training. HIIT is time-efficient but shares neural fatigue with heavy lifts; LISS is cheap recovery work. The Kang 2022 meta maps out what HIIT-based concurrent training actually does.",
+          "numbered_points_outline": [
+            "1. WHAT HIIT DOES IN CONCURRENT TRAINING — Kang 2022 meta finds HIIT-based concurrent programs improve strength/power and aerobic capacity simultaneously in trained team-sport athletes",
+            "2. WHAT HIIT COSTS — Neural and muscular fatigue that overlaps with heavy lifting; treat it like a fourth training session, not a recovery tool",
+            "3. WHAT LISS DOES — Low-intensity steady state builds aerobic base and recovery capacity with minimal overlap with lifting fatigue",
+            "4. HOW TO COMBINE — 1-2 short HIIT sessions + 1-2 LISS sessions per week is a defensible starting point for most strength athletes",
+            "5. THE PITFALL — Stacking HIIT days on top of heavy lifting days compounds fatigue and is the most common reason concurrent programs blow up"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "36429528",
+              "doi": "10.3390/ijerph192214800",
+              "authors": "Kang J et al.",
+              "year": 2022,
+              "title": "Effects of Concurrent Strength and HIIT-Based Endurance Training on Physical Fitness in Trained Team Sports Players: A Systematic Review and Meta-Analysis",
+              "journal": "Int J Environ Res Public Health",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            },
+            {
+              "pmid": "39969307",
+              "doi": "10.1097/MD.0000000000041055",
+              "authors": "Wang T, Bo S",
+              "year": 2024,
+              "title": "Optimizing concurrent training programs: A review on factors that enhance muscle strength",
+              "journal": "Medicine (Baltimore)",
+              "source": "keyword_research_2026-04-13.json: hybrid_training_concurrent"
+            }
+          ],
+          "safety_flags": [
+            "none"
+          ],
+          "estimated_difficulty": "medium"
+        }
+      ]
+    }
+  ],
+  "uncited_topics": [],
+  "uncited_topics_notes": {
+    "cluster_11_category_mismatch": "The deep-research-report's 'Recovery & sleep optimization' cluster does not correspond to any single category in config/categories.json. The current 6-category tree (training_methods, sample_programming, nutrition, supplements, cardio, warmup) was explicitly chosen for 2026-04-12 and per task rules we do not invent a new category. Recovery topics in this plan are routed into training_methods (sleep physiology, HRV) and nutrition (caffeine cutoff). This is a reasonable compromise but not perfect — a future conversation with team-lead should decide whether to (a) leave recovery split across 2 categories, (b) add a new 'recovery' category for 2026 Q2, or (c) constrain recovery posts to 'nutrition' only.",
+    "sarms_special_handling": "supplements_sarms_warning is intentionally planned as a hard-framed safety post, not a balanced-evidence post. Per team memory (2026-04 SARMs/FDA/WADA memo) the evidence is not 'mixed' on the harm side — FDA, WADA, and USADA all classify SARMs as unapproved and prohibited. Drafter must use direct language, not hedge.",
+    "rwl_and_low_back_pain_handling": "These two topics (nutrition_weight_cut_safe_floor, training_low_back_pain_lift_through_or_rest) are the two highest-caution posts in the plan. Both require explicit 'see a qualified clinician' or 'work with a coach' language and should not be the user's first drafting exercise — suggest saving them for after the easier cited topics land and the drafting workflow is proven.",
+    "duplicate_caffeine_sleep": "supplements_caffeine_sleep_tradeoff (cluster 2) and nutrition_caffeine_sleep_window (cluster 11) cover overlapping ground from different angles. Team-lead may want to merge them into a single post or keep both if the supplements-vs-nutrition audience split is worth it."
+  },
+  "category_counts": {
+    "supplements": 10,
+    "nutrition": 13,
+    "training_methods": 16,
+    "sample_programming": 4,
+    "warmup": 5,
+    "cardio": 5
+  },
+  "category_gaps": {
+    "warmup": "RESOLVED in task #52 pass — cluster 13 added with 5 topics sourced from trending_questions_2026-04-13.json (trend_warmup_minimal_effective, trend_static_stretching_reduces_strength). All 5 are UNCITED because the trending file carries no DOIs/PMIDs — researcher follow-up needed before drafting (see uncited_topics[]).",
+    "cardio": "RESOLVED in task #52 pass — cluster 14 added with 5 topics all cited from keyword_research_2026-04-13.json: hybrid_training_concurrent (Huiberts 2024, Murlasits 2017, Mikkonen 2024, Kang 2022, Wang 2024)."
+  },
+  "recommended_drafting_order": [
+    "PHASE 1 — EASY WINS (first 5 drafts): supplements_creatine_basics, nutrition_protein_target_1_62, training_minimum_effective_dose, supplements_caffeine_dosing_for_strength, nutrition_protein_window_myth",
+    "PHASE 2 — CORE PROGRAMMING (next 10): supplements_creatine_dosing_no_loading, supplements_creatine_kidney_myth, training_volume_dose_response, training_frequency_vs_volume, training_rpe_basics, training_deload_when_and_how, training_squat_high_vs_low_bar, training_sumo_vs_conventional_deadlift, training_bench_arch_and_setup, training_injury_rates_powerlifting",
+    "PHASE 3 — SAFETY + CAUTION (only after workflow is proven): supplements_sarms_warning, nutrition_weight_cut_safe_floor, nutrition_rehydration_protocol, training_low_back_pain_lift_through_or_rest",
+    "PHASE 4 — REMAINING 33 topics in any order driven by user preference"
+  ]
+}
