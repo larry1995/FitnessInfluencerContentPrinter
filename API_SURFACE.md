@@ -1,6 +1,6 @@
 # ContentPrinter — Public API Surface
 
-**Version:** 0.3.1
+**Version:** 0.4.0
 **Status:** Stable — see § Stability Promise below.
 **Consumers:** CentralStrengthKB iOS app (via its FastAPI backend), any future integrations.
 
@@ -223,6 +223,34 @@ Re-audit a single post's `draft.txt` and re-stamp its `meta.json` with the resul
 
 ---
 
+### `scrape_for_topic(topic, *, category=None, max_sources=5, languages=None, timeout_seconds=30.0) -> list[dict]`
+
+Run an on-demand PubMed query and return up to `max_sources` canonical Article dicts ready to feed into `generate_grounded_draft`. Added in 0.4.0 to bridge the CSKB job-runner gap — the existing scrapers in `src/*_scraper.py` are batch entry points that walk config files and write `work/raw/*.json` dumps; that shape doesn't fit a request handler that needs "give me N articles about creatine, now."
+
+**v1 is PubMed-only by design.** Only PubMed yields `structured_content` with DOI/PMID/authors/year, which is the only path that gives the grounded drafter a non-empty allow-list deterministically. bioRxiv/RSS/YouTube/Reddit handlers are deferred — adding them would just push more jobs into `INSUFFICIENT_SOURCE_DATA` without improving drafter output.
+
+| Arg | Type | Description |
+|---|---|---|
+| `topic` | `str` | Required. Free-text search query, passed verbatim to NCBI's esearch. |
+| `category` | `str \| None` | Caller record-keeping label. Stamped into each returned dict's `topic` field but **not used as a search filter** — PubMed relevance ranking is good enough in v1. Defaults to `None`, in which case the stamped topic falls back to `"training"`. |
+| `max_sources` | `int` | Upper bound on returned articles. The function overfetches 2x at the esearch layer to absorb efetch parse failures, then slices to exactly `max_sources`. Default `5`. |
+| `languages` | `list[str] \| None` | Reserved for future use. Ignored in v1. |
+| `timeout_seconds` | `float` | Per-request network timeout. Currently advisory — the underlying `http_utils` session uses its own default. Default `30.0`. |
+
+**Returns:** A list of Article dicts, length `≤ max_sources`. Each dict matches the canonical shape consumed by `generate_grounded_draft` — see `src/pubmed_scraper.build_entry_from_article` for the field-by-field definition. Required fields: `title`, `url`, `source`, `source_type="pubmed"`, `topic`, `summary`, `full_text`, `structured_content` (with `pmid`, `doi`, `authors`, `year`, `journal`, `mesh_terms`), `scraped_at`, `hash`. **Empty list on zero results — not an error**, so the caller can land a job in a deterministic `failed` state with a useful message rather than catching an exception.
+
+**Raises:** `ValueError` if `topic` is empty or not a string, or if `max_sources` is not a positive int. `TopicScraperError` if the PubMed esearch or efetch call itself fails (network down, NCBI 5xx, etc.); the `__cause__` of the raised exception is the original transport error.
+
+**Side effects:** Two outbound HTTPS requests to `eutils.ncbi.nlm.nih.gov` per call (one esearch, one efetch), with a 1-second rate-limit sleep between them per NCBI's unauthenticated-client guidance. No disk writes. **Synchronous and not safe to call from a FastAPI request handler** — run in a background worker (same constraint as `generate_grounded_draft` and `refresh_audit_meta`).
+
+**F-0 interaction:** This function does NOT call `verify_citations` on the sources it returns. Verification happens at the drafter allow-list layer (`grounded_drafter.extract_allowed_citations`), which is the single chokepoint for what gets cited. A topic query that yields PubMed records with unverifiable DOIs will produce an empty allow-list downstream and the job will drop to `INSUFFICIENT_SOURCE_DATA` cleanly — no double-verification, no drift.
+
+### `TopicScraperError`
+
+`RuntimeError` subclass raised by `scrape_for_topic` on transport failures only. Not raised on zero results — see above. Catch this at the job-runner layer and surface as a `failed` job with the underlying cause in `meta.error`.
+
+---
+
 ## 3. The `Post` dict shape
 
 Returned by `generate_draft` and consumed by `render_page` (after an additional structuring pass — see § 4 for the render-time shape). Fields:
@@ -319,7 +347,7 @@ Any additional keys in a ref dict are preserved in `download_log.json` but not u
 
 ## 7. Stability Promise
 
-This API surface is **version 0.3.1**. While we're in 0.x:
+This API surface is **version 0.4.0**. While we're in 0.x:
 
 - **Function signatures** (name + positional/keyword args + return type) are **frozen** within a minor version. If a signature must change, the minor version bumps and the old signature stays as a compatibility shim for one release.
 - **Return dict shapes** may **gain new fields** without a version bump. **Existing fields and their types will not change** without a version bump.
@@ -337,6 +365,7 @@ At 1.0 the promise tightens: major version bump required for any signature chang
 - **0.1.1 → 0.2.0** (additive, but minor-bump because new exports): added `verify_citations`, `is_blocking`, `BLOCKING_SEVERITIES` (frozenset), `SOFT_FLAG_SEVERITIES` (frozenset), `VERIFICATION_UNAVAILABLE` (str constant), and `CitationIssue` (TypedDict). New § 10 documents the citation verification severity ladder. § 6 added a new degradation guarantee #6 covering `verify_citations` network-failure behavior. **No existing signatures, return shapes, or degradation paths were changed.** The minor bump (rather than patch) reflects that the new public surface introduces a load-bearing F-0 gate that consumers will build against — even though the change is strictly additive, the policy document for `is_blocking()` (which severities count as blocking) is now part of the stability promise and a future change to that set requires another minor bump.
 - **0.2.0 → 0.3.0** (additive, but minor-bump because new export with load-bearing semantics): added `generate_grounded_draft(article, *, max_retries=1, slug=None) -> str | None`. New § 11 documents the grounded LLM drafting workflow as Layer 1 of the citation-hallucination defense (Layer 2 = `verify_citations`, Layer 3 = `audit_meta_writer`). § 6 added a new degradation guarantee #7 covering the three None paths (INSUFFICIENT_SOURCE_DATA, no API key, DROP). **No existing signatures, return shapes, or degradation paths were changed.** The minor bump (rather than patch) reflects that the new export is the canonical safe-drafter API for any consumer wanting publication-grade output — the existing `generate_draft` template path is preserved unchanged but is no longer the recommended entry point for content destined for the Central Strength brand.
 - **0.3.0 → 0.3.1** (additive patch): promoted `refresh_audit_meta` from "src/-shim escape hatch" to a first-class `contentprinter.refresh_audit_meta` export via a thin `contentprinter/audit.py` wrapper. CSKB consumers now write `from contentprinter import refresh_audit_meta` instead of `from audit_meta_writer import refresh_audit_meta` — the unsanctioned-import grep gate stays clean and the §11.3 CSKB handler sketch no longer needs an escape-hatch exception. § 9.1 leak list also updated to add `audit_meta_writer` and `grounded_drafter` as transitional bare-top-level names (still importable via the `pip install -e .` shim, but officially unsanctioned). Patch bump (not minor) because no new public semantics are introduced — the wrapper is a 1:1 delegation to the existing `audit_meta_writer.refresh_audit_meta` function with the same signature and return-string set. The wrapper file is trivially removable when Task #33 (next sprint, required) collapses `src/` into `contentprinter._internal` — the public import path stays the same; only the internal `import audit_meta_writer as _amw` line gets rewritten.
+- **0.3.1 → 0.4.0** (additive, but minor-bump because new export with load-bearing semantics): added `scrape_for_topic(topic, *, category=None, max_sources=5, languages=None, timeout_seconds=30.0) -> list[dict]` and the accompanying `TopicScraperError` exception class. Bridges the on-demand topic-query gap that the existing batch scrapers (`src/*_scraper.py`) couldn't fill — they walk config files and write `work/raw/*.json` dumps, which doesn't fit a request handler that needs "give me N PubMed articles about X, now." v1 is **PubMed-only by design**; the returned dicts use the same canonical Article shape the batch path already produces (extracted from `scrape_pubmed`'s inner loop into a reusable `pubmed_scraper.build_entry_from_article` helper, so there's a single source of truth for the field mapping that `grounded_drafter._structured_to_citation` reads). **No existing signatures, return shapes, or degradation paths were changed.** The minor bump (rather than patch) reflects that `scrape_for_topic` is the canonical entry point for any downstream that wants to feed `generate_grounded_draft` from a free-text query rather than a pre-scraped JSON dump — once CSKB's job runner adopts it, future changes to the function or its `TopicScraperError` semantics are part of the stability promise. Empty-list-on-zero-results vs. exception-on-transport-failure is the load-bearing semantic and is now frozen per § 7.
 
 ### URL matching for round-trip topic lookup
 

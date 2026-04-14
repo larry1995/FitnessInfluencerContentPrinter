@@ -497,7 +497,7 @@ def test_library_export_reachable():
     assert hasattr(contentprinter, "generate_grounded_draft")
     assert callable(contentprinter.generate_grounded_draft)
     # Confirm the package version bump landed
-    assert contentprinter.__version__ == "0.3.1"
+    assert contentprinter.__version__ == "0.4.0"
 
 
 def test_library_export_validates_article():

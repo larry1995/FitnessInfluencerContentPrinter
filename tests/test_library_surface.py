@@ -15,7 +15,7 @@ if str(_REPO) not in sys.path:
 
 def test_package_exposes_expected_symbols():
     import contentprinter
-    assert contentprinter.__version__ == "0.3.1"
+    assert contentprinter.__version__ == "0.4.0"
     required = {
         "generate_draft",
         "generate_grounded_draft",
@@ -27,9 +27,12 @@ def test_package_exposes_expected_symbols():
         "verify_citations",
         "is_blocking",
         "refresh_audit_meta",
+        "scrape_for_topic",
+        "TopicScraperError",
     }
     assert required.issubset(set(contentprinter.__all__))
     for name in required:
+        # TopicScraperError is a class; everything else should be callable too.
         assert callable(getattr(contentprinter, name)), f"{name} must be callable"
 
 

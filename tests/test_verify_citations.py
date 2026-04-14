@@ -322,9 +322,9 @@ def test_verify_citations_returns_rows_in_input_order(monkeypatch):
 # ── Version bump check ────────────────────────────────────────────────────
 
 
-def test_package_version_is_031():
+def test_package_version_is_040():
     import contentprinter
-    assert contentprinter.__version__ == "0.3.1"
+    assert contentprinter.__version__ == "0.4.0"
 
 
 def test_package_exports_verify_symbols():

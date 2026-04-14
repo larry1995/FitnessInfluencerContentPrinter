@@ -37,8 +37,9 @@ from contentprinter.verify import (
 )
 from contentprinter.grounded_drafter import generate_grounded_draft
 from contentprinter.audit import refresh_audit_meta
+from contentprinter.topic_scraper import scrape_for_topic, TopicScraperError
 
-__version__ = "0.3.1"
+__version__ = "0.4.0"
 
 __all__ = [
     "generate_draft",
@@ -55,5 +56,7 @@ __all__ = [
     "VERIFICATION_UNAVAILABLE",
     "CitationIssue",
     "refresh_audit_meta",
+    "scrape_for_topic",
+    "TopicScraperError",
     "__version__",
 ]

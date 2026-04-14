@@ -193,6 +193,38 @@ def parse_pubmed_xml(xml_text):
     return articles
 
 
+def build_entry_from_article(article: dict, topic: str) -> dict:
+    """Build the canonical Article dict from an efetch-parsed PubMed record.
+
+    Extracted from the ``scrape_pubmed`` loop so the on-demand topic scraper
+    (``contentprinter.scrape_for_topic``) can reuse the exact same shape
+    without duplicating the field mapping. The output is what
+    ``grounded_drafter._structured_to_citation`` reads — any drift here
+    silently breaks the F-0 allow-list.
+    """
+    pmid = article["pmid"]
+    h = content_hash(f"pubmed:{pmid}")
+    return {
+        "title": article["title"],
+        "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+        "source": f"PubMed ({article['journal']})" if article["journal"] else "PubMed",
+        "source_type": "pubmed",
+        "topic": topic,
+        "summary": article["abstract"][:500] if article["abstract"] else "",
+        "full_text": article["abstract"][:20000],
+        "structured_content": {
+            "pmid": pmid,
+            "authors": article["authors"],
+            "journal": article["journal"],
+            "year": article["year"],
+            "doi": article["doi"],
+            "mesh_terms": article["mesh_terms"],
+        },
+        "scraped_at": datetime.now().isoformat(),
+        "hash": h,
+    }
+
+
 def scrape_pubmed():
     """Main function -- search PubMed for relevant exercise science studies."""
     config, sources = load_config()
@@ -248,31 +280,10 @@ def scrape_pubmed():
         print(f"  Retrieved {len(articles)} articles")
 
         for article in articles:
-            h = content_hash(f"pubmed:{article['pmid']}")
+            entry = build_entry_from_article(article, topic)
+            h = entry["hash"]
             if h in seen_hashes:
                 continue
-
-            # Build structured output compatible with the pipeline
-            entry = {
-                "title": article["title"],
-                "url": f"https://pubmed.ncbi.nlm.nih.gov/{article['pmid']}/",
-                "source": f"PubMed ({article['journal']})" if article["journal"] else "PubMed",
-                "source_type": "pubmed",
-                "topic": topic,
-                "summary": article["abstract"][:500] if article["abstract"] else "",
-                "full_text": article["abstract"][:20000],
-                "structured_content": {
-                    "pmid": article["pmid"],
-                    "authors": article["authors"],
-                    "journal": article["journal"],
-                    "year": article["year"],
-                    "doi": article["doi"],
-                    "mesh_terms": article["mesh_terms"],
-                },
-                "scraped_at": datetime.now().isoformat(),
-                "hash": h,
-            }
-
             all_articles.append(entry)
             seen_hashes.add(h)
             print(f"  [OK] {article['title'][:70]}...")
