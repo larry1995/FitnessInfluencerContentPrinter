@@ -14,7 +14,7 @@
     ],
     "clusters_in_source": 12,
     "clusters_in_plan": 14,
-    "total_topics": 53,
+    "total_topics": 55,
     "cited_topics": 48,
     "uncited_topics_count": 0,
     "warmup_cardio_pass_at": "2026-04-14T22:58:00Z",
@@ -27,11 +27,13 @@
       "Citations are pulled verbatim from keyword_research_2026-04-13.json. Only verified DOIs/PMIDs are copied. No citation fabrication per F-0 memory.",
       "Topics touching SARMs, rapid weight loss, and 'lift through pain' explicitly carry safety_flags per the 2026-04 SARMs/FDA/WADA memo and team safety policy."
     ],
-    "cited_count": 53,
+    "cited_count": 55,
     "uncited_count": 0,
     "researcher_pass_at": "2026-04-14T23:04:40Z",
     "researcher_pass_notes": "Task #51: fetched PubMed citations for 6 previously-uncited topics via contentprinter.scrape_for_topic. See individual topic.suggested_citations with source tag 'contentprinter.scrape_for_topic @ 2026-04-14 (task #51)'. All DOIs/PMIDs came verbatim from PubMed efetch — no LLM generation, no fabrication (F-0 discipline).",
-    "warmup_backfill_pass_at": "2026-04-14T23:04:40Z"
+    "warmup_backfill_pass_at": "2026-04-14T23:04:40Z",
+    "gi_topics_added_at": "2026-04-16",
+    "gi_topics_note": "User-requested: GI index common foods + sweet potato cooking method for lowest GI. Citations from PubMed via researcher (task unlabeled, session 2026-04-16)."
   },
   "clusters": [
     {
@@ -929,6 +931,116 @@
             "none"
           ],
           "estimated_difficulty": "medium"
+        },
+        {
+          "slug": "nutrition_gi_index_common_foods",
+          "title": "Glycemic Index cheat sheet: GI of common main dishes for lifters",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "A practical GI overview of the carb sources lifters actually eat — rice, pasta, potatoes, oats, bread — with the canonical Foster-Powell/Brand-Miller international GI tables as the evidence base. Emphasis on which staples spike blood sugar fastest and which give sustained energy for training.",
+          "numbered_points_outline": [
+            "1. WHAT GI ACTUALLY MEASURES — glucose response relative to a reference food (white bread or glucose); why it matters for training energy and body composition",
+            "2. HIGH-GI STAPLES — white rice (~72), white bread (~75), instant oats (~79); when these are useful (post-workout replenishment, pre-meet carb loading)",
+            "3. MODERATE-GI STAPLES — basmati rice (~58), sweet potato (varies 44-94 by cooking method), whole wheat pasta (~42-50); the everyday training-day choices",
+            "4. LOW-GI STAPLES — steel-cut oats (~42), most legumes (~30-40), al dente pasta; sustained energy, better satiety, useful in a cut",
+            "5. PRACTICAL GUIDE — GI isn't everything (glycemic load, fiber, protein co-ingestion all modulate response); pick your carbs by training context, not by GI alone"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "34258626",
+              "doi": "10.1093/ajcn/nqab233",
+              "authors": "Atkinson FS et al.",
+              "year": 2021,
+              "title": "International tables of glycemic index and glycemic load values 2021: a systematic review.",
+              "journal": "The American journal of clinical nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "18835944",
+              "doi": "10.2337/dc08-1239",
+              "authors": "Atkinson FS et al.",
+              "year": 2008,
+              "title": "International tables of glycemic index and glycemic load values: 2008.",
+              "journal": "Diabetes care",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "12081815",
+              "doi": "10.1093/ajcn/76.1.5",
+              "authors": "Foster-Powell K et al.",
+              "year": 2002,
+              "title": "International table of glycemic index and glycemic load values: 2002.",
+              "journal": "The American journal of clinical nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "7572722",
+              "doi": "10.1093/ajcn/62.4.871S",
+              "authors": "Foster-Powell K, Miller JB",
+              "year": 1995,
+              "title": "International tables of glycemic index.",
+              "journal": "The American journal of clinical nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "26160327",
+              "doi": "10.1016/j.numecd.2015.05.005",
+              "authors": "Augustin LSA et al.",
+              "year": 2015,
+              "title": "Glycemic index, glycemic load and glycemic response: An International Scientific Consensus Summit from the International Carbohydrate Quality Consortium (ICQC).",
+              "journal": "Nutrition, metabolism, and cardiovascular diseases",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            }
+          ],
+          "safety_flags": [],
+          "estimated_difficulty": "easy"
+        },
+        {
+          "slug": "nutrition_sweet_potato_cooking_gi",
+          "title": "How to cook sweet potato for the lowest GI: boiling vs baking vs roasting",
+          "category": "nutrition",
+          "layout_hint": "default",
+          "audience": "all",
+          "angle": "Sweet potato GI ranges from ~44 (boiled) to ~94 (baked) depending on cooking method. Boiling preserves more resistant starch and limits gelatinization, producing the lowest glycemic response. Practical guide for lifters who want sustained energy without the blood sugar spike.",
+          "numbered_points_outline": [
+            "1. THE RANGE IS HUGE — Same food, GI from 44 to 94 depending on how you cook it (Bahado-Singh 2011, 10 cultivars tested across methods)",
+            "2. BOILING = LOWEST GI — Less complete starch gelatinization; more resistant starch survives; slower glucose absorption",
+            "3. BAKING/ROASTING = HIGHEST GI — Extended dry heat fully gelatinizes starch, breaks down cell walls, makes glucose highly available",
+            "4. COOLING AFTER COOKING HELPS — Retrograded starch (resistant starch type 3) forms on cooling, further lowering effective GI even after reheating",
+            "5. PRACTICAL APPLICATION — Meal prep boiled sweet potato, refrigerate, reheat for the lowest GI option; baked sweet potato is fine post-workout when you WANT fast carbs"
+          ],
+          "suggested_citations": [
+            {
+              "pmid": "22132322",
+              "doi": "10.1155/2011/584832",
+              "authors": "Bahado-Singh PS et al.",
+              "year": 2011,
+              "title": "Relationship between Processing Method and the Glycemic Indices of Ten Sweet Potato (Ipomoea batatas) Cultivars Commonly Consumed in Jamaica.",
+              "journal": "Journal of nutrition and metabolism",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "16925852",
+              "doi": "",
+              "authors": "Bahado-Singh PS et al.",
+              "year": 2006,
+              "title": "Food processing methods influence the glycaemic indices of some commonly eaten West Indian carbohydrate-rich foods.",
+              "journal": "The British journal of nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            },
+            {
+              "pmid": "34258626",
+              "doi": "10.1093/ajcn/nqab233",
+              "authors": "Atkinson FS et al.",
+              "year": 2021,
+              "title": "International tables of glycemic index and glycemic load values 2021: a systematic review.",
+              "journal": "The American journal of clinical nutrition",
+              "source": "contentprinter.scrape_for_topic @ 2026-04-16 (gi-research)"
+            }
+          ],
+          "safety_flags": [],
+          "estimated_difficulty": "easy"
         }
       ]
     },
