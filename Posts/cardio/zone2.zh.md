@@ -1,0 +1,78 @@
+# 力量举运动员的 Zone 2 有氧 — 你的心脏也是一块肌肉
+
+你练深蹲。你练卧推。你练硬拉。但你上次训练那块让你活着的肌肉是什么时候？
+
+心血管健康是力量型运动的盲区。而 Zone 2 有氧是不会毁掉你增肌成果的解决方案。
+
+**1. 力量举运动员有心脏问题（字面意义上的）**
+2018年一项研究发现，与耐力运动员和久坐的对照组相比，竞技力量运动员的左心室肥厚和静息血压升高的发生率显著更高。大重量训练——尤其是使用瓦尔萨尔瓦呼吸法时——会使血压急性飙升至300/150 mmHg以上。如果没有有氧调节，这些反复的血压尖峰会在数十年间累积。
+
+**2. 什么是 Zone 2？**
+Zone 2 是低强度有氧运动，在运动时你可以正常对话。技术上来说，它是你最大心率的60-70%，大致为：
+- 20岁：120-140 bpm
+- 30岁：114-133 bpm
+- 40岁：108-126 bpm
+- 50岁：102-119 bpm
+
+"对话测试"很管用：如果你能完整地说完句子而不喘气，你就在 Zone 2。如果你说到一半需要停下来喘气，那就太高了。
+
+**3. 为什么特别是 Zone 2？**
+Zone 2 训练线粒体密度和脂肪氧化能力，同时不产生显著疲劳。2020年发表于Sports Medicine的综述发现，低强度有氧训练改善了：
+- 线粒体生物发生（细胞中更多的能量工厂）
+- 毛细血管密度（更好的肌肉血液供应）
+- 心脏每搏输出量（你的心脏每次跳动泵出更多血液）
+- 组间和训练间的恢复
+
+这意味着更好的做功能力、更快的恢复和更高效的训练——所有这些都不会产生高强度有氧带来的肌肉流失干扰。
+
+**4. 它不会影响你的力量**
+Wilson（2012）关于同步训练的荟萃分析发现，低强度有氧（如 Zone 2）对下肢力量或肌肥大没有显著的负面影响。干扰效应主要发生在高强度、高冲击的有氧（冲刺、长跑）——而不是轻松的骑自行车或步行。
+
+**5. 它能改善你的组间恢复**
+更好的有氧能力意味着更快的磷酸肌酸再合成。2016年一项研究发现，VO2max更高的举重者在大重量组间恢复更快，并且在一次训练中能完成更多的总训练量。Zone 2 有氧确实能帮助你举得更多。
+
+力量举运动员如何安排 Zone 2：
+
+频率：每周2-3次
+时长：每次20-40分钟
+运动方式（从干扰最小到最大排列）：
+**1. 步行 / 坡度跑步机（干扰最低）**
+**2. 固定自行车 / 躺式自行车**
+**3. 椭圆机 / 划船机**
+**4. 游泳**
+**5. 慢跑（干扰最高——尽量避免）**
+
+时间安排：
+- 最佳：休息日或举铁后6小时以上
+- 可以接受：举铁之后（不是之前）
+- 避免：在大重量深蹲/硬拉训练之前
+
+4天训练者的示例周安排：
+周一：大重量深蹲 (Squat) + 卧推 (Bench)
+周二：30分钟 Zone 2 骑自行车（心率120-140）
+周三：大重量硬拉 (Deadlift) + 站姿推举 (OHP)
+周四：30分钟 Zone 2 坡度步行
+周五：容量深蹲 (Squat) + 卧推 (Bench)
+周六：30-40分钟 Zone 2 骑自行车或徒步
+周日：完全休息
+
+预期效果：
+- 第1-2周：感觉太轻松。这就是重点。
+- 第3-4周：静息心率开始下降。
+- 第6-8周：你会注意到组间恢复变快了。
+- 第3个月以后：血压改善，做功能力提升。
+
+**总结：**
+你可以是健身房里最强壮的人，但仍然可能在55岁时死于心脏病。Zone 2 有氧是健身中最廉价的保险：每次20-30分钟，每周2-3次，以能对话的配速。你的深蹲不会受影响。你的心脏会感谢你。
+
+在 centralstrengthgyms.com 预约你的体验课
+
+#CentralStrength #SantaClaraFitness #CentralStrengthGym #BayAreaStrength #Zone2Cardio #HeartHealth #PowerlifterCardio #CardiovascularHealth #AerobicBase #StrengthTraining #Powerlifting #GymLife #Longevity #TrainSmart #EvidenceBasedFitness
+
+参考文献：
+**1. Held S et al. (2026). Maximizing Adaptations in Concurrent Training: An Umbrella Review of Meta-analyses. Sports Med. doi:10.1007/s40279-026-02401-y PMID:41762427**
+**2. Fikenzer S et al. (2018). Effects of endurance versus resistance training on cardiac biomarkers in recreational athletes. Clin Res Cardiol, 107(5):411-420. doi:10.1007/s00392-017-1192-0**
+**3. Wilson JM et al. (2012). Concurrent training: a meta-analysis examining interference of aerobic and resistance exercises. J Strength Cond Res, 26(8):2293-2307. doi:10.1519/JSC.0b013e31823a3e2d**
+**4. MacDougall JD et al. (1985). Arterial blood pressure response to heavy resistance exercise. J Appl Physiol, 58(3):785-790. doi:10.1152/jappl.1985.58.3.785**
+**5. Iellamo F et al. (2019). Cardiovascular effects of strength training in strength athletes. J Cardiovasc Med, 20(6):372-378. doi:10.2459/JCM.0000000000000648**
+**6. Tomlin DL & Wenger HA (2001). The relationship between aerobic fitness and recovery from high intensity intermittent exercise. Sports Med, 31(1):1-11. doi:10.2165/00007256-200131010-00001**
