@@ -165,6 +165,12 @@ def finalize_topic(slug: str, *, dry_run: bool = False) -> FinalizeResult:
 
     Idempotent. Safe to call multiple times; overwrites existing output files.
     Returns a FinalizeResult summarizing what was moved.
+
+    F-0 gate honored: if `work/<slug>/_blocked.json` exists (written by
+    `single_page_generator.generate_all_single_pages` after a blocking verify
+    outcome), the slug is skipped with `skipped_reason="blocked-by-verify"`.
+    The PNG stays in work/ for visual inspection but will NOT reach Posts/
+    until the draft is fixed and re-rendered (which clears the sidecar).
     """
     work_topic = WORK_DIR / slug
     if not work_topic.is_dir():
@@ -172,6 +178,13 @@ def finalize_topic(slug: str, *, dry_run: bool = False) -> FinalizeResult:
             slug=slug, category="", clean_slug="",
             png_moved=False, zh_md_written=False, pdfs_moved=0,
             skipped_reason="missing-work-dir",
+        )
+
+    if (work_topic / "_blocked.json").exists():
+        return FinalizeResult(
+            slug=slug, category="", clean_slug="",
+            png_moved=False, zh_md_written=False, pdfs_moved=0,
+            skipped_reason="blocked-by-verify",
         )
 
     category, clean_slug = classify(slug)
@@ -229,20 +242,33 @@ def summarize(results: list[FinalizeResult]) -> str:
         return "0 topics finalized"
     per_cat: dict[str, int] = {}
     png_total = zh_total = pdf_total = 0
+    blocked_slugs: list[str] = []
+    other_skipped = 0
     for r in results:
+        if r.skipped_reason == "blocked-by-verify":
+            blocked_slugs.append(r.slug)
+            continue
         if r.skipped_reason:
+            other_skipped += 1
             continue
         per_cat[r.category] = per_cat.get(r.category, 0) + 1
         png_total += int(r.png_moved)
         zh_total += int(r.zh_md_written)
         pdf_total += r.pdfs_moved
+    finalized = len(results) - len(blocked_slugs) - other_skipped
     lines = [
-        f"Finalized {len(results)} topics ({png_total} png, {zh_total} zh.md, {pdf_total} pdf)",
+        f"Finalized {finalized} topics ({png_total} png, {zh_total} zh.md, {pdf_total} pdf)",
     ]
     for cat in CATEGORIES:
         n = per_cat.get(cat, 0)
         if n:
             lines.append(f"  {cat}: {n}")
+    if blocked_slugs:
+        lines.append(
+            f"HELD {len(blocked_slugs)} topic(s) by F-0 gate (see work/<slug>/_blocked.json):"
+        )
+        for slug in blocked_slugs:
+            lines.append(f"  - {slug}")
     return "\n".join(lines)
 
 

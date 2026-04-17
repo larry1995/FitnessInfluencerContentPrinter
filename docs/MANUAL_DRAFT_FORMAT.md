@@ -157,9 +157,12 @@ REFERENCES:
   after the `doi:` or `doi.org/` prefix.
 - **PMID**: include as `PMID: 12345678` or `PMID:12345678`. Matches
   `PMID[:\s]+(\d{5,9})`.
-- Having DOI or PMID is what lets `verify_citations` (if you choose to
-  run it manually — see F-0 section below) do a round-trip check against
-  Crossref and PubMed.
+- Having DOI or PMID is what lets the F-0 verify gate (which runs
+  automatically on every `singlepage` — see section below) do a
+  round-trip check against Crossref and PubMed. A reference with no
+  DOI or PMID lands as `NO_VERIFIABLE_SOURCE`, which is a **blocking**
+  severity — the slug will be held by the gate and will not finalize
+  until the reference is given a verifiable identifier.
 
 **Canonical citation shape** (matches `_format_citation_text` in
 `grounded_drafter.py`):
@@ -204,50 +207,82 @@ the cleanest signal.
   `ANTHROPIC_API_KEY`.
 - Scrape anything. The `singlepage` CLI command only reads existing
   `draft.txt` files under `work/`.
-- **Run F-0 citation verification.** See next section.
+
+**DOES (since task #49, contentprinter 0.5.0):**
+
+- **Run the F-0 verify gate on every rendered draft.** See next
+  section — manual drafts are now protected by the same verification
+  discipline as LLM-generated drafts.
 
 ---
 
-## F-0 citation verification and manual drafts
+## F-0 citation verification (automatic since 0.5.0)
 
-**The `singlepage` and `finalize` CLI paths do NOT run
-`verify_citations`.** Verification is wired only into two places in the
-repo, and neither is in the manual workflow:
+As of `contentprinter` 0.5.0 the `singlepage` CLI path runs
+`contentprinter.run_verify_gate` on every draft immediately after
+rendering the PNG. The gate classifies each reference against
+Crossref + PubMed and writes one sidecar file per slug:
 
-1. `grounded_drafter.generate_grounded_draft` — Layer A (byte-check
-   against the verified allow-list) and Layer B (`verify_citations`
-   full re-verify) run **before** the draft is written. A manual draft
-   bypasses this entirely because you never called `generate_grounded_draft`.
-2. `audit_meta_writer.refresh_audit_meta` — runs `verify_citations` on
-   an existing `draft.txt` and stamps the result into `meta.json`. It is
-   called automatically by `drafter.draft_all_grounded` and by
-   `audit_meta_writer.py --slug <slug>` from the command line, but is
-   NOT invoked by `singlepage` / `finalize`.
+| Sidecar (under `work/<slug>/`) | Meaning | Finalize behavior |
+|---|---|---|
+| `_done.json` | all references verified OK | promoted to `Posts/` |
+| `_warn.json` | soft flags (`JOURNAL_MISMATCH`, `YEAR_WRONG`, `NOT_PUBMED_INDEXED`, `DOI_UNRESOLVABLE`) or `VERIFICATION_UNAVAILABLE` (network down) | promoted to `Posts/` — review recommended |
+| `_blocked.json` | at least one blocking severity (`DOI_FABRICATED`, `DOI_WRONG`, `DOI_MISATTRIBUTED`, `NO_VERIFIABLE_SOURCE`, `PMID_NOT_FOUND`, `AUTHOR_WRONG`, `TITLE_MISMATCH`) | **HELD** — PNG stays in `work/`, never reaches `Posts/` |
 
-**Practical consequence:** if you hand-write a draft with fabricated
-citations, the pipeline will happily render and publish it. The F-0
-verify gate protects the LLM drafter from hallucinating; it does **not**
-protect manually-authored content from the same mistake.
+Blocked slugs stay in `work/` so you can inspect the PNG, look up the
+problem citations in the sidecar JSON, fix them in `draft.txt`, and
+re-run `singlepage`. The gate clears any stale sidecar before writing
+the new one, so a slug that previously blocked and is now correct will
+promote cleanly without manual cleanup.
 
-**If you want the same protection on a manual draft, run one of:**
+**Fail-closed discipline:** any severity the classifier doesn't
+recognize (e.g. a new audit-module severity shipped in a future
+release) is treated as blocking. The gate's routing is byte-identical
+to the CSKB job runner's `app/jobs/verify_gate.py::run_verify_gate` —
+same classifier protects the CLI and the FastAPI background runner.
+
+**Network cost:** the gate calls Crossref and PubMed once per
+reference, roughly 1-2 seconds each. A 5-reference post adds ~10
+seconds to `singlepage`; a 20-reference post adds ~40. If Crossref or
+PubMed is unreachable, the affected row lands as
+`VERIFICATION_UNAVAILABLE` and the slug goes to `_warn.json`, NOT
+`_blocked.json` — the gate never blocks on infrastructure failures.
+
+### Escape hatch: `--skip-verify`
+
+If you need to preview a render without running the gate (rapid
+iteration on a layout, offline environment, etc.), the `singlepage`
+command accepts two **deliberately tedious** flags that must be passed
+together:
 
 ```bash
-# Option 1: run verify directly and print the rows
-python3 -c "
-from contentprinter import verify_citations
-rows = verify_citations('work/<slug>/en/draft.txt')
-for r in rows:
-    print(r['severity'], '-', r['draft'].get('doi') or r['draft'].get('pmid'))
-"
-
-# Option 2: write audit state into work/<slug>/meta.json
-python3 src/audit_meta_writer.py --slug <slug>
+python3 src/main.py singlepage --skip-verify --i-know-what-i-am-doing
 ```
 
-Either approach will fetch every citation from Crossref / PubMed and
-flag mismatches. Blocking severities (`DOI_NOT_FOUND`, `TITLE_MISMATCH`,
-`FIRST_AUTHOR_MISMATCH`, `YEAR_MISMATCH`) should be treated as
-"do not publish until corrected".
+Both flags are required — `--skip-verify` alone prints a warning and
+is ignored. When both are set, the gate is bypassed entirely, a
+`_skip_verify.json` marker is written into each slug directory, and a
+loud `[WARN] F-0 verify gate SKIPPED` banner goes to stderr. Do NOT
+publish output produced in this mode to Instagram — the whole point of
+the double-flag friction is to keep this path out of normal use.
+
+### Re-running the gate on its own
+
+If you want to re-verify an existing draft without re-rendering the
+PNG, either of these works:
+
+```bash
+# Option A: call the gate directly
+python3 -c "
+from contentprinter import run_verify_gate
+draft = open('work/<slug>/en/draft.txt').read()
+outcome = run_verify_gate(draft, slug='<slug>')
+print(outcome['status'], outcome['counts'])
+"
+
+# Option B: re-run singlepage (idempotent; overwrites the PNG + sidecar)
+python3 src/main.py singlepage
+```
 
 ---
 
@@ -308,17 +343,16 @@ REFERENCES:
 mkdir -p work/supplements_creatine_basics/en
 $EDITOR work/supplements_creatine_basics/en/draft.txt   # paste + edit template
 
-# 2. (Optional) Verify citations before rendering
-python3 -c "
-from contentprinter import verify_citations
-for r in verify_citations('work/supplements_creatine_basics/en/draft.txt'):
-    print(r['severity'], r['draft'].get('doi') or r['draft'].get('pmid'))
-"
-
-# 3. Render + finalize
+# 2. Render + verify + finalize (one command, F-0 gate runs automatically)
 python3 src/main.py singlepage
 # → work/supplements_creatine_basics/en/single_page.png
-# → Posts/supplements/creatine_basics.png
+# → work/supplements_creatine_basics/_done.json   (or _warn.json / _blocked.json)
+# → Posts/supplements/creatine_basics.png          (if not blocked)
+
+# 3. If any slug blocked, inspect and fix
+cat work/supplements_creatine_basics/_blocked.json   # see which refs failed
+$EDITOR work/supplements_creatine_basics/en/draft.txt  # correct the citations
+python3 src/main.py singlepage                       # re-run — clears old sidecar
 
 # 4. (Optional) Write a Chinese version by hand
 $EDITOR work/supplements_creatine_basics/zh/draft.txt

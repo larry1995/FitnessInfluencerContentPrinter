@@ -15,7 +15,7 @@ if str(_REPO) not in sys.path:
 
 def test_package_exposes_expected_symbols():
     import contentprinter
-    assert contentprinter.__version__ == "0.4.0"
+    assert contentprinter.__version__ == "0.5.0"
     required = {
         "generate_draft",
         "generate_grounded_draft",
@@ -26,6 +26,7 @@ def test_package_exposes_expected_symbols():
         "download_references",
         "verify_citations",
         "is_blocking",
+        "run_verify_gate",
         "refresh_audit_meta",
         "scrape_for_topic",
         "TopicScraperError",

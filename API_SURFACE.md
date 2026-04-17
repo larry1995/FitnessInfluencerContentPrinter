@@ -22,6 +22,7 @@ from contentprinter import (
     download_references,
     verify_citations,
     is_blocking,
+    run_verify_gate,
     is_llm_configured,
     refresh_audit_meta,
 )
@@ -206,6 +207,33 @@ else:
 
 ---
 
+### `run_verify_gate(draft_text, *, slug="") -> VerifyGateOutcome`
+
+Run the F-0 verification gate on an English draft body and return a pre-classified outcome dict that both the ContentPrinter singlepage CLI and the CSKB FastAPI job runner can act on without duplicating severity-routing logic.
+
+| Arg | Type | Description |
+|---|---|---|
+| `draft_text` | `str` | The full draft.txt body (same input shape as `verify_citations`). |
+| `slug` | `str` | Optional topic slug stamped onto each citation row for traceability. Default `""`. |
+
+**Returns:** `VerifyGateOutcome` TypedDict with three fields:
+
+| Field | Type | Description |
+|---|---|---|
+| `status` | `str` | One of `"done"`, `"verification_pending_review"`, `"verification_failed"`. Derived from the citation rows: any blocking → `verification_failed`; any soft-flag or `VERIFICATION_UNAVAILABLE` → `verification_pending_review`; otherwise → `done`. |
+| `citations` | `list[dict]` | The full `verify_citations` result, deep-copied so consumers can mutate freely. |
+| `counts` | `dict[str, int]` | Keys: `blocked`, `warn`, `pending_review`, `verified`. Sums to `len(citations)`. |
+
+**Raises:** Whatever `verify_citations` raises (`ValueError` on empty input).
+
+**Side effects:** Same as `verify_citations` — outbound HTTPS to Crossref + PubMed, ~1-2 seconds per REFERENCES entry. No file writes.
+
+**Fail-closed discipline:** any severity value not recognized as `OK`, `VERIFICATION_UNAVAILABLE`, a member of `BLOCKING_SEVERITIES`, or a member of `SOFT_FLAG_SEVERITIES` is treated as **blocked**. This matches the CSKB `app/jobs/verify_gate.py::run_verify_gate` routing exactly (task #49), so a future audit module that emits a new severity cannot silently sneak past the gate on either surface.
+
+**Intended callers:** the `singlepage` CLI path (`src/single_page_generator.py::generate_all_single_pages`), the CSKB FastAPI job runner (`app/jobs/runner.py`, currently has its own byte-identical copy pending migration to this shared helper), and any future consumer that needs a single function call from draft-text to publication-status.
+
+---
+
 ### `refresh_audit_meta(slug, *, dry_run=False) -> str`
 
 Re-audit a single post's `draft.txt` and re-stamp its `meta.json` with the result. **The only sanctioned mechanism** to update audit fields after a remediation edit — see § 10.5 for the rule and § 11.3 for the CSKB job-runner integration.
@@ -347,7 +375,7 @@ Any additional keys in a ref dict are preserved in `download_log.json` but not u
 
 ## 7. Stability Promise
 
-This API surface is **version 0.4.0**. While we're in 0.x:
+This API surface is **version 0.5.0**. While we're in 0.x:
 
 - **Function signatures** (name + positional/keyword args + return type) are **frozen** within a minor version. If a signature must change, the minor version bumps and the old signature stays as a compatibility shim for one release.
 - **Return dict shapes** may **gain new fields** without a version bump. **Existing fields and their types will not change** without a version bump.

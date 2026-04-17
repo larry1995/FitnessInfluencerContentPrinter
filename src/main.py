@@ -86,9 +86,12 @@ def run_draft(use_llm: bool = False):
     return draft_all()
 
 
-def run_single_page():
+def run_single_page(*, skip_verify: bool = False, skip_verify_confirm: bool = False):
     print("\n[STEP 6/7] Rendering single-page PNGs from drafts...\n")
-    return generate_all_single_pages()
+    return generate_all_single_pages(
+        skip_verify=skip_verify,
+        skip_verify_confirm=skip_verify_confirm,
+    )
 
 
 def run_finalize(dry_run: bool = False):
@@ -209,7 +212,13 @@ def main():
             scrape_forums()
         elif command == "singlepage":
             print_banner()
-            generate_all_single_pages()
+            flags = sys.argv[2:]
+            skip_verify = "--skip-verify" in flags
+            skip_verify_confirm = "--i-know-what-i-am-doing" in flags
+            generate_all_single_pages(
+                skip_verify=skip_verify,
+                skip_verify_confirm=skip_verify_confirm,
+            )
             run_finalize()
         elif command == "finalize":
             print_banner()

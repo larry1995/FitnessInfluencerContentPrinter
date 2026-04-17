@@ -24,6 +24,7 @@ Usage:
 
 import json
 import re
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -1576,11 +1577,47 @@ def _discover_topic_drafts():
     return topic_drafts
 
 
-def generate_all_single_pages():
+def generate_all_single_pages(*, skip_verify: bool = False, skip_verify_confirm: bool = False):
+    """Render single-page PNGs from `work/<slug>/en/draft.txt` drafts.
+
+    After each PNG is written the draft text is run through the F-0 verify
+    gate (`contentprinter.run_verify_gate`). The classified outcome is routed
+    to one of three sidecar files in `work/<slug>/`:
+
+    - `_done.json`   — status="done", no blocking or pending rows.
+    - `_warn.json`   — status="verification_pending_review" (soft flags or
+      VERIFICATION_UNAVAILABLE). PNG still finalizes; human review
+      recommended but not mandatory.
+    - `_blocked.json` — status="verification_failed". `output_layout.finalize_topic`
+      refuses to promote the PNG to `Posts/` as long as this file exists.
+
+    Any of the three sidecars from a previous run is removed before the new
+    one is written so stale state cannot block a slug indefinitely.
+
+    `skip_verify=True` short-circuits the gate for the entire run. It is ONLY
+    honored when `skip_verify_confirm=True` is also set; the double-flag
+    discipline matches the `--skip-verify --i-know-what-i-am-doing` CLI pair
+    in `main.py`. Used without the confirm, `skip_verify` is ignored and a
+    loud warning is printed to stderr. Lone-use of this escape hatch bypasses
+    the F-0 doctrine and should only happen during local preview work.
+    """
     topic_drafts = _discover_topic_drafts()
     if not topic_drafts:
         print("[INFO] No polished posts found.")
         return
+
+    gate_active = not (skip_verify and skip_verify_confirm)
+    if skip_verify and not skip_verify_confirm:
+        print(
+            "[WARN] --skip-verify ignored: --i-know-what-i-am-doing confirm flag not set.",
+            file=sys.stderr,
+        )
+    if not gate_active:
+        print(
+            "[WARN] F-0 verify gate SKIPPED by --skip-verify --i-know-what-i-am-doing. "
+            "Renders will not be checked against Crossref/PubMed. Do not publish.",
+            file=sys.stderr,
+        )
 
     print(f"\n{'='*60}")
     print(f"  DETAILED SINGLE-PAGE GENERATOR (3x resolution)")
@@ -1588,9 +1625,11 @@ def generate_all_single_pages():
     print(f"  Author: {AUTHOR_NAME}, {AUTHOR_TITLE}")
     print(f"  Posts: {len(topic_drafts)}")
     print(f"  Output: {PAGE_WIDTH}px wide @ {SCALE}x scale")
+    print(f"  Verify gate: {'ON' if gate_active else 'OFF (unsafe)'}")
     print(f"{'='*60}\n")
 
     all_pages = []
+    gate_counts = {"done": 0, "warn": 0, "blocked": 0, "skipped": 0}
     tmp_img = Image.new("RGB", (PAGE_WIDTH, 100))
     tmp_draw = ImageDraw.Draw(tmp_img)
 
@@ -1602,6 +1641,14 @@ def generate_all_single_pages():
         png_path.parent.mkdir(parents=True, exist_ok=True)
         page_img.save(png_path, "PNG", optimize=True)
         all_pages.append((png_path, page_img))
+
+        _run_verify_gate_for_slug(
+            slug=slug,
+            draft_path=txt_file,
+            topic_dir=png_path.parent.parent,
+            gate_active=gate_active,
+            gate_counts=gate_counts,
+        )
 
         n_pts = len(post["numbered_points"]) or len(post["sections"])
         n_extra = len(post["extra_sections"])
@@ -1643,6 +1690,134 @@ def generate_all_single_pages():
         print(f"\n[PDF] Combined PDF: {pdf_path} ({len(all_pages)} pages)")
 
     print(f"\n[DONE] {len(all_pages)} detailed single-page posts written to per-topic work/<slug>/en/")
+    if gate_active:
+        print(
+            f"[GATE] F-0 verify: {gate_counts['done']} done, "
+            f"{gate_counts['warn']} warn (review), {gate_counts['blocked']} BLOCKED"
+        )
+        if gate_counts["blocked"]:
+            print(
+                f"[GATE] Blocked slugs will NOT finalize. Inspect "
+                f"work/<slug>/_blocked.json for failing citations.",
+                file=sys.stderr,
+            )
+
+
+def _run_verify_gate_for_slug(
+    *,
+    slug: str,
+    draft_path: Path,
+    topic_dir: Path,
+    gate_active: bool,
+    gate_counts: dict,
+) -> None:
+    """Run the F-0 verify gate on one rendered slug and write a sidecar file.
+
+    Writes exactly one of `_done.json`, `_warn.json`, or `_blocked.json` into
+    `work/<slug>/` (topic_dir). Any previous sidecar from a prior run is
+    removed first so a blocked slug that is later corrected cannot remain
+    blocked by stale state. Failures inside the gate (unexpected exceptions
+    from `verify_citations`, network layer blowing up) are captured and land
+    the slug in `_blocked.json` with a `gate_error` field — fail closed, same
+    doctrine as the CSKB runner.
+
+    When `gate_active=False` (escape hatch), the gate is skipped entirely,
+    sidecars are cleared, and a `_skip_verify.json` marker is written so the
+    downstream finalize step can still see that this slug's publication state
+    is unknown-by-choice. `gate_counts["skipped"]` is incremented.
+    """
+    done_path = topic_dir / "_done.json"
+    warn_path = topic_dir / "_warn.json"
+    blocked_path = topic_dir / "_blocked.json"
+    skip_path = topic_dir / "_skip_verify.json"
+    for stale in (done_path, warn_path, blocked_path, skip_path):
+        if stale.exists():
+            try:
+                stale.unlink()
+            except OSError:
+                pass
+
+    if not gate_active:
+        skip_path.write_text(
+            json.dumps(
+                {"slug": slug, "status": "skipped", "reason": "skip_verify_flag"},
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        gate_counts["skipped"] += 1
+        print(f"[GATE] {slug}: SKIPPED (--skip-verify)")
+        return
+
+    try:
+        from contentprinter import run_verify_gate
+    except ImportError as exc:
+        blocked_path.write_text(
+            json.dumps(
+                {
+                    "slug": slug,
+                    "status": "verification_failed",
+                    "gate_error": f"ImportError: {exc}",
+                    "counts": {"blocked": 1, "warn": 0, "pending_review": 0, "verified": 0},
+                    "citations": [],
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        gate_counts["blocked"] += 1
+        print(f"[GATE] {slug}: BLOCKED (import error)", file=sys.stderr)
+        return
+
+    try:
+        draft_text = draft_path.read_text(encoding="utf-8")
+        outcome = run_verify_gate(draft_text, slug=slug)
+    except Exception as exc:
+        blocked_path.write_text(
+            json.dumps(
+                {
+                    "slug": slug,
+                    "status": "verification_failed",
+                    "gate_error": f"{type(exc).__name__}: {exc}",
+                    "counts": {"blocked": 1, "warn": 0, "pending_review": 0, "verified": 0},
+                    "citations": [],
+                },
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        gate_counts["blocked"] += 1
+        print(f"[GATE] {slug}: BLOCKED (gate error: {type(exc).__name__})", file=sys.stderr)
+        return
+
+    payload = {
+        "slug": slug,
+        "status": outcome["status"],
+        "counts": outcome["counts"],
+        "citations": outcome["citations"],
+    }
+    counts = outcome["counts"]
+    if outcome["status"] == "verification_failed":
+        blocked_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        gate_counts["blocked"] += 1
+        print(
+            f"[GATE] {slug}: BLOCKED "
+            f"({counts['blocked']} blocking, {counts['warn']} warn, "
+            f"{counts['pending_review']} pending, {counts['verified']} ok)",
+            file=sys.stderr,
+        )
+    elif outcome["status"] == "verification_pending_review":
+        warn_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        gate_counts["warn"] += 1
+        print(
+            f"[GATE] {slug}: WARN "
+            f"({counts['warn']} warn, {counts['pending_review']} pending, "
+            f"{counts['verified']} ok)"
+        )
+    else:
+        done_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        gate_counts["done"] += 1
+        print(f"[GATE] {slug}: DONE ({counts['verified']} verified)")
 
 
 if __name__ == "__main__":

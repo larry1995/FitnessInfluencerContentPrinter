@@ -486,3 +486,98 @@ def _synthetic_draft_with_one_ref(raw_ref: str, ref_idx: int) -> str:
     module without forking its `audit_draft` body.
     """
     return f"REFERENCES:\n{ref_idx}. {raw_ref}\n"
+
+
+# ── F-0 verification gate (terminal-status classifier) ────────────────────
+
+
+class VerifyGateOutcome(TypedDict):
+    """Classified outcome of running the F-0 gate on a draft.
+
+    Produced by `run_verify_gate`. The three terminal statuses mirror the
+    CSKB job runner's Job.status field exactly so a single helper serves
+    both the ContentPrinter CLI and the FastAPI background runner.
+    """
+
+    status: str
+    citations: list[dict]
+    counts: dict[str, int]
+
+
+def run_verify_gate(draft_text: str, *, slug: str = "") -> VerifyGateOutcome:
+    """Run the F-0 verification gate on an English draft body.
+
+    Calls `verify_citations` on the draft and classifies the resulting rows
+    into one of three terminal statuses:
+
+        "done"                          — every row has severity "OK".
+        "verification_pending_review"   — no BLOCKING rows, but at least
+                                          one row is VERIFICATION_UNAVAILABLE
+                                          or in SOFT_FLAG_SEVERITIES.
+        "verification_failed"           — at least one row is in
+                                          BLOCKING_SEVERITIES, OR any row
+                                          carries an unknown severity
+                                          (fail-closed per F-0 doctrine:
+                                          "stubs are dangerous"; a future
+                                          audit-module severity we don't
+                                          recognize must over-block).
+
+    Args:
+        draft_text: full draft.txt contents as a string.
+        slug: optional topic slug stamped onto each row for traceability.
+
+    Returns:
+        A `VerifyGateOutcome` dict with:
+            status: one of the three terminal strings above
+            citations: list of row dicts from `verify_citations` (possibly
+                empty if the draft has no REFERENCES block — in which case
+                status is "done" with zero counts)
+            counts: {"blocked", "warn", "pending_review", "verified"}
+
+    The network / cost profile is inherited from `verify_citations`
+    (1-2 seconds per reference, outbound to Crossref + PubMed). Run in a
+    background job, not a request handler.
+
+    This function is identical in severity routing to CSKB's
+    `app.jobs.verify_gate.run_verify_gate`. Both the ContentPrinter CLI
+    (singlepage path, task #49) and the CSKB FastAPI runner (task #15+)
+    are meant to use this shared helper so the F-0 discipline cannot drift
+    between surfaces.
+    """
+    rows = verify_citations(draft_text, slug=slug)
+
+    blocked = 0
+    warn = 0
+    pending = 0
+    verified = 0
+    for row in rows:
+        sev = row.get("severity")
+        if sev == _OK_SEVERITY:
+            verified += 1
+        elif sev == VERIFICATION_UNAVAILABLE:
+            pending += 1
+        elif sev in BLOCKING_SEVERITIES:
+            blocked += 1
+        elif sev in SOFT_FLAG_SEVERITIES:
+            warn += 1
+        else:
+            # Unknown severity — fail closed per F-0 ("stubs are dangerous").
+            blocked += 1
+
+    if blocked > 0:
+        status = "verification_failed"
+    elif pending > 0 or warn > 0:
+        status = "verification_pending_review"
+    else:
+        status = "done"
+
+    return {
+        "status": status,
+        "citations": [dict(row) for row in rows],
+        "counts": {
+            "blocked": blocked,
+            "warn": warn,
+            "pending_review": pending,
+            "verified": verified,
+        },
+    }

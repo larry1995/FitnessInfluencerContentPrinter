@@ -34,12 +34,14 @@ from contentprinter.verify import (
     SOFT_FLAG_SEVERITIES,
     VERIFICATION_UNAVAILABLE,
     CitationIssue,
+    run_verify_gate,
+    VerifyGateOutcome,
 )
 from contentprinter.grounded_drafter import generate_grounded_draft
 from contentprinter.audit import refresh_audit_meta
 from contentprinter.topic_scraper import scrape_for_topic, TopicScraperError
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"
 
 __all__ = [
     "generate_draft",
@@ -55,6 +57,8 @@ __all__ = [
     "SOFT_FLAG_SEVERITIES",
     "VERIFICATION_UNAVAILABLE",
     "CitationIssue",
+    "run_verify_gate",
+    "VerifyGateOutcome",
     "refresh_audit_meta",
     "scrape_for_topic",
     "TopicScraperError",
