@@ -145,6 +145,8 @@ def zh_draft_to_markdown(zh_text: str) -> str:
     if not lines:
         return ""
     title = lines[0].strip().rstrip("—— ").strip()
+    if title.startswith("# "):
+        title = title[2:].lstrip()
     body_start = 1
     while body_start < len(lines) and not lines[body_start].strip():
         body_start += 1

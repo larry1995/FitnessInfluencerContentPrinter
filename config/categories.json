@@ -47,6 +47,8 @@
     "nutrition_vitamin_d":          ["supplements", "vitamin_d"],
     "supplements_beta_alanine":     ["supplements", "beta_alanine"],
     "supplements_magnesium":        ["supplements", "magnesium"],
+    "zma":                          ["supplements", "zma"],
+    "glutamine":                    ["supplements", "glutamine"],
 
     "cardio_concurrent_training":   ["cardio", "concurrent_training"],
     "cardio_zone2":                 ["cardio", "zone2"],
