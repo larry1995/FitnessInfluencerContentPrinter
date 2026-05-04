@@ -157,8 +157,7 @@ ContentPrinter/
 │   └── test_chinese_drafter.py
 │
 ├── assets/
-├── templates/
-└── powerlifting_app/           ← unrelated side project, preserved
+└── templates/
 ```
 
 **What changed in the 2026-04-12 refactor:**
