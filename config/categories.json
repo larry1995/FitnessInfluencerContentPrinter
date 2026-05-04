@@ -49,6 +49,7 @@
     "supplements_magnesium":        ["supplements", "magnesium"],
     "zma":                          ["supplements", "zma"],
     "glutamine":                    ["supplements", "glutamine"],
+    "krill_vs_fish_oil":            ["supplements", "krill_vs_fish_oil"],
 
     "cardio_concurrent_training":   ["cardio", "concurrent_training"],
     "cardio_zone2":                 ["cardio", "zone2"],
